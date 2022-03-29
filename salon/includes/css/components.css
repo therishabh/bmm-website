@@ -1,0 +1,64 @@
+.custom-switch {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding-left: 0;
+}
+.ps-0, .px-0 {
+  padding-left: 0 !important;
+}
+.custom-switch-input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.custom-switch-input:checked ~ .custom-switch-indicator {
+  background: #f92b62;
+}
+.custom-switch-input:checked ~ .custom-switch-indicator {
+  background: #f92b62;
+}
+.me-3, .mx-3 {
+  margin-right: 0.75rem !important;
+}
+.custom-switch-indicator {
+  display: inline-block;
+  height: 1.25rem;
+  width: 2.25rem;
+  background: #f6f6fb;
+  border-radius: 50px;
+  position: relative;
+  vertical-align: bottom;
+  border: 1px solid #e9edf4;
+  transition: 0.3s border-color, 0.3s background-color;
+}
+
+.custom-switch-input:checked~.custom-switch-indicator:before {
+  left: calc(1rem + 1px);
+}
+
+.custom-switch-indicator:before {
+  content: "";
+  position: absolute;
+  height: calc(1.25rem - 4px);
+  width: calc(1.25rem - 4px);
+  top: 1px;
+  left: 1px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.3s left;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 40%);
+}
+
+.custom-switch-description {
+  margin-left: 0.5rem;
+  color: #6e7687;
+  transition: 0.3s color;
+}
