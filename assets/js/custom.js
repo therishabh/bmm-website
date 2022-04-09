@@ -6,6 +6,13 @@ $(document).ready(function() {
     //     }, 3000);
     // });
 
+    $('.salon-category-tabs li').click(function() {
+        $('.salon-category-tabs li').removeClass('active');
+        $(this).addClass('active');
+        $('.custom-tab-content').hide();
+        $('#' + $(this).attr('data')).show();
+    });
+
     $('nav li').mouseover(function() {
         $(this).find('.submenu').show();
     });

@@ -3,7 +3,7 @@
 function base_url()
 {
     // return "https://" . $_SERVER['SERVER_NAME'] . "/";
-    return "http://" . $_SERVER['SERVER_NAME'] . "/esteps/bmm-frontend/";
+    return "http://" . $_SERVER['SERVER_NAME'] . "/bmm-website-new/bmm-website-new/";
 }
 
 function includeWithVariables($filePath, $variables = array(), $print = true)
