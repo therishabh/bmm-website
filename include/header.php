@@ -62,17 +62,6 @@
                             <li><a href="ladies-hair-styling.php">Nail Care</a></li>
                         </ul>
                     </li>
-                    <!-- <li>
-                    <a href="#">Gents <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                    <ul class="list-unstyled pl-3 responsive-dropdown">
-                        <li><a href="#">Hair Cut & Finish</a></li>
-                        <li><a href="#">Hair Color</a></li>
-                        <li><a href="#">Hair Texture</a></li>
-                        <li><a href="#">Hair Treatments</a></li>
-                        <li><a href="#">Skin Care</a></li>
-                        <li><a href="#">Beard Grooming</a></li>
-                    </ul>
-            </li> -->
                     <li>
                         <a href="#">Salons <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
                         <ul class="list-unstyled pl-3 responsive-dropdown">
@@ -149,14 +138,6 @@
                             </div>
                         </div>
                     </li>
-                    <!-- <li>
-                    <a href="#">BMM Cards <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                    <ul class="list-unstyled pl-3 responsive-dropdown">
-                        <li><a href="#">Membership Cards</a></li>
-                        <li><a href="#">Gifts Cards</a></li>
-                        <li><a href="#">Flexi Cards</a></li>
-                    </ul>
-                </li> -->
                     <li>
                         <a href="#">Locations <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
                         <ul class="list-unstyled pl-3 responsive-dropdown">
@@ -259,14 +240,6 @@
                             </div>
                         </div>
                     </li>
-                    <!-- <li>
-                    <a href="#">BMM Cards <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                    <ul class="list-unstyled pl-3 responsive-dropdown">
-                        <li><a href="#">Membership Cards</a></li>
-                        <li><a href="#">Gifts Cards</a></li>
-                        <li><a href="#">Flexi Cards</a></li>
-                    </ul>
-                </li> -->
                     <li>
                         <a href="#">Recommended <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
                         <ul class="list-unstyled pl-3 responsive-dropdown">
@@ -370,73 +343,6 @@
                     </li>
                 </ul>
             </li>
-            <!-- <li>
-            <a href="#">Groom Makeover <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-            <ul class="list-unstyled pl-3 responsive-dropdown">
-                <li>
-                    <a href="#">Services <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                    <ul class="list-unstyled pl-3 responsive-dropdown">
-                        <li><a href="#">Hair Styling</a></li>
-                        <li><a href="#">Hair Styling</a></li>
-                        <li><a href="#">Make Up</a></li>
-                        <li><a href="#">Hair Texture</a></li>
-                        <li><a href="#">Hair Treatments</a></li>
-                        <li><a href="#">Hand & Feet</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Package <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                    <ul class="list-unstyled pl-3 responsive-dropdown">
-                        <li><a href="#">Silver</a></li>
-                        <li><a href="#">Gold</a></li>
-                        <li><a href="#">Platinum</a></li>
-                        <li><a href="#">Diamond</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">BMM Cards <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                    <ul class="list-unstyled pl-3 responsive-dropdown">
-                        <li><a href="#">Membership Cards</a></li>
-                        <li><a href="#">Gifts Cards</a></li>
-                        <li><a href="#">Flexi Cards</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Salons <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                    <ul class="list-unstyled pl-3 responsive-dropdown">
-                        <li><a href="#">Hair Masters</a></li>
-                        <li><a href="#">Looks</a></li>
-                        <li><a href="#">Geetanjali</a></li>
-                        <li><a href="#">VLCC</a></li>
-                        <li><a href="#">Jawed habib</a></li>
-                        <li><a href="#">Toni & Guy</a></li>
-                        <li><a href="#">F Salon</a></li>
-                        <li><a href="#">Alps Beauty</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Locations <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                    <ul class="list-unstyled pl-3 responsive-dropdown">
-                        <li><a href="#">Rajouri Garden</a></li>
-                        <li><a href="#">Punjabi Bagh</a></li>
-                        <li><a href="#">Janakpuri</a></li>
-                        <li><a href="#">Chandigarh</a></li>
-                        <li><a href="#">Vasant Vihar</a></li>
-                        <li><a href="#">Pitampura</a></li>
-                        <li><a href="#">Dwarka</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Occasions<span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                    <ul class="list-unstyled pl-3 responsive-dropdown">
-                        <li><a href="#">Mehandi </a></li>
-                        <li><a href="#">Sagan </a></li>
-                        <li><a href="#">Party Reception </a></li>
-                        <li><a href="#">Wedding </a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li> -->
             <li>
                 <a href="#">Salon at Home <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
                 <ul class="list-unstyled pl-3 responsive-dropdown">
@@ -763,21 +669,24 @@
                 <?php
                 if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
                 ?>
-                    <div class="col-md-5 offset-md-1 search-div">
-                        <div class="input-group search-bar-main">
-                            <i class="fa fa-search seacrh-icons"></i>
-                            <input type="text" class="form-control" placeholder="Salons, Makeup Artists, Bridal Makeup" aria-label="" aria-describedby="basic-addon1">
-                            <div class="input-group-append">
+                    <div class="col-md-5 offset-md-1">
+                        <div class="search-div">
+                            <div class="input-group search-bar-main">
+                                <i class="fa fa-search seacrh-icons"></i>
+                                <input type="text" class="form-control" placeholder="Salons, Makeup Artists, Bridal Makeup" />
+                                <!-- <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
                                     Search
                                 </button>
+                            </div> -->
+                            </div>
+                            <div class="search-list">
+                                <ul id="searchData">
+                                </ul>
                             </div>
                         </div>
-                        <!-- <div class="search-bar">
-                        <i class='fa fa-search seacrh-icons'></i>
-                        <input type="text" class="form-control" placeholder="Search Salon, Makeup Artist...">
-                    </div> -->
                     </div>
+
                     <div class="col-md-3 col-1 responsive-search-bar">
                         <a href="#" class="d-block">
                             <i class='fa fa-search'></i>
@@ -1965,7 +1874,7 @@
 
                         <li class="p-relative">
                             <a href="pro/index.php">BMM PRO
-                                <span class="new-tag new">FREE</span>
+                                <!-- <span class="new-tag new">FREE</span> -->
                             </a>
                         </li>
 
@@ -2080,9 +1989,44 @@
 
     <script>
         $(function() {
-            const tokanInfoConst = localStorage.getItem("token");
+            const token = localStorage.getItem("token");
+            $('.search-bar-main input').keyup(function() {
+                let $this = $(this);
+                if (!$(this).val()) {
+                    $('.search-list').hide();
+                } else {
+                    $.ajax({
+                        url: `${base_url}/user/search/get-search-list.php?q=cu`,
+                        type: 'GET',
+                        dataType: 'JSON',
+                        success: function(result) {
+                            // console.log(result.result);
+                            // $('.searchData').append(`<li>${result.result.services[0].name}</li>`);      
+
+                            serviceList = result.result.services;
+                            if (serviceList && serviceList.length > 0) {
+                                serviceList.forEach(service => {
+                                    $('#searchData').append(`<li class="${service.id}">${service.name}<span>${service.type}</span></li>`);
+                                });
+                                var value = $this.val().toLowerCase();
+                                $("#searchData li").filter(function() {
+                                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                });
+                                $('.search-list').show();
+                            } else {}
+
+                        }
+                    });
+
+                }
+            });
+
+            $('body').click(function(){
+                $('.search-list').hide();
+            });
+
             $.ajax({
-                url: base_url + 'salon/get-info.php?token= ' + tokanInfoConst + ' &q=info,services,amenities,timings',
+                url: base_url + 'salon/get-info.php?token= ' + token + ' &q=info,services,amenities,timings',
                 type: 'GET',
                 dataType: 'JSON',
                 success: function(result) {
