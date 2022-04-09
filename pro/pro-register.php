@@ -68,7 +68,9 @@ includeWithVariables('./../include/header.php', array('page_title' => "Book MY M
                                     <input type="email" id="email_id_input" placeholder="Enter Email Id" class="form-control" maxlength="" name="email">
                                 </div>
                                 <div class="g-recaptcha brochure__form__captcha" data-sitekey="6LeMSM8eAAAAABYjhVtzcDqWMCwLZu_oPCh2kBRB"></div>
-                                <div class="form-group text-center" style="margin-top: 15px;"><button type="submit" id="proRegisterBtn" class="btn login-btn">Sign Up</button></div>
+                                <div class="form-group text-center" style="margin-top: 15px;">
+                                    <button type="submit" id="proRegisterBtn" class="btn login-btn">Sign Up</button>
+                                </div>
                                 <div class="bar-text">
                                     <span> Already have an account ?</span>
                                 </div>
@@ -94,15 +96,22 @@ includeWithVariables('./../include/header.php', array('page_title' => "Book MY M
                                     <div class="go-back-btn btn login-btn">Go Back</div>
                                     <button type="submit" id="verifyOTP" class="btn login-btn">Verify OTP</button>
                                 </div>
+                            </div>
                         </form>
 
-                        <form class="login-form login-pro-form d-custom-none" id="proRegisterStepThree">
+                        <form class="login-form login-pro-form d-custom-none mx-auto" id="proRegisterStepThree">
                             <div class="form-heading">Registration - Set Password</div>
                             <div class="register-steps register-step3 mt-3">
                                 <div class="form-group">
                                     <label for="new_password">New Password</label>
                                     <input type="password" id="new_password" placeholder="Enter Password" class="form-control" name="password">
                                 </div>
+                                <div class="form-group">
+                                    <label for="confirm_password">Confirm Password</label>
+                                    <input type="password" id="confirm_password" placeholder="Confirm Password" class="form-control" name="confirmPassword">
+                                </div>
+                                <div class="form-group text-center"><button type="submit" id="stepThreeSubmitBtn" class="btn login-btn">Submit</button></div>
+                            </div>
                         </form>
                     </div>
                 </section>
