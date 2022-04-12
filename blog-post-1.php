@@ -12,6 +12,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
 
 
                         <div class="blog-post-box-detail">
+                        <span class="blog-category">Bridal Makeup</span>
                             <h2>Cracking the Perfect Work from Home Make-up Look!</h2>
                             <img src="assets/images/blog-img-1.jpg" class="img-fluid">
                             <div class="blog-post-box-detail-body">
@@ -28,6 +29,15 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                                     <p>While with these steps, we have officially cracked the WFH make-up look that is easy to create and quick to apply. But putting the right clothes, giving a semi-formal look and a clean hairdo are also a must. You can also accessorize your look with simple earrings or neck chains to look work ready with a positive, refreshing vibe.</p>
 
                                 </div>
+                                
+                                <ul class="blog-tags">
+                                    <li>Tag 1</li>
+                                    <li>Tag 2</li>
+                                    <li>Tag 3</li>
+                                    <li>Tag 4</li>
+                                    <li>Tag 5</li>
+                                </ul>
+
                             </div>
                         </div>
 
