@@ -2021,32 +2021,34 @@
                 }
             });
 
-            $('body').click(function(){
+            $('body').click(function() {
                 $('.search-list').hide();
             });
 
-            $.ajax({
-                url: base_url + 'salon/get-info.php?token= ' + token + ' &q=info,services,amenities,timings',
-                type: 'GET',
-                dataType: 'JSON',
-                success: function(result) {
-                    // $('#login_email').text(result.result.info.email_id.slice(0, 7) + '..');
-                    var loginEmail = `<div class="custom-dropdown-btn">
-                                    <a class="sign-up">
-                                    <i class="far fa-user-circle float-left mr-2"></i> <span> ${result.result.info.email_id.slice(0, 7) + '..'} </span>
-                                </a>
-                            </div>`
-                    $('#loginBtn').prepend(loginEmail);
-                },
-                error: function() {
-                    var loginEmail = `<div class="custom-dropdown-common-btn">
-                <a href="login.php">
-                <i class="far fa-user-circle float-left mr-2"></i> <span>Sign In</span>
-                </a>
-                </div>
-                `
-                    $('#loginBtn').prepend(loginEmail);
-                }
-            });
+            if (token) {
+                $.ajax({
+                    url: base_url + 'salon/get-info.php?token= ' + token + ' &q=info,services,amenities,timings',
+                    type: 'GET',
+                    dataType: 'JSON',
+                    success: function(result) {
+                        // $('#login_email').text(result.result.info.email_id.slice(0, 7) + '..');
+                        var loginEmail = `<div class="custom-dropdown-btn">
+                                        <a class="sign-up">
+                                        <i class="far fa-user-circle float-left mr-2"></i> <span> ${result.result.info.email_id.slice(0, 7) + '..'} </span>
+                                    </a>
+                                </div>`
+                        $('#loginBtn').prepend(loginEmail);
+                    },
+                    error: function() {
+                        var loginEmail = `<div class="custom-dropdown-common-btn">
+                    <a href="login.php">
+                    <i class="far fa-user-circle float-left mr-2"></i> <span>Sign In</span>
+                    </a>
+                    </div>
+                    `
+                        $('#loginBtn').prepend(loginEmail);
+                    }
+                });
+            }
         });
     </script>
