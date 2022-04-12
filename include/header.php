@@ -1996,9 +1996,10 @@
                     $('.search-list').hide();
                 } else {
                     $.ajax({
-                        url: `${base_url}/user/search/get-search-list.php?q=cu`,
+                        url: `${base_url}/user/search/get-search-list.php`,
                         type: 'GET',
                         dataType: 'JSON',
+                        data : {q : $this.val()},
                         success: function(result) {
                             // console.log(result.result);
                             // $('.searchData').append(`<li>${result.result.services[0].name}</li>`);      
@@ -2006,12 +2007,12 @@
                             serviceList = result.result.services;
                             if (serviceList && serviceList.length > 0) {
                                 serviceList.forEach(service => {
-                                    $('#searchData').append(`<li class="${service.id}">${service.name}<span>${service.type}</span></li>`);
+                                    $('#searchData').append(`<li class="${service.id}">${service.name}<span>Salon</span></li>`);
                                 });
-                                var value = $this.val().toLowerCase();
-                                $("#searchData li").filter(function() {
-                                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                                });
+                                // var value = $this.val().toLowerCase();
+                                // $("#searchData li").filter(function() {
+                                //     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                // });
                                 $('.search-list').show();
                             } else {}
 
