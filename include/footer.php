@@ -276,6 +276,7 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js//Chart.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/utils.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/utilities.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/bootstrap-autocomplete.js"></script>
 
 
 <!--gallery script start here-->

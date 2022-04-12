@@ -5716,3 +5716,7 @@ label.error {
 .search-list ul li:hover {
     background: #f1f1f1;
 }
+
+.dropdown-item span {
+    font-size: 80%;
+}
