@@ -5,7 +5,113 @@
         <h1>Manage Profile</h1>
     </div>
 
-    <div class="row">
+    <div class="row" id="makeupArtistInfoSection">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    Makeup Artist Info
+                </div>
+                <div class="card-body">
+                    <form action="" id="infoForm">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Makeup Artist Name</label>
+                                    <input type="text" class="form-control" name="contact_person_name">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    <div class="position-relative">
+                                        <input type="text" class="form-control" name="contact_person_mobile" disabled>
+                                        <i class="fa fa-check-square-o position-absolute" aria-hidden="true" style="top: 8px;color: green;right: 10px;font-size: 20px;"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="text" class="form-control" name="contact_person_email" disabled>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Gender</label>
+                                    <select name="contact_person_gender" class="form-control">
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Payment Option</label>
+                                    <select name="payment_option" class="form-control">
+                                        <option value="male">No Advance Payment</option>
+                                        <option value="male">10% Advance Payment</option>
+                                        <option value="male">20% Advance Payment</option>
+                                        <option value="male">50% Advance Payment</option>
+                                        <option value="male">100% Advance Payment</option>
+                                        <option value="female">After Completion of service</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Out of State Service</label>
+                                    <select name="payment_option" class="form-control">
+                                        <option value="male">Ready ot go anywhere</option>
+                                        <option value="male">Provide service in my area only</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Address</label>
+                                    <textarea type="text" class="form-control" name="address"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>City</label>
+                                    <input type="text" class="form-control" name="city">
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>State</label>
+                                    <input type="text" class="form-control" name="state">
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Pin Code</label>
+                                    <input type="text" class="form-control" name="pin_code">
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>PAN Number</label><br>
+                                    <input type="text" class="form-control" name="pancard_number">
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="salonInfoSection">
         <div class="col-md-4">
             <div class="card">
                 <div class="card-header">
@@ -173,6 +279,14 @@
         const token = localStorage.getItem("salonToken");
         if (token) {
             const salonCategory = localStorage.getItem('bmmSalonCategory');
+            if (salonCategory == 'makeup_artist') {
+                $("#makeupArtistInfoSection").show();
+                $("#salonInfoSection").remove();
+            } else {
+                $("#salonInfoSection").show();
+                $("#makeupArtistInfoSection").remove();
+            }
+
             const url = `${base_url}/salon/get-info.php`;
             $.ajax({
                 url: url,
@@ -184,11 +298,11 @@
                 },
                 success: function(result) {
                     const salon_info = result.result.info;
-                    $('#contactPersonForm [name=contact_person_name]').val(salon_info.contact_person_name);
-                    $('#contactPersonForm [name=contact_person_mobile]').val(salon_info.mobile_no);
-                    $('#contactPersonForm [name=contact_person_email]').val(salon_info.email_id);
-                    $("#contactPersonForm [name=contact_person_gender]").val(salon_info.contact_person_gender);
-                    $("#contactPersonForm [name=i_am_owner]").val(salon_info.i_am_owner)
+                    $('#infoForm [name=contact_person_name]').val(salon_info.contact_person_name);
+                    $('#infoForm [name=contact_person_mobile]').val(salon_info.mobile_no);
+                    $('#infoForm [name=contact_person_email]').val(salon_info.email_id);
+                    $("#infoForm [name=contact_person_gender]").val(salon_info.contact_person_gender);
+                    $("#infoForm [name=i_am_owner]").val(salon_info.i_am_owner)
 
                     $('#salonInfoForm [name=salon_name]').val(salon_info.salon_name);
                     $('#salonInfoForm [name=website]').val(salon_info.website);

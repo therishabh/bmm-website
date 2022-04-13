@@ -70,6 +70,7 @@ includeWithVariables('./../include/header.php', array('page_title' => "Book MY M
                                 <div class="g-recaptcha brochure__form__captcha" data-sitekey="6LeMSM8eAAAAABYjhVtzcDqWMCwLZu_oPCh2kBRB"></div>
                                 <div class="form-group text-center" style="margin-top: 15px;">
                                     <button type="submit" id="proRegisterBtn" class="btn login-btn">Sign Up</button>
+                                    <button type="button" id="timer-btn" class="btn login-btn" disabled><span></span> sec</button>
                                 </div>
                                 <div class="bar-text">
                                     <span> Already have an account ?</span>
@@ -85,6 +86,7 @@ includeWithVariables('./../include/header.php', array('page_title' => "Book MY M
                         <form class="login-form login-pro-form d-custom-none" id="proRegisterStepTwo">
                             <div class="form-heading">Registration - Verify OTP</div>
                             <div class="register-steps register-step2 mt-3">
+                                <div class="font-weight-bold h6 mb-2 text-light" id="send-otp-text"></div>
                                 <div class="form-group">
                                     <label for="otp_text">OTP</label>
                                     <input type="text" id="otp_text" placeholder="Enter OTP" class="form-control" maxlength="6" name="otp">
@@ -290,6 +292,8 @@ includeWithVariables('./../include/header.php', array('page_title' => "Book MY M
                             $('#proRegisterStepOne').hide();
                             $('#proRegisterStepTwo').show();
                             tempToken = data.token;
+                            const otpText = "OTP has been sent to : +91-" + signup_post_data.mobile_no
+                            $("#send-otp-text").text(otpText)
                             resendSetInterval();
                         },
                         error: function(error) {
@@ -313,15 +317,21 @@ includeWithVariables('./../include/header.php', array('page_title' => "Book MY M
         function resendSetInterval() {
             $('.resend-btn').hide();
             $('.resend-seconds').show();
+            $("#proRegisterBtn").hide();
+            $("#timer-btn").show();
             let resend_seconds = otpTiming;
             $('.resend-seconds span').text(resend_seconds);
+            $('#timer-btn span').text(resend_seconds);
             let interval = setInterval(function() {
                 resend_seconds--;
                 if (resend_seconds > 1) {
                     $('.resend-seconds span').text(resend_seconds);
+                    $('#timer-btn span').text(resend_seconds);
                 } else {
                     $('.resend-seconds').hide();
                     $('.resend-btn').show();
+                    $("#proRegisterBtn").show();
+                    $("#timer-btn").hide();
                     clearInterval(interval);
                     return;
                 }
