@@ -3642,6 +3642,15 @@ nav li:hover .submenu {
     margin-bottom: 20px;
 }
 
+.blog-post-box-detail .blog-category {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #f92a63;
+    margin-bottom: 5px;
+    display: block;
+    cursor: pointer;
+}
+
 .blog-post-box-detail p {
     font-size: 16px;
     line-height: 30px;
@@ -5715,4 +5724,89 @@ label.error {
 
 .search-list ul li:hover {
     background: #f1f1f1;
+}
+
+.dropdown-item span {
+    font-size: 80%;
+}
+
+.blog-item {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.blog-item a {
+    color: #333;
+    transition: 0.45s;
+}
+
+.blog-item a:hover {
+    color: #f92a63;
+    text-decoration: none;
+}
+
+.blog-item h4 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.blog-item p {
+    margin-bottom: 0px;
+}
+
+.blog-item .blog-category {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #f92a63;
+    margin-bottom: 5px;
+    display: block;
+    cursor: pointer;
+}
+
+ul.blog-tags {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+ul.blog-tags li {
+    list-style: none;
+    background: #f1f1f1;
+    color: #000;
+    padding: 4px 12px;
+    transition: all 0.45s;
+}
+
+ul.blog-tags li:hover {
+    background: #f92a63;
+    color: #fff;
+}
+
+ul.blog-filter {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    gap: 10px;
+}
+
+ul.blog-filter li {
+    list-style: none;
+    background: #f1f1f1;
+    color: #000;
+    padding: 4px 12px;
+    transition: all 0.45s;
+}
+
+ul.blog-filter li svg {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+ul.blog-filter li:hover {
+    background: #f92a63;
+    color: #fff;
 }
