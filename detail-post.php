@@ -27,7 +27,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                 <div class="blog-cateogry-title mb-3">
                     <span> Categories</span>
                 </div>
-                <div class="blog-categories-list">
+                <div class="blog-categories-list" id = "categories-list">
                     <ul>
                         <li>
                             <a href="#">Makeup</a>
@@ -40,17 +40,9 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                 <div class="blog-cateogry-title mb-3">
                     <span> Recent Posts</span>
                 </div>
-                <div class="blog-categories-list">
+                <div class="blog-categories-list" id="recent-post">
                     <ul>
                         <li><a href="blog-post-1.php">Cracking the Perfect Work from Home Make-up Look!</a></li>
-                        <li><a href="blog-post-2.php">The Best Eye Care Products to Nourish your Under Eyes</a></li>
-                        <li><a href="blog-post-3.php">The Bride Story: Your Complete Bridal Package!</a></li>
-                        <li><a href="blog-post-4.php">Ideas for Best Bridal Outfits for all Indian Wedding Functions!</a></li>
-                        <li><a href="blog-post-5.php">Make-up Products that are a Must for Every Bride’s Vanity Box!</a></li>
-                        <li><a href="blog-post-6.php">What are the 5 Best Lipstick Shades to Try in Summers!</a></li>
-                        <li><a href="blog-post-7.php">The Best Eye Make-up Products, to Make Your Eyes Dazzle!</a></li>
-                        <li><a href="blog-post-8.php">Top 10 Beauty & Make-up Hacks Every Bride Can Rock for her D-day!</a></li>
-
                     </ul>
                 </div>
             </div>
@@ -108,7 +100,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                 dataType : "JSON",
                 success : function(result){
                     if(result.result.length > 0){
-                        $(".blog-categories-list ul").text(result.result.length);
+                        $("#categories-list ul").text(result.result.length);
                         let data = "";
                         let count = 1;
                         result.result.forEach(function(val){
@@ -117,7 +109,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                             </li>`;
                             count++;
                         });
-                        $(".blog-categories-list").html(data);
+                        $("#categories-list").html(data);
                     }
                 }
             });
@@ -125,6 +117,38 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
         get_category_list();
 // ------------------------CATEGORIES ENDS HERE------------------------------------------------- 
 
-    
+
+
+//--------------------------RECENT POST STARTS HERE---------------------------------------------
+        let heading = getParameterByName('heading');
+        let get_recentpost_list = function(){
+            let recentPost = {
+                heading : heading
+            }
+        $.ajax({
+            url : base_url + "/blog/recent-post.php",
+            type : "GET",
+            data : recentPost,
+            dataType : "JSON",
+            success : function(result){
+                if(result.result.length > 0){
+                    $("#recent-post ul").text(result.result.length);
+                    let data = "";
+                    let count = 1;
+                    result.result.forEach(function(val){
+                        data += `<li>
+                            <a href = "#" class = "social-links">${val.heading}</a>
+                        </li>`;
+                        count++;
+                    });
+                    $("#recent-post").html(data);
+                }              
+            }
+        });
+        };
+        get_recentpost_list();
+//--------------------------RECENT POST ENDS HERE---------------------------------------------
+
+
 });
 </script>
