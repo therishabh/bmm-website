@@ -47,7 +47,7 @@
 
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label>Payment Option</label>
+                                    <label>Payment</label>
                                     <select name="payment_option" class="form-control">
                                         <option value="male">No Advance Payment</option>
                                         <option value="male">10% Advance Payment</option>
@@ -61,10 +61,19 @@
 
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label>Out of State Service</label>
+                                    <label>Travel to Outstation</label>
                                     <select name="payment_option" class="form-control">
-                                        <option value="male">Ready ot go anywhere</option>
-                                        <option value="male">Provide service in my area only</option>
+                                        <option value="male">Yes</option>
+                                        <option value="male">No</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Travel to Client location </label>
+                                    <select name="payment_option" class="form-control">
+                                        <option value="male">Yes</option>
+                                        <option value="male">No</option>
                                     </select>
                                 </div>
                             </div>

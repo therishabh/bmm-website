@@ -1998,70 +1998,44 @@
                 formatResult: function(item) {
                     return {
                         value: item.id,
-                        text: "[" + item.id + "] " + item.name,
+                        text: item.name,
                         html: [
-                            item.name + '<br />',
-                            // '<span>' + item.keys + '</span>',
-                            '<span>' + item.keys + '</span>',
+                            `${item.name} ${item.genderType ? '['+ item.genderType +']' : '' }<br/><span>${item.category}</span>`,
                         ]
                     };
                 },
                 events: {
                     search: function(qry, callback) {
                         $.ajax(
-                            `${base_url}/user/search/get-search-list.php`,
-                            {
+                            `${base_url}/user/search/get-search-list.php`, {
                                 data: {
                                     'q': qry
                                 }
                             }
                         ).done(function(res) {
-                            console.log(res.result)
-                            // for (const typeTest in res.result) {
-                            //     // console.log(`${type}`);
-                            //     callback(res.result.typeTest)
-                            // }
-                            callback(res.result.services)
+                            let responseData = [];
+                            categoryObj = {
+                                "services": "Services",
+                                "makeup_artist": "Makeup Artist",
+                                "salon": "Salon",
+                            }
+                            for (let key in res.result) {
+                                res.result[key].forEach(val => {
+                                    let obj = {
+                                        id: val.id,
+                                        category: categoryObj[key],
+                                        genderType: val.category,
+                                        name: val.name
+                                    }
+                                    responseData.push(obj);
+                                })
+                            }
+                            debugger;
+                            callback(responseData)
                         });
                     }
                 }
             });
-
-            // $('.search-bar-main input').keyup(function() {
-            //     let $this = $(this);
-            //     if (!$(this).val()) {
-            //         $('.search-list').hide();
-            //     } else {
-            //         $.ajax({
-            //             url: `${base_url}/user/search/get-search-list.php`,
-            //             type: 'GET',
-            //             dataType: 'JSON',
-            //             data : {q : $this.val()},
-            //             success: function(result) {
-            //                 // console.log(result.result);
-            //                 // $('.searchData').append(`<li>${result.result.services[0].name}</li>`);      
-
-            //                 serviceList = result.result.services;
-            //                 if (serviceList && serviceList.length > 0) {
-            //                     serviceList.forEach(service => {
-            //                         $('#searchData').append(`<li class="${service.id}">${service.name}<span>Salon</span></li>`);
-            //                     });
-            //                     // var value = $this.val().toLowerCase();
-            //                     // $("#searchData li").filter(function() {
-            //                     //     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            //                     // });
-            //                     $('.search-list').show();
-            //                 } else {}
-
-            //             }
-            //         });
-
-            //     }
-            // });
-
-            // $('body').click(function() {
-            //     $('.search-list').hide();
-            // });
 
             if (token) {
                 $.ajax({
