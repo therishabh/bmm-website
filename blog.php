@@ -12,122 +12,41 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                     <li>Bridal Makeup <i class="fa fa-times"></i> </li>
                 </ul>
 
-                <div class="blog-item">
-                    <div class="row">
-                        <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="blog-item">
                             <img src="assets/images/blog-img-1.jpg" class="img-fluid">
-                        </div>
-                        <div class="col-md-9">
                             <span class="blog-category">Bridal Makeup</span>
                             <a href="blog-post-1.php">
-                                <h4>Cracking the Perfect Work from Home Make-up Look!</h4>
+                                <h4>Glossy Makeup Is Officially All Over Instagram Again—And We’re Here</h4>
                             </a>
-                            <p>As we all have entered the ‘new normal’ in this fateful year 2020, work from home has become a norm for most of us...</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="blog-item">
-                    <div class="row">
-                        <div class="col-md-3">
+                    <div class="col-md-6">
+                        <div class="blog-item">
                             <img src="assets/images/blog-img-1.jpg" class="img-fluid">
-                        </div>
-                        <div class="col-md-9">
                             <span class="blog-category">Bridal Makeup</span>
                             <a href="blog-post-1.php">
-                                <h4>Cracking the Perfect Work from Home Make-up Look!</h4>
+                                <h4>Glossy Makeup Is Officially All Over Instagram Again—And We’re Here</h4>
                             </a>
-                            <p>As we all have entered the ‘new normal’ in this fateful year 2020, work from home has become a norm for most of us...</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="blog-item">
-                    <div class="row">
-                        <div class="col-md-3">
+                    <div class="col-md-6">
+                        <div class="blog-item">
                             <img src="assets/images/blog-img-1.jpg" class="img-fluid">
-                        </div>
-                        <div class="col-md-9">
                             <span class="blog-category">Bridal Makeup</span>
                             <a href="blog-post-1.php">
-                                <h4>Cracking the Perfect Work from Home Make-up Look!</h4>
+                                <h4>Glossy Makeup Is Officially All Over Instagram Again—And We’re Here</h4>
                             </a>
-                            <p>As we all have entered the ‘new normal’ in this fateful year 2020, work from home has become a norm for most of us...</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="blog-item">
-                    <div class="row">
-                        <div class="col-md-3">
+                    <div class="col-md-6">
+                        <div class="blog-item">
                             <img src="assets/images/blog-img-1.jpg" class="img-fluid">
-                        </div>
-                        <div class="col-md-9">
                             <span class="blog-category">Bridal Makeup</span>
                             <a href="blog-post-1.php">
-                                <h4>Cracking the Perfect Work from Home Make-up Look!</h4>
+                                <h4>Glossy Makeup Is Officially All Over Instagram Again—And We’re Here</h4>
                             </a>
-                            <p>As we all have entered the ‘new normal’ in this fateful year 2020, work from home has become a norm for most of us...</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-item">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <img src="assets/images/blog-img-1.jpg" class="img-fluid">
-                        </div>
-                        <div class="col-md-9">
-                            <span class="blog-category">Bridal Makeup</span>
-                            <a href="blog-post-1.php">
-                                <h4>Cracking the Perfect Work from Home Make-up Look!</h4>
-                            </a>
-                            <p>As we all have entered the ‘new normal’ in this fateful year 2020, work from home has become a norm for most of us...</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-item">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <img src="assets/images/blog-img-1.jpg" class="img-fluid">
-                        </div>
-                        <div class="col-md-9">
-                            <span class="blog-category">Bridal Makeup</span>
-                            <a href="blog-post-1.php">
-                                <h4>Cracking the Perfect Work from Home Make-up Look!</h4>
-                            </a>
-                            <p>As we all have entered the ‘new normal’ in this fateful year 2020, work from home has become a norm for most of us...</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-item">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <img src="assets/images/blog-img-1.jpg" class="img-fluid">
-                        </div>
-                        <div class="col-md-9">
-                            <span class="blog-category">Bridal Makeup</span>
-                            <a href="blog-post-1.php">
-                                <h4>Cracking the Perfect Work from Home Make-up Look!</h4>
-                            </a>
-                            <p>As we all have entered the ‘new normal’ in this fateful year 2020, work from home has become a norm for most of us...</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-item">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <img src="assets/images/blog-img-1.jpg" class="img-fluid">
-                        </div>
-                        <div class="col-md-9">
-                            <span class="blog-category">Bridal Makeup</span>
-                            <a href="blog-post-1.php">
-                                <h4>Cracking the Perfect Work from Home Make-up Look!</h4>
-                            </a>
-                            <p>As we all have entered the ‘new normal’ in this fateful year 2020, work from home has become a norm for most of us...</p>
                         </div>
                     </div>
                 </div>
@@ -153,7 +72,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                                 <a href="blog-post-1.php">
                                     <h4>Cracking the Perfect Work from Home Make-up Look!</h4>
                                 </a>
-                                <p>As we all have entered the ‘new normal’ in this fateful year 2020, work from home has become a norm for most of us...</p>
+
                             </div>
                         </div>
 

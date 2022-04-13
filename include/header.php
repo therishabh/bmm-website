@@ -695,152 +695,12 @@
                     </div>
                     <div class="col-md-3 col-3">
                         <div class="top-right-list">
-                            <!-- <div class="top-right-list-item">
-                            <div class="custom-dropdown">
-                                <div class="custom-dropdown-btn">
-                                    <i class="fas fa-users"></i> <span>Community</span></div>
-                                <div class="custom-dropdown-item">
-                                    <div class="row">
-                                        <div class="col-2 text-center mt-2"><i class="far fa-user-circle"></i> </div>
-                                        <div class="col-6 pl-0"><span>Company Profile</span><br><small>Sign in to see your profile</small> </div>
-                                        <div class="col-2"><i class="fa fa-bell"></i> </div>
-                                        <div class="col-2"><i class="fa fa-envelope"></i> </div>
-                                    </div>
-                                    <hr>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <a href="#" class="btn btn-primary btn-block">Sign In</a>
-                                        </div>
-                                        <div class="col-6">
-                                            <a href="#" class="btn btn-secondary btn-block">Create Account</a>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <img src="<?php echo base_url(); ?>assets/images/community_home.webp" alt="">
-                                        </div>
-                                        <div class="col-9">
-                                            <h6>Community Group</h6>
-                                            <p>Ask questions, join challenges, and get recommendations from people like you</p>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <img src="<?php echo base_url(); ?>assets/images/community_home.webp" alt="">
-                                        </div>
-                                        <div class="col-9">
-                                            <h6>Community Group</h6>
-                                            <p>Ask questions, join challenges, and get recommendations from people like you</p>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <img src="<?php echo base_url(); ?>assets/images/community_home.webp" alt="">
-                                        </div>
-                                        <div class="col-9">
-                                            <h6>Community Group</h6>
-                                            <p>Ask questions, join challenges, and get recommendations from people like you</p>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                </div>
-                            </div>
-                        </div> -->
-
-                            <!-- <div class="top-right-list-item">
-                            <div class="custom-dropdown">
-                                <div class="custom-dropdown-btn">
-                                    <i class="fas fa-hotel float-left"></i> <span class="float-left pl-2"> <span>Salon & Services</span> <br>
-                                    <small> Janak Puri, Delhi</small></span>
-                                </div>
-                                <div class="custom-dropdown-item">
-                                    <div class="row">
-                                        <div class="col-12 mt-2">
-                                            <h6><i class="fa fa-map-marker-alt"></i> &nbsp; Search My Salon</h6>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <h6>Upcoming Events </h6>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <img src="<?php echo base_url(); ?>assets/images/happening_new.webp" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="col-9">
-                                            <h6>Store Events</h6>
-                                            <p>Exciting launches, parties, & more!</p>
-                                        </div>
-                                    </div>
-                                    <hr>
-
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <img src="<?php echo base_url(); ?>assets/images/happening_events_2.webp" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="col-9">
-                                            <h6>What's New in Store</h6>
-                                            <p>Explore what's hot in your store</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
 
                             <div class="top-right-list-item">
                                 <div class="custom-dropdown">
-                                    <div id="loginBtn"></div>
-                                    <div class="custom-dropdown-item">
-                                        <?php include 'include/salon_menu.php' ?>
-                                        <!-- <div class="row">
-                                    <div class="col-2 text-center mt-2"><i class="far fa-user-circle"></i> </div>
-                                    <div class="col-10 pl-0"><span>Happy Friday, Beautiful</span><br><small>Sign in to Sephora for a more personalized experience
-                                        </small> </div>
-                                </div>
-                                <hr>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <a href="#" class="btn btn-primary btn-block">Sign In</a>
-                                    </div>
-                                    <div class="col-6">
-                                        <a href="#" class="btn btn-secondary btn-block">Create Account</a>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <h6>
-                                            Beauty Insider Summary</h6>
-                                        <p>
-                                            View activity, savings, benefits</p>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <h6>
-                                            Beauty Insider Summary</h6>
-                                        <p>
-                                            View activity, savings, benefits</p>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <h6>
-                                            Beauty Insider Summary</h6>
-                                        <p>
-                                            View activity, savings, benefits</p>
-                                    </div>
-                                </div>
-                                <hr> -->
-
+                                    <div class="custom-dropdown-btn">
+                                        <a class="sign-up loginBtn"><i class="far fa-user-circle float-left mr-2"></i> <span> Login </span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -850,9 +710,7 @@
                             </div>
 
                             <div class="top-right-list-item">
-                                <!-- <a href="cart-details.php"> -->
                                 <a href="#">
-                                    <!-- <span class="cart-count">2</span> -->
                                     <i class="fas fa-shopping-bag text-pink icons"></i>
                                 </a>
                             </div>
@@ -1988,9 +1846,50 @@
 
     </div>
 
+
+    <!-- The Modal -->
+    <div class="modal auth-modal" id="loginModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <section class="login-section p-0">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <section class="login">
+                        <form class="login-form">
+                            <div class="form-group">
+                            <div class="form-heading">Sign In</div>
+                                <div class="form-group mt-3">
+                                    <label>Mobile Number / Email id</label>
+                                    <input type="text" placeholder="Enter Email/Phone" class="form-control" maxlength="" name="emailOrPhoneNumber">
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" placeholder="Enter Password" class="form-control" maxlength="" name="password">
+                                </div>
+                                <div class="form-group text-center auth-btns">
+                                    <button type="submit" class="btn login-btn">Sign In</button>
+                                    <div class="or-text">
+                                        <span>OR</span>
+                                    </div>
+                                    <button type="button" id="signin-with-otp-btn" class="btn login-btn">Sign In with OTP</button>
+                                </div>
+                                <p class="text-white">Don't Have An Account ?<a class="text-white" href="register.php">Join Now</a></p>
+                            </div>
+                        </form>
+                    </section>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
     <script>
         $(function() {
             const token = localStorage.getItem("token");
+
+            $('.loginBtn').click(function() {
+                $('#loginModal').modal('show');
+            });
 
             $('.advancedAutoComplete').autoComplete({
                 minLength: 1,
