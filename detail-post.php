@@ -30,7 +30,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                 <div class="blog-categories-list" id="categories-list">
                     <ul>
                         <li>
-                            <a href="#">Makeup</a>
+                            <a href="#"></a>
                         </li>
                     </ul>
                 </div>
@@ -42,7 +42,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                 </div>
                 <div class="blog-categories-list" id="recent-post">
                     <ul>
-                        <li><a href="blog-post-1.php">Cracking the Perfect Work from Home Make-up Look!</a></li>
+                        <li><a href="blog-post-1.php"></a></li>
                     </ul>
                 </div>
             </div>
@@ -62,7 +62,6 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
             let post_data = {
                 post_id: post_id
             }
-
             $.ajax({
                 url: base_url + "/blog/post-detail.php",
                 type: "GET",
@@ -88,29 +87,19 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
 
 
         // ------------------------CATEGORIES STARTS HERE------------------------------------------------- 
-        let name = getParameterByName('name');
         let get_category_list = function() {
-            let list = {
-                name: name
-            }
             $.ajax({
-                url: base_url + "/blog/category-list.php",
+                url: base_url + "blog/category-list.php",
                 type: "GET",
-                data: list,
                 dataType: "JSON",
                 success: function(result) {
-                    if (result.result.length > 0) {
-                        $("#categories-list ul").text(result.result.length);
-                        let data = "";
-                        let count = 1;
-                        result.result.forEach(function(val) {
-                            data += `<li>
-                                <a href = "#" class = "social-links">${val.name}</a>
+                    let data = "";
+                    result.result.forEach(function(val) {
+                        data += `<li>
+                                <a href="#" class="social-links">${val.name}</a>
                             </li>`;
-                            count++;
-                        });
-                        $("#categories-list").html(data);
-                    }
+                    });
+                    $("#categories-list ul").html(data);
                 }
             });
         };
@@ -120,29 +109,19 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
 
 
         //--------------------------RECENT POST STARTS HERE---------------------------------------------
-        let heading = getParameterByName('heading');
         let get_recentpost_list = function() {
-            let recentPost = {
-                heading: heading
-            }
             $.ajax({
-                url: base_url + "/blog/recent-post.php",
+                url: base_url + "blog/recent-post.php",
                 type: "GET",
-                data: recentPost,
                 dataType: "JSON",
                 success: function(result) {
-                    if (result.result.length > 0) {
-                        $("#recent-post ul").text(result.result.length);
-                        let data = "";
-                        let count = 1;
-                        result.result.forEach(function(val) {
-                            data += `<li>
-                            <a href = "#" class = "social-links">${val.heading}</a>
+                    let data = "";
+                    result.result.forEach(function(val) {
+                        data += `<li>
+                            <a href="#" class="social-links">${val.heading}</a>
                         </li>`;
-                            count++;
-                        });
-                        $("#recent-post").html(data);
-                    }
+                    });
+                    $("#recent-post ul").html(data);
                 }
             });
         };
