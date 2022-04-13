@@ -1997,7 +1997,7 @@
                 resolver: 'custom',
                 formatResult: function(item) {
                     return {
-                        value: item.id,
+                        value: item.name,
                         text: item.name,
                         html: [
                             `${item.name} ${item.genderType ? '['+ item.genderType +']' : '' }<br/><span>${item.category}</span>`,
@@ -2030,12 +2030,20 @@
                                     responseData.push(obj);
                                 })
                             }
-                            debugger;
                             callback(responseData)
                         });
                     }
                 }
             });
+
+            $('.advancedAutoComplete').on('autocomplete.select', function(evt, item) {
+                debugger;
+            });
+
+            $('.advancedAutoComplete').on('autocomplete.freevalue', function(evt, value) {
+                debugger;
+            });
+
 
             if (token) {
                 $.ajax({
