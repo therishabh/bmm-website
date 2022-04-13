@@ -1,4 +1,3 @@
-
 <div id="body-wrapper">
     <section id="left-pannel">
         <ul>
@@ -28,11 +27,11 @@
             </li>
             <li>
                 <a href="manage-package.php" class="">
-                <i class="fa fa-briefcase" aria-hidden="true"></i>
+                    <i class="fa fa-briefcase" aria-hidden="true"></i>
                     Manage Package
                 </a>
             </li>
-            <li>
+            <li class="manage-amenities">
                 <a href="manage-amenities.php" class="">
                     <i class="fa fa-cogs" aria-hidden="true"></i>
                     Manage Amenities
@@ -56,7 +55,7 @@
                     Bank Info
                 </a>
             </li>
-            <li>
+            <li class="manage-timing">
                 <a href="manage-timing.php" class="">
                     <i class="fa fa-clock-o" aria-hidden="true"></i>
                     Manage Timing

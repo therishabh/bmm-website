@@ -1,5 +1,7 @@
 function logout() {
   localStorage.removeItem("salonToken");
+  localStorage.removeItem("salonName");
+  localStorage.removeItem("bmmSalonCategory");
   $.toast({
     heading: "Logout Successfully",
     showHideTransition: "slide",

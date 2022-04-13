@@ -172,6 +172,7 @@
 
         const token = localStorage.getItem("salonToken");
         if (token) {
+            const salonCategory = localStorage.getItem('bmmSalonCategory');
             const url = `${base_url}/salon/get-info.php`;
             $.ajax({
                 url: url,

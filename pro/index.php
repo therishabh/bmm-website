@@ -210,6 +210,7 @@ includeWithVariables('./../include/header.php', array('page_title' => "Book MY M
                         $("#signInBtn").removeAttr('disabled');
                         toastr.success("Sign in successfully");
                         localStorage.setItem("salonToken", result.token);
+                        localStorage.setItem("bmmSalonCategory", result.category);
                         window.location.replace('../salon/dashboard.php');
                     },
                     error: function(error) {
@@ -319,6 +320,7 @@ includeWithVariables('./../include/header.php', array('page_title' => "Book MY M
                         toastr.success('OTP successfully verified');
                         $("#verifyOTP").removeAttr('disabled');
                         localStorage.setItem("salonToken", result.token);
+                        localStorage.setItem("bmmSalonCategory", result.category);
                         window.location.replace('../salon/dashboard.php');
                     },
                     error: function(error) {

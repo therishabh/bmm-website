@@ -431,6 +431,7 @@ includeWithVariables('./../include/header.php', array('page_title' => "Book MY M
                         success: function(result) {
                             toastr.success('You have successfully Registered');
                             localStorage.setItem("salonToken", result.token);
+                            localStorage.setItem("bmmSalonCategory", result.category);
                             window.location.replace('../salon/dashboard.php');
                             $("#stepThreeSubmitBtn").removeAttr('disabled');
                         },

@@ -29,7 +29,7 @@
                 </a>
             </div>
             <div class="user-info-wrapper">
-                <div class="salon-name" id="headerSalonName">Geetanjali Salon</div>
+                <div class="salon-name" id="headerSalonName"></div>
                 <div class="logout-btn">
                     <button onclick="logout();">Logout</button>
                 </div>

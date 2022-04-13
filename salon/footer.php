@@ -13,6 +13,7 @@
         const token = localStorage.getItem("salonToken");
         if (token) {
             const salon_name = localStorage.getItem('salonName');
+            const salonCategory = localStorage.getItem('bmmSalonCategory');
             if (!salon_name) {
                 const url = `${base_url}/salon/get-info.php`;
                 $.ajax({
@@ -31,6 +32,10 @@
                 });
             } else {
                 $("#headerSalonName").text(salon_name);
+            }
+            if (salonCategory && salonCategory == 'makeup_artist') {
+                $("#left-pannel .manage-timing").remove();
+                $("#left-pannel .manage-amenities").remove();
             }
         } else {
             window.location.replace('../');
