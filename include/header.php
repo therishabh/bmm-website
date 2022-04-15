@@ -1847,36 +1847,75 @@
     </div>
 
 
-    <!-- The Modal -->
+    <!-- Login Modal -->
     <div class="modal auth-modal" id="loginModal">
         <div class="modal-dialog">
             <div class="modal-content">
 
                 <section class="login-section p-0">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <section class="login">
-                        <form class="login-form">
+                    <div class="login">
+                        <form class="login-form" id="loginForm">
                             <div class="form-group">
-                            <div class="form-heading">Sign In</div>
+                                <div class="form-heading">Sign In</div>
                                 <div class="form-group mt-3">
                                     <label>Mobile Number / Email id</label>
-                                    <input type="text" placeholder="Enter Email/Phone" class="form-control" maxlength="" name="emailOrPhoneNumber">
+                                    <input type="text" class="form-control" maxlength="" name="email_mobile">
                                 </div>
                                 <div class="form-group">
                                     <label>Password</label>
-                                    <input type="password" placeholder="Enter Password" class="form-control" maxlength="" name="password">
+                                    <input type="password" class="form-control" maxlength="" name="password">
                                 </div>
                                 <div class="form-group text-center auth-btns">
                                     <button type="submit" class="btn login-btn">Sign In</button>
                                     <div class="or-text">
                                         <span>OR</span>
                                     </div>
-                                    <button type="button" id="signin-with-otp-btn" class="btn login-btn">Sign In with OTP</button>
+                                    <button type="submit" class="btn login-btn">Sign In with OTP</button>
                                 </div>
-                                <p class="text-white">Don't Have An Account ?<a class="text-white" href="register.php">Join Now</a></p>
+                                <p class="text-white">Don't Have An Account? <span class="registerBtn cursor-pointer">Join Now</span></p>
                             </div>
                         </form>
-                    </section>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal auth-modal" id="registerModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <section class="login-section p-0">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="login">
+                        <form class="login-form">
+                            <div class="form-group">
+                                <div class="form-heading">Register</div>
+                                <div class="form-group">
+                                    <label>Full Name</label>
+                                    <input type="text" class="form-control" maxlength="" name="email">
+                                </div>
+                                <div class="form-group">
+                                    <label>Mobile Number</label>
+                                    <input type="text" class="form-control" maxlength="" name="phoneNumber">
+                                </div>
+                                <div class="form-group">
+                                    <label>Gender</label>
+                                    <select class="form-control">
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                                <div class="form-group text-center">
+                                    <button type="submit" class="btn login-btn">Register</button>
+                                </div>
+                                <p class="text-white">Have An Account? <span class="loginBtn cursor-pointer">Click here to Sign In</span></p>
+                            </div>
+                        </form>
+                    </div>
                 </section>
 
             </div>
@@ -1888,8 +1927,55 @@
             const token = localStorage.getItem("token");
 
             $('.loginBtn').click(function() {
+                $('.modal').modal('hide');
                 $('#loginModal').modal('show');
             });
+            $('.registerBtn').click(function() {
+                $('.modal').modal('hide');
+                $('#registerModal').modal('show');
+            });
+
+            let otpTiming = 60;
+            let tempToken;
+            let interval;
+            $("#loginForm").validate({
+                rules: {
+                    email_mobile: "required",
+                    password: "required",
+                },
+                messages: {
+                    email_mobile: "Please enter Mobile Number or Email id",
+                    password: "Please enter Password",
+                },
+
+                submitHandler: function(form) {
+                    let category = $('#loginForm input[name=salonType]:checked').val();
+                    let post_data = {
+                        email_mobile: $('#loginForm [name=email_mobile]').val(),
+                        password: $('#loginForm [name=password]').val(),
+                        category: category,
+                    }
+                    $("#signInBtn").attr('disabled', true);
+                    $.ajax({
+                        url: base_url + 'salon/auth/login.php',
+                        type: 'POST',
+                        dataType: 'JSON',
+                        data: JSON.stringify(post_data),
+                        success: function(result) {
+                            $("#signInBtn").removeAttr('disabled');
+                            toastr.success("Sign in successfully");
+                            localStorage.setItem("salonToken", result.token);
+                            localStorage.setItem("bmmSalonCategory", result.category);
+                            window.location.replace('../salon/dashboard.php');
+                        },
+                        error: function(error) {
+                            $("#signInBtn").removeAttr('disabled');
+                            toastr.error(error.responseJSON.message);
+                        }
+                    });
+                }
+            });
+
 
             $('.advancedAutoComplete').autoComplete({
                 minLength: 1,
