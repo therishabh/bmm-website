@@ -15,7 +15,16 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                 <div class="row">
                     <div class="col-md-6">
                         <div class="blog-item">
-                            <img src="assets/images/blog-img-1.jpg" class="img-fluid">
+                            <img src="" class="img-fluid">
+                            <span class="blog-category"></span>
+                            <!-- <a href="blog-post-1.php">
+                                <h4>Glossy Makeup Is Officially All Over Instagram Again—And We’re Here</h4>
+                            </a> -->
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-6">
+                        <div class="blog-item">
+                            <img src="" class="img-fluid">
                             <span class="blog-category">Bridal Makeup</span>
                             <a href="blog-post-1.php">
                                 <h4>Glossy Makeup Is Officially All Over Instagram Again—And We’re Here</h4>
@@ -39,16 +48,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                                 <h4>Glossy Makeup Is Officially All Over Instagram Again—And We’re Here</h4>
                             </a>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="blog-item">
-                            <img src="assets/images/blog-img-1.jpg" class="img-fluid">
-                            <span class="blog-category">Bridal Makeup</span>
-                            <a href="blog-post-1.php">
-                                <h4>Glossy Makeup Is Officially All Over Instagram Again—And We’re Here</h4>
-                            </a>
-                        </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <ul class="pagination justify-content-center mt-5">
@@ -493,3 +493,34 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
 </section>
 
 <?php include 'include/footer.php' ?>
+
+<script>
+    $(function(){
+        let get_post_listing = function(){
+            $.ajax({
+                url : base_url + "/blog/post-list.php",
+                type : "GET",
+                dataType : "JSON",
+                success : function(result){
+                    let data = "";
+                    result.result.forEach(function(val){
+                        data+=`<div class="col-md-6">
+                        <div class="blog-item">
+                            <img src="${val.image.name}" class="img-fluid">
+                            <span class="blog-category">${val.category.name}</span>
+                            <a href="#">
+                                <h4>${val.heading}</h4>
+                            </a>
+                        </div>
+                    </div>`;
+                    $(".blog-item").html(data);
+                    });  
+                }
+            });
+        };
+        get_post_listing();
+    });
+</script>
+
+
+

@@ -63,7 +63,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                 post_id: post_id
             }
             $.ajax({
-                url: base_url + "/blog/post-detail.php",
+                url: base_url + "blog/post-detail.php",
                 type: "GET",
                 data: post_data,
                 dataType: "JSON",
