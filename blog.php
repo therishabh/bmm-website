@@ -495,16 +495,16 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
 <?php include 'include/footer.php' ?>
 
 <script>
-    $(function(){
-        let get_post_listing = function(){
+    $(function() {
+        let get_post_listing = function() {
             $.ajax({
-                url : base_url + "/blog/post-list.php",
-                type : "GET",
-                dataType : "JSON",
-                success : function(result){
+                url: base_url + "/blog/post-list.php",
+                type: "GET",
+                dataType: "JSON",
+                success: function(result) {
                     let data = "";
-                    result.result.forEach(function(val){
-                        data+=`<div class="col-md-6">
+                    result.result.forEach(function(val) {
+                        data += `<div class="col-md-6">
                         <div class="blog-item">
                             <img src="${val.image.name}" class="img-fluid">
                             <span class="blog-category">${val.category.name}</span>
@@ -513,14 +513,11 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                             </a>
                         </div>
                     </div>`;
-                    $(".blog-item").html(data);
-                    });  
+                        $(".row").html(data);
+                    });
                 }
             });
         };
         get_post_listing();
     });
 </script>
-
-
-
