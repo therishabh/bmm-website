@@ -12,7 +12,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                     <li>Bridal Makeup <i class="fa fa-times"></i> </li>
                 </ul>
 
-                <div class="row">
+                <div class="row" id="post-list">
                     <div class="col-md-6">
                         <div class="blog-item">
                             <img src="" class="img-fluid">
@@ -374,92 +374,11 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                 <div class="blog-cateogry-title mb-3">
                     <span> Categories</span>
                 </div>
-                <div class="blog-categories-list">
+                <div class="blog-categories-list" id="categories-list">
                     <ul>
-                        <li><a href="#">Makeup <span class="blog-sub-categories-toggle-btn">+</span></a>
-                            <ul class="blog-sub-categories-list">
-                                <li><a href="#">Makeup Looks</a></li>
-                                <li><a href="#">Face</a></li>
-                                <li><a href="#">Eyes</a></li>
-                                <li><a href="#">Lips</a></li>
-                                <li><a href="#">Nails</a></li>
-                                <li><a href="#">Bridal Makeup</a></li>
-                            </ul>
+                        <li>
+                            <a href="#"></a>
                         </li>
-
-                        <li><a href="#">Skin <span class="blog-sub-categories-toggle-btn">+</span></a>
-                            <ul class="blog-sub-categories-list">
-                                <li><a href="#">Skin Types &amp; Care</a></li>
-                                <li><a href="#">Oily Skin and Acne</a></li>
-                                <li><a href="#">Anti Ageing</a></li>
-                                <li><a href="#">Sun Protection</a></li>
-                                <li><a href="#">Bridal Skin</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="#">Hair <span class="blog-sub-categories-toggle-btn">+</span></a>
-                            <ul class="blog-sub-categories-list">
-                                <li><a href="#">Hair Care</a></li>
-                                <li><a href="#">Hair Styling</a></li>
-                                <li><a href="#">Hair Colour</a></li>
-                                <li><a href="#">Bridal Hair</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="#">Personal Care <span class="blog-sub-categories-toggle-btn">+</span></a>
-                            <ul class="blog-sub-categories-list">
-                                <li><a href="#">Hand &amp; Foot Care</a></li>
-                                <li><a href="#">Nail Care</a></li>
-                                <li><a href="#">Personal Hygiene</a></li>
-                                <li><a href="#">Lingerie</a></li>
-                                <li><a href="#">Nasty Beauty</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="#">Wellness <span class="blog-sub-categories-toggle-btn">+</span></a>
-                            <ul class="blog-sub-categories-list">
-                                <li><a href="#">Fitness &amp; Weight Loss</a></li>
-                                <li><a href="#">Diet &amp; Recipes</a></li>
-                                <li><a href="#">Herbal &amp; Home Remedies</a></li>
-                                <li><a href="#">Pregnancy</a></li>
-                                <li><a href="#">Bridal Wellness</a></li>
-                                <li><a href="#">Working Women</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="#">Celebrity <span class="blog-sub-categories-toggle-btn">+</span></a>
-                            <ul class="blog-sub-categories-list">
-                                <li><a href="#">Fashion</a></li>
-                                <li><a href="#">Beauty</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="#">Men <span class="blog-sub-categories-toggle-btn">+</span></a>
-                            <ul class="blog-sub-categories-list">
-                                <li><a href="#">Grooming Advice</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="#">Luxury <span class="blog-sub-categories-toggle-btn">+</span></a>
-                            <ul class="blog-sub-categories-list">
-                                <li><a href="#">Makeup</a></li>
-                                <li><a href="#">Skin</a></li>
-                                <li><a href="#">Hair</a></li>
-                            </ul>
-                        </li>
-
-                        <!-- <li><a href="#">Beauty Treatments<span>(6)</span></a></li>
-                            <li><a href="#">Makeup<span>(13)</span></a></li>
-                            <li><a href="#">Hair Texture<span>(20)</span></a></li>
-                            <li><a href="#">Bridal<span>(16)</span></a></li>
-                            <li><a href="#">Lip<span>(3)</span></a></li>
-                            <li><a href="#">Hair Styling<span>(12)</span></a></li>
-                            <li><a href="#">Facials & Rituals<span>(4)</span></a></li>
-                            <li><a href="#">Hair Treatments<span>(7)</span></a></li>
-                            <li><a href="#">Nail Care<span>(11)</span></a></li>
-                            <li><a href="#">Hand & Feet<span>(4)</span></a></li>
-
-                          -->
                     </ul>
                 </div>
 
@@ -468,17 +387,9 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                 <div class="blog-cateogry-title mb-3">
                     <span> Recent Posts</span>
                 </div>
-                <div class="blog-categories-list">
+                <div class="blog-categories-list" id="recent-post">
                     <ul>
-                        <li><a href="blog-post-1.php">Cracking the Perfect Work from Home Make-up Look!</a></li>
-                        <li><a href="blog-post-2.php">The Best Eye Care Products to Nourish your Under Eyes</a></li>
-                        <li><a href="blog-post-3.php">The Bride Story: Your Complete Bridal Package!</a></li>
-                        <li><a href="blog-post-4.php">Ideas for Best Bridal Outfits for all Indian Wedding Functions!</a></li>
-                        <li><a href="blog-post-5.php">Make-up Products that are a Must for Every Bride’s Vanity Box!</a></li>
-                        <li><a href="blog-post-6.php">What are the 5 Best Lipstick Shades to Try in Summers!</a></li>
-                        <!-- <li><a href="blog-post-7.php">The Best Eye Make-up Products, to Make Your Eyes Dazzle!</a></li> -->
-                        <li><a href="blog-post-8.php">Top 10 Beauty & Make-up Hacks Every Bride Can Rock for her D-day!</a></li>
-
+                        <li><a href="blog-post-1.php"></a></li>
                     </ul>
                 </div>
             </div>
@@ -498,26 +409,68 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
     $(function() {
         let get_post_listing = function() {
             $.ajax({
-                url: base_url + "/blog/post-list.php",
+                url: base_url + "blog/post-list.php",
                 type: "GET",
                 dataType: "JSON",
                 success: function(result) {
                     let data = "";
                     result.result.forEach(function(val) {
                         data += `<div class="col-md-6">
-                        <div class="blog-item">
-                            <img src="${val.image.name}" class="img-fluid">
-                            <span class="blog-category">${val.category.name}</span>
-                            <a href="#">
-                                <h4>${val.heading}</h4>
-                            </a>
-                        </div>
-                    </div>`;
-                        $(".row").html(data);
+                            <div class="blog-item">
+                                <img src="${val.image.name}" class="img-fluid">
+                                <span class="blog-category">${val.category.name}</span>
+                                <a href="http://localhost/estep/bmm-website-new/detail-post.php?post-id=${val.id}">
+                                    <h4>${val.heading}</h4>
+                                </a>
+                            </div>
+                        </div>`;
+                        $("#post-list").html(data);
                     });
                 }
             });
-        };
+        }
         get_post_listing();
+
+        // ------------------------CATEGORIES STARTS HERE------------------------------------------------- 
+        let get_category_list = function() {
+            $.ajax({
+                url: base_url + "blog/category-list.php",
+                type: "GET",
+                dataType: "JSON",
+                success: function(result) {
+                    let data = "";
+                    result.result.forEach(function(val) {
+                        data += `<li>
+                                <a href="#" class="social-links">${val.name}</a>
+                            </li>`;
+                    });
+                    $("#categories-list ul").html(data);
+                }
+            });
+        };
+        get_category_list();
+        // ------------------------CATEGORIES ENDS HERE------------------------------------------------- 
+
+
+
+        //--------------------------RECENT POST STARTS HERE---------------------------------------------
+        let get_recentpost_list = function() {
+            $.ajax({
+                url: base_url + "blog/recent-post.php",
+                type: "GET",
+                dataType: "JSON",
+                success: function(result) {
+                    let data = "";
+                    result.result.forEach(function(val) {
+                        data += `<li>
+                            <a href="http://localhost/estep/bmm-website-new/detail-post.php?post-id=${val.id}" class="social-links">${val.heading}</a>
+                        </li>`;
+                    });
+                    $("#recent-post ul").html(data);
+                }
+            });
+        };
+        get_recentpost_list();
+        //--------------------------RECENT POST ENDS HERE---------------------------------------------
     });
 </script>

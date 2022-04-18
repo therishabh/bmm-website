@@ -118,7 +118,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                     let data = "";
                     result.result.forEach(function(val) {
                         data += `<li>
-                            <a href="#" class="social-links">${val.heading}</a>
+                            <a href="http://localhost/estep/bmm-website-new/detail-post.php?post-id=${val.id}" class="social-links">${val.heading}</a>
                         </li>`;
                     });
                     $("#recent-post ul").html(data);
