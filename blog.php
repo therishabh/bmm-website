@@ -51,13 +51,13 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                     </div> -->
                 </div>
 
-                <ul class="pagination justify-content-center mt-5">
-                    <li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
+                <ul class="pagination justify-content-center mt-5" id="blog_listing_pagination">
+                    <!-- <li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
                     <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
                     <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
                     <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
                     <li class="page-item"><a class="page-link" href="javascript:void(0);">4</a></li>
-                    <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li> -->
                 </ul>
 
                 <!-- <div class="row">
@@ -406,16 +406,28 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
 <?php include 'include/footer.php' ?>
 
 <script>
-    $(function(){
-        let get_post_listing = function(){
+    $(function() {
+        var page_no = "1";
+        var page_count = "10";
+        var category_id = "";
+        let total_pages = "";
+
+        let get_post_listing = function() {
+            let paramsData = {
+                page_no: page_no,
+                page_count: page_count,
+                category_id: category_id,
+            }
+
             $.ajax({
-                url : base_url + "blog/post-list.php",
-                type : "GET",
-                dataType : "JSON",
-                success : function(result){
+                url: base_url + "blog/post-list.php",
+                type: "GET",
+                data: paramsData,
+                dataType: "JSON",
+                success: function(result) {
                     let data = "";
-                    result.result.forEach(function(val){
-                        data+=`<div class="col-md-6">
+                    result.result.forEach(function(val) {
+                        data += `<div class="col-md-6">
                             <div class="blog-item">
                                 <img src="${val.image.name}" class="img-fluid">
                                 <span class="blog-category">${val.category.name}</span>
@@ -424,15 +436,53 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                                 </a>
                             </div>
                         </div>`;
-                        $("#post-list").html(data);
                     });
+                    $("#post-list").html(data);
+
+                    // PAGINATION
+                    let paginationLi = `<li class="page-item pagination-previous-btn"><a class="page-link">Previous</a></li>`
+                    total_pages = Math.ceil(result.total / page_count);
+                    for (var i = 1; i <= total_pages; i++) {
+                        if (i == page_no) {
+                            paginationLi += `<li class="page-item pagination-page-no active" data_id="${i}"><a class="page-link">${i}</a></li>`
+                        } else {
+                            paginationLi += `<li class="page-item pagination-page-no" data_id="${i}"><a class="page-link">${i}</a></li>`
+                        }
+                    }
+                    paginationLi += `<li class="page-item pagination-next-btn"><a class="page-link " >Next</a></li>`
+
+                    $("#blog_listing_pagination").html(paginationLi);
+                    if(total_pages == page_no){
+                        $(".pagination-next-btn").hide(); 
+                    }
+
+                    if(page_no == 1){
+                        $(".pagination-previous-btn").hide(); 
+                    }
                 }
             });
         }
         get_post_listing();
 
-         // ------------------------CATEGORIES STARTS HERE------------------------------------------------- 
-         let get_category_list = function() {
+        $("#blog_listing_pagination").on('click','.pagination-page-no',function() {
+            page_no = $(this).attr('data_id');
+            get_post_listing();
+        })
+
+        $("#blog_listing_pagination").on('click','.pagination-next-btn',function(){
+            page_no = parseInt(page_no) + 1;
+            get_post_listing();
+            
+        })
+        $("#blog_listing_pagination").on('click','.pagination-previous-btn',function(){
+            page_no = parseInt(page_no) -1;
+            get_post_listing();
+            
+        })
+
+
+        // ------------------------CATEGORIES STARTS HERE------------------------------------------------- 
+        let get_category_list = function() {
             $.ajax({
                 url: base_url + "blog/category-list.php",
                 type: "GET",
@@ -474,6 +524,3 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
         //--------------------------RECENT POST ENDS HERE---------------------------------------------
     });
 </script>
-
-
-
