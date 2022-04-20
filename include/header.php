@@ -1860,18 +1860,18 @@
                                 <div class="form-heading">Sign In</div>
                                 <div class="form-group mt-3">
                                     <label>Mobile Number / Email id</label>
-                                    <input type="text" class="form-control" maxlength="" name="email_mobile">
+                                    <input type="text" class="form-control" name="email_mobile">
                                 </div>
                                 <div class="form-group">
                                     <label>Password</label>
-                                    <input type="password" class="form-control" maxlength="" name="password">
+                                    <input type="password" class="form-control" name="password">
                                 </div>
                                 <div class="form-group text-center auth-btns">
-                                    <button type="submit" class="btn login-btn">Sign In</button>
+                                    <button type="submit" id="signInBtn" class="btn login-btn">Sign In</button>
                                     <div class="or-text">
                                         <span>OR</span>
                                     </div>
-                                    <button type="submit" class="btn login-btn">Sign In with OTP</button>
+                                    <button type="button" class="btn login-btn">Sign In with OTP</button>
                                 </div>
                                 <p class="text-white">Don't Have An Account? <span class="registerBtn cursor-pointer">Join Now</span></p>
                             </div>
@@ -1891,26 +1891,26 @@
                 <section class="login-section p-0">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <div class="login">
-                        <form class="login-form">
+                        <form class="login-form" id="proRegisterStepOne">
                             <div class="form-group">
                                 <div class="form-heading">Register</div>
                                 <div class="form-group">
                                     <label>Full Name</label>
-                                    <input type="text" class="form-control" maxlength="" name="email">
+                                    <input type="text" class="form-control" name="name">
                                 </div>
                                 <div class="form-group">
                                     <label>Mobile Number</label>
-                                    <input type="text" class="form-control" maxlength="" name="phoneNumber">
+                                    <input type="text" class="form-control" name="mobile_no">
                                 </div>
                                 <div class="form-group">
                                     <label>Gender</label>
-                                    <select class="form-control">
+                                    <select class="form-control" name="gender">
                                         <option value="male">Male</option>
                                         <option value="female">Female</option>
                                     </select>
                                 </div>
                                 <div class="form-group text-center">
-                                    <button type="submit" class="btn login-btn">Register</button>
+                                    <button type="submit" id="registerBtn" class="btn login-btn">Register</button>
                                 </div>
                                 <p class="text-white">Have An Account? <span class="loginBtn cursor-pointer">Click here to Sign In</span></p>
                             </div>
@@ -1938,6 +1938,7 @@
             let otpTiming = 60;
             let tempToken;
             let interval;
+
             $("#loginForm").validate({
                 rules: {
                     email_mobile: "required",
@@ -1949,27 +1950,64 @@
                 },
 
                 submitHandler: function(form) {
-                    let category = $('#loginForm input[name=salonType]:checked').val();
+                    debugger;
                     let post_data = {
                         email_mobile: $('#loginForm [name=email_mobile]').val(),
                         password: $('#loginForm [name=password]').val(),
-                        category: category,
                     }
                     $("#signInBtn").attr('disabled', true);
                     $.ajax({
-                        url: base_url + 'salon/auth/login.php',
+                        url: `${base_url}/user/auth/login.php`,
                         type: 'POST',
                         dataType: 'JSON',
                         data: JSON.stringify(post_data),
                         success: function(result) {
                             $("#signInBtn").removeAttr('disabled');
                             toastr.success("Sign in successfully");
-                            localStorage.setItem("salonToken", result.token);
-                            localStorage.setItem("bmmSalonCategory", result.category);
+                            localStorage.setItem("userToken", result.token);
                             window.location.replace('../salon/dashboard.php');
                         },
                         error: function(error) {
                             $("#signInBtn").removeAttr('disabled');
+                            toastr.error(error.responseJSON.message);
+                        }
+                    });
+                }
+            });
+
+            $("#proRegisterStepOne").validate({
+                rules: {
+                    name: "required",
+                    mobile_no: "required",
+                    gender: "required",
+                },
+                messages: {
+                    name: "Please enter Full Name",
+                    mobile_no: "Please enter Mobile Number",
+                    gender: "Please enter Password",
+                },
+
+                submitHandler: function(form) {
+                    let post_data = {
+                        name: $('#proRegisterStepOne [name=name]').val(),
+                        mobile_no: $('#proRegisterStepOne [name=mobile_no]').val(),
+                        gender: $('#proRegisterStepOne [name=gender]').val(),
+                    }
+                    $("#registerBtn").attr('disabled', true);
+                    $.ajax({
+                        url: `${base_url}/user/signup.php`,
+                        type: 'POST',
+                        dataType: 'JSON',
+                        data: JSON.stringify(post_data),
+                        success: function(result) {
+                            console.log(result);
+                            $("#registerBtn").removeAttr('disabled');
+                            toastr.success("You have successfully Registered");
+                            localStorage.setItem("userToken", result.token);
+                            window.location.replace('../user/dashboard.php');
+                        },
+                        error: function(error) {
+                            $("#registerBtn").removeAttr('disabled');
                             toastr.error(error.responseJSON.message);
                         }
                     });
