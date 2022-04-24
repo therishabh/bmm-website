@@ -2046,7 +2046,7 @@
                             $("#loginForm").hide();
                             toastr.success(result.message);
                             tempToken = result.token;
-                            resendSetInterval();
+                            signInResendSetInterval();
                         },
                         error: function(error) {
                             $("#signin-with-otp-btn").removeAttr('disabled');
@@ -2058,7 +2058,7 @@
                 }
             }
 
-            function resendSetInterval() {
+            function signInResendSetInterval() {
                 $('.resend-btn').hide();
                 $('.resend-seconds').show();
                 $("#signin-with-otp-btn").hide();
