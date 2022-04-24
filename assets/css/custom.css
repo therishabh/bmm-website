@@ -5844,3 +5844,8 @@ ul.blog-filter li:hover {
     text-align: left !important;
     display: block;
 }
+
+label.resend-seconds,
+label.register-resend-seconds {
+    text-align: center !important;
+}

@@ -1871,9 +1871,25 @@
                                     <div class="or-text">
                                         <span>OR</span>
                                     </div>
-                                    <button type="button" class="btn login-btn">Sign In with OTP</button>
+                                    <button type="button" id="signin-with-otp-btn" class="btn login-btn">Sign In with OTP</button>
                                 </div>
                                 <p class="text-white">Don't Have An Account? <span class="registerBtn cursor-pointer">Join Now</span></p>
+                            </div>
+                        </form>
+                        <form class="login-form login-pro-form d-custom-none" id="loginStepTwo">
+                            <div class="form-heading">Sign In - Verify OTP</div>
+                            <div class="register-steps register-step2 mt-3">
+                                <div class="form-group">
+                                    <label for="otp_text">OTP</label>
+                                    <input type="text" id="otp_text" placeholder="Enter OTP" class="form-control" maxlength="6" name="otp">
+                                </div>
+                                <div class="form-group"></div>
+                                <label class="resend-seconds"> <span class></span> sec</label>
+                                <div class="cursor-pointer resend-btn">Resend OTP</div>
+                                <div class="form-group text-center mt-3">
+                                    <div class="go-back-btn btn login-btn">Go Back</div>
+                                    <button type="submit" id="verifyOTP" class="btn login-btn">Verify OTP</button>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -1891,23 +1907,33 @@
                 <section class="login-section p-0">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <div class="login">
-                        <form class="login-form" id="proRegisterStepOne">
+                        <form class="login-form" id="registerStepOne">
                             <div class="form-group">
                                 <div class="form-heading">Register</div>
-                                <div class="form-group">
-                                    <label>Full Name</label>
-                                    <input type="text" class="form-control" name="name">
+                                <div class="row mt-3">
+                                    <div class="col-md-8">
+                                        <div class="form-group">
+                                            <label>Full Name</label>
+                                            <input type="text" class="form-control" name="name">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>Gender</label>
+                                            <select class="form-control" name="gender">
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label>Mobile Number</label>
                                     <input type="text" class="form-control" name="mobile_no">
                                 </div>
                                 <div class="form-group">
-                                    <label>Gender</label>
-                                    <select class="form-control" name="gender">
-                                        <option value="male">Male</option>
-                                        <option value="female">Female</option>
-                                    </select>
+                                    <label>Email Id</label>
+                                    <input type="text" class="form-control" name="email_id">
                                 </div>
                                 <div class="form-group text-center">
                                     <button type="submit" id="registerBtn" class="btn login-btn">Register</button>
@@ -1915,6 +1941,25 @@
                                 <p class="text-white">Have An Account? <span class="loginBtn cursor-pointer">Click here to Sign In</span></p>
                             </div>
                         </form>
+
+                        <form class="login-form login-pro-form d-custom-none" id="registerStepTwo">
+                            <div class="form-heading">Registration - Verify OTP</div>
+                            <div class="register-steps register-step2 mt-3">
+                                <div class="font-weight-bold h6 mb-2 text-light" id="send-otp-text"></div>
+                                <div class="form-group">
+                                    <label for="otp_text">OTP</label>
+                                    <input type="text" id="otp_text" placeholder="Enter OTP" class="form-control" maxlength="6" name="otp">
+                                </div>
+                                <div class="form-group"></div>
+                                <label class="register-resend-seconds"> <span class></span> sec</label>
+                                <div class="cursor-pointer resend-btn">Resend OTP</div>
+                                <div class="form-group text-center mt-3">
+                                    <div class="go-back-btn btn login-btn">Go Back</div>
+                                    <button type="submit" id="verifyOTP" class="btn login-btn">Verify OTP</button>
+                                </div>
+                            </div>
+                        </form>
+
                     </div>
                 </section>
 
@@ -1935,6 +1980,11 @@
                 $('#registerModal').modal('show');
             });
 
+
+            // *****************
+            // Login
+            // *****************
+
             let otpTiming = 60;
             let tempToken;
             let interval;
@@ -1950,7 +2000,6 @@
                 },
 
                 submitHandler: function(form) {
-                    debugger;
                     let post_data = {
                         email_mobile: $('#loginForm [name=email_mobile]').val(),
                         password: $('#loginForm [name=password]').val(),
@@ -1965,7 +2014,7 @@
                             $("#signInBtn").removeAttr('disabled');
                             toastr.success("Sign in successfully");
                             localStorage.setItem("userToken", result.token);
-                            window.location.replace('../salon/dashboard.php');
+                            window.location.replace('../dashboard.php');
                         },
                         error: function(error) {
                             $("#signInBtn").removeAttr('disabled');
@@ -1975,36 +2024,154 @@
                 }
             });
 
-            $("#proRegisterStepOne").validate({
+            $("#signin-with-otp-btn").click(function() {
+                sendOTPForLogin();
+            });
+
+            function sendOTPForLogin() {
+                $('#loginStepTwo input[name=otp]').val("")
+                let post_data = {
+                    mobile_no: $("#loginForm [name=email_mobile]").val(),
+                }
+                if (!!post_data.mobile_no) {
+                    $("#signin-with-otp-btn").attr('disabled', true);
+                    $.ajax({
+                        url: base_url + '/user/auth/login-with-otp.php',
+                        type: 'POST',
+                        dataType: 'JSON',
+                        data: JSON.stringify(post_data),
+                        success: function(result) {
+                            $("#signin-with-otp-btn").removeAttr('disabled');
+                            $("#loginStepTwo").show();
+                            $("#loginForm").hide();
+                            toastr.success(result.message);
+                            tempToken = result.token;
+                            resendSetInterval();
+                        },
+                        error: function(error) {
+                            $("#signin-with-otp-btn").removeAttr('disabled');
+                            toastr.error(error.responseJSON.message);
+                        }
+                    });
+                } else {
+                    toastr.error("Please enter Mobile Number");
+                }
+            }
+
+            function resendSetInterval() {
+                $('.resend-btn').hide();
+                $('.resend-seconds').show();
+                $("#signin-with-otp-btn").hide();
+                $("#timer-btn").show();
+                let resend_seconds = otpTiming;
+                $('.resend-seconds span').text(resend_seconds);
+                $('#timer-btn span').text(resend_seconds);
+                interval = setInterval(function() {
+                    resend_seconds--;
+                    if (resend_seconds > 1) {
+                        $('.resend-seconds span').text(resend_seconds);
+                        $('#timer-btn span').text(resend_seconds);
+                    } else {
+                        $('.resend-seconds').hide();
+                        $('.resend-btn').show();
+                        $("#signin-with-otp-btn").show();
+                        $("#timer-btn").hide();
+                        clearInterval(interval);
+                        return;
+                    }
+                }, 1000);
+            }
+
+            $('.resend-btn').click(function() {
+                sendOTPForLogin();
+            });
+
+            $("#loginStepTwo .go-back-btn").click(function() {
+                $("#loginStepTwo").hide();
+                $("#loginForm").show();
+                $("#signin-with-otp-btn").show();
+            });
+
+            $("#loginStepTwo").validate({
+                rules: {
+                    otp: {
+                        required: true,
+                        number: true,
+                        minlength: 4
+                    }
+                },
+                messages: {
+                    otp: {
+                        required: "Please enter OTP",
+                        number: "Please enter a valid OTP",
+                        minlength: "Please enter 4 digit OTP"
+                    }
+                },
+                submitHandler: function(form) {
+                    let post_data = {
+                        otp: $('#loginStepTwo input[name=otp]').val(),
+                        token: tempToken
+                    }
+                    $("#verifyOTP").attr('disabled', true);
+                    $.ajax({
+                        url: base_url + 'user/auth/verify-otp.php',
+                        type: 'POST',
+                        dataType: 'JSON',
+                        data: JSON.stringify(post_data),
+                        success: function(result) {
+                            clearInterval(interval);
+                            toastr.success('OTP successfully verified');
+                            $("#verifyOTP").removeAttr('disabled');
+                            localStorage.setItem("salonToken", result.token);
+                            localStorage.setItem("bmmSalonCategory", result.category);
+                            window.location.replace('../dashboard.php');
+                        },
+                        error: function(error) {
+                            $("#verifyOTP").removeAttr('disabled');
+                            toastr.error(error.responseJSON.message);
+                        }
+                    });
+                }
+            });
+
+            // *****************
+            // registerStepOne
+            // *****************
+
+            $("#registerStepOne").validate({
                 rules: {
                     name: "required",
                     mobile_no: "required",
+                    email_id: "required",
                     gender: "required",
                 },
                 messages: {
                     name: "Please enter Full Name",
                     mobile_no: "Please enter Mobile Number",
-                    gender: "Please enter Password",
+                    email_id: "Please enter Email Id",
+                    gender: "Please select Gender",
                 },
 
                 submitHandler: function(form) {
                     let post_data = {
-                        name: $('#proRegisterStepOne [name=name]').val(),
-                        mobile_no: $('#proRegisterStepOne [name=mobile_no]').val(),
-                        gender: $('#proRegisterStepOne [name=gender]').val(),
+                        name: $('#registerStepOne [name=name]').val(),
+                        mobile_no: $('#registerStepOne [name=mobile_no]').val(),
+                        email_id: $('#registerStepOne [name=email_id]').val(),
+                        gender: $('#registerStepOne [name=gender]').val(),
                     }
                     $("#registerBtn").attr('disabled', true);
                     $.ajax({
-                        url: `${base_url}/user/signup.php`,
+                        url: `${base_url}user/auth/signup.php`,
                         type: 'POST',
                         dataType: 'JSON',
                         data: JSON.stringify(post_data),
                         success: function(result) {
                             console.log(result);
-                            $("#registerBtn").removeAttr('disabled');
-                            toastr.success("You have successfully Registered");
-                            localStorage.setItem("userToken", result.token);
-                            window.location.replace('../user/dashboard.php');
+                            $("#registerStepOne #registerBtn").removeAttr('disabled')
+                            $('#registerStepOne').hide();
+                            $('#registerStepTwo').show();
+                            tempToken = result.token;
+                            resendSetInterval();
                         },
                         error: function(error) {
                             $("#registerBtn").removeAttr('disabled');
@@ -2014,6 +2181,99 @@
                 }
             });
 
+            // *****************
+            // registerStepTwo
+            // *****************
+            function resendSetInterval() {
+                $('.resend-btn').hide();
+                $('.register-resend-seconds').show();
+                $("#registerBtn").hide();
+                $("#timer-btn").show();
+                let resend_seconds = otpTiming;
+                $('.register-resend-seconds span').text(resend_seconds);
+                $('#timer-btn span').text(resend_seconds);
+                let interval = setInterval(function() {
+                    resend_seconds--;
+                    if (resend_seconds > 1) {
+                        $('.register-resend-seconds span').text(resend_seconds);
+                        $('#timer-btn span').text(resend_seconds);
+                    } else {
+                        $('.register-resend-seconds').hide();
+                        $('.resend-btn').show();
+                        $("#registerBtn").show();
+                        $("#timer-btn").hide();
+                        clearInterval(interval);
+                        return;
+                    }
+                }, 1000);
+            }
+
+            $('.resend-btn').click(function() {
+                let post_data = {
+                    token: tempToken
+                }
+                $.ajax({
+                    url: base_url + 'user/auth/resend-otp.php',
+                    type: 'POST',
+                    dataType: 'JSON',
+                    data: JSON.stringify(post_data),
+                    success: function() {
+                        resendSetInterval();
+                    }
+                });
+            });
+
+            $("#registerStepTwo").validate({
+                rules: {
+                    otp: {
+                        required: true,
+                        number: true,
+                        minlength: 4
+                    }
+                },
+                messages: {
+                    otp: {
+                        required: "Please enter OTP",
+                        number: "Please enter a valid OTP",
+                        minlength: "Please enter 4 digit OTP"
+                    }
+                },
+                submitHandler: function(form) {
+                    let post_data = {
+                        otp: $('#registerStepTwo input[name=otp]').val(),
+                        token: tempToken
+                    }
+                    $("#verifyOTP").attr('disabled', true);
+                    $.ajax({
+                        url: base_url + 'user/auth/verify-otp.php',
+                        type: 'POST',
+                        dataType: 'JSON',
+                        data: JSON.stringify(post_data),
+                        success: function(res) {
+                            // $('#registerStepTwo').hide();                            
+                            toastr.success('You have successfully Registered');
+                            localStorage.setItem("userToken", res.token);
+                            $('#registerModal').modal('hide');
+                            $("#verifyOTP").removeAttr('disabled');
+                            window.location.replace('user/dashboard.php');
+                        },
+                        error: function(error) {
+                            $("#verifyOTP").removeAttr('disabled');
+                            toastr.error(error.responseJSON.message);
+                        }
+                    });
+                }
+            });
+
+            $("#registerStepTwo .go-back-btn").click(function() {
+                $('#registerStepTwo').hide();
+                $('#registerStepOne').show();
+                $('#registerBtn').show();
+            })
+
+            // *****************
+            // advancedAutoComplete
+            // *****************
 
             $('.advancedAutoComplete').autoComplete({
                 minLength: 1,
@@ -2030,7 +2290,7 @@
                 events: {
                     search: function(qry, callback) {
                         $.ajax(
-                            `${base_url}/user/search/get-search-list.php`, {
+                            `${base_url}user/search/get-search-list.php`, {
                                 data: {
                                     'q': qry
                                 }
@@ -2059,18 +2319,14 @@
                 }
             });
 
-            $('.advancedAutoComplete').on('autocomplete.select', function(evt, item) {
-                debugger;
-            });
+            $('.advancedAutoComplete').on('autocomplete.select', function(evt, item) {});
 
-            $('.advancedAutoComplete').on('autocomplete.freevalue', function(evt, value) {
-                debugger;
-            });
+            $('.advancedAutoComplete').on('autocomplete.freevalue', function(evt, value) {});
 
 
             if (token) {
                 $.ajax({
-                    url: base_url + 'salon/get-info.php?token= ' + token + ' &q=info,services,amenities,timings',
+                    url: base_url + 'get-info.php?token= ' + token + ' &q=info,services,amenities,timings',
                     type: 'GET',
                     dataType: 'JSON',
                     success: function(result) {
