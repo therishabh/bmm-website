@@ -431,7 +431,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                             <div class="blog-item">
                                 <img src="${val.image.name}" class="img-fluid">
                                 <span class="blog-category">${val.category.name}</span>
-                                <a href="http://localhost/estep/bmm-website-new/detail-post.php?post-id=${val.id}">
+                                <a href="<?php echo base_url(); ?>detail-post.php?post-id=${val.id}">
                                     <h4>${val.heading}</h4>
                                 </a>
                             </div>
@@ -452,32 +452,32 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                     paginationLi += `<li class="page-item pagination-next-btn"><a class="page-link " >Next</a></li>`
 
                     $("#blog_listing_pagination").html(paginationLi);
-                    if(total_pages == page_no){
-                        $(".pagination-next-btn").hide(); 
+                    if (total_pages == page_no) {
+                        $(".pagination-next-btn").hide();
                     }
 
-                    if(page_no == 1){
-                        $(".pagination-previous-btn").hide(); 
+                    if (page_no == 1) {
+                        $(".pagination-previous-btn").hide();
                     }
                 }
             });
         }
         get_post_listing();
 
-        $("#blog_listing_pagination").on('click','.pagination-page-no',function() {
+        $("#blog_listing_pagination").on('click', '.pagination-page-no', function() {
             page_no = $(this).attr('data_id');
             get_post_listing();
         })
 
-        $("#blog_listing_pagination").on('click','.pagination-next-btn',function(){
+        $("#blog_listing_pagination").on('click', '.pagination-next-btn', function() {
             page_no = parseInt(page_no) + 1;
             get_post_listing();
-            
+
         })
-        $("#blog_listing_pagination").on('click','.pagination-previous-btn',function(){
-            page_no = parseInt(page_no) -1;
+        $("#blog_listing_pagination").on('click', '.pagination-previous-btn', function() {
+            page_no = parseInt(page_no) - 1;
             get_post_listing();
-            
+
         })
 
 
@@ -513,7 +513,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                     let data = "";
                     result.result.forEach(function(val) {
                         data += `<li>
-                            <a href="http://localhost/estep/bmm-website-new/detail-post.php?post-id=${val.id}" class="social-links">${val.heading}</a>
+                            <a href="<?php echo base_url(); ?>detail-post.php?post-id=${val.id}" class="social-links">${val.heading}</a>
                         </li>`;
                     });
                     $("#recent-post ul").html(data);

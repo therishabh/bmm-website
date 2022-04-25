@@ -1995,11 +1995,12 @@
                     }
                     $("#registerBtn").attr('disabled', true);
                     $.ajax({
-                        url: `${base_url}/user/signup.php`,
+                        url: `${base_url}/user/auth/signup.php`,
                         type: 'POST',
                         dataType: 'JSON',
                         data: JSON.stringify(post_data),
                         success: function(result) {
+                            debugger;
                             console.log(result);
                             $("#registerBtn").removeAttr('disabled');
                             toastr.success("You have successfully Registered");
