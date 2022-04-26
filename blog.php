@@ -430,10 +430,12 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                         data += `<div class="col-md-6">
                             <div class="blog-item">
                                 <img src="${val.image.name}" class="img-fluid">
-                                <span class="blog-category">${val.category.name}</span>
+                                <div class="blog-body">
                                 <a href="<?php echo base_url(); ?>detail-post.php?post-id=${val.id}">
-                                    <h4>${val.heading}</h4>
+                                <h4>${val.heading}</h4>
                                 </a>
+                                <span class="blog-category">${val.category.name}</span>
+                                </div>
                             </div>
                         </div>`;
                     });
