@@ -2165,6 +2165,7 @@
                         dataType: 'JSON',
                         data: JSON.stringify(post_data),
                         success: function(result) {
+                            debugger;
                             console.log(result);
                             $("#registerStepOne #registerBtn").removeAttr('disabled')
                             $('#registerStepOne').hide();
