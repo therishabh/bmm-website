@@ -5301,7 +5301,8 @@ ul.fotter-links2 li {
     margin: 1px 6px;
 }
 
-.resend-btn {
+.resend-btn,
+.register-resend-btn {
     display: none;
 }
 

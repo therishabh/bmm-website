@@ -1952,7 +1952,7 @@
                                 </div>
                                 <div class="form-group"></div>
                                 <label class="register-resend-seconds"> <span class></span> sec</label>
-                                <div class="cursor-pointer resend-btn">Resend OTP</div>
+                                <div class="cursor-pointer register-resend-btn">Resend OTP</div>
                                 <div class="form-group text-center mt-3">
                                     <div class="go-back-btn btn login-btn">Go Back</div>
                                     <button type="submit" id="verifyOTP" class="btn login-btn">Verify OTP</button>
@@ -2014,7 +2014,7 @@
                             $("#signInBtn").removeAttr('disabled');
                             toastr.success("Sign in successfully");
                             localStorage.setItem("userToken", result.token);
-                            window.location.replace('../dashboard.php');
+                            window.location.replace('user/dashboard.php');
                         },
                         error: function(error) {
                             $("#signInBtn").removeAttr('disabled');
@@ -2122,9 +2122,8 @@
                             clearInterval(interval);
                             toastr.success('OTP successfully verified');
                             $("#verifyOTP").removeAttr('disabled');
-                            localStorage.setItem("salonToken", result.token);
-                            localStorage.setItem("bmmSalonCategory", result.category);
-                            window.location.replace('../dashboard.php');
+                            localStorage.setItem("userToken", result.token);
+                            window.location.replace('user/dashboard.php');
                         },
                         error: function(error) {
                             $("#verifyOTP").removeAttr('disabled');
@@ -2185,7 +2184,7 @@
             // registerStepTwo
             // *****************
             function resendSetInterval() {
-                $('.resend-btn').hide();
+                $('.register-resend-btn').hide();
                 $('.register-resend-seconds').show();
                 $("#registerBtn").hide();
                 $("#timer-btn").show();
@@ -2199,7 +2198,7 @@
                         $('#timer-btn span').text(resend_seconds);
                     } else {
                         $('.register-resend-seconds').hide();
-                        $('.resend-btn').show();
+                        $('.register-resend-btn').show();
                         $("#registerBtn").show();
                         $("#timer-btn").hide();
                         clearInterval(interval);
@@ -2208,7 +2207,7 @@
                 }, 1000);
             }
 
-            $('.resend-btn').click(function() {
+            $('.register-resend-btn').click(function() {
                 let post_data = {
                     token: tempToken
                 }
