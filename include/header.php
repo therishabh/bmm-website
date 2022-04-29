@@ -1443,7 +1443,6 @@
                         data: JSON.stringify(post_data),
                         success: function(result) {
                             debugger;
-                            console.log(result);
                             $("#registerStepOne #registerBtn").removeAttr('disabled')
                             $('#registerStepOne').hide();
                             $('#registerStepTwo').show();
@@ -1615,7 +1614,7 @@
                     type: 'GET',
                     dataType: 'JSON',
                     success: function(result) {
-                        console.log(result);
+                        console.log(result)
                         for (let key in result) {
                             if (key == 'ladies') {
                                 $("#salonServices").append(`
@@ -1637,7 +1636,7 @@
                                     result[key][category].forEach(val => {
                                         var x = `#salonServices #${key}-card-body-wrapper .${intoSlug(category)}`;
                                         $(x).append(`
-                                      <li><a href="#">${val.name}</a></li>
+                                      <li><a href="service-list.php?service_id=${val.id}">${val.name}</a></li>
                                     `);
                                     })
                                 }
