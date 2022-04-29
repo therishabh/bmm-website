@@ -19,6 +19,9 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
         </div>
 
         <div id="salonsTab" class="custom-tab-content d-custom-block">
+            <div class="loading-wrapper">
+                <img src="assets/images/loader.gif" alt="loading">
+            </div>
             <div id="salonData">
                 <div class="row"></div>
             </div>
@@ -343,13 +346,14 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
 <script>
     $(function() {
         const urlParams = new URLSearchParams(window.location.search);
-            const service_id = urlParams.get('service_id');
+        const service_id = urlParams.get('service_id');
 
         var getListingResult = function() {
+            $(".loading-wrapper").show();
             $.ajax({
                 url: `${base_url}/user/search/get-listing-result.php`,
                 type: 'GET',
-                data:{
+                data: {
                     service_id: service_id
                 },
                 dataType: 'JSON',
@@ -357,7 +361,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                     result = result.result;
                     console.log(result);
 
-                    result.forEach(val=>{
+                    result.forEach(val => {
                         $('#salonData .row').append(`
                 <div class="col-md-4">
                     <a href="hair-masters.php" class="service-box">
@@ -373,7 +377,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                 </div>
                         `)
                     })
-                
+                    $(".loading-wrapper").hide();
                 }
             });
         }

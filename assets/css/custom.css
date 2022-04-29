@@ -5868,6 +5868,7 @@ label.register-resend-seconds {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 10px;
 }
 
 .loading-wrapper img {
