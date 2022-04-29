@@ -5861,3 +5861,16 @@ label.resend-seconds,
 label.register-resend-seconds {
     text-align: center !important;
 }
+
+.loading-wrapper {
+    height: 300px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-wrapper img {
+    width: 200px;
+    box-shadow: none !important;
+}
