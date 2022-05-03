@@ -5555,11 +5555,15 @@ label.error {
 
 .service-wrapper .service-wrapper-header {
     background: #e7e7e7;
-    padding: 25px;
+    padding: 20px;
+}
+
+.service-wrapper .service-wrapper-header p {
+    margin-bottom: 0px;
 }
 
 .service-wrapper .service-wrapper-body {
-    padding: 25px;
+    padding: 20px;
 }
 
 .service-wrapper .service-wrapper-body .service-wrapper-list {
@@ -5567,7 +5571,20 @@ label.error {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #ccc;
-    padding: 25px;
+    padding: 25px 0px;
+}
+
+.service-wrapper .service-wrapper-body .service-wrapper-list .discounted_price {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.service-wrapper .service-wrapper-body .service-wrapper-list:first-child {
+    padding-top: 0px;
+}
+
+.service-wrapper .service-wrapper-body .service-wrapper-list:last-child {
+    padding-bottom: 0px;
 }
 
 .service-wrapper .service-wrapper-body .service-wrapper-list p {
@@ -5874,4 +5891,16 @@ label.register-resend-seconds {
 .loading-wrapper img {
     width: 200px;
     box-shadow: none !important;
+}
+
+.bootstrap-autocomplete .dropdown-item a {
+    color: #333 !important;
+    display: block;
+}
+
+.bootstrap-autocomplete .dropdown-item.active a,
+.bootstrap-autocomplete .dropdown-item:active a {
+    color: #fff !important;
+    text-decoration: none;
+    background-color: #007bff;
 }
