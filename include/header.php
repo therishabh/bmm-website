@@ -1559,7 +1559,7 @@
                         value: item.name,
                         text: item.name,
                         html: [
-                            `${item.name} ${item.genderType ? '['+ item.genderType +']' : '' }<br/><span>${item.category}</span>`,
+                            `<a href="service-list.php?service_id=${item.id}">${item.name} ${item.genderType ? '['+ item.genderType +']' : '' }<br/><span>${item.category}</span></a>`,
                         ]
                     };
                 },
@@ -1614,7 +1614,7 @@
                     type: 'GET',
                     dataType: 'JSON',
                     success: function(result) {
-                        console.log(result)
+                        // console.log(result)
                         for (let key in result) {
                             if (key == 'ladies') {
                                 $("#salonServices").append(`
@@ -1628,8 +1628,8 @@
                                         `<div class="col-lg mb-4">
                                     <div class="menu-common-list">
                                         <div class="nav-submenu-title" data="${category}">${category}</div>
-                                        <ul class="checkbox-wrapper ${intoSlug(category)}"></ul>                       
-                                        </div>                
+                                        <ul class="checkbox-wrapper ${intoSlug(category)}"></ul>
+                                        </div>
                                     </div>
                                     `
                                     );

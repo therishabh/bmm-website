@@ -25,151 +25,18 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
             <div id="salonData">
                 <div class="row"></div>
             </div>
-            <!-- <div class="row">
-                <div class="col-md-4">
-                    <a href="hair-masters.php" class="service-box">
-                        <img src="assets/images/salon-shop-1.jpg" alt="" class="img-fluid" />
-                        <div class="service-body">
-                            <h4>Hair Masters Salon</h4>
-                            <p> <i class="fa fa-map-marker-alt"></i> Janakpuri, New Delhi</p>
-                            <span class="rating"><i class="fas fa-star"></i> 4.8</span>
-                            <span class="booked">76 Booked</span>
-                            <div class="salon-featured-tag">Recommended</div>
-                            <hr>
-                            <p><i class="fa fa-tags"></i> &nbsp; 20% off &nbsp; | &nbsp; Use BMM001</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="#" class="service-box">
-                        <img src="assets/images/salon-shop-2.jpg" alt="" class="img-fluid" />
-                        <div class="service-body">
-                            <h4>Looks Salon</h4>
-                            <p> <i class="fa fa-map-marker-alt"></i> Punjabi Bagh, New Delhi</p>
-                            <span class="rating"><i class="fas fa-star"></i> 3.9</span>
-                            <span class="booked">48 Booked</span>
-                            <hr>
-                            <p><i class="fa fa-tags"></i> &nbsp; 20% off &nbsp; | &nbsp; Use BMM001</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="#" class="service-box">
-                        <img src="assets/images/salon-shop-3.jpg" alt="" class="img-fluid" />
-                        <div class="service-body">
-                            <h4>Geetanjali Salon</h4>
-                            <p> <i class="fa fa-map-marker-alt"></i> Preet Vihar, New Delhi</p>
-                            <span class="rating"><i class="fas fa-star"></i> 4.5</span>
-                            <span class="booked">69 Booked</span>
-                            <hr>
-                            <p><i class="fa fa-tags"></i> &nbsp; 20% off &nbsp; | &nbsp; Use BMM001</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="#" class="service-box">
-                        <img src="assets/images/salon-shop-1.jpg" alt="" class="img-fluid" />
-                        <div class="service-body">
-                            <h4>Hair Masters Salon</h4>
-                            <p> <i class="fa fa-map-marker-alt"></i> Janakpuri, New Delhi</p>
-                            <span class="rating"><i class="fas fa-star"></i> 4.8</span>
-                            <span class="booked">132 Booked</span>
-                            <hr>
-                            <p><i class="fa fa-tags"></i> &nbsp; 20% off &nbsp; | &nbsp; Use BMM001</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="#" class="service-box">
-                        <img src="assets/images/salon-shop-1.jpg" alt="" class="img-fluid" />
-                        <div class="service-body">
-                            <h4>Hair Masters Salon</h4>
-                            <p> <i class="fa fa-map-marker-alt"></i> Janakpuri, New Delhi</p>
-                            <span class="rating"><i class="fas fa-star"></i> 4.8</span>
-                            <span class="booked">132 Booked</span>
-                            <div class="salon-featured-tag">Recommended</div>
-                            <hr>
-                            <p><i class="fa fa-tags"></i> &nbsp; 20% off &nbsp; | &nbsp; Use BMM001</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="#" class="service-box">
-                        <img src="assets/images/salon-shop-1.jpg" alt="" class="img-fluid" />
-                        <div class="service-body">
-                            <h4>Hair Masters Salon</h4>
-                            <p> <i class="fa fa-map-marker-alt"></i> Janakpuri, New Delhi</p>
-                            <span class="rating"><i class="fas fa-star"></i> 4.8</span>
-                            <span class="booked">132 Booked</span>
-                            <hr>
-                            <p><i class="fa fa-tags"></i> &nbsp; 20% off &nbsp; | &nbsp; Use BMM001</p>
-                        </div>
-                    </a>
-                </div>
-            </div> -->
         </div>
 
         <div id="servicesTab" class="custom-tab-content">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="service-wrapper">
-                        <div class="service-wrapper-header">
-                            <h4>Hair Masters Salon</h4>
-                            <p> <i class="fa fa-map-marker-alt"></i> Janakpuri, New Delhi</p>
-                        </div>
-                        <div class="service-wrapper-body">
-                            <div class="service-wrapper-list">
-                                <div>
-                                    <h5>Hair Cut</h5>
-                                    <p>Rs. 119</p>
-                                </div>
-                                <div>
-                                    <button class="btn btn-pink">Book</button>
-                                </div>
-                            </div>
-                            <div class="service-wrapper-list">
-                                <div>
-                                    <h5>Shampoo & Conditioning</h5>
-                                    <p>Rs. 199</p>
-                                </div>
-                                <div>
-                                    <button class="btn btn-pink">Book</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-wrapper">
-                        <div class="service-wrapper-header">
-                            <h4>Looks Salon</h4>
-                            <p> <i class="fa fa-map-marker-alt"></i> Punjabi Bagh, New Delhi</p>
-                        </div>
-                        <div class="service-wrapper-body">
-                            <div class="service-wrapper-list">
-                                <div>
-                                    <h5>Hair Cut</h5>
-                                    <p>Rs. 85</p>
-                                </div>
-                                <div>
-                                    <button class="btn btn-pink">Book</button>
-                                </div>
-                            </div>
-                            <div class="service-wrapper-list">
-                                <div>
-                                    <h5>Shampoo & Conditioning</h5>
-                                    <p>Rs. 149</p>
-                                </div>
-                                <div>
-                                    <button class="btn btn-pink">Book</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div id="serviceData">
             </div>
         </div>
 
         <div id="bridalTab" class="custom-tab-content">
-            <div class="row">
+            <div id="bridalData">
+                <div class="row"></div>
+            </div>
+            <!-- <div class="row">
                 <div class="col-md-4">
                     <a href="hair-masters.php" class="service-box">
                         <img src="assets/images/salon-shop-4.jpg" alt="" class="img-fluid" />
@@ -250,11 +117,14 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                         </div>
                     </a>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <div id="luxeTab" class="custom-tab-content">
-            <div class="row">
+            <div id="luxeData">
+                <div class="row"></div>
+            </div>
+            <!-- <div class="row">
                 <div class="col-md-4">
                     <a href="hair-masters.php" class="service-box">
                         <img src="assets/images/salon-shop-7.jpg" alt="" class="img-fluid" />
@@ -335,7 +205,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                         </div>
                     </a>
                 </div>
-            </div>
+            </div> -->
         </div>
 
     </div>
@@ -365,19 +235,91 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                         $('#salonData .row').append(`
                 <div class="col-md-4">
                     <a href="hair-masters.php" class="service-box">
-                        <img src="assets/images/salon-shop-1.jpg" alt="" class="img-fluid" />
+                        <img src="https://via.placeholder.com/400x250" alt="" class="img-fluid" />
                         <div class="service-body">
                             <h4> ${val.salon_name}</h4>
                             <p> <i class="fa fa-map-marker-alt"></i> ${val.city} ${val.state}</p>
                             <span class="rating"><i class="fas fa-star"></i> ${val.rating}</span>
                             <hr>
-                            <p><i class="fa fa-tags"></i> &nbsp; 20% off &nbsp; | &nbsp; Use BMM001</p>
+                            <p class="discountPara"></p>
+                        </div>
+                    </a>
+                </div>
+                        `);
+
+                        if (val.is_bridal_service_provide) {
+                            $('#bridalData .row').append(`
+                <div class="col-md-4">
+                    <a href="hair-masters.php" class="service-box">
+                        <img src="https://via.placeholder.com/400x250" alt="" class="img-fluid" />
+                        <div class="service-body">
+                            <h4> ${val.salon_name}</h4>
+                            <p> <i class="fa fa-map-marker-alt"></i> ${val.city} ${val.state}</p>
+                            <span class="rating"><i class="fas fa-star"></i> ${val.rating}</span>
+                            <hr>
+                            <p class="discountPara"></p>
                         </div>
                     </a>
                 </div>
                         `)
-                    })
+                        } 
+                        if (val.is_luxury_service_provide) {
+                            $('#luxeData .row').append(`
+                <div class="col-md-4">
+                    <a href="hair-masters.php" class="service-box">
+                        <img src="https://via.placeholder.com/400x250" alt="" class="img-fluid" />
+                        <div class="service-body">
+                            <h4> ${val.salon_name}</h4>
+                            <p> <i class="fa fa-map-marker-alt"></i> ${val.city} ${val.state}</p>
+                            <span class="rating"><i class="fas fa-star"></i> ${val.rating}</span>
+                            <hr>
+                            <p class="discountPara"></p>
+                        </div>
+                    </a>
+                </div>
+                        `)
+                        }
+
+
+                        $('#serviceData').append(`
+                    <div class="service-wrapper">
+                        <div class="service-wrapper-header">
+                            <h4>${val.salon_name}</h4>
+                            <p> <i class="fa fa-map-marker-alt"></i> ${val.city} ${val.state}</p>
+                        </div>
+                        <div class="service-wrapper-body">
+                        </div>
+                    </div>
+                        `)
+
+                        val.coupons.forEach((val2, index) => {
+                            if (index == 0) {
+                                $('.discountPara').append(`
+                                <i class="fa fa-tags"></i> &nbsp; ${val2.discount_percent? `${val2.discount_percent} % off` : `${val2.flat_discount_amount} Flat Discount`}
+                            `)
+                            }
+                        });
+
+                        val.services.forEach((serviceVal, index) => {
+                            $('#serviceData .service-wrapper-body').append(`
+                            <div class="service-wrapper-list" id="${serviceVal.id}">
+                                <div>
+                                    <h5>${serviceVal.name} [${serviceVal.category}] </h5>
+                                    <div>
+                                    <s>Rs. ${serviceVal.mrp_price}</s>
+                                    <span class="discounted_price">Rs. ${serviceVal.discounted_price}</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button class="btn btn-pink">Book</button>
+                                </div>
+                            </div>                        
+                            `)
+                        });
+
+                    });
                     $(".loading-wrapper").hide();
+
                 }
             });
         }
