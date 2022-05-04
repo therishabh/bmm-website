@@ -93,7 +93,7 @@ includeWithVariables('./../include/header.php', array('page_title' => "Book MY M
                                 </div>
                                 <div class="form-group"></div>
                                 <label class="resend-seconds"> <span class></span> sec</label>
-                                <div class="cursor-pointer resend-btn">Resend OTP</div>
+                                <div class="cursor-pointer resend-btn text-white font-weight-bold" style="font-size: 16px; text-decoration: underline;">Resend OTP</div>
                                 <div class="form-group text-center mt-3">
                                     <div class="go-back-btn btn login-btn">Go Back</div>
                                     <button type="submit" id="verifyOTP" class="btn login-btn">Verify OTP</button>
@@ -293,7 +293,7 @@ includeWithVariables('./../include/header.php', array('page_title' => "Book MY M
                             $('#proRegisterStepTwo').show();
                             tempToken = data.token;
                             const otpText = "OTP has been sent to : +91-" + signup_post_data.mobile_no
-                            $("#send-otp-text").text(otpText)
+                            $("#proRegisterStepTwo #send-otp-text").text(otpText);
                             resendSetInterval();
                         },
                         error: function(error) {
