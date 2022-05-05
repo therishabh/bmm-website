@@ -5652,7 +5652,8 @@ label.error {
 }
 
 .button-wrap .sign-in-btn,
-.login-form .go-back-btn {
+.login-form .go-back-btn,
+.login-form .user-go-back-btn {
     background: #f92b62;
     color: #fff;
     border: 2px solid #fff;

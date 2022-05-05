@@ -1148,7 +1148,7 @@
                                     <div class="or-text">
                                         <span>OR</span>
                                     </div>
-                                    <button type="button" id="signin-with-otp-btn" class="btn login-btn">Sign In with OTP</button>
+                                    <button type="button" id="user-signin-with-otp-btn" class="btn login-btn">Sign In with OTP</button>
                                 </div>
                                 <p class="text-white">Don't Have An Account? <span class="registerBtn cursor-pointer">Join Now</span></p>
                             </div>
@@ -1162,9 +1162,9 @@
                                 </div>
                                 <div class="form-group"></div>
                                 <label class="resend-seconds"> <span class></span> sec</label>
-                                <div class="cursor-pointer resend-btn">Resend OTP</div>
+                                <div class="cursor-pointer user-login-resend-btn">Resend OTP</div>
                                 <div class="form-group text-center mt-3">
-                                    <div class="go-back-btn btn login-btn">Go Back</div>
+                                    <div class="user-go-back-btn btn login-btn">Go Back</div>
                                     <button type="submit" id="verifyOTP" class="btn login-btn">Verify OTP</button>
                                 </div>
                             </div>
@@ -1229,9 +1229,9 @@
                                 </div>
                                 <div class="form-group"></div>
                                 <label class="register-resend-seconds"> <span class></span> sec</label>
-                                <div class="cursor-pointer register-resend-btn">Resend OTP</div>
+                                <div class="cursor-pointer user-register-resend-btn">Resend OTP</div>
                                 <div class="form-group text-center mt-3">
-                                    <div class="go-back-btn btn login-btn">Go Back</div>
+                                    <div class="user-go-back-btn btn login-btn">Go Back</div>
                                     <button type="submit" id="verifyOTP" class="btn login-btn">Verify OTP</button>
                                 </div>
                             </div>
@@ -1301,7 +1301,7 @@
                 }
             });
 
-            $("#signin-with-otp-btn").click(function() {
+            $("#user-signin-with-otp-btn").click(function() {
                 sendOTPForLogin();
             });
 
@@ -1311,14 +1311,14 @@
                     mobile_no: $("#loginForm [name=email_mobile]").val(),
                 }
                 if (!!post_data.mobile_no) {
-                    $("#signin-with-otp-btn").attr('disabled', true);
+                    $("#user-signin-with-otp-btn").attr('disabled', true);
                     $.ajax({
                         url: base_url + '/user/auth/login-with-otp.php',
                         type: 'POST',
                         dataType: 'JSON',
                         data: JSON.stringify(post_data),
                         success: function(result) {
-                            $("#signin-with-otp-btn").removeAttr('disabled');
+                            $("#user-signin-with-otp-btn").removeAttr('disabled');
                             $("#loginStepTwo").show();
                             $("#loginForm").hide();
                             toastr.success(result.message);
@@ -1326,7 +1326,7 @@
                             signInResendSetInterval();
                         },
                         error: function(error) {
-                            $("#signin-with-otp-btn").removeAttr('disabled');
+                            $("#user-signin-with-otp-btn").removeAttr('disabled');
                             toastr.error(error.responseJSON.message);
                         }
                     });
@@ -1336,9 +1336,9 @@
             }
 
             function signInResendSetInterval() {
-                $('.resend-btn').hide();
+                $('.user-login-resend-btn').hide();
                 $('.resend-seconds').show();
-                $("#signin-with-otp-btn").hide();
+                $("#user-signin-with-otp-btn").hide();
                 $("#timer-btn").show();
                 let resend_seconds = otpTiming;
                 $('.resend-seconds span').text(resend_seconds);
@@ -1350,8 +1350,8 @@
                         $('#timer-btn span').text(resend_seconds);
                     } else {
                         $('.resend-seconds').hide();
-                        $('.resend-btn').show();
-                        $("#signin-with-otp-btn").show();
+                        $('.user-login-resend-btn').show();
+                        $("#user-signin-with-otp-btn").show();
                         $("#timer-btn").hide();
                         clearInterval(interval);
                         return;
@@ -1359,14 +1359,14 @@
                 }, 1000);
             }
 
-            $('.resend-btn').click(function() {
+            $('.user-login-resend-btn').click(function() {
                 sendOTPForLogin();
             });
 
-            $("#loginStepTwo .go-back-btn").click(function() {
+            $("#loginStepTwo .user-go-back-btn").click(function() {
                 $("#loginStepTwo").hide();
                 $("#loginForm").show();
-                $("#signin-with-otp-btn").show();
+                $("#user-user-signin-with-otp-btn").show();
             });
 
             $("#loginStepTwo").validate({
@@ -1461,7 +1461,7 @@
             // registerStepTwo
             // *****************
             function resendSetInterval() {
-                $('.register-resend-btn').hide();
+                $('.user-register-resend-btn').hide();
                 $('.register-resend-seconds').show();
                 $("#registerBtn").hide();
                 $("#timer-btn").show();
@@ -1475,7 +1475,7 @@
                         $('#timer-btn span').text(resend_seconds);
                     } else {
                         $('.register-resend-seconds').hide();
-                        $('.register-resend-btn').show();
+                        $('.user-register-resend-btn').show();
                         $("#registerBtn").show();
                         $("#timer-btn").hide();
                         clearInterval(interval);
@@ -1484,7 +1484,7 @@
                 }, 1000);
             }
 
-            $('.register-resend-btn').click(function() {
+            $('.user-register-resend-btn').click(function() {
                 let post_data = {
                     token: tempToken
                 }
@@ -1541,7 +1541,7 @@
                 }
             });
 
-            $("#registerStepTwo .go-back-btn").click(function() {
+            $("#registerStepTwo .user-go-back-btn").click(function() {
                 $('#registerStepTwo').hide();
                 $('#registerStepOne').show();
                 $('#registerBtn').show();
