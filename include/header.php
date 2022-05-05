@@ -1559,7 +1559,8 @@
                         value: item.name,
                         text: item.name,
                         html: [
-                            `<a href="service-list.php?service_id=${item.id}">${item.name} ${item.genderType ? '['+ item.genderType +']' : '' }<br/><span>${item.category}</span></a>`,
+                            `${item.name} ${item.genderType ? '['+ item.genderType +']' : '' }<br/><span>${item.category}</span>`,
+                            // `<a href="service-list.php?service_id=${item.id}">${item.name} ${item.genderType ? '['+ item.genderType +']' : '' }<br/><span>${item.category}</span></a>`,
                         ]
                     };
                 },
@@ -1595,7 +1596,9 @@
                 }
             });
 
-            $('.advancedAutoComplete').on('autocomplete.select', function(evt, item) {});
+            $('.advancedAutoComplete').on('autocomplete.select', function(evt, item) {
+                window.location.replace(`service-list.php?service_id=${item.id}`);
+            });
 
             $('.advancedAutoComplete').on('autocomplete.freevalue', function(evt, value) {});
 
