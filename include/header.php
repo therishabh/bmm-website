@@ -697,7 +697,7 @@
                             <div class="top-right-list-item">
                                 <a href="cart.php" class="cart-anchor">
                                     <i class="fas fa-shopping-bag text-pink icons"></i>
-                                    <span class="cart-count-circle">20</span>
+                                    <span class="cart-count-circle">0</span>
                                 </a>
                             </div>
 

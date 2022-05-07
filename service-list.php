@@ -215,10 +215,12 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
 
 <script>
     $(function() {
+        const token = localStorage.getItem("userToken");
         const urlParams = new URLSearchParams(window.location.search);
         const service_id = urlParams.get('service_id');
 
         var getListingResult = function() {
+            var cartCount = '';
             $(".loading-wrapper").show();
             $.ajax({
                 url: `${base_url}/user/search/get-listing-result.php`,
@@ -262,7 +264,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                     </a>
                 </div>
                         `)
-                        } 
+                        }
                         if (val.is_luxury_service_provide) {
                             $('#luxeData .row').append(`
                 <div class="col-md-4">
@@ -311,7 +313,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                                     </div>
                                 </div>
                                 <div>
-                                    <button class="btn btn-pink">Book</button>
+                                    <button class="btn btn-pink bookServiceBtn">Book</button>
                                 </div>
                             </div>                        
                             `)
@@ -323,6 +325,17 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                 }
             });
         }
+
+        $('body').on('click', '.bookServiceBtn', function() {
+            if (!token){
+                $('#loginModal').modal('show');
+            }
+            else{
+                $('.cart-count-circle').text('1');
+                alert($(this).parents('.service-wrapper-body').find('.service-wrapper-list').attr('id'));
+            }
+        });
+
         getListingResult();
     })
 </script>
