@@ -63,7 +63,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                 post_id: post_id
             }
             $.ajax({
-                url: base_url + "blog/post-detail.php",
+                url: base_url + "user/blog/post-detail.php",
                 type: "GET",
                 data: post_data,
                 dataType: "JSON",
@@ -89,7 +89,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
         // ------------------------CATEGORIES STARTS HERE------------------------------------------------- 
         let get_category_list = function() {
             $.ajax({
-                url: base_url + "blog/category-list.php",
+                url: base_url + "user/blog/category-list.php",
                 type: "GET",
                 dataType: "JSON",
                 success: function(result) {
@@ -111,7 +111,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
         //--------------------------RECENT POST STARTS HERE---------------------------------------------
         let get_recentpost_list = function() {
             $.ajax({
-                url: base_url + "blog/recent-post.php",
+                url: base_url + "user/blog/recent-post.php",
                 type: "GET",
                 dataType: "JSON",
                 success: function(result) {
