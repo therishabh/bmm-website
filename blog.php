@@ -420,7 +420,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
             }
 
             $.ajax({
-                url: base_url + "blog/post-list.php",
+                url: base_url + "user/blog/post-list.php",
                 type: "GET",
                 data: paramsData,
                 dataType: "JSON",
@@ -430,10 +430,12 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                         data += `<div class="col-md-6">
                             <div class="blog-item">
                                 <img src="${val.image.name}" class="img-fluid">
-                                <span class="blog-category">${val.category.name}</span>
+                                <div class="blog-body">
                                 <a href="<?php echo base_url(); ?>detail-post.php?post-id=${val.id}">
-                                    <h4>${val.heading}</h4>
+                                <h4>${val.heading}</h4>
                                 </a>
+                                <span class="blog-category">${val.category.name}</span>
+                                </div>
                             </div>
                         </div>`;
                     });
@@ -484,7 +486,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
         // ------------------------CATEGORIES STARTS HERE------------------------------------------------- 
         let get_category_list = function() {
             $.ajax({
-                url: base_url + "blog/category-list.php",
+                url: base_url + "user/blog/category-list.php",
                 type: "GET",
                 dataType: "JSON",
                 success: function(result) {
@@ -506,7 +508,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
         //--------------------------RECENT POST STARTS HERE---------------------------------------------
         let get_recentpost_list = function() {
             $.ajax({
-                url: base_url + "blog/recent-post.php",
+                url: base_url + "user/blog/recent-post.php",
                 type: "GET",
                 dataType: "JSON",
                 success: function(result) {

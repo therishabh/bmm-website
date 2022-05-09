@@ -671,21 +671,6 @@
                 ?>
                     <div class="col-md-5 offset-md-1">
                         <input class="form-control advancedAutoComplete" type="text" autocomplete="off" placeholder="Salons, Makeup Artists, Bridal Makeup" />
-                        <!-- <div class="search-div">
-                            <div class="input-group search-bar-main">
-                                <i class="fa fa-search seacrh-icons"></i>
-                                <input type="text" class="form-control" placeholder="Salons, Makeup Artists, Bridal Makeup" />
-                                <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    Search
-                                </button>
-                            </div>
-                            </div>
-                            <div class="search-list">
-                                <ul id="searchData">
-                                </ul>
-                            </div>
-                        </div> -->
                     </div>
 
                     <div class="col-md-3 col-1 responsive-search-bar">
@@ -710,8 +695,9 @@
                             </div>
 
                             <div class="top-right-list-item">
-                                <a href="#">
+                                <a href="cart.php" class="cart-anchor">
                                     <i class="fas fa-shopping-bag text-pink icons"></i>
+                                    <span class="cart-count-circle">0</span>
                                 </a>
                             </div>
 
@@ -730,274 +716,128 @@
             <nav>
                 <div class="container-fluid">
                     <ul>
-                        <!-- <li><a href="ladies-service.php">Ladies</a>
-                    <div class="submenu">
-                        <div class="">
-                            <div class="row">
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Services</ldiv>
-                                            <ul>
-                                                <li><a href="ladies-service.php#Hair">Hair</a></li>
-                                                <li><a href="ladies-service.php#ChemicalService">Chemical Service</a></li>
-                                                <li><a href="ladies-service.php#ColorRoots">Color Roots</a></li>
-                                                <li><a href="ladies-service.php#HairSPA">Hair SPA</a></li>
-                                                <li><a href="ladies-service.php#HeadMassage">Head Massage</a></li>
-                                                <li><a href="ladies-service.php#ManicurePedicure">Manicure/Pedicure</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-
-
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Offers</div>
-                                        <ul>
-                                            <li><a href="offers.php">Free Hair Cut</a></li>
-                                            <li><a href="offers.php">50% off on Manicure</a></li>
-                                            <li><a href="offers.php">50% off on Pedicure</a></li>
-                                            <li><a href="offers.php">Free Makeup Trial</a></li>
-                                            <li><a href="offers.php">Free Nail Care</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">BMM Cards</div>
-                                        <ul>
-                                            <li><a href="cards.php">Membership Cards</a></li>
-                                            <li><a href="cards.php">Gift Cards</a></li>
-                                            <li><a href="cards.php">Flexi Cards</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-md-3">
-                                    <img src="<?php echo base_url(); ?>assets/images/submenu-salon-female-img.jpg" alt="" class="img-fluid">
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                    </div>
-                </li> -->
-
-                        <!-- <li><a href="gents-service.php">Gents</a>
-                    <div class="submenu">
-                        <div class="">
-                            <div class="row">
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Services</ldiv>
-                                            <ul>
-                                                <li><a href="gents-service.php#Hair">Hair</a></li>
-                                                <li><a href="gents-service.php#ChemicalService">Chemical Service</a></li>
-                                                <li><a href="gents-service.php#Trimming">Trimming</a></li>
-                                                <li><a href="gents-service.php#ColorRoots">Color Roots</a></li>
-                                                <li><a href="gents-service.php#HairSPA">Hair SPA</a></li>
-                                                <li><a href="gents-service.php#HeadMassage">Head Massage</a></li>
-                                                <li><a href="gents-service.php#Waxing">Waxing</a></li>
-                                                <li><a href="gents-service.php#BodyTherapies">Body Therapies</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-
-
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Offers</div>
-                                        <ul>
-                                            <li><a href="offers.php">Free Hair Cut</a></li>
-                                            <li><a href="offers.php">50% off on Manicure</a></li>
-                                            <li><a href="offers.php">50% off on Pedicure</a></li>
-                                            <li><a href="offers.php">Free Makeup Trial</a></li>
-                                            <li><a href="offers.php">Free Nail Care</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">BMM Cards</div>
-                                        <ul>
-                                            <li><a href="cards.php">Membership Cards</a></li>
-                                            <li><a href="cards.php">Gift Cards</a></li>
-                                            <li><a href="cards.php">Flexi Cards</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-md-3">
-                                    <img src="<?php echo base_url(); ?>assets/images/submenu-salon-female-img.jpg" alt="" class="img-fluid">
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                    </div>
-                </li> -->
                         <li><a href="#">Salon</a>
                             <div class="submenu">
 
-                                <div class="">
-                                    <div class="row">
-                                        <div class="col-md">
-                                            <div class="menu-common-list">
-                                                <div class="nav-submenu-title">Hair Styling</div>
-                                                <ul>
-                                                    <li><a href="service-list.php">Hair Cut</a></li>
-                                                    <li><a href="#">Ironing</a></li>
-                                                    <li><a href="#">Global Colouring</a></li>
-                                                    <li><a href="#">Blow Dry</a></li>
-                                                    <li><a href="#">Root Touch Up</a></li>
-                                                    <li><a href="#">Shampoo & Conditioning</a></li>
-                                                    <li><a href="#">Head Massage</a></li>
-                                                    <li><a href="#">Roller Setting</a></li>
-                                                    <li><a href="#">Oiling</a></li>
-                                                </ul>
-                                            </div>
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <div class="loading-wrapper">
+                                            <img src="assets/images/loader.gif" alt="loading">
                                         </div>
-
-                                        <div class="col-md">
-                                            <div class="menu-common-list">
-                                                <div class="nav-submenu-title">Hair Texture</div>
-                                                <ul>
-                                                    <li><a href="#">Rebonding</a></li>
-                                                    <li><a href="#">Perming</a></li>
-                                                    <li><a href="#">Keratin</a></li>
-                                                    <li><a href="#">Colour Protection</a></li>
-                                                    <li><a href="#">Smoothening</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="menu-common-list">
-                                                <div class="nav-submenu-title">Hair Treatments</div>
-                                                <ul>
-                                                    <li><a href="#">Spa Treatments</a></li>
-                                                    <li><a href="#">Volumizing</a></li>
-                                                    <li><a href="#">Advanced Hair Moisturising</a></li>
-                                                    <li><a href="#">Scalp Treatments</a></li>
-                                                </ul>
-                                            </div>
+                                        <div id="salonServices">
                                         </div>
-
-                                        <div class="col-md">
-                                            <div class="menu-common-list">
-                                                <div class="nav-submenu-title">Hand & Feet</div>
-                                                <ul>
-                                                    <li><a href="#">Manicure</a></li>
-                                                    <li><a href="#">Spa Pedicure</a></li>
-                                                    <li><a href="#">Pedicure</a></li>
-                                                    <li><a href="#">Waxing</a></li>
-                                                    <li><a href="#">Spa Manicure</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="menu-common-list">
-                                                <div class="nav-submenu-title">Nail Care</div>
-                                                <ul>
-                                                    <li><a href="#">Nail Paint</a></li>
-                                                    <li><a href="#">Nail Art</a></li>
-                                                    <li><a href="#">Nail Filling</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-md">
-                                            <div class="menu-common-list">
-                                                <div class="nav-submenu-title">Make Up</div>
-                                                <ul>
-                                                    <li><a href="#">Party Make Up</a></li>
-                                                    <li><a href="#">Engagement Make Up</a></li>
-                                                    <li><a href="#">Bridal & Reception Make Up</a></li>
-                                                    <li><a href="#">Base Make Up</a></li>
-                                                    <li><a href="#">Eye Make Up</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-md">
-                                            <div class="menu-common-list">
-                                                <div class="nav-submenu-title">Facials & Rituals</div>
-                                                <ul>
-                                                    <li><a href="#">Bleach</a></li>
-                                                    <li><a href="#">Luxury Facials/Rituals</a></li>
-                                                    <li><a href="#">Clean Ups</a></li>
-                                                    <li><a href="#">Body Polishing/Rejuvenation</a></li>
-                                                    <li><a href="#">Threading</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-md">
-                                            <div class="menu-common-list">
-                                                <div class="nav-submenu-title">Recommended</div>
-                                                <ul>
-                                                    <li><a href="hair-masters.php">Hair Masters</a></li>
-                                                    <li><a href="#">Looks</a></li>
-                                                    <li><a href="#">Geetanjali</a></li>
-                                                    <li><a href="#">VLCC</a></li>
-                                                    <li><a href="#">Jawed Habib</a></li>
-                                                    <li><a href="#">Toni & Guy</a></li>
-                                                    <li><a href="#">F Salon</a></li>
-                                                    <li><a href="#">Alps Beauty</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <!-- <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">BMM Cards</div>
-                                        <ul>
-                                            <li><a href="cards.php">Membership Cards</a></li>
-                                            <li><a href="cards.php">Gift Cards</a></li>
-                                            <li><a href="cards.php">Flexi Cards</a></li>
-                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="<?php echo base_url(); ?>assets/images/submenu-salon-female-img.jpg" alt="" class="img-fluid">
                                     </div>
                                 </div>
 
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Offers</div>
-                                        <ul>
-                                            <li><a href="#">Free Hair Cut</a></li>
-                                            <li><a href="#">50% off on Manicure</a></li>
-                                            <li><a href="#">50% off on Pedicure</a></li>
-                                            <li><a href="#">Free Makeup Trial</a></li>
-                                            <li><a href="#">Free Nail Care</a></li>
-                                        </ul>
-                                    </div>
-                                </div> -->
 
-                                        <!-- <div class="col-md">
-                                    <div class="salon-logos-list">
-                                        <ul>
-                                            <li>
-                                                <img src="<?php echo base_url(); ?>assets/images/salon-logo-1.png" alt="">
-                                            </li>
-                                            <li>
-                                                <img src="<?php echo base_url(); ?>assets/images/salon-logo-2.png" alt="">
-                                            </li>
-                                            <li>
-                                                <img src="<?php echo base_url(); ?>assets/images/salon-logo-3.png" alt="">
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div> -->
-
-
-                                        <div class="col-md-3">
-                                            <img src="<?php echo base_url(); ?>assets/images/submenu-salon-female-img.jpg" alt="" class="img-fluid">
+                                <!-- <div class="row">
+                                    <div class="col-md">
+                                        <div class="menu-common-list">
+                                            <div class="nav-submenu-title">Hair Styling</div>
+                                            <ul>
+                                                <li><a href="service-list.php">Hair Cut</a></li>
+                                                <li><a href="#">Ironing</a></li>
+                                                <li><a href="#">Global Colouring</a></li>
+                                                <li><a href="#">Blow Dry</a></li>
+                                                <li><a href="#">Root Touch Up</a></li>
+                                                <li><a href="#">Shampoo & Conditioning</a></li>
+                                                <li><a href="#">Head Massage</a></li>
+                                                <li><a href="#">Roller Setting</a></li>
+                                                <li><a href="#">Oiling</a></li>
+                                            </ul>
                                         </div>
-
                                     </div>
-                                </div>
+
+                                    <div class="col-md">
+                                        <div class="menu-common-list">
+                                            <div class="nav-submenu-title">Hair Texture</div>
+                                            <ul>
+                                                <li><a href="#">Rebonding</a></li>
+                                                <li><a href="#">Perming</a></li>
+                                                <li><a href="#">Keratin</a></li>
+                                                <li><a href="#">Colour Protection</a></li>
+                                                <li><a href="#">Smoothening</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="menu-common-list">
+                                            <div class="nav-submenu-title">Hair Treatments</div>
+                                            <ul>
+                                                <li><a href="#">Spa Treatments</a></li>
+                                                <li><a href="#">Volumizing</a></li>
+                                                <li><a href="#">Advanced Hair Moisturising</a></li>
+                                                <li><a href="#">Scalp Treatments</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md">
+                                        <div class="menu-common-list">
+                                            <div class="nav-submenu-title">Hand & Feet</div>
+                                            <ul>
+                                                <li><a href="#">Manicure</a></li>
+                                                <li><a href="#">Spa Pedicure</a></li>
+                                                <li><a href="#">Pedicure</a></li>
+                                                <li><a href="#">Waxing</a></li>
+                                                <li><a href="#">Spa Manicure</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="menu-common-list">
+                                            <div class="nav-submenu-title">Nail Care</div>
+                                            <ul>
+                                                <li><a href="#">Nail Paint</a></li>
+                                                <li><a href="#">Nail Art</a></li>
+                                                <li><a href="#">Nail Filling</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md">
+                                        <div class="menu-common-list">
+                                            <div class="nav-submenu-title">Make Up</div>
+                                            <ul>
+                                                <li><a href="#">Party Make Up</a></li>
+                                                <li><a href="#">Engagement Make Up</a></li>
+                                                <li><a href="#">Bridal & Reception Make Up</a></li>
+                                                <li><a href="#">Base Make Up</a></li>
+                                                <li><a href="#">Eye Make Up</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md">
+                                        <div class="menu-common-list">
+                                            <div class="nav-submenu-title">Facials & Rituals</div>
+                                            <ul>
+                                                <li><a href="#">Bleach</a></li>
+                                                <li><a href="#">Luxury Facials/Rituals</a></li>
+                                                <li><a href="#">Clean Ups</a></li>
+                                                <li><a href="#">Body Polishing/Rejuvenation</a></li>
+                                                <li><a href="#">Threading</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md">
+                                        <div class="menu-common-list">
+                                            <div class="nav-submenu-title">Recommended</div>
+                                            <ul>
+                                                <li><a href="hair-masters.php">Hair Masters</a></li>
+                                                <li><a href="#">Looks</a></li>
+                                                <li><a href="#">Geetanjali</a></li>
+                                                <li><a href="#">VLCC</a></li>
+                                                <li><a href="#">Jawed Habib</a></li>
+                                                <li><a href="#">Toni & Guy</a></li>
+                                                <li><a href="#">F Salon</a></li>
+                                                <li><a href="#">Alps Beauty</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <img src="<?php echo base_url(); ?>assets/images/submenu-salon-female-img.jpg" alt="" class="img-fluid">
+                                    </div>
+
+                                </div> -->
 
                             </div>
                         </li>
@@ -1020,38 +860,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Gents Services</ldiv>
-                                            <ul>
-                                                <li><a href="gents-service.php#Hair">Hair</a></li>
-                                                <li><a href="gents-service.php#ChemicalService">Chemical Service</a></li>
-                                                <li><a href="gents-service.php#Trimming">Trimming</a></li>
-                                                <li><a href="gents-service.php#ColorRoots">Color Roots</a></li>
-                                                <li><a href="gents-service.php#HairSPA">Hair SPA</a></li>
-                                                <li><a href="gents-service.php#HeadMassage">Head Massage</a></li>
-                                                <li><a href="gents-service.php#Waxing">Waxing</a></li>
-                                                <li><a href="gents-service.php#BodyTherapies">Body Therapies</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div> -->
 
-                                        <!-- <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Events</div>
-                                        <ul>
-                                            <li><a href="events.php">Mehandi/Sagan</a></li>
-                                            <li><a href="events.php">Wedding/Reception </a></li>
-                                            <li><a href="events.php">Fashion Show</a></li>
-                                            <li><a href="events.php">E Commerce Shoot</a></li>
-                                            <li><a href="events.php">Pre Wedding Shoot</a></li>
-                                            <li><a href="events.php">Baby Shower</a></li>
-                                            <li><a href="events.php">Corporate Events</a></li>
-
-                                        </ul>
-                                    </div>
-                                </div> -->
 
                                         <div class="col-md">
                                             <div class="menu-common-list">
@@ -1181,476 +990,11 @@
                             </div>
                         </li>
 
-                        <!-- <li><a href="groom-makeover-consultation-form.php">Groom Makeover</a>
-                    <div class="submenu">
-
-                        <div class="">
-                            <div class="row">
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Services</ldiv>
-                                            <ul>
-                                                <li><a href="ladies-service.php#Hair">Groom Makeover</a></li>
-                                                <li><a href="gents-service.php#Hair">Hair</a></li>
-                                                <li><a href="gents-service.php#ChemicalService">Chemical Service</a></li>
-                                                <li><a href="gents-service.php#Trimming">Trimming</a></li>
-                                                <li><a href="gents-service.php#ColorRoots">Color Roots</a></li>
-                                                <li><a href="gents-service.php#HairSPA">Hair SPA</a></li>
-                                                <li><a href="gents-service.php#HeadMassage">Head Massage</a></li>
-                                                <li><a href="gents-service.php#Waxing">Waxing</a></li>
-                                                <li><a href="gents-service.php#BodyTherapies">Body Therapies</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Package</div>
-                                        <ul>
-                                            <li><a href="ladies-hair-styling.php">Silver</a></li>
-                                            <li><a href="package.php">Gold</a></li>
-                                            <li><a href="package.php">Platinum</a></li>
-                                            <li><a href="package.php">Diamond</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">BMM Cards</div>
-                                        <ul>
-                                            <li><a href="cards.php">Membership Cards</a></li>
-                                            <li><a href="cards.php">Gift Cards</a></li>
-                                            <li><a href="cards.php">Flexi Cards</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-md-3">
-                                    <img src="<?php echo base_url(); ?>assets/images/groom-makeover-nav.jpg" alt="" class="img-fluid">
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </li> -->
-
-                        <!-- <li><a href="cards.php">BMM Cards</a></li> -->
-
-                        <!-- <li><a href="#">Salon at Home</a>
-                    <div class="submenu">
-
-                        <div class="">
-                            <div class="row">
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Services</ldiv>
-                                            <ul>
-                                                <li><a href="ladies-hair-styling.php">Hair Styling</a></li>
-                                                <li><a href="#">Make Up</a></li>
-                                                <li><a href="#">Hair Texture</a></li>
-                                                <li><a href="#">Hair Treatments</a></li>
-                                                <li><a href="#">Facials & Rituals</a></li>
-                                                <li><a href="#">Hand & Feet</a></li>
-                                                <li><a href="#">Nail Care</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Recommended</div>
-                                        <ul>
-                                            <li><a href="makeup-artist-1.php">Priyanka Sharma</a></li>
-                                            <li><a href="#">Anshika Sharma</a></li>
-                                            <li><a href="#">Bushra Shahid</a></li>
-                                            <li><a href="#">Manju</a></li>
-                                            <li><a href="#">Neha Sharma</a></li>
-                                            <li><a href="#">Manjari</a></li>
-                                            <li><a href="#">Afsheen</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Package</div>
-                                        <ul>
-                                            <li><a href="#">Wellness</a></li>
-                                            <li><a href="#">Stress Buster</a></li>
-                                            <li><a href="#">Pre Bridal</a></li>
-                                        </ul>
-                                       
-                                    </div>
-                                </div>
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                    <div class="nav-submenu-title">BMM Cards</div>
-                                        <ul>
-                                            <li><a href="cards.php">Membership Cards</a></li>
-                                            <li><a href="cards.php">Gift Cards</a></li>
-                                            <li><a href="cards.php">Flexi Cards</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-md-3">
-                                    <img src="<?php echo base_url(); ?>assets/images/salon-at-home-nav-img.jpg" alt="" class="img-fluid">
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </li> -->
 
                         <li><a href="makeup-academy.php">Makeup Academy</a></li>
 
-                        <!-- <li><a href="#">Buy</a>
-                    <div class="submenu">
-
-                        <div class="">
-                            <div class="row">
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Makeup</ldiv>
-                                            <ul>
-                                                <li><a href="product-categories.php">Face</a></li>
-                                                <li><a href="#">Eyes</a></li>
-                                                <li><a href="#">Lips</a></li>
-                                                <li><a href="#">Nails</a></li>
-                                                <li><a href="#">Tools & Brushes</a></li>
-                                                <li><a href="#">Top Brands</a></li>
-                                                <li><a href="#">Trending</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Skin</ldiv>
-                                            <ul>
-                                                <li><a href="#">Cleaners</a></li>
-                                                <li><a href="#">Moisturizers</a></li>
-                                                <li><a href="#">Masks</a></li>
-                                                <li><a href="#">Eye Care</a></li>
-                                                <li><a href="#">Skin Care </a></li>
-                                                <li><a href="#">Body Care </a></li>
-                                                <li><a href="#">Lips Care </a></li>
-                                                <li><a href="#">Hands & Feet</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Hair</ldiv>
-                                            <ul>
-                                                <li><a href="#">Hair Care</a></li>
-                                                <li><a href="#">Tools & Accessories</a></li>
-                                                <li><a href="#">Hair Styling</a></li>
-                                                <li><a href="#">Top Brands</a></li>
-                                                <li><a href="#">Shop by Concern</a></li>
-                                                <li><a href="#">Trending</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Mom & Baby</div>
-                                        <ul>
-                                            <li><a href="#">Baby & Kids Care</a></li>
-                                            <li><a href="#">Maternity Care</a></li>
-                                            <li><a href="#">Nursing & Feeding</a></li>
-                                            <li><a href="#">Health & Safety</a></li>
-                                        </ul>
-
-
-                                        <div class="nav-submenu-title">Appliances</ldiv>
-                                            <ul>
-                                                <li><a href="#">Hair Styling Tools</a></li>
-                                                <li><a href="#">Hair Removal Tools</a></li>
-                                                <li><a href="#">Shaving Tools</a></li>
-                                                <li><a href="#">Face/Skin/Tools</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Men</ldiv>
-                                            <ul>
-                                                <li><a href="#"> Shaving</a></li>
-                                                <li><a href="#"> Beard Care</a></li>
-                                                <li><a href="#"> Hair Care</a></li>
-                                                <li><a href="#"> Skin Care</a></li>
-                                                <li><a href="#"> Bath & Body</a></li>
-                                                <li><a href="#"> Top Brnd</a></li>
-                                                <li><a href="#"> Grooming Kids</a></li>
-                                                <li><a href="#"> Wellness</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Personal Care</ldiv>
-                                            <ul>
-                                                <li><a href="#">Men's Grooming</a></li>
-                                                <li><a href="#">Home & Health</a></li>
-                                                <li><a href="#">Face</a></li>
-                                                <li><a href="#">Eyes</a></li>
-                                                <li><a href="#">Lips</a></li>
-                                                <li><a href="#">Nails</a></li>
-                                                <li><a href="#">Body</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Health & Wellness</ldiv>
-                                            <ul>
-                                                <li><a href="#">Good for you</a></li>
-                                                <li><a href="#">Health Supplements</a></li>
-                                                <li><a href="#">Weight Management</a></li>
-                                                <li><a href="#">Sports Nutrition</a></li>
-                                                <li><a href="#">Sexual Wellness</a></li>
-                                            </ul>
-                                            <div class="nav-submenu-title">BMM Cards</div>
-                                            <ul>
-                                                <li><a href="cards.php">Membership Cards</a></li>
-                                                <li><a href="cards.php">Gift Cards</a></li>
-                                                <li><a href="cards.php">Flexi Cards</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Natural</ldiv>
-                                            <ul>
-                                                <li><a href="#">Face</a></li>
-                                                <li><a href="#">Eyes</a></li>
-                                                <li><a href="#">Lips</a></li>
-                                                <li><a href="#">Nails</a></li>
-                                                <li><a href="#">Body</a></li>
-                                                <li><a href="#">Aromatherapy</a></li>
-                                                <li><a href="#">Top Brands</a></li>
-                                                <li><a href="#">Trending</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-
-
-                    </div>
-                </li>
-
-                <li><a href="#">Brands</a>
-                    <div class="submenu">
-
-                        <div class="">
-                            <div class="row">
-
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Affordable Brands<ldiv>
-                                                <ul>
-                                                    <li><a href="#">Lanvin</a></li>
-                                                    <li><a href="#">BodyHerbals</a></li>
-                                                    <li><a href="#">Maybelline</a></li>
-                                                    <li><a href="#">L'oreal Paris</a></li>
-                                                    <li><a href="#">La Monk</a></li>
-
-                                                </ul>
-                                                <div class="nav-submenu-title">BMM Cards</div>
-                                                <ul>
-                                                    <li><a href="cards.php">Membership Cards</a></li>
-                                                    <li><a href="cards.php">Gift Cards</a></li>
-                                                    <li><a href="cards.php">Flexi Cards</a></li>
-                                                </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <ul>
-                                            <li><a href="#" class="nav-submenu-title">Brands A-Z</a></li>
-                                        </ul>
-                                        <div class="nav-submenu-title">Popular</ldiv>
-                                            <ul>
-                                                <li><a href="#">Lakme</a></li>
-                                                <li><a href="#">Maybelline</a></li>
-                                                <li><a href="#">L'oreal Paris</a></li>
-                                                <li><a href="#">La Monk</a></li>
-                                                <li><a href="#">Lanvin</a></li>
-                                                <li><a href="#">BodyHerbals</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Featured</ldiv>
-                                            <ul>
-                                                <li><a href="#">Lakme</a></li>
-                                                <li><a href="#">Maybelline</a></li>
-                                                <li><a href="#">L'oreal Paris</a></li>
-                                                <li><a href="#">La Monk</a></li>
-                                                <li><a href="#">Lanvin</a></li>
-                                                <li><a href="#">BodyHerbals</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">New Launches</ldiv>
-                                            <ul>
-                                                <li><a href="#">Lakme</a></li>
-                                                <li><a href="#">Maybelline</a></li>
-                                                <li><a href="#">L'oreal Paris</a></li>
-                                                <li><a href="#">La Monk</a></li>
-                                                <li><a href="#">Lanvin</a></li>
-                                                <li><a href="#">BodyHerbals</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-
-                                <div class="col-md-3">
-                                    <img src="<?php echo base_url(); ?>assets/images/brand-nav-img.jpg" alt="" class="img-fluid">
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                    </div>
-                </li> -->
-
                         <li><a href="cards.php">Cards </a></li>
                         <li><a href="im-beautiful.php">I'm Beautiful &nbsp; <i class="fa fa-heart"></i> </a>
-                            <!-- <div class="submenu">
-
-                        <div class="">
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Makeup</ldiv>
-                                            <ul>
-                                                <li><a href="im-beautiful.php">HD Makeup</a></li>
-                                                <li><a href="im-beautiful.php">Bridal Makeup</a></li>
-                                                <li><a href="im-beautiful.php">Party Makeup</a></li>
-                                                <li><a href="im-beautiful.php">WFH Makeup</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Hair Styling</ldiv>
-                                            <ul>
-                                                <li><a href="im-beautiful.php">Hair Cut</a></li>
-                                                <li><a href="im-beautiful.php">Ironing</a></li>
-                                                <li><a href="im-beautiful.php"> Global Colouring</a></li>
-                                                <li><a href="im-beautiful.php">Blow Dry</a></li>
-                                                <li><a href="im-beautiful.php">Root Touch Up</a></li>
-                                                <li><a href="im-beautiful.php">Shampoo &amp; Conditioning</a></li>
-                                                <li><a href="im-beautiful.php">Head Massage</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Bridal Wear</div>
-                                        <ul>
-                                            <li><a href="im-beautiful.php">Saree</a></li>
-                                            <li><a href="im-beautiful.php">Lenghas</a></li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="menu-common-list">
-                                        <ul>
-                                            <li><a class="nav-submenu-title" href="im-beautiful.php">Trending</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-common-list">
-                                        <ul>
-                                            <li><a class="nav-submenu-title" href="im-beautiful.php">Star of the Month</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-md-3">
-                                    <img src="<?php echo base_url(); ?>assets/images/makeup-artist-nav-img2.jpg" alt="" class="img-fluid">
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div> -->
-                        </li>
-                        <!-- <li>
-                    <a href="cards.php"> BMM Card</a>
-                    <div class="submenu">
-
-                        <div class="">
-                            <div class="row">
-
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Membership Card</div>
-                                      
-                                    </div>
-                                </div>
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">EMI Cards</div>
-                                      
-                                    </div>
-                                </div>
-
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Flexi Card</div>
-                                       
-                                    </div>
-
-                                </div>
-
-                                <div class="col-md-3">
-                                    <img src="<?php echo base_url(); ?>assets/images/card-nav-img1.jpg" alt="" class="img-fluid">
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </li> -->
 
                         <li>
                             <a href="<?php echo base_url(); ?>bmm-tv.php"> BMM TV</a>
@@ -1659,73 +1003,7 @@
                             <a href="book-appointment.php"> Quick Booking &nbsp; <i class="fa fa-calendar-alt"></i> </a>
                         </li>
                         <li class="active-offer-nav"><a href="offers.php">Offers</a>
-                            <!-- <div class="submenu">
-                        <div class="">
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Top Offers</ldiv>
-                                            <ul>
-                                                <li><a href="offers.php">Salon</a></li>
-                                                <li><a href="offers.php">Makeup Artist</a></li>
-                                                <li><a href="offers.php">Salon at Home</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md">
-                                    <div class="menu-common-list">
-                                        <ul>
-                                            <li><a href="offers.php" class="nav-submenu-title">Today's Deal</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Deals of the Month</div>
-                                        <ul>
-                                            <li><a href="offers.php">50% off on Party Makeup</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Festive Offers</div>
-                                        <ul>
-                                            <li><a href="offers.php">Karwa Chauth</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md">
 
-                                    <div class="menu-common-list">
-                                        <ul>
-                                            <li><a href="offers.php" class="nav-submenu-title"> One Rupee Offers</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Cashback Offers </div>
-                                        <ul>
-                                            <li><a href="offers.php">10% Cashback on 5000</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title">Coupons</div>
-
-                                        <ul>
-                                            <li>
-                                                <a href="offers.php">Extra 10% OFF on ICICI Bank Cards.</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-md-3">
-                                    <img src="<?php echo base_url(); ?>assets/images/offer-nav-img.jpg" alt="" class="img-fluid">
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div> -->
                         </li>
 
                         <li><a href="blog.php">Blog </a>
@@ -1871,7 +1149,7 @@
                                     <div class="or-text">
                                         <span>OR</span>
                                     </div>
-                                    <button type="button" id="signin-with-otp-btn" class="btn login-btn">Sign In with OTP</button>
+                                    <button type="button" id="user-signin-with-otp-btn" class="btn login-btn">Sign In with OTP</button>
                                 </div>
                                 <p class="text-white">Don't Have An Account? <span class="registerBtn cursor-pointer">Join Now</span></p>
                             </div>
@@ -1885,9 +1163,9 @@
                                 </div>
                                 <div class="form-group"></div>
                                 <label class="resend-seconds"> <span class></span> sec</label>
-                                <div class="cursor-pointer resend-btn">Resend OTP</div>
+                                <div class="cursor-pointer user-login-resend-btn">Resend OTP</div>
                                 <div class="form-group text-center mt-3">
-                                    <div class="go-back-btn btn login-btn">Go Back</div>
+                                    <div class="user-go-back-btn btn login-btn">Go Back</div>
                                     <button type="submit" id="verifyOTP" class="btn login-btn">Verify OTP</button>
                                 </div>
                             </div>
@@ -1952,9 +1230,9 @@
                                 </div>
                                 <div class="form-group"></div>
                                 <label class="register-resend-seconds"> <span class></span> sec</label>
-                                <div class="cursor-pointer resend-btn">Resend OTP</div>
+                                <div class="cursor-pointer user-register-resend-btn">Resend OTP</div>
                                 <div class="form-group text-center mt-3">
-                                    <div class="go-back-btn btn login-btn">Go Back</div>
+                                    <div class="user-go-back-btn btn login-btn">Go Back</div>
                                     <button type="submit" id="verifyOTP" class="btn login-btn">Verify OTP</button>
                                 </div>
                             </div>
@@ -2014,7 +1292,7 @@
                             $("#signInBtn").removeAttr('disabled');
                             toastr.success("Sign in successfully");
                             localStorage.setItem("userToken", result.token);
-                            window.location.replace('../dashboard.php');
+                            window.location.replace('user/dashboard.php');
                         },
                         error: function(error) {
                             $("#signInBtn").removeAttr('disabled');
@@ -2024,7 +1302,7 @@
                 }
             });
 
-            $("#signin-with-otp-btn").click(function() {
+            $("#user-signin-with-otp-btn").click(function() {
                 sendOTPForLogin();
             });
 
@@ -2034,14 +1312,14 @@
                     mobile_no: $("#loginForm [name=email_mobile]").val(),
                 }
                 if (!!post_data.mobile_no) {
-                    $("#signin-with-otp-btn").attr('disabled', true);
+                    $("#user-signin-with-otp-btn").attr('disabled', true);
                     $.ajax({
                         url: base_url + '/user/auth/login-with-otp.php',
                         type: 'POST',
                         dataType: 'JSON',
                         data: JSON.stringify(post_data),
                         success: function(result) {
-                            $("#signin-with-otp-btn").removeAttr('disabled');
+                            $("#user-signin-with-otp-btn").removeAttr('disabled');
                             $("#loginStepTwo").show();
                             $("#loginForm").hide();
                             toastr.success(result.message);
@@ -2049,7 +1327,7 @@
                             signInResendSetInterval();
                         },
                         error: function(error) {
-                            $("#signin-with-otp-btn").removeAttr('disabled');
+                            $("#user-signin-with-otp-btn").removeAttr('disabled');
                             toastr.error(error.responseJSON.message);
                         }
                     });
@@ -2059,9 +1337,9 @@
             }
 
             function signInResendSetInterval() {
-                $('.resend-btn').hide();
+                $('.user-login-resend-btn').hide();
                 $('.resend-seconds').show();
-                $("#signin-with-otp-btn").hide();
+                $("#user-signin-with-otp-btn").hide();
                 $("#timer-btn").show();
                 let resend_seconds = otpTiming;
                 $('.resend-seconds span').text(resend_seconds);
@@ -2073,8 +1351,8 @@
                         $('#timer-btn span').text(resend_seconds);
                     } else {
                         $('.resend-seconds').hide();
-                        $('.resend-btn').show();
-                        $("#signin-with-otp-btn").show();
+                        $('.user-login-resend-btn').show();
+                        $("#user-signin-with-otp-btn").show();
                         $("#timer-btn").hide();
                         clearInterval(interval);
                         return;
@@ -2082,14 +1360,14 @@
                 }, 1000);
             }
 
-            $('.resend-btn').click(function() {
+            $('.user-login-resend-btn').click(function() {
                 sendOTPForLogin();
             });
 
-            $("#loginStepTwo .go-back-btn").click(function() {
+            $("#loginStepTwo .user-go-back-btn").click(function() {
                 $("#loginStepTwo").hide();
                 $("#loginForm").show();
-                $("#signin-with-otp-btn").show();
+                $("#user-user-signin-with-otp-btn").show();
             });
 
             $("#loginStepTwo").validate({
@@ -2122,9 +1400,8 @@
                             clearInterval(interval);
                             toastr.success('OTP successfully verified');
                             $("#verifyOTP").removeAttr('disabled');
-                            localStorage.setItem("salonToken", result.token);
-                            localStorage.setItem("bmmSalonCategory", result.category);
-                            window.location.replace('../dashboard.php');
+                            localStorage.setItem("userToken", result.token);
+                            window.location.replace('user/dashboard.php');
                         },
                         error: function(error) {
                             $("#verifyOTP").removeAttr('disabled');
@@ -2167,7 +1444,6 @@
                         data: JSON.stringify(post_data),
                         success: function(result) {
                             debugger;
-                            console.log(result);
                             $("#registerStepOne #registerBtn").removeAttr('disabled')
                             $('#registerStepOne').hide();
                             $('#registerStepTwo').show();
@@ -2186,7 +1462,7 @@
             // registerStepTwo
             // *****************
             function resendSetInterval() {
-                $('.resend-btn').hide();
+                $('.user-register-resend-btn').hide();
                 $('.register-resend-seconds').show();
                 $("#registerBtn").hide();
                 $("#timer-btn").show();
@@ -2200,7 +1476,7 @@
                         $('#timer-btn span').text(resend_seconds);
                     } else {
                         $('.register-resend-seconds').hide();
-                        $('.resend-btn').show();
+                        $('.user-register-resend-btn').show();
                         $("#registerBtn").show();
                         $("#timer-btn").hide();
                         clearInterval(interval);
@@ -2209,7 +1485,7 @@
                 }, 1000);
             }
 
-            $('.resend-btn').click(function() {
+            $('.user-register-resend-btn').click(function() {
                 let post_data = {
                     token: tempToken
                 }
@@ -2266,7 +1542,7 @@
                 }
             });
 
-            $("#registerStepTwo .go-back-btn").click(function() {
+            $("#registerStepTwo .user-go-back-btn").click(function() {
                 $('#registerStepTwo').hide();
                 $('#registerStepOne').show();
                 $('#registerBtn').show();
@@ -2285,6 +1561,7 @@
                         text: item.name,
                         html: [
                             `${item.name} ${item.genderType ? '['+ item.genderType +']' : '' }<br/><span>${item.category}</span>`,
+                            // `<a href="service-list.php?service_id=${item.id}">${item.name} ${item.genderType ? '['+ item.genderType +']' : '' }<br/><span>${item.category}</span></a>`,
                         ]
                     };
                 },
@@ -2320,10 +1597,64 @@
                 }
             });
 
-            $('.advancedAutoComplete').on('autocomplete.select', function(evt, item) {});
+            $('.advancedAutoComplete').on('autocomplete.select', function(evt, item) {
+                window.location.replace(`service-list.php?service_id=${item.id}`);
+            });
 
             $('.advancedAutoComplete').on('autocomplete.freevalue', function(evt, value) {});
 
+            // *****************
+            // getAllServices
+            // *****************
+            var getAllServices = function() {
+                $(".loading-wrapper").show();
+                var selectedServices = [];
+                var intoSlug = function(str) {
+                    return str.toLowerCase().split(' ').join('-').replace('&', '');
+                }
+                const url = `${base_url}/user/services/get-services.php`;
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    dataType: 'JSON',
+                    success: function(result) {
+                        // console.log(result)
+                        for (let key in result) {
+                            if (key == 'ladies') {
+                                $("#salonServices").append(`
+                            <div class="">
+                                <div id="${key+'-card-body-wrapper'}">
+                                    <div class="row"></div>
+                                </div>
+                            </div>`);
+                                for (let category in result[key]) {
+                                    $(`#salonServices #${key}-card-body-wrapper .row`).append(
+                                        `<div class="col-lg mb-4">
+                                    <div class="menu-common-list">
+                                        <div class="nav-submenu-title" data="${category}">${category}</div>
+                                        <ul class="checkbox-wrapper ${intoSlug(category)}"></ul>
+                                        </div>
+                                    </div>
+                                    `
+                                    );
+                                    result[key][category].forEach(val => {
+                                        var x = `#salonServices #${key}-card-body-wrapper .${intoSlug(category)}`;
+                                        $(x).append(`
+                                      <li><a href="service-list.php?service_id=${val.id}">${val.name}</a></li>
+                                    `);
+                                    })
+                                }
+                            }
+                        }
+
+                        $(".loading-wrapper").hide();
+                        $("#salonServices").fadeIn(1000);
+                        $(".services-page .button-wrapper button").fadeIn(1000);
+
+                    }
+                });
+            }
+            getAllServices();
 
             if (token) {
                 $.ajax({
