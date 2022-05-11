@@ -670,7 +670,10 @@
                 if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
                 ?>
                     <div class="col-md-5 offset-md-1">
-                        <input class="form-control advancedAutoComplete" type="text" autocomplete="off" placeholder="Salons, Makeup Artists, Bridal Makeup" />
+                        <div class="autocomplete-box">
+                            <i class="fa fa-search"></i>
+                            <input class="form-control advancedAutoComplete" type="text" autocomplete="off" placeholder="Salons, Makeup Artists, Bridal Makeup" />
+                        </div>
                     </div>
 
                     <div class="col-md-3 col-1 responsive-search-bar">
@@ -1619,14 +1622,15 @@
                     dataType: 'JSON',
                     success: function(result) {
                         // console.log(result)
+                        
                         for (let key in result) {
                             if (key == 'ladies') {
                                 $("#salonServices").append(`
-                            <div class="">
+                                  <div class="">
                                 <div id="${key+'-card-body-wrapper'}">
                                     <div class="row"></div>
                                 </div>
-                            </div>`);
+                                  </div>`);
                                 for (let category in result[key]) {
                                     $(`#salonServices #${key}-card-body-wrapper .row`).append(
                                         `<div class="col-lg mb-4">

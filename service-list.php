@@ -240,7 +240,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                         <img src="https://via.placeholder.com/400x250" alt="" class="img-fluid" />
                         <div class="service-body">
                             <h4> ${val.salon_name}</h4>
-                            <p> <i class="fa fa-map-marker-alt"></i> ${val.city} ${val.state}</p>
+                            <p> <i class="fa fa-map-marker-alt"></i> ${val.city}, ${val.state}</p>
                             <span class="rating"><i class="fas fa-star"></i> ${val.rating}</span>
                             <hr>
                             <p class="discountPara"></p>
@@ -303,7 +303,23 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                         });
 
                         val.services.forEach((serviceVal, index) => {
-                            $('#serviceData .service-wrapper-body').append(`
+                            if (serviceVal.mrp_price === 0) {
+                                $('#serviceData .service-wrapper-body').append(`
+                            <div class="service-wrapper-list" id="${serviceVal.id}">
+                                <div>
+                                    <h5>${serviceVal.name} [${serviceVal.category}] </h5>
+                                    <div>
+                                    <span class="discounted_price">Rs. ${serviceVal.discounted_price}</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button class="btn btn-pink bookServiceBtn">Book</button>
+                                </div>
+                            </div>                        
+                            `)
+                            } else {
+
+                                $('#serviceData .service-wrapper-body').append(`
                             <div class="service-wrapper-list" id="${serviceVal.id}">
                                 <div>
                                     <h5>${serviceVal.name} [${serviceVal.category}] </h5>
@@ -317,6 +333,8 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                                 </div>
                             </div>                        
                             `)
+                            }
+
                         });
 
                     });
@@ -327,10 +345,9 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
         }
 
         $('body').on('click', '.bookServiceBtn', function() {
-            if (!token){
+            if (!token) {
                 $('#loginModal').modal('show');
-            }
-            else{
+            } else {
                 $('.cart-count-circle').text('1');
                 alert($(this).parents('.service-wrapper-body').find('.service-wrapper-list').attr('id'));
             }
