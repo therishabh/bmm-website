@@ -24,7 +24,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
 
 <script>
     $(function() {
-    // CARD DETAIL STARTS HERE-------------------------------------------------------
+        // CARD DETAIL STARTS HERE-------------------------------------------------------
         let card_id = getParameterByName('card-id');
         let get_membership_card_detail = function() {
             let card_detail = {
@@ -42,14 +42,14 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                     $('.card_value').html('Get card with value of ' + result.value);
                     $('.card_validity').html('Card Validity will be for ' + result.validity);
                     $('.category').html('Card Category ' + result.category);
-                    $('.card-detail-box').append('<a href="#" class="btn btn-pink buy-card mt-4">Buy Now</a>');
+                    $('.card-detail-box').append('<a href="<?php echo base_url(); ?>membership-card-checkout.php" class="btn btn-pink buy-card mt-4">Buy Now</a>');
                     $('#card-img').attr('src', "" + result.image + "").append("#card-banner");
                     $('.card-detail-body').html(result.description);
                 }
             });
         }
-    get_membership_card_detail();
-    // CARD DETAIL ENDS HERE-------------------------------------------------------
+        get_membership_card_detail();
+        // CARD DETAIL ENDS HERE-------------------------------------------------------
 
     });
 </script>

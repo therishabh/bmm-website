@@ -38,11 +38,6 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                     <div class="card-body">
                         <h3 class="card-name"></h3>
                         <ul>
-                            <!-- <li>Exclusive Benefits on card price of 11000/-</li>
-                            <li>Get 4000/- more on 11000/- card price + 500 BMM Points.</li>
-                            <li>Card Validity for 6 months.</li>
-                            <li>EMI starts at 1099.</li>
-                            <li>No Joining Fee , No Annual Fee</li> -->
                         </ul>
                     </div>
                 </div>
@@ -78,7 +73,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                                 <li>Card Category : ${val.category}.</li>
                                 <li>No Joining Fee , No Annual Fee</li>
                             </ul>
-                            <a href="#" class="btn btn-pink buy-card m-2">Buy Now</a>
+                            <a href="<?php echo base_url(); ?>membership-card-checkout.php?card-id=${val.id}" class="btn btn-pink buy-card m-2">Buy Now</a>
                             <a href="<?php echo base_url(); ?>membership-card-detail.php?card-id=${val.id}" class="btn btn-pink know-more m-2">Know More</a>
                             </div>
                             </div>
