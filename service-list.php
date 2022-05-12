@@ -218,6 +218,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
         const token = localStorage.getItem("userToken");
         const urlParams = new URLSearchParams(window.location.search);
         const service_id = urlParams.get('service_id');
+        const str = urlParams.get('str');
 
         var getListingResult = function() {
             var cartCount = '';
@@ -226,7 +227,8 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                 url: `${base_url}/user/search/get-listing-result.php`,
                 type: 'GET',
                 data: {
-                    service_id: service_id
+                    service_id: service_id,
+                    str: str
                 },
                 dataType: 'JSON',
                 success: function(result) {
@@ -286,7 +288,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                         $('#serviceData').append(`
                     <div class="service-wrapper">
                         <div class="service-wrapper-header">
-                            <h4>${val.salon_name}</h4>
+                            <h4><a href="hair-masters.php?service_id=${val.id}">${val.salon_name}</a></h4>
                             <p> <i class="fa fa-map-marker-alt"></i> ${val.city} ${val.state}</p>
                         </div>
                         <div class="service-wrapper-body">

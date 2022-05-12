@@ -1564,7 +1564,6 @@
                         text: item.name,
                         html: [
                             `${item.name} ${item.genderType ? '['+ item.genderType +']' : '' }<br/><span>${item.category}</span>`,
-                            // `<a href="service-list.php?service_id=${item.id}">${item.name} ${item.genderType ? '['+ item.genderType +']' : '' }<br/><span>${item.category}</span></a>`,
                         ]
                     };
                 },
@@ -1601,10 +1600,23 @@
             });
 
             $('.advancedAutoComplete').on('autocomplete.select', function(evt, item) {
-                window.location.replace(`service-list.php?service_id=${item.id}`);
+                // debugger;
+                // console.log(item);
+                if(item.category == 'Services'){
+                    window.location.replace(`service-list.php?service_id=${item.id}`);
+                }
+                else if(item.category == 'Salon'){
+                    window.location.replace(`hair-masters.php?service_id=${item.id}`);
+                }
+                else if(item.category == 'Makeup Artist'){
+                    window.location.replace(`makeup-artist.php?service_id=${item.id}`);
+                    console.log(item);
+                }
             });
-
-            $('.advancedAutoComplete').on('autocomplete.freevalue', function(evt, value) {});
+            
+            $('.advancedAutoComplete').on('autocomplete.freevalue', function(evt, value) {
+                window.location.replace(`service-list.php?str=${value}`);
+            });
 
             // *****************
             // getAllServices
