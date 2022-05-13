@@ -3890,7 +3890,10 @@ nav li:hover .submenu {
     font-size: 12px;
 }
 
-.cart-count {
+
+/* .cart-count { */
+
+.cart-count-circle {
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -5421,6 +5424,15 @@ label.error {
     padding: 25px;
 }
 
+.service-wrapper .service-wrapper-header a {
+    color: #000;
+}
+
+.service-wrapper .service-wrapper-header a:hover {
+    text-decoration: none;
+    color: var(--pink);
+}
+
 .service-wrapper .service-wrapper-body {
     padding: 25px;
 }
@@ -5737,4 +5749,18 @@ label.register-resend-seconds {
     background: #f4f4f4;
     border: 1px solid rgba(151, 151, 151, 0.1);
     padding-left: 40px;
+}
+
+#nodata>div {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#nodata img {
+    width: 160px;
+    margin-bottom: 36px;
 }

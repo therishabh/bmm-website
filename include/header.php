@@ -1161,8 +1161,8 @@
                             <div class="form-heading">Sign In - Verify OTP</div>
                             <div class="register-steps register-step2 mt-3">
                                 <div class="form-group">
-                                    <label for="otp_text">OTP</label>
-                                    <input type="text" id="otp_text" placeholder="Enter OTP" class="form-control" maxlength="6" name="otp">
+                                    <label for="otp_text text-center"> <span id="otp-mobile"></span> On this mobile number you'll receive an OTP</label>
+                                    <input type="text" id="otp_text" placeholder="Enter OTP" class="form-control mt-3" maxlength="6" name="otp">
                                 </div>
                                 <div class="form-group"></div>
                                 <label class="resend-seconds"> <span class></span> sec</label>
@@ -1202,15 +1202,15 @@
                                         <div class="form-group">
                                             <label>Gender</label>
                                             <select class="form-control" name="gender">
-                                                <option value="male">Male</option>
                                                 <option value="female">Female</option>
+                                                <option value="male">Male</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label>Mobile Number</label>
-                                    <input type="text" class="form-control" name="mobile_no">
+                                    <input type="text" class="form-control" name="mobile_no" maxlength="10">
                                 </div>
                                 <div class="form-group">
                                     <label>Email Id</label>
@@ -1295,7 +1295,7 @@
                             $("#signInBtn").removeAttr('disabled');
                             toastr.success("Sign in successfully");
                             localStorage.setItem("userToken", result.token);
-                            window.location.replace('user/dashboard.php');
+                            // window.location.replace('user/dashboard.php');
                         },
                         error: function(error) {
                             $("#signInBtn").removeAttr('disabled');
@@ -1310,6 +1310,7 @@
             });
 
             function sendOTPForLogin() {
+                $('#otp-mobile').text($('[name=email_mobile]').val());
                 $('#loginStepTwo input[name=otp]').val("")
                 let post_data = {
                     mobile_no: $("#loginForm [name=email_mobile]").val(),
@@ -1370,7 +1371,7 @@
             $("#loginStepTwo .user-go-back-btn").click(function() {
                 $("#loginStepTwo").hide();
                 $("#loginForm").show();
-                $("#user-user-signin-with-otp-btn").show();
+                $("#user-signin-with-otp-btn").show();
             });
 
             $("#loginStepTwo").validate({
@@ -1404,7 +1405,7 @@
                             toastr.success('OTP successfully verified');
                             $("#verifyOTP").removeAttr('disabled');
                             localStorage.setItem("userToken", result.token);
-                            window.location.replace('user/dashboard.php');
+                            // window.location.replace('user/dashboard.php');
                         },
                         error: function(error) {
                             $("#verifyOTP").removeAttr('disabled');

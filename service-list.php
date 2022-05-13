@@ -18,6 +18,8 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
             </div>
         </div>
 
+        <div id="nodata"></div>
+
         <div id="salonsTab" class="custom-tab-content d-custom-block">
             <div class="loading-wrapper">
                 <img src="assets/images/loader.gif" alt="loading">
@@ -233,12 +235,12 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                 dataType: 'JSON',
                 success: function(result) {
                     result = result.result;
-                    console.log(result);
-
-                    result.forEach(val => {
-                        $('#salonData .row').append(`
-                <div class="col-md-4">
-                    <a href="hair-masters.php" class="service-box">
+                    console.log(result[0].services[0].name);
+                    if (result.length > 0) {
+                        result.forEach(val => {
+                            $('#salonData .row').append(`
+                     <div class="col-md-4">
+                     <a href="hair-masters.php" class="service-box">
                         <img src="https://via.placeholder.com/400x250" alt="" class="img-fluid" />
                         <div class="service-body">
                             <h4> ${val.salon_name}</h4>
@@ -251,8 +253,8 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                 </div>
                         `);
 
-                        if (val.is_bridal_service_provide) {
-                            $('#bridalData .row').append(`
+                            if (val.is_bridal_service_provide) {
+                                $('#bridalData .row').append(`
                 <div class="col-md-4">
                     <a href="hair-masters.php" class="service-box">
                         <img src="https://via.placeholder.com/400x250" alt="" class="img-fluid" />
@@ -266,9 +268,9 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                     </a>
                 </div>
                         `)
-                        }
-                        if (val.is_luxury_service_provide) {
-                            $('#luxeData .row').append(`
+                            }
+                            if (val.is_luxury_service_provide) {
+                                $('#luxeData .row').append(`
                 <div class="col-md-4">
                     <a href="hair-masters.php" class="service-box">
                         <img src="https://via.placeholder.com/400x250" alt="" class="img-fluid" />
@@ -282,10 +284,10 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                     </a>
                 </div>
                         `)
-                        }
+                            }
 
 
-                        $('#serviceData').append(`
+                            $('#serviceData').append(`
                     <div class="service-wrapper">
                         <div class="service-wrapper-header">
                             <h4><a href="hair-masters.php?service_id=${val.id}">${val.salon_name}</a></h4>
@@ -296,17 +298,17 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                     </div>
                         `)
 
-                        val.coupons.forEach((val2, index) => {
-                            if (index == 0) {
-                                $('.discountPara').append(`
+                            val.coupons.forEach((val2, index) => {
+                                if (index == 0) {
+                                    $('.discountPara').append(`
                                 <i class="fa fa-tags"></i> &nbsp; ${val2.discount_percent? `${val2.discount_percent} % off` : `${val2.flat_discount_amount} Flat Discount`}
                             `)
-                            }
-                        });
+                                }
+                            });
 
-                        val.services.forEach((serviceVal, index) => {
-                            if (serviceVal.mrp_price === 0) {
-                                $('#serviceData .service-wrapper-body').append(`
+                            val.services.forEach((serviceVal, index) => {
+                                if (serviceVal.mrp_price === 0) {
+                                    $('#serviceData .service-wrapper-body').append(`
                             <div class="service-wrapper-list" id="${serviceVal.id}">
                                 <div>
                                     <h5>${serviceVal.name} [${serviceVal.category}] </h5>
@@ -319,9 +321,9 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                                 </div>
                             </div>                        
                             `)
-                            } else {
+                                } else {
 
-                                $('#serviceData .service-wrapper-body').append(`
+                                    $('#serviceData .service-wrapper-body').append(`
                             <div class="service-wrapper-list" id="${serviceVal.id}">
                                 <div>
                                     <h5>${serviceVal.name} [${serviceVal.category}] </h5>
@@ -335,12 +337,15 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                                 </div>
                             </div>                        
                             `)
-                            }
+                                }
+
+                            });
 
                         });
-
-                    });
-                    $(".loading-wrapper").hide();
+                        $(".loading-wrapper").hide();
+                    } else {
+                        $('#nodata').html('<div><img src="assets/images/nodata.png" /><h5>Data is not available...</h5></div>')
+                    }
 
                 }
             });
