@@ -1251,6 +1251,7 @@
     <script>
         $(function() {
             const token = localStorage.getItem("token");
+            const userToken = localStorage.getItem("userToken");
 
             $('.loginBtn').click(function() {
                 $('.modal').modal('hide');
@@ -1603,18 +1604,16 @@
             $('.advancedAutoComplete').on('autocomplete.select', function(evt, item) {
                 // debugger;
                 // console.log(item);
-                if(item.category == 'Services'){
+                if (item.category == 'Services') {
                     window.location.replace(`service-list.php?service_id=${item.id}`);
-                }
-                else if(item.category == 'Salon'){
+                } else if (item.category == 'Salon') {
                     window.location.replace(`hair-masters.php?service_id=${item.id}`);
-                }
-                else if(item.category == 'Makeup Artist'){
+                } else if (item.category == 'Makeup Artist') {
                     window.location.replace(`makeup-artist.php?service_id=${item.id}`);
                     console.log(item);
                 }
             });
-            
+
             $('.advancedAutoComplete').on('autocomplete.freevalue', function(evt, value) {
                 window.location.replace(`service-list.php?str=${value}`);
             });
@@ -1635,7 +1634,7 @@
                     dataType: 'JSON',
                     success: function(result) {
                         // console.log(result)
-                        
+
                         for (let key in result) {
                             if (key == 'ladies') {
                                 $("#salonServices").append(`
@@ -1673,6 +1672,26 @@
             }
             getAllServices();
 
+
+            // *****************
+            // cartCount
+            // *****************
+            if (userToken) {
+                const cartCount = function() {
+                    $.ajax({
+                        url: `${base_url}user/cart/get-cart-count.php`,
+                        type: 'GET',
+                        dataType: 'JSON',
+                        data: {
+                            token: userToken
+                        },
+                        success: function(result) {
+                            $('.cart-count-circle').text(result.count);
+                        }
+                    });
+                }
+                cartCount();
+            }
             if (token) {
                 $.ajax({
                     url: base_url + 'get-info.php?token= ' + token + ' &q=info,services,amenities,timings',

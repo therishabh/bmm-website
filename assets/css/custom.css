@@ -5424,6 +5424,10 @@ label.error {
     padding: 25px;
 }
 
+.service-wrapper .service-wrapper-header p {
+    margin-bottom: 0px;
+}
+
 .service-wrapper .service-wrapper-header a {
     color: #000;
 }
