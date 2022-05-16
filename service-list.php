@@ -239,6 +239,25 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
 
                     if (result && result.length > 0) {
                         result.forEach((val, key) => {
+                            var serviceWrapper = '';
+                            if (val.services && val.services.length > 0) {
+                                val.services.forEach(serviceVal => {
+                                    serviceWrapper += `
+                                    <div class="service-wrapper-list" id="${serviceVal.id}">
+                                        <div>
+                                            <h5>${serviceVal.name} [${serviceVal.category}] </h5>
+                                            <div>
+                                            <s>Rs. ${serviceVal.mrp_price}</s>
+                                            <span class="discounted_price">Rs. ${serviceVal.discounted_price}</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-pink bookServiceBtn">Book</button>
+                                        </div>
+                                    </div>    
+                                    `
+                                });
+                            }
                             $('#salonData .row').append(`
                      <div class="col-md-4">
                      <a href="hair-masters.php" class="service-box">
@@ -254,26 +273,15 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                 </div>
                         `);
 
-                            if (val.services && val.services.length > 0) {
-                                val.services.forEach(serviceVal => {
-                                    // console.log(serviceVal.mrp_price);
-                                    // $(`#serviceData .service-wrapper-body`).append(serviceVal[].mrp_price);
-                                            $(`#serviceData .service-wrapper-body`).append(`
-                                    <div class="service-wrapper-list" id="${serviceVal.id}">
-                                        <div>
-                                            <h5>${serviceVal.name} [${serviceVal.category}] </h5>
-                                            <div>
-                                            <s>Rs. ${serviceVal.mrp_price}</s>
-                                            <span class="discounted_price">Rs. ${serviceVal.discounted_price}</span>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <button class="btn btn-pink bookServiceBtn">Book</button>
-                                        </div>
-                                    </div>                           
-                                    `)
-                                });
-                            };
+                            // if (val.services && val.services.length > 0) {
+                            //     val.services.forEach(serviceVal => {
+                            //         console.log(serviceVal.mrp_price);
+                            //         $(`#serviceData .service-wrapper-body`).append(serviceVal[].mrp_price);
+                            //                 $(`#serviceData .service-wrapper-body`).append(`
+                                                          
+                            //         `)
+                            //     });
+                            // };
 
                             if (val.coupons && val.coupons.length > 0) {
                                 val.coupons.forEach((couponVal, index) => {
@@ -287,35 +295,35 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
 
                             if (val.is_bridal_service_provide) {
                                 $('#bridalData .row').append(`
-                <div class="col-md-4">
-                    <a href="hair-masters.php" class="service-box">
-                        <img src="https://via.placeholder.com/400x250" alt="" class="img-fluid" />
-                        <div class="service-body">
-                            <h4> ${val.salon_name}</h4>
-                            <p> <i class="fa fa-map-marker-alt"></i> ${val.city} ${val.state}</p>
-                            <span class="rating"><i class="fas fa-star"></i> ${val.rating}</span>
-                            <hr>
-                            <p class="discountPara"></p>
-                        </div>
-                    </a>
-                </div>
-                        `)
+                              <div class="col-md-4">
+                               <a href="hair-masters.php" class="service-box">
+                             <img src="https://via.placeholder.com/400x250" alt="" class="img-fluid" />
+                              <div class="service-body">
+                              <h4> ${val.salon_name}</h4>
+                              <p> <i class="fa fa-map-marker-alt"></i> ${val.city} ${val.state}</p>
+                              <span class="rating"><i class="fas fa-star"></i> ${val.rating}</span>
+                              <hr>
+                              <p class="discountPara"></p>
+                              </div>
+                              </a>
+                              </div>
+                               `)
                             }
                             if (val.is_luxury_service_provide) {
                                 $('#luxeData .row').append(`
-                <div class="col-md-4">
-                    <a href="hair-masters.php" class="service-box">
-                        <img src="https://via.placeholder.com/400x250" alt="" class="img-fluid" />
-                        <div class="service-body">
-                            <h4> ${val.salon_name}</h4>
-                            <p> <i class="fa fa-map-marker-alt"></i> ${val.city} ${val.state}</p>
-                            <span class="rating"><i class="fas fa-star"></i> ${val.rating}</span>
-                            <hr>
-                            <p class="discountPara"></p>
-                        </div>
-                    </a>
-                </div>
-                        `)
+                              <div class="col-md-4">
+                                  <a href="hair-masters.php" class="service-box">
+                                      <img src="https://via.placeholder.com/400x250" alt="" class="img-fluid" />
+                                      <div class="service-body">
+                                          <h4> ${val.salon_name}</h4>
+                                          <p> <i class="fa fa-map-marker-alt"></i> ${val.city} ${val.state}</p>
+                                          <span class="rating"><i class="fas fa-star"></i> ${val.rating}</span>
+                                          <hr>
+                                          <p class="discountPara"></p>
+                                      </div>
+                                  </a>
+                              </div>
+                               `)
                             }
 
 
@@ -326,6 +334,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                             <p> <i class="fa fa-map-marker-alt"></i> ${val.city} ${val.state}</p>
                         </div>
                         <div class="service-wrapper-body">
+                        ${serviceWrapper}
                         </div>
                     </div>
                         `)
