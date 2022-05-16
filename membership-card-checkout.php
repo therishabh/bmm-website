@@ -25,6 +25,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                             <p class="card_value"></p>
                             <p class="card_validity"></p>
                             <p class="category"></p>
+                            <p class="card_fee"></p>
                         </div>
                     </div>
                 </div>
@@ -71,6 +72,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                     $('.card_value').html('Get card with value of ' + result.value);
                     $('.card_validity').html('Card Validity will be for ' + result.validity);
                     $('.category').html('Card Category ' + result.category);
+                    $('.card_fee').html('No Joining Fee, No Annual Fee');
                     $('#card-img').attr('src', "" + result.image + "").append("#card-banner");
                     $("#card_price").html(`₹` + result.price);
                     $("#card_value").html(`₹` + result.value);
@@ -135,6 +137,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                     };
                     var rzp = new Razorpay(options);
                     rzp.open();
+                    $("#checkout-btn").attr('disabled',false);
                 },
 
             });
