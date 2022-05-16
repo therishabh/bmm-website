@@ -685,10 +685,22 @@
                         <div class="top-right-list">
 
                             <div class="top-right-list-item">
-                                <div class="custom-dropdown">
+                                <div class="custom-dropdown dropdown-before-login">
                                     <div class="custom-dropdown-btn">
                                         <a class="sign-up loginBtn"><i class="far fa-user-circle float-left mr-2"></i> <span> Login </span>
                                         </a>
+                                    </div>
+                                </div>
+                                <div class="custom-dropdown dropdown-after-login d-custom-none">
+                                    <div class="custom-dropdown-btn">
+                                        <a class="username"><i class="far fa-user-circle float-left mr-2"></i> <span> Login </span>
+                                        </a>
+                                    </div>
+                                    <div class="custom-dropdown-item">
+                                        <ul>
+                                            <li><a href="user/dashboard.php"><i class="fa fa-user"></i> <span>My Profile</span></a></li>
+                                            <li><a href="#" onclick="logout();"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -1296,6 +1308,8 @@
                             $("#signInBtn").removeAttr('disabled');
                             toastr.success("Sign in successfully");
                             localStorage.setItem("userToken", result.token);
+                            $('.loginBtn span').text(username);
+                            $('.modal').modal('hide');
                             // window.location.replace('user/dashboard.php');
                         },
                         error: function(error) {
@@ -1406,6 +1420,13 @@
                             toastr.success('OTP successfully verified');
                             $("#verifyOTP").removeAttr('disabled');
                             localStorage.setItem("userToken", result.token);
+                            localStorage.setItem("username", result.name);
+                            $('.modal').modal('hide');
+                            $('.dropdown-before-login').hide();
+                            $('.dropdown-after-login').show();
+                            username = localStorage.getItem("username");
+                            $('.username span').text(username);
+                            cartCount();
                             // window.location.replace('user/dashboard.php');
                         },
                         error: function(error) {
@@ -1676,20 +1697,24 @@
             // *****************
             // cartCount
             // *****************
+            const cartCount = function() {
+                $.ajax({
+                    url: `${base_url}user/cart/get-cart-count.php`,
+                    type: 'GET',
+                    dataType: 'JSON',
+                    data: {
+                        token: userToken
+                    },
+                    success: function(result) {
+                        $('.cart-count-circle').text(result.count);
+                    }
+                });
+            }
             if (userToken) {
-                const cartCount = function() {
-                    $.ajax({
-                        url: `${base_url}user/cart/get-cart-count.php`,
-                        type: 'GET',
-                        dataType: 'JSON',
-                        data: {
-                            token: userToken
-                        },
-                        success: function(result) {
-                            $('.cart-count-circle').text(result.count);
-                        }
-                    });
-                }
+                $('.dropdown-before-login').hide();
+                $('.dropdown-after-login').show();
+                username = localStorage.getItem("username");
+                $('.username span').text(username);
                 cartCount();
             }
             if (token) {
@@ -1718,4 +1743,13 @@
                 });
             }
         });
+
+        function logout() {
+            localStorage.removeItem("userToken");
+            localStorage.removeItem("username");
+            $('.dropdown-after-login').hide();
+            $('.dropdown-before-login').show();
+            toastr.success('You have successfully Logout');
+            $('.cart-count-circle').text(0);
+        }
     </script>

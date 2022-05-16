@@ -247,7 +247,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                                         <div>
                                             <h5>${serviceVal.name} [${serviceVal.category}] </h5>
                                             <div>
-                                            <s>Rs. ${serviceVal.mrp_price}</s>
+                                            ${serviceVal.mrp_price == 0 ? '' : `<s>Rs. ${serviceVal.mrp_price}</s>`}
                                             <span class="discounted_price">Rs. ${serviceVal.discounted_price}</span>
                                             </div>
                                         </div>

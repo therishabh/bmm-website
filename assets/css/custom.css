@@ -910,9 +910,39 @@ nav h5 {
     border-radius: 4px !important;
     overflow: hidden;
     box-shadow: 2px 4px 10px rgba(39, 59, 69, 0.4);
-    width: 240px;
+    width: 185px;
     z-index: 100000;
     display: none;
+}
+
+.custom-dropdown .custom-dropdown-item ul {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.custom-dropdown .custom-dropdown-item ul li {
+    list-style: none;
+}
+
+.custom-dropdown .custom-dropdown-item ul li a {
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 15px;
+}
+
+.custom-dropdown .custom-dropdown-item ul li a span {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.custom-dropdown .custom-dropdown-item ul li a:hover {
+    background: #f1f1f1;
+    text-decoration: none;
 }
 
 .custom-dropdown .custom-dropdown-btn,
