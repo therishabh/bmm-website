@@ -1,7 +1,4 @@
-<?php
-include './shared/utilities.php';
-includeWithVariables('./include/header.php', array('page_title' => "Book MY Makeup"));
-?>
+
 
 <div class="container">
     <div class="row">
@@ -21,7 +18,6 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
     <div class="card-detail-body mt-5"></div>
 </div>
 
-<?php include 'include/footer.php' ?>
 
 <script>
     $(function() {

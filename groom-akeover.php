@@ -1,9 +1,3 @@
-<?php
-include './shared/utilities.php';
-includeWithVariables('./include/header.php', array('page_title' => "Book MY Makeup"));
-?>
-
-
 
 <div class="card-page">
     <div class="container">
@@ -20,5 +14,3 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
         </div>
     </div>
 </div>
-
-<?php include 'include/footer.php' ?>

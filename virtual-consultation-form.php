@@ -33,11 +33,6 @@ if (isset($_POST['submit'])) {
 ?>
 
 
-<?php
-include './shared/utilities.php';
-includeWithVariables('./include/header.php', array('page_title' => "Book MY Makeup"));
-?>
-
 <section class="online-appointment">
     <div class="container">
         <h2 class="text-center">Get Expert Advice Online from Beauty consultants</h2>
@@ -222,5 +217,3 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
     </form>
     </div>
 </section>
-
-<?php include 'include/footer.php' ?>

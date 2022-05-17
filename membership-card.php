@@ -1,7 +1,4 @@
-<?php
-include './shared/utilities.php';
-includeWithVariables('./include/header.php', array('page_title' => "Book MY Makeup"));
-?>
+
 
 <img src="assets/images/card-slide1.jpg" alt="">
 
@@ -45,8 +42,6 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
         </div>
     </div>
 </section>
-<?php include 'include/footer.php' ?>
-
 
 <script>
     $(function() {

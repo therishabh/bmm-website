@@ -1,7 +1,3 @@
-<?php
-include './shared/utilities.php';
-includeWithVariables('./include/header.php', array('page_title' => "Book MY Makeup"));
-?>
 
 <section class="cart-details-section">
     <div class="container">
@@ -47,8 +43,6 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
 </section>
 
 <div class="overlay"></div>
-
-<?php include 'include/footer.php' ?>
 
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script>

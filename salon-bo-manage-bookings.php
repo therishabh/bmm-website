@@ -1,7 +1,3 @@
-<?php
-include './shared/utilities.php';
-includeWithVariables('./include/header.php', array('page_title' => "Book MY Makeup"));
-?>
 
 <section class="user-manage-profile">
     <div class="container">
@@ -166,8 +162,6 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
     </div>
 </section>
 
-<?php include 'include/footer.php' ?>
-</body>
 <script src="assets/highslide/highslide-with-gallery.js"></script>
 
 <script src="assets/js//Chart.min.js"></script>
@@ -234,4 +228,3 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
     });
 </script>
 
-</html>

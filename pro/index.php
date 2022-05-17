@@ -1,7 +1,4 @@
-<?php
-include './../shared/utilities.php';
-includeWithVariables('./../include/header.php', array('page_title' => "Book MY Makeup Pro Login"));
-?>
+
 <section class="slide-section">
     <div id="slides" class="carousel slide" data-ride="carousel">
         <!-- The slideshow -->
@@ -173,7 +170,6 @@ includeWithVariables('./../include/header.php', array('page_title' => "Book MY M
     <img src="../assets/images/login-section-pro-bg.jpg" alt="" />
 </section>
 
-<?php include '../include/footer.php' ?>
 <script>
     let token = localStorage.getItem('salonToken');
     if (token) {
@@ -333,6 +329,3 @@ includeWithVariables('./../include/header.php', array('page_title' => "Book MY M
 
     });
 </script>
-</body>
-
-</html>

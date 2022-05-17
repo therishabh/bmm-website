@@ -1,7 +1,4 @@
-<?php
-include './shared/utilities.php';
-includeWithVariables('./include/header.php', array('page_title' => "Book MY Makeup"));
-?>
+
 <section class="haircut-service-icons">
     <div class="container">
         <div class="row">
@@ -689,8 +686,6 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
         </div>
     </section> -->
 
-<?php include 'include/footer.php' ?>
-
 
 <!-- The Modal -->
 <div class="modal" id="bookingModal">
@@ -753,7 +748,3 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
         </div>
     </div>
 </div>
-
-</body>
-
-</html>

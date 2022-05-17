@@ -1,7 +1,4 @@
-<?php
-include './shared/utilities.php';
-includeWithVariables('./include/header.php', array('page_title' => "Book MY Makeup"));
-?>
+
 <div id="demo" class="carousel slide bmm-card-carousel" data-ride="carousel">
     <!-- The slideshow -->
     <div class="carousel-inner">
@@ -286,5 +283,3 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
             </div> -->
     </div>
 </section>
-
-<?php include 'include/footer.php' ?>

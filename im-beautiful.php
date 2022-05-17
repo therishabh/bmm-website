@@ -1,7 +1,3 @@
-<?php
-include './shared/utilities.php';
-includeWithVariables('./include/header.php', array('page_title' => "Book MY Makeup"));
-?>
 
 <section class="inner-header">
     <img src="assets/images/bmm-tv-banner.jpg" class="img-fluid" alt="">
@@ -613,5 +609,3 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
         </div>
     </section>
 </div>
-
-<?php include 'include/footer.php' ?>

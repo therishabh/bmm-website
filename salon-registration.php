@@ -1,7 +1,3 @@
-<?php
-include './shared/utilities.php';
-includeWithVariables('./include/header.php', array('page_title' => "Book MY Makeup"));
-?>
 
 <section class="book-appointment-banner">
     <img src="assets/images/book-appointment.jpg" class="img-fluid">
@@ -68,5 +64,3 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
 
     </div>
 </section>
-
-<?php include 'include/footer.php' ?>

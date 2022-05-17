@@ -1,9 +1,3 @@
-<?php
-include './shared/utilities.php';
-includeWithVariables('./include/header.php', array('page_title' => "Book MY Makeup"));
-?>
-
-
 
 <section class="pay-section">
   <div class="container">
@@ -31,9 +25,6 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
 
   </div>
 </section>
-
-<?php include 'include/footer.php' ?>
-
 
 <!-- The Modal -->
 <div class="modal cardFormModal" id="cardFormModal">
@@ -64,7 +55,3 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
     </div>
   </div>
 </div>
-
-</body>
-
-</html>

@@ -24,25 +24,26 @@
     <meta name="contactName" content="Book My Makeup" />
     <meta name="contactOrganization" content="Book My Makeup" />
 
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/owl.carousel.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/toastr.min.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/custom.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/responsive.css">
-    <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/css/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/css/toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/css/responsive.css">
+    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/jquery.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 
 <body>
+    <input type="hidden" id="base_url" value="<?php echo $base_url; ?>" />
     <div class="responsive-rgba text-right">
     </div>
     <div class="responsive-nav">
         <div class="row">
             <div class="col-6">
-                <a href="login.php" class="btn btn-pink">Sign In</a>
+                <a href="login" class="btn btn-pink">Sign In</a>
             </div>
             <div class="col-6">
-                <a href="register.php" class="btn btn-pink">Sign Up</a>
+                <a href="register" class="btn btn-pink">Sign Up</a>
             </div>
         </div>
         <hr>
@@ -53,19 +54,19 @@
                     <li>
                         <a href="#">Ladies <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
                         <ul class="list-unstyled pl-3 responsive-dropdown">
-                            <li><a href="ladies-hair-styling.php">Hair Styling</a></li>
-                            <li><a href="ladies-hair-styling.php">Make Up</a></li>
-                            <li><a href="ladies-hair-styling.php">Hair Texture</a></li>
-                            <li><a href="ladies-hair-styling.php">Hair Treatments</a></li>
-                            <li><a href="ladies-hair-styling.php">Facials & Rituals</a></li>
-                            <li><a href="ladies-hair-styling.php">Hand & Feet</a></li>
-                            <li><a href="ladies-hair-styling.php">Nail Care</a></li>
+                            <li><a href="ladies-hair-styling">Hair Styling</a></li>
+                            <li><a href="ladies-hair-styling">Make Up</a></li>
+                            <li><a href="ladies-hair-styling">Hair Texture</a></li>
+                            <li><a href="ladies-hair-styling">Hair Treatments</a></li>
+                            <li><a href="ladies-hair-styling">Facials & Rituals</a></li>
+                            <li><a href="ladies-hair-styling">Hand & Feet</a></li>
+                            <li><a href="ladies-hair-styling">Nail Care</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#">Salons <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
                         <ul class="list-unstyled pl-3 responsive-dropdown">
-                            <li><a href="hair-masters.php">Hair Masters</a></li>
+                            <li><a href="hair-masters">Hair Masters</a></li>
                             <li><a href="#">Looks</a></li>
                             <li><a href="#">Geetanjali</a></li>
                             <li><a href="#">VLCC</a></li>
@@ -271,7 +272,7 @@
                     <li>
                         <a href="#">Services <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
                         <ul class="list-unstyled pl-3 responsive-dropdown">
-                            <li><a href="ladies-hair-styling.php">Hair Styling</a></li>
+                            <li><a href="ladies-hair-styling">Hair Styling</a></li>
                             <li><a href="#">Make Up</a></li>
                             <li><a href="#">Hair Texture</a></li>
                             <li><a href="#">Hair Treatments</a></li>
@@ -293,9 +294,9 @@
                     <li>
                         <a href="#">BMM Cards <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
                         <ul class="list-unstyled pl-3 responsive-dropdown">
-                            <li><a href="cards.php">Membership Cards</a></li>
-                            <li><a href="cards.php">Gift Cards</a></li>
-                            <li><a href="cards.php">Flexi Cards</a></li>
+                            <li><a href="cards">Membership Cards</a></li>
+                            <li><a href="cards">Gift Cards</a></li>
+                            <li><a href="cards">Flexi Cards</a></li>
                         </ul>
                     </li>
                     <li>
@@ -564,8 +565,8 @@
                     </li>
                 </ul>
             </li>
-            <li><a href="blog.php">BMM TV</a></li>
-            <li><a href="blog.php">Quick Booking <i class="fa fa-calendar-alt"></i> </a></li>
+            <li><a href="blog">BMM TV</a></li>
+            <li><a href="blog">Quick Booking <i class="fa fa-calendar-alt"></i> </a></li>
             <li>
                 <a href="#">Offers <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
                 <ul class="list-unstyled pl-3 responsive-dropdown">
@@ -612,7 +613,7 @@
                 </li> -->
                 </ul>
             </li>
-            <li><a href="blog.php">Blog</a></li>
+            <li><a href="blog">Blog</a></li>
         </ul>
     </div>
     <?php
@@ -641,9 +642,9 @@
                         </div>
                         <ul class="float-right">
                             <li>
-                                <a href="get-app.php"><i class="fas fa-mobile-alt"></i> Get APP</a>
+                                <a href="get-app"><i class="fas fa-mobile-alt"></i> Get APP</a>
                             </li>
-                            <li><a href="virtual-consultation.php"> <i class="far fa-comments"></i>Makeup Consultant</a></li>
+                            <li><a href="virtual-consultation"> <i class="far fa-comments"></i>Makeup Consultant</a></li>
                             <li>
                                 <i class="fa fa-phone-alt"></i> &nbsp; 844 855 4942
                             </li>
@@ -664,7 +665,7 @@
                     </a>
                 </div>
                 <div class="col-md-3 col-7">
-                    <a href="<?php echo base_url(); ?>index.php" class="logo"><img src="<?php echo base_url(); ?>assets/images/logo.png" class="img-fluid" alt=""></a>
+                    <a href="<?php echo $base_url; ?>" class="logo"><img src="<?php echo $base_url; ?>assets/images/logo.png" class="img-fluid" alt=""></a>
                 </div>
                 <?php
                 if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
@@ -698,7 +699,7 @@
                                     </div>
                                     <div class="custom-dropdown-item">
                                         <ul>
-                                            <li><a href="user/dashboard.php"><i class="fa fa-user"></i> <span>My Profile</span></a></li>
+                                            <li><a href="user/dashboard"><i class="fa fa-user"></i> <span>My Profile</span></a></li>
                                             <li><a href="#" onclick="logout();"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a></li>
                                         </ul>
                                     </div>
@@ -710,7 +711,7 @@
                             </div>
 
                             <div class="top-right-list-item">
-                                <a href="cart.php" class="cart-anchor">
+                                <a href="cart" class="cart-anchor">
                                     <i class="fas fa-shopping-bag text-pink icons"></i>
                                     <span class="cart-count-circle">0</span>
                                 </a>
@@ -743,7 +744,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-3">
-                                        <img src="<?php echo base_url(); ?>assets/images/submenu-salon-female-img.jpg" alt="" class="img-fluid">
+                                        <img src="<?php echo $base_url; ?>assets/images/submenu-salon-female-img.jpg" alt="" class="img-fluid">
                                     </div>
                                 </div>
 
@@ -753,7 +754,7 @@
                                         <div class="menu-common-list">
                                             <div class="nav-submenu-title">Hair Styling</div>
                                             <ul>
-                                                <li><a href="service-list.php">Hair Cut</a></li>
+                                                <li><a href="service-list">Hair Cut</a></li>
                                                 <li><a href="#">Ironing</a></li>
                                                 <li><a href="#">Global Colouring</a></li>
                                                 <li><a href="#">Blow Dry</a></li>
@@ -836,7 +837,7 @@
                                         <div class="menu-common-list">
                                             <div class="nav-submenu-title">Recommended</div>
                                             <ul>
-                                                <li><a href="hair-masters.php">Hair Masters</a></li>
+                                                <li><a href="hair-masters">Hair Masters</a></li>
                                                 <li><a href="#">Looks</a></li>
                                                 <li><a href="#">Geetanjali</a></li>
                                                 <li><a href="#">VLCC</a></li>
@@ -849,7 +850,7 @@
                                     </div>
 
                                     <div class="col-md-3">
-                                        <img src="<?php echo base_url(); ?>assets/images/submenu-salon-female-img.jpg" alt="" class="img-fluid">
+                                        <img src="<?php echo $base_url; ?>assets/images/submenu-salon-female-img.jpg" alt="" class="img-fluid">
                                     </div>
 
                                 </div> -->
@@ -865,12 +866,12 @@
                                             <div class="menu-common-list">
                                                 <div class="nav-submenu-title">Services</ldiv>
                                                     <ul>
-                                                        <li><a href="ladies-service.php#Hair">Hair</a></li>
-                                                        <li><a href="ladies-service.php#ChemicalService">Chemical Service</a></li>
-                                                        <li><a href="ladies-service.php#ColorRoots">Color Roots</a></li>
-                                                        <li><a href="ladies-service.php#HairSPA">Hair SPA</a></li>
-                                                        <li><a href="ladies-service.php#HeadMassage">Head Massage</a></li>
-                                                        <li><a href="ladies-service.php#ManicurePedicure">Manicure/Pedicure</a></li>
+                                                        <li><a href="ladies-service#Hair">Hair</a></li>
+                                                        <li><a href="ladies-service#ChemicalService">Chemical Service</a></li>
+                                                        <li><a href="ladies-service#ColorRoots">Color Roots</a></li>
+                                                        <li><a href="ladies-service#HairSPA">Hair SPA</a></li>
+                                                        <li><a href="ladies-service#HeadMassage">Head Massage</a></li>
+                                                        <li><a href="ladies-service#ManicurePedicure">Manicure/Pedicure</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -881,15 +882,15 @@
                                             <div class="menu-common-list">
                                                 <div class="nav-submenu-title">Packages</div>
                                                 <ul>
-                                                    <li><a href="package.php">Family</a></li>
-                                                    <li><a href="package.php">Eco</a></li>
-                                                    <li><a href="package.php">Gold</a></li>
+                                                    <li><a href="package">Family</a></li>
+                                                    <li><a href="package">Eco</a></li>
+                                                    <li><a href="package">Gold</a></li>
                                                 </ul>
                                                 <div class="nav-submenu-title">BMM Cards</div>
                                                 <ul>
-                                                    <li><a href="cards.php">Membership Cards</a></li>
-                                                    <li><a href="cards.php">Gift Cards</a></li>
-                                                    <li><a href="cards.php">Flexi Cards</a></li>
+                                                    <li><a href="cards">Membership Cards</a></li>
+                                                    <li><a href="cards">Gift Cards</a></li>
+                                                    <li><a href="cards">Flexi Cards</a></li>
                                                 </ul>
 
 
@@ -900,7 +901,7 @@
                                             <div class="menu-common-list">
                                                 <div class="nav-submenu-title">Recommended</div>
                                                 <ul>
-                                                    <li><a href="makeup-artist-1.php">Priyanka Sharma</a></li>
+                                                    <li><a href="makeup-artist-1">Priyanka Sharma</a></li>
                                                     <li><a href="#">Anshika Sharma</a></li>
                                                     <li><a href="#">Bushra Shahid</a></li>
                                                     <li><a href="#">Manju</a></li>
@@ -914,18 +915,18 @@
                                             <div class="menu-common-list">
                                                 <div class="nav-submenu-title">Offers</ldiv>
                                                     <ul>
-                                                        <li><a href="offers.php">Free Hair Cut</a></li>
-                                                        <li><a href="offers.php">50% off on Manicure</a></li>
-                                                        <li><a href="offers.php">50% off on Pedicure</a></li>
-                                                        <li><a href="offers.php">Free Makeup Trial</a></li>
-                                                        <li><a href="offers.php">Free Nail Care</a></li>
+                                                        <li><a href="offers">Free Hair Cut</a></li>
+                                                        <li><a href="offers">50% off on Manicure</a></li>
+                                                        <li><a href="offers">50% off on Pedicure</a></li>
+                                                        <li><a href="offers">Free Makeup Trial</a></li>
+                                                        <li><a href="offers">Free Nail Care</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="col-md-3">
-                                            <img src="<?php echo base_url(); ?>assets/images/wedding-pre-bridal-nav-img.jpg" alt="" class="img-fluid">
+                                            <img src="<?php echo $base_url; ?>assets/images/wedding-pre-bridal-nav-img.jpg" alt="" class="img-fluid">
                                         </div>
 
                                     </div>
@@ -934,7 +935,7 @@
                             </div>
                         </li>
 
-                        <li><a href="bridal-makeup-consultation-form.php">Bridal Makeup</a>
+                        <li><a href="bridal-makeup-consultation-form">Bridal Makeup</a>
                             <div class="submenu">
 
                                 <div class="">
@@ -960,10 +961,10 @@
                                             <div class="menu-common-list">
                                                 <div class="nav-submenu-title">Bridal Package</ldiv>
                                                     <ul>
-                                                        <li><a href="package.php">Silver</a></li>
-                                                        <li><a href="package.php">Gold</a></li>
-                                                        <li><a href="package.php">Platinum</a></li>
-                                                        <li><a href="package.php">Diamond</a></li>
+                                                        <li><a href="package">Silver</a></li>
+                                                        <li><a href="package">Gold</a></li>
+                                                        <li><a href="package">Platinum</a></li>
+                                                        <li><a href="package">Diamond</a></li>
                                                     </ul>
 
 
@@ -974,10 +975,10 @@
                                             <div class="menu-common-list">
                                                 <div class="nav-submenu-title">Pre Bridal Package</ldiv>
                                                     <ul>
-                                                        <li><a href="package.php">Silver</a></li>
-                                                        <li><a href="package.php">Gold</a></li>
-                                                        <li><a href="package.php">Platinum</a></li>
-                                                        <li><a href="package.php">Diamond</a></li>
+                                                        <li><a href="package">Silver</a></li>
+                                                        <li><a href="package">Gold</a></li>
+                                                        <li><a href="package">Platinum</a></li>
+                                                        <li><a href="package">Diamond</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -987,16 +988,16 @@
                                             <div class="menu-common-list">
                                                 <div class="nav-submenu-title">BMM Cards</div>
                                                 <ul>
-                                                    <li><a href="cards.php">Membership Cards</a></li>
-                                                    <li><a href="cards.php">Gift Cards</a></li>
-                                                    <li><a href="cards.php">Flexi Cards</a></li>
+                                                    <li><a href="cards">Membership Cards</a></li>
+                                                    <li><a href="cards">Gift Cards</a></li>
+                                                    <li><a href="cards">Flexi Cards</a></li>
                                                 </ul>
                                             </div>
                                         </div>
 
 
                                         <div class="col-md-3">
-                                            <img src="<?php echo base_url(); ?>assets/images/makeup-artist-nav-img.jpg" alt="" class="img-fluid">
+                                            <img src="<?php echo $base_url; ?>assets/images/makeup-artist-nav-img.jpg" alt="" class="img-fluid">
                                         </div>
 
                                     </div>
@@ -1006,26 +1007,26 @@
                         </li>
 
 
-                        <li><a href="makeup-academy.php">Makeup Academy</a></li>
+                        <li><a href="makeup-academy">Makeup Academy</a></li>
 
-                        <li><a href="cards.php">Cards </a></li>
-                        <li><a href="im-beautiful.php">I'm Beautiful &nbsp; <i class="fa fa-heart"></i> </a>
+                        <li><a href="cards">Cards </a></li>
+                        <li><a href="im-beautiful">I'm Beautiful &nbsp; <i class="fa fa-heart"></i> </a>
 
                         <li>
-                            <a href="<?php echo base_url(); ?>bmm-tv.php"> BMM TV</a>
+                            <a href="<?php echo $base_url; ?>bmm-tv"> BMM TV</a>
                         </li>
                         <li>
-                            <a href="book-appointment.php"> Quick Booking &nbsp; <i class="fa fa-calendar-alt"></i> </a>
+                            <a href="book-appointment"> Quick Booking &nbsp; <i class="fa fa-calendar-alt"></i> </a>
                         </li>
-                        <li class="active-offer-nav"><a href="offers.php">Offers</a>
+                        <li class="active-offer-nav"><a href="offers">Offers</a>
 
                         </li>
 
-                        <li><a href="blog.php">Blog </a>
+                        <li><a href="blog">Blog </a>
                         </li>
 
                         <li class="p-relative">
-                            <a href="pro/index.php">BMM PRO
+                            <a href="pro/index">BMM PRO
                                 <!-- <span class="new-tag new">FREE</span> -->
                             </a>
                         </li>
@@ -1259,497 +1260,3 @@
             </div>
         </div>
     </div>
-
-    <script>
-        $(function() {
-            const token = localStorage.getItem("token");
-            const userToken = localStorage.getItem("userToken");
-
-            $('.loginBtn').click(function() {
-                $('.modal').modal('hide');
-                $('#loginModal').modal('show');
-            });
-            $('.registerBtn').click(function() {
-                $('.modal').modal('hide');
-                $('#registerModal').modal('show');
-            });
-
-
-            // *****************
-            // Login
-            // *****************
-
-            let otpTiming = 60;
-            let tempToken;
-            let interval;
-
-            $("#loginForm").validate({
-                rules: {
-                    email_mobile: "required",
-                    password: "required",
-                },
-                messages: {
-                    email_mobile: "Please enter Mobile Number or Email id",
-                    password: "Please enter Password",
-                },
-
-                submitHandler: function(form) {
-                    let post_data = {
-                        email_mobile: $('#loginForm [name=email_mobile]').val(),
-                        password: $('#loginForm [name=password]').val(),
-                    }
-                    $("#signInBtn").attr('disabled', true);
-                    $.ajax({
-                        url: `${base_url}/user/auth/login.php`,
-                        type: 'POST',
-                        dataType: 'JSON',
-                        data: JSON.stringify(post_data),
-                        success: function(result) {
-                            $("#signInBtn").removeAttr('disabled');
-                            toastr.success("Sign in successfully");
-                            localStorage.setItem("userToken", result.token);
-                            $('.loginBtn span').text(username);
-                            $('.modal').modal('hide');
-                            // window.location.replace('user/dashboard.php');
-                        },
-                        error: function(error) {
-                            $("#signInBtn").removeAttr('disabled');
-                            toastr.error(error.responseJSON.message);
-                        }
-                    });
-                }
-            });
-
-            $("#user-signin-with-otp-btn").click(function() {
-                sendOTPForLogin();
-            });
-
-            function sendOTPForLogin() {
-                $('#otp-mobile').text($('[name=email_mobile]').val());
-                $('#loginStepTwo input[name=otp]').val("")
-                let post_data = {
-                    mobile_no: $("#loginForm [name=email_mobile]").val(),
-                }
-                if (!!post_data.mobile_no) {
-                    $("#user-signin-with-otp-btn").attr('disabled', true);
-                    $.ajax({
-                        url: base_url + '/user/auth/login-with-otp.php',
-                        type: 'POST',
-                        dataType: 'JSON',
-                        data: JSON.stringify(post_data),
-                        success: function(result) {
-                            $("#user-signin-with-otp-btn").removeAttr('disabled');
-                            $("#loginStepTwo").show();
-                            $("#loginForm").hide();
-                            toastr.success(result.message);
-                            tempToken = result.token;
-                            signInResendSetInterval();
-                        },
-                        error: function(error) {
-                            $("#user-signin-with-otp-btn").removeAttr('disabled');
-                            toastr.error(error.responseJSON.message);
-                        }
-                    });
-                } else {
-                    toastr.error("Please enter Mobile Number");
-                }
-            }
-
-            function signInResendSetInterval() {
-                $('.user-login-resend-btn').hide();
-                $('.resend-seconds').show();
-                $("#user-signin-with-otp-btn").hide();
-                $("#timer-btn").show();
-                let resend_seconds = otpTiming;
-                $('.resend-seconds span').text(resend_seconds);
-                $('#timer-btn span').text(resend_seconds);
-                interval = setInterval(function() {
-                    resend_seconds--;
-                    if (resend_seconds > 1) {
-                        $('.resend-seconds span').text(resend_seconds);
-                        $('#timer-btn span').text(resend_seconds);
-                    } else {
-                        $('.resend-seconds').hide();
-                        $('.user-login-resend-btn').show();
-                        $("#user-signin-with-otp-btn").show();
-                        $("#timer-btn").hide();
-                        clearInterval(interval);
-                        return;
-                    }
-                }, 1000);
-            }
-
-            $('.user-login-resend-btn').click(function() {
-                sendOTPForLogin();
-            });
-
-            $("#loginStepTwo .user-go-back-btn").click(function() {
-                $("#loginStepTwo").hide();
-                $("#loginForm").show();
-                $("#user-signin-with-otp-btn").show();
-            });
-
-            $("#loginStepTwo").validate({
-                rules: {
-                    otp: {
-                        required: true,
-                        number: true,
-                        minlength: 4
-                    }
-                },
-                messages: {
-                    otp: {
-                        required: "Please enter OTP",
-                        number: "Please enter a valid OTP",
-                        minlength: "Please enter 4 digit OTP"
-                    }
-                },
-                submitHandler: function(form) {
-                    let post_data = {
-                        otp: $('#loginStepTwo input[name=otp]').val(),
-                        token: tempToken
-                    }
-                    $("#verifyOTP").attr('disabled', true);
-                    $.ajax({
-                        url: base_url + 'user/auth/verify-otp.php',
-                        type: 'POST',
-                        dataType: 'JSON',
-                        data: JSON.stringify(post_data),
-                        success: function(result) {
-                            clearInterval(interval);
-                            toastr.success('OTP successfully verified');
-                            $("#verifyOTP").removeAttr('disabled');
-                            localStorage.setItem("userToken", result.token);
-                            localStorage.setItem("username", result.name);
-                            $('.modal').modal('hide');
-                            $('.dropdown-before-login').hide();
-                            $('.dropdown-after-login').show();
-                            username = localStorage.getItem("username");
-                            $('.username span').text(username);
-                            cartCount();
-                            // window.location.replace('user/dashboard.php');
-                        },
-                        error: function(error) {
-                            $("#verifyOTP").removeAttr('disabled');
-                            toastr.error(error.responseJSON.message);
-                        }
-                    });
-                }
-            });
-
-            // *****************
-            // registerStepOne
-            // *****************
-
-            $("#registerStepOne").validate({
-                rules: {
-                    name: "required",
-                    mobile_no: "required",
-                    email_id: "required",
-                    gender: "required",
-                },
-                messages: {
-                    name: "Please enter Full Name",
-                    mobile_no: "Please enter Mobile Number",
-                    email_id: "Please enter Email Id",
-                    gender: "Please select Gender",
-                },
-
-                submitHandler: function(form) {
-                    let post_data = {
-                        name: $('#registerStepOne [name=name]').val(),
-                        mobile_no: $('#registerStepOne [name=mobile_no]').val(),
-                        email_id: $('#registerStepOne [name=email_id]').val(),
-                        gender: $('#registerStepOne [name=gender]').val(),
-                    }
-                    $("#registerBtn").attr('disabled', true);
-                    $.ajax({
-                        url: `${base_url}user/auth/signup.php`,
-                        type: 'POST',
-                        dataType: 'JSON',
-                        data: JSON.stringify(post_data),
-                        success: function(result) {
-                            debugger;
-                            $("#registerStepOne #registerBtn").removeAttr('disabled')
-                            $('#registerStepOne').hide();
-                            $('#registerStepTwo').show();
-                            tempToken = result.token;
-                            resendSetInterval();
-                        },
-                        error: function(error) {
-                            $("#registerBtn").removeAttr('disabled');
-                            toastr.error(error.responseJSON.message);
-                        }
-                    });
-                }
-            });
-
-            // *****************
-            // registerStepTwo
-            // *****************
-            function resendSetInterval() {
-                $('.user-register-resend-btn').hide();
-                $('.register-resend-seconds').show();
-                $("#registerBtn").hide();
-                $("#timer-btn").show();
-                let resend_seconds = otpTiming;
-                $('.register-resend-seconds span').text(resend_seconds);
-                $('#timer-btn span').text(resend_seconds);
-                let interval = setInterval(function() {
-                    resend_seconds--;
-                    if (resend_seconds > 1) {
-                        $('.register-resend-seconds span').text(resend_seconds);
-                        $('#timer-btn span').text(resend_seconds);
-                    } else {
-                        $('.register-resend-seconds').hide();
-                        $('.user-register-resend-btn').show();
-                        $("#registerBtn").show();
-                        $("#timer-btn").hide();
-                        clearInterval(interval);
-                        return;
-                    }
-                }, 1000);
-            }
-
-            $('.user-register-resend-btn').click(function() {
-                let post_data = {
-                    token: tempToken
-                }
-                $.ajax({
-                    url: base_url + 'user/auth/resend-otp.php',
-                    type: 'POST',
-                    dataType: 'JSON',
-                    data: JSON.stringify(post_data),
-                    success: function() {
-                        resendSetInterval();
-                    }
-                });
-            });
-
-            $("#registerStepTwo").validate({
-                rules: {
-                    otp: {
-                        required: true,
-                        number: true,
-                        minlength: 4
-                    }
-                },
-                messages: {
-                    otp: {
-                        required: "Please enter OTP",
-                        number: "Please enter a valid OTP",
-                        minlength: "Please enter 4 digit OTP"
-                    }
-                },
-                submitHandler: function(form) {
-                    let post_data = {
-                        otp: $('#registerStepTwo input[name=otp]').val(),
-                        token: tempToken
-                    }
-                    $("#verifyOTP").attr('disabled', true);
-                    $.ajax({
-                        url: base_url + 'user/auth/verify-otp.php',
-                        type: 'POST',
-                        dataType: 'JSON',
-                        data: JSON.stringify(post_data),
-                        success: function(res) {
-                            // $('#registerStepTwo').hide();                            
-                            toastr.success('You have successfully Registered');
-                            localStorage.setItem("userToken", res.token);
-                            $('#registerModal').modal('hide');
-                            $("#verifyOTP").removeAttr('disabled');
-                            window.location.replace('user/dashboard.php');
-                        },
-                        error: function(error) {
-                            $("#verifyOTP").removeAttr('disabled');
-                            toastr.error(error.responseJSON.message);
-                        }
-                    });
-                }
-            });
-
-            $("#registerStepTwo .user-go-back-btn").click(function() {
-                $('#registerStepTwo').hide();
-                $('#registerStepOne').show();
-                $('#registerBtn').show();
-            })
-
-            // *****************
-            // advancedAutoComplete
-            // *****************
-
-            $('.advancedAutoComplete').autoComplete({
-                minLength: 1,
-                resolver: 'custom',
-                formatResult: function(item) {
-                    return {
-                        value: item.name,
-                        text: item.name,
-                        html: [
-                            `${item.name} ${item.genderType ? '['+ item.genderType +']' : '' }<br/><span>${item.category}</span>`,
-                        ]
-                    };
-                },
-                events: {
-                    search: function(qry, callback) {
-                        $.ajax(
-                            `${base_url}user/search/get-search-list.php`, {
-                                data: {
-                                    'q': qry
-                                }
-                            }
-                        ).done(function(res) {
-                            let responseData = [];
-                            categoryObj = {
-                                "services": "Services",
-                                "makeup_artist": "Makeup Artist",
-                                "salon": "Salon",
-                            }
-                            for (let key in res.result) {
-                                res.result[key].forEach(val => {
-                                    let obj = {
-                                        id: val.id,
-                                        category: categoryObj[key],
-                                        genderType: val.category,
-                                        name: val.name
-                                    }
-                                    responseData.push(obj);
-                                })
-                            }
-                            callback(responseData)
-                        });
-                    }
-                }
-            });
-
-            $('.advancedAutoComplete').on('autocomplete.select', function(evt, item) {
-                // debugger;
-                // console.log(item);
-                if (item.category == 'Services') {
-                    window.location.replace(`service-list.php?service_id=${item.id}`);
-                } else if (item.category == 'Salon') {
-                    window.location.replace(`hair-masters.php?service_id=${item.id}`);
-                } else if (item.category == 'Makeup Artist') {
-                    window.location.replace(`makeup-artist.php?service_id=${item.id}`);
-                    console.log(item);
-                }
-            });
-
-            $('.advancedAutoComplete').on('autocomplete.freevalue', function(evt, value) {
-                window.location.replace(`service-list.php?str=${value}`);
-            });
-
-            // *****************
-            // getAllServices
-            // *****************
-            var getAllServices = function() {
-                $(".loading-wrapper").show();
-                var selectedServices = [];
-                var intoSlug = function(str) {
-                    return str.toLowerCase().split(' ').join('-').replace('&', '');
-                }
-                const url = `${base_url}/user/services/get-services.php`;
-                $.ajax({
-                    url: url,
-                    type: 'GET',
-                    dataType: 'JSON',
-                    success: function(result) {
-                        // console.log(result)
-
-                        for (let key in result) {
-                            if (key == 'ladies') {
-                                $("#salonServices").append(`
-                                  <div class="">
-                                <div id="${key+'-card-body-wrapper'}">
-                                    <div class="row"></div>
-                                </div>
-                                  </div>`);
-                                for (let category in result[key]) {
-                                    $(`#salonServices #${key}-card-body-wrapper .row`).append(
-                                        `<div class="col-lg mb-4">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title" data="${category}">${category}</div>
-                                        <ul class="checkbox-wrapper ${intoSlug(category)}"></ul>
-                                        </div>
-                                    </div>
-                                    `
-                                    );
-                                    result[key][category].forEach(val => {
-                                        var x = `#salonServices #${key}-card-body-wrapper .${intoSlug(category)}`;
-                                        $(x).append(`
-                                      <li><a href="service-list.php?service_id=${val.id}">${val.name}</a></li>
-                                    `);
-                                    })
-                                }
-                            }
-                        }
-
-                        $(".loading-wrapper").hide();
-                        $("#salonServices").fadeIn(1000);
-                        $(".services-page .button-wrapper button").fadeIn(1000);
-
-                    }
-                });
-            }
-            getAllServices();
-
-
-            // *****************
-            // cartCount
-            // *****************
-            const cartCount = function() {
-                $.ajax({
-                    url: `${base_url}user/cart/get-cart-count.php`,
-                    type: 'GET',
-                    dataType: 'JSON',
-                    data: {
-                        token: userToken
-                    },
-                    success: function(result) {
-                        $('.cart-count-circle').text(result.count);
-                    }
-                });
-            }
-            if (userToken) {
-                $('.dropdown-before-login').hide();
-                $('.dropdown-after-login').show();
-                username = localStorage.getItem("username");
-                $('.username span').text(username);
-                cartCount();
-            }
-            if (token) {
-                $.ajax({
-                    url: base_url + 'get-info.php?token= ' + token + ' &q=info,services,amenities,timings',
-                    type: 'GET',
-                    dataType: 'JSON',
-                    success: function(result) {
-                        // $('#login_email').text(result.result.info.email_id.slice(0, 7) + '..');
-                        var loginEmail = `<div class="custom-dropdown-btn">
-                                        <a class="sign-up">
-                                        <i class="far fa-user-circle float-left mr-2"></i> <span> ${result.result.info.email_id.slice(0, 7) + '..'} </span>
-                                    </a>
-                                </div>`
-                        $('#loginBtn').prepend(loginEmail);
-                    },
-                    error: function() {
-                        var loginEmail = `<div class="custom-dropdown-common-btn">
-                    <a href="login.php">
-                    <i class="far fa-user-circle float-left mr-2"></i> <span>Sign In</span>
-                    </a>
-                    </div>
-                    `
-                        $('#loginBtn').prepend(loginEmail);
-                    }
-                });
-            }
-        });
-
-        function logout() {
-            localStorage.removeItem("userToken");
-            localStorage.removeItem("username");
-            $('.dropdown-after-login').hide();
-            $('.dropdown-before-login').show();
-            toastr.success('You have successfully Logout');
-            $('.cart-count-circle').text(0);
-        }
-    </script>
