@@ -40,10 +40,10 @@
     <div class="responsive-nav">
         <div class="row">
             <div class="col-6">
-                <a href="login" class="btn btn-pink">Sign In</a>
+                <a href="<?php echo $base_url; ?>login" class="btn btn-pink">Sign In</a>
             </div>
             <div class="col-6">
-                <a href="register" class="btn btn-pink">Sign Up</a>
+                <a href="<?php echo $base_url; ?>register" class="btn btn-pink">Sign Up</a>
             </div>
         </div>
         <hr>
@@ -54,19 +54,19 @@
                     <li>
                         <a href="#">Ladies <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
                         <ul class="list-unstyled pl-3 responsive-dropdown">
-                            <li><a href="ladies-hair-styling">Hair Styling</a></li>
-                            <li><a href="ladies-hair-styling">Make Up</a></li>
-                            <li><a href="ladies-hair-styling">Hair Texture</a></li>
-                            <li><a href="ladies-hair-styling">Hair Treatments</a></li>
-                            <li><a href="ladies-hair-styling">Facials & Rituals</a></li>
-                            <li><a href="ladies-hair-styling">Hand & Feet</a></li>
-                            <li><a href="ladies-hair-styling">Nail Care</a></li>
+                            <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Styling</a></li>
+                            <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Make Up</a></li>
+                            <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Texture</a></li>
+                            <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Treatments</a></li>
+                            <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Facials & Rituals</a></li>
+                            <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hand & Feet</a></li>
+                            <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Nail Care</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#">Salons <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
                         <ul class="list-unstyled pl-3 responsive-dropdown">
-                            <li><a href="hair-masters">Hair Masters</a></li>
+                            <li><a href="<?php echo $base_url; ?>hair-masters">Hair Masters</a></li>
                             <li><a href="#">Looks</a></li>
                             <li><a href="#">Geetanjali</a></li>
                             <li><a href="#">VLCC</a></li>
@@ -94,13 +94,13 @@
                                         <div class="menu-common-list">
                                             <div class="nav-submenu-title">Services</div>
                                             <ul>
-                                                <li><a href="/ladies-hair-styling">Hair Styling</a></li>
-                                                <li><a href="/ladies-hair-styling">Make Up</a></li>
-                                                <li><a href="/ladies-hair-styling">Hair Texture</a></li>
-                                                <li><a href="/ladies-hair-styling">Hair Treatments</a></li>
-                                                <li><a href="/ladies-hair-styling">Facials &amp; Rituals</a></li>
-                                                <li><a href="/ladies-hair-styling">Hand &amp; Feet</a></li>
-                                                <li><a href="/ladies-hair-styling">Nail Care</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Styling</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Make Up</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Texture</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Treatments</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Facials &amp; Rituals</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hand &amp; Feet</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Nail Care</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -108,9 +108,9 @@
                                         <div class="menu-common-list">
                                             <div class="nav-submenu-title">Package</div>
                                             <ul>
-                                                <li><a href="/package">Wellness</a></li>
-                                                <li><a href="/package">Stress Buster</a></li>
-                                                <li><a href="/package">Pre Bridal</a></li>
+                                                <li><a href="<?php echo $base_url; ?>package">Wellness</a></li>
+                                                <li><a href="<?php echo $base_url; ?>package">Stress Buster</a></li>
+                                                <li><a href="<?php echo $base_url; ?>package">Pre Bridal</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -118,9 +118,9 @@
                                         <div class="menu-common-list">
                                             <div class="nav-submenu-title">BMM Cards</div>
                                             <ul>
-                                                <li><a href="/bmm-card">Membership Cards</a></li>
-                                                <li><a href="/bmm-card">Gift Cards</a></li>
-                                                <li><a href="/bmm-card">Flexi Cards</a></li>
+                                                <li><a href="<?php echo $base_url; ?>bmm-card">Membership Cards</a></li>
+                                                <li><a href="<?php echo $base_url; ?>bmm-card">Gift Cards</a></li>
+                                                <li><a href="<?php echo $base_url; ?>bmm-card">Flexi Cards</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -128,9 +128,9 @@
                                         <div class="menu-common-list">
                                             <div class="nav-submenu-title">Membership</div>
                                             <ul>
-                                                <li><a href="/bmm-card">Silver</a></li>
-                                                <li><a href="/bmm-card">Gold</a></li>
-                                                <li><a href="/bmm-card">Platinum</a></li>
+                                                <li><a href="<?php echo $base_url; ?>bmm-card">Silver</a></li>
+                                                <li><a href="<?php echo $base_url; ?>bmm-card">Gold</a></li>
+                                                <li><a href="<?php echo $base_url; ?>bmm-card">Platinum</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -196,13 +196,13 @@
                                         <div class="menu-common-list">
                                             <div class="nav-submenu-title">Services</div>
                                             <ul>
-                                                <li><a href="/ladies-hair-styling">Hair Styling</a></li>
-                                                <li><a href="/ladies-hair-styling">Make Up</a></li>
-                                                <li><a href="/ladies-hair-styling">Hair Texture</a></li>
-                                                <li><a href="/ladies-hair-styling">Hair Treatments</a></li>
-                                                <li><a href="/ladies-hair-styling">Facials &amp; Rituals</a></li>
-                                                <li><a href="/ladies-hair-styling">Hand &amp; Feet</a></li>
-                                                <li><a href="/ladies-hair-styling">Nail Care</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Styling</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Make Up</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Texture</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Treatments</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Facials &amp; Rituals</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hand &amp; Feet</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Nail Care</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -210,9 +210,9 @@
                                         <div class="menu-common-list">
                                             <div class="nav-submenu-title">Package</div>
                                             <ul>
-                                                <li><a href="/package">Wellness</a></li>
-                                                <li><a href="/package">Stress Buster</a></li>
-                                                <li><a href="/package">Pre Bridal</a></li>
+                                                <li><a href="<?php echo $base_url; ?>package">Wellness</a></li>
+                                                <li><a href="<?php echo $base_url; ?>package">Stress Buster</a></li>
+                                                <li><a href="<?php echo $base_url; ?>package">Pre Bridal</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -220,9 +220,9 @@
                                         <div class="menu-common-list">
                                             <div class="nav-submenu-title">BMM Cards</div>
                                             <ul>
-                                                <li><a href="/bmm-card">Membership Cards</a></li>
-                                                <li><a href="/bmm-card">Gift Cards</a></li>
-                                                <li><a href="/bmm-card">Flexi Cards</a></li>
+                                                <li><a href="<?php echo $base_url; ?>bmm-card">Membership Cards</a></li>
+                                                <li><a href="<?php echo $base_url; ?>bmm-card">Gift Cards</a></li>
+                                                <li><a href="<?php echo $base_url; ?>bmm-card">Flexi Cards</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -230,9 +230,9 @@
                                         <div class="menu-common-list">
                                             <div class="nav-submenu-title">Membership</div>
                                             <ul>
-                                                <li><a href="/bmm-card">Silver</a></li>
-                                                <li><a href="/bmm-card">Gold</a></li>
-                                                <li><a href="/bmm-card">Platinum</a></li>
+                                                <li><a href="<?php echo $base_url; ?>bmm-card">Silver</a></li>
+                                                <li><a href="<?php echo $base_url; ?>bmm-card">Gold</a></li>
+                                                <li><a href="<?php echo $base_url; ?>bmm-card">Platinum</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -272,7 +272,7 @@
                     <li>
                         <a href="#">Services <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
                         <ul class="list-unstyled pl-3 responsive-dropdown">
-                            <li><a href="ladies-hair-styling">Hair Styling</a></li>
+                            <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Styling</a></li>
                             <li><a href="#">Make Up</a></li>
                             <li><a href="#">Hair Texture</a></li>
                             <li><a href="#">Hair Treatments</a></li>
@@ -565,8 +565,8 @@
                     </li>
                 </ul>
             </li>
-            <li><a href="blog">BMM TV</a></li>
-            <li><a href="blog">Quick Booking <i class="fa fa-calendar-alt"></i> </a></li>
+            <li><a href="<?php echo $base_url; ?>blog">BMM TV</a></li>
+            <li><a href="<?php echo $base_url; ?>blog">Quick Booking <i class="fa fa-calendar-alt"></i> </a></li>
             <li>
                 <a href="#">Offers <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
                 <ul class="list-unstyled pl-3 responsive-dropdown">
@@ -613,11 +613,11 @@
                 </li> -->
                 </ul>
             </li>
-            <li><a href="blog">Blog</a></li>
+            <li><a href="<?php echo $base_url; ?>blog">Blog</a></li>
         </ul>
     </div>
     <?php
-    if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
+//    if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
     ?>
         <div class="top-stripe">
             <div class="container-fluid">
@@ -642,9 +642,9 @@
                         </div>
                         <ul class="float-right">
                             <li>
-                                <a href="get-app"><i class="fas fa-mobile-alt"></i> Get APP</a>
+                                <a href="<?php echo $base_url; ?>get-app"><i class="fas fa-mobile-alt"></i> Get APP</a>
                             </li>
-                            <li><a href="virtual-consultation"> <i class="far fa-comments"></i>Makeup Consultant</a></li>
+                            <li><a href="<?php echo $base_url; ?>virtual-consultation"> <i class="far fa-comments"></i>Makeup Consultant</a></li>
                             <li>
                                 <i class="fa fa-phone-alt"></i> &nbsp; 844 855 4942
                             </li>
@@ -654,7 +654,7 @@
             </div>
         </div>
     <?php
-    }
+//    }
     ?>
     <header>
         <div class="container-fluid header-container">
@@ -668,7 +668,7 @@
                     <a href="<?php echo $base_url; ?>" class="logo"><img src="<?php echo $base_url; ?>assets/images/logo.png" class="img-fluid" alt=""></a>
                 </div>
                 <?php
-                if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
+//                if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
                 ?>
                     <div class="col-md-5 offset-md-1">
                         <div class="autocomplete-box">
@@ -699,7 +699,7 @@
                                     </div>
                                     <div class="custom-dropdown-item">
                                         <ul>
-                                            <li><a href="user/dashboard"><i class="fa fa-user"></i> <span>My Profile</span></a></li>
+                                            <li><a href="<?php echo $base_url; ?>user/profile"><i class="fa fa-user"></i> <span>My Profile</span></a></li>
                                             <li><a href="#" onclick="logout();"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a></li>
                                         </ul>
                                     </div>
@@ -720,14 +720,14 @@
                         </div>
                     </div>
                 <?php
-                }
+//                }
                 ?>
             </div>
 
         </div>
         </div>
         <?php
-        if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
+//        if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
         ?>
             <nav>
                 <div class="container-fluid">
@@ -866,12 +866,12 @@
                                             <div class="menu-common-list">
                                                 <div class="nav-submenu-title">Services</ldiv>
                                                     <ul>
-                                                        <li><a href="ladies-service#Hair">Hair</a></li>
-                                                        <li><a href="ladies-service#ChemicalService">Chemical Service</a></li>
-                                                        <li><a href="ladies-service#ColorRoots">Color Roots</a></li>
-                                                        <li><a href="ladies-service#HairSPA">Hair SPA</a></li>
-                                                        <li><a href="ladies-service#HeadMassage">Head Massage</a></li>
-                                                        <li><a href="ladies-service#ManicurePedicure">Manicure/Pedicure</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>ladies-service#Hair">Hair</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>ladies-service#ChemicalService">Chemical Service</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>ladies-service#ColorRoots">Color Roots</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>ladies-service#HairSPA">Hair SPA</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>ladies-service#HeadMassage">Head Massage</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>ladies-service#ManicurePedicure">Manicure/Pedicure</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -882,15 +882,15 @@
                                             <div class="menu-common-list">
                                                 <div class="nav-submenu-title">Packages</div>
                                                 <ul>
-                                                    <li><a href="package">Family</a></li>
-                                                    <li><a href="package">Eco</a></li>
-                                                    <li><a href="package">Gold</a></li>
+                                                    <li><a href="<?php echo $base_url; ?>package">Family</a></li>
+                                                    <li><a href="<?php echo $base_url; ?>package">Eco</a></li>
+                                                    <li><a href="<?php echo $base_url; ?>package">Gold</a></li>
                                                 </ul>
                                                 <div class="nav-submenu-title">BMM Cards</div>
                                                 <ul>
-                                                    <li><a href="cards">Membership Cards</a></li>
-                                                    <li><a href="cards">Gift Cards</a></li>
-                                                    <li><a href="cards">Flexi Cards</a></li>
+                                                    <li><a href="<?php echo $base_url; ?>cards">Membership Cards</a></li>
+                                                    <li><a href="<?php echo $base_url; ?>cards">Gift Cards</a></li>
+                                                    <li><a href="<?php echo $base_url; ?>cards">Flexi Cards</a></li>
                                                 </ul>
 
 
@@ -901,7 +901,7 @@
                                             <div class="menu-common-list">
                                                 <div class="nav-submenu-title">Recommended</div>
                                                 <ul>
-                                                    <li><a href="makeup-artist-1">Priyanka Sharma</a></li>
+                                                    <li><a href="<?php echo $base_url; ?>makeup-artist-1">Priyanka Sharma</a></li>
                                                     <li><a href="#">Anshika Sharma</a></li>
                                                     <li><a href="#">Bushra Shahid</a></li>
                                                     <li><a href="#">Manju</a></li>
@@ -915,11 +915,11 @@
                                             <div class="menu-common-list">
                                                 <div class="nav-submenu-title">Offers</ldiv>
                                                     <ul>
-                                                        <li><a href="offers">Free Hair Cut</a></li>
-                                                        <li><a href="offers">50% off on Manicure</a></li>
-                                                        <li><a href="offers">50% off on Pedicure</a></li>
-                                                        <li><a href="offers">Free Makeup Trial</a></li>
-                                                        <li><a href="offers">Free Nail Care</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>offers">Free Hair Cut</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>offers">50% off on Manicure</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>offers">50% off on Pedicure</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>offers">Free Makeup Trial</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>offers">Free Nail Care</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -935,7 +935,7 @@
                             </div>
                         </li>
 
-                        <li><a href="bridal-makeup-consultation-form">Bridal Makeup</a>
+                        <li><a href="<?php echo $base_url; ?>bridal-makeup-consultation-form">Bridal Makeup</a>
                             <div class="submenu">
 
                                 <div class="">
@@ -961,10 +961,10 @@
                                             <div class="menu-common-list">
                                                 <div class="nav-submenu-title">Bridal Package</ldiv>
                                                     <ul>
-                                                        <li><a href="package">Silver</a></li>
-                                                        <li><a href="package">Gold</a></li>
-                                                        <li><a href="package">Platinum</a></li>
-                                                        <li><a href="package">Diamond</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>package">Silver</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>package">Gold</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>package">Platinum</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>package">Diamond</a></li>
                                                     </ul>
 
 
@@ -975,10 +975,10 @@
                                             <div class="menu-common-list">
                                                 <div class="nav-submenu-title">Pre Bridal Package</ldiv>
                                                     <ul>
-                                                        <li><a href="package">Silver</a></li>
-                                                        <li><a href="package">Gold</a></li>
-                                                        <li><a href="package">Platinum</a></li>
-                                                        <li><a href="package">Diamond</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>package">Silver</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>package">Gold</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>package">Platinum</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>package">Diamond</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -988,9 +988,9 @@
                                             <div class="menu-common-list">
                                                 <div class="nav-submenu-title">BMM Cards</div>
                                                 <ul>
-                                                    <li><a href="cards">Membership Cards</a></li>
-                                                    <li><a href="cards">Gift Cards</a></li>
-                                                    <li><a href="cards">Flexi Cards</a></li>
+                                                    <li><a href="<?php echo $base_url; ?>cards">Membership Cards</a></li>
+                                                    <li><a href="<?php echo $base_url; ?>cards">Gift Cards</a></li>
+                                                    <li><a href="<?php echo $base_url; ?>cards">Flexi Cards</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -1007,26 +1007,26 @@
                         </li>
 
 
-                        <li><a href="makeup-academy">Makeup Academy</a></li>
+                        <li><a href="<?php echo $base_url; ?>makeup-academy">Makeup Academy</a></li>
 
-                        <li><a href="cards">Cards </a></li>
-                        <li><a href="im-beautiful">I'm Beautiful &nbsp; <i class="fa fa-heart"></i> </a>
+                        <li><a href="<?php echo $base_url; ?>cards">Cards </a></li>
+                        <li><a href="<?php echo $base_url; ?>im-beautiful">I'm Beautiful &nbsp; <i class="fa fa-heart"></i> </a>
 
                         <li>
                             <a href="<?php echo $base_url; ?>bmm-tv"> BMM TV</a>
                         </li>
                         <li>
-                            <a href="book-appointment"> Quick Booking &nbsp; <i class="fa fa-calendar-alt"></i> </a>
+                            <a href="<?php echo $base_url; ?>book-appointment"> Quick Booking &nbsp; <i class="fa fa-calendar-alt"></i> </a>
                         </li>
                         <li class="active-offer-nav"><a href="offers">Offers</a>
 
                         </li>
 
-                        <li><a href="blog">Blog </a>
+                        <li><a href="<?php echo $base_url; ?>blog">Blog </a>
                         </li>
 
                         <li class="p-relative">
-                            <a href="pro/index">BMM PRO
+                            <a href="<?php echo $base_url; ?>pro/index">BMM PRO
                                 <!-- <span class="new-tag new">FREE</span> -->
                             </a>
                         </li>
@@ -1036,7 +1036,7 @@
                 </div>
             </nav>
         <?php
-        }
+//        }
         ?>
     </header>
 

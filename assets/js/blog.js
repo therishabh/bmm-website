@@ -5,7 +5,7 @@
  */
 
 
-$(function() {
+
         var page_no = "1";
         var page_count = "10";
         var category_id = "";
@@ -63,11 +63,11 @@ $(function() {
                 }
             });
         }
-        get_post_listing();
+        
 
         $("#blog_listing_pagination").on('click', '.pagination-page-no', function() {
             page_no = $(this).attr('data_id');
-            get_post_listing();
+            get_post_listing(); 
         })
 
         $("#blog_listing_pagination").on('click', '.pagination-next-btn', function() {
@@ -82,6 +82,23 @@ $(function() {
         })
 
 
+
+        function onCategoryClick(id,name){
+            category_id = id;
+            page_no = "1";
+            get_post_listing();
+            $("#blog-filter").removeClass('d-none');
+            $("#blog-filter li span").html(name);
+        };
+        
+        function removeFilter() {
+            $("#blog-filter").addClass('d-none');
+            $("#blog-filter li span").html('');
+            category_id = '';
+            page_no = "1";
+            get_post_listing();
+        }
+        
         // ------------------------CATEGORIES STARTS HERE------------------------------------------------- 
         let get_category_list = function() {
             $.ajax({
@@ -91,15 +108,16 @@ $(function() {
                 success: function(result) {
                     let data = "";
                     result.result.forEach(function(val) {
-                        data += `<li>
-                                <a href="#" class="social-links">${val.name}</a>
-                            </li>`;
+                        data = '<li onClick="onCategoryClick('+val.id+','+"'"+val.name+"'"+')" > ';
+                        data += '<a class="social-links">'+val.name+'</a>';
+                        data += '</li>';
+                        $("#categories-list ul").append(data);
                     });
-                    $("#categories-list ul").html(data);
+                    
                 }
             });
         };
-        get_category_list();
+        
         // ------------------------CATEGORIES ENDS HERE------------------------------------------------- 
 
 
@@ -121,6 +139,9 @@ $(function() {
                 }
             });
         };
-        get_recentpost_list();
+        
         //--------------------------RECENT POST ENDS HERE---------------------------------------------
-    });
+        get_category_list();
+        get_recentpost_list();
+        get_post_listing();
+   

@@ -18,7 +18,7 @@ $(function () {
             dataType: 'JSON',
             success: function (result) {
                 result = result.result;
-                console.log(result);
+                //console.log(result);
 
                 if (result && result.length > 0) {
                     result.forEach((val, key) => {

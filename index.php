@@ -13,9 +13,9 @@ if ($page == "") {
 
 if ($page == 'blog') {
     $blog_id = $explode_data[1];
-    if($blog_id==''){
+    if ($blog_id == '') {
         include_once './include/header.php';
-        include_once "blog-post.php";
+        include_once "blog.php";
         include './include/footer.php';
     } else {
         include_once './include/header.php';
@@ -35,10 +35,21 @@ if ($page !== 'blog') {
         default:
             break;
     }
-
-
-
-    include_once './include/header.php';
-    include_once "{$page}.php";
-    include './include/footer.php';
+    
+    if ($page == 'salon') {
+        include_once "./salon/{$explode_data[1]}.php";
+    } else if ($page == 'pro') {
+        include_once './include/header.php';
+        include_once "./pro/{$explode_data[1]}.php";
+        include './include/footer.php';
+    } else if ($page == 'user') {
+        include_once './include/header.php';
+        include_once "./user/{$explode_data[1]}.php";
+        include './include/footer.php';
+    } else {
+        include_once './include/header.php';
+        include_once "{$page}.php";
+        include './include/footer.php';
+    }
+    
 }

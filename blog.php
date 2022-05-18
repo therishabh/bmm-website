@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-md-8">
 
-                <ul class="blog-filter mb-4">
-                    <li>Bridal Makeup <i class="fa fa-times"></i> </li>
+                <ul class="blog-filter mb-4 d-none" id="blog-filter">
+                    <li><span></span> <i class="fa fa-times" onclick="removeFilter();"></i> </li>
                 </ul>
 
                 <div class="row" id="post-list">
@@ -372,9 +372,7 @@
                 </div>
                 <div class="blog-categories-list" id="categories-list">
                     <ul>
-                        <li>
-                            <a href="#"></a>
-                        </li>
+                        
                     </ul>
                 </div>
 

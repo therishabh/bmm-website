@@ -9,6 +9,6 @@ function logout() {
     bgColor: "#179756",
   });
   setTimeout(function () {
-    window.location.replace("../pro/");
+    window.location.replace("../pro/index");
   }, 1000);
 }

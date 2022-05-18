@@ -2,7 +2,7 @@ Options -Indexes
 Options -MultiViews
 
 RewriteEngine On
-RewriteCond %{REQUEST_URI} !^/salon
+#RewriteCond %{REQUEST_URI} !^/salon/*
 RewriteCond %{SCRIPT_FILENAME} !-d 
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteRule ^(.*)$ index.php?pn=$1 [NC]

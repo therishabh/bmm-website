@@ -214,7 +214,7 @@ $(function() {
                         dataType: 'JSON',
                         data: JSON.stringify(post_data),
                         success: function(result) {
-                            debugger;
+                            
                             $("#registerStepOne #registerBtn").removeAttr('disabled')
                             $('#registerStepOne').hide();
                             $('#registerStepTwo').show();
@@ -303,7 +303,7 @@ $(function() {
                             localStorage.setItem("userToken", res.token);
                             $('#registerModal').modal('hide');
                             $("#verifyOTP").removeAttr('disabled');
-                            window.location.replace('user/dashboard');
+                            window.location.replace(__url+'user/profile');
                         },
                         error: function(error) {
                             $("#verifyOTP").removeAttr('disabled');
@@ -448,13 +448,15 @@ $(function() {
                     type: 'GET',
                     dataType: 'JSON',
                     data: {
-                        token: userToken
+                        token: localStorage.getItem("userToken")
                     },
                     success: function(result) {
                         $('.cart-count-circle').text(result.count);
                     }
                 });
             }
+            
+            //if user already logged in 
             if (userToken) {
                 $('.dropdown-before-login').hide();
                 $('.dropdown-after-login').show();
@@ -462,6 +464,7 @@ $(function() {
                 $('.username span').text(username);
                 cartCount();
             }
+            
             if (token) {
                 $.ajax({
                     url: base_url + 'get-info?token= ' + token + ' &q=info,services,amenities,timings',

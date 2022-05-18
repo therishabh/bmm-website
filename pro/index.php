@@ -4,7 +4,7 @@
         <!-- The slideshow -->
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="../assets/images/pro-slide1.jpg" alt="">
+                <img src="<?php echo $base_url; ?>assets/images/pro-slide1.jpg" alt="">
             </div>
         </div>
 
@@ -66,7 +66,7 @@
                             <span>Don't Have An Account ?</span>
                         </div>
                         <div class="button-wrap">
-                            <a href="pro-register.php">
+                            <a href="<?php echo $base_url; ?>pro/pro-register">
                                 <div class="sign-in-btn btn login-btn">Sign Up</div>
                             </a>
                         </div>
@@ -101,21 +101,21 @@
         <div class="row get-started-row">
             <div class="col-md-4">
                 <div class="text-center">
-                    <img src="../assets/images/get-started-step-1.png" class="img-fluid">
+                    <img src="<?php echo $base_url; ?>assets/images/get-started-step-1.png" class="img-fluid">
                     <h5 class="mb-0 mt-3">Register</h5>
                     <p class="pt-2">Are you a salon owner or a Makeup Artist,Register with us for a free listing.</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="text-center">
-                    <img src="../assets/images/get-started-step-2.png" class="img-fluid">
+                    <img src="<?php echo $base_url; ?>assets/images/get-started-step-2.png" class="img-fluid">
                     <h5 class="mb-0 mt-3">Validation</h5>
                     <p class="pt-2">Share your business details <br>with us to validate !</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="text-center">
-                    <img src="../assets/images/get-started-step-3.png" class="img-fluid">
+                    <img src="<?php echo $base_url; ?>assets/images/get-started-step-3.png" class="img-fluid">
                     <h5 class="mb-0 mt-3">Approved</h5>
                     <p class="pt-2"> Once approved,Start getting <br>bookings and earn.</p>
                 </div>
@@ -132,32 +132,32 @@
 
             <div class="item">
                 <div class="partner-logo-box">
-                    <img src="../assets/images/pro-brand-logo-1.png" alt="" />
+                    <img src="<?php echo $base_url; ?>assets/images/pro-brand-logo-1.png" alt="" />
                 </div>
             </div>
             <div class="item">
                 <div class="partner-logo-box">
-                    <img src="../assets/images/pro-brand-logo-2.png" alt="" />
+                    <img src="<?php echo $base_url; ?>assets/images/pro-brand-logo-2.png" alt="" />
                 </div>
             </div>
             <div class="item">
                 <div class="partner-logo-box">
-                    <img src="../assets/images/pro-brand-logo-3.png" alt="" />
+                    <img src="<?php echo $base_url; ?>assets/images/pro-brand-logo-3.png" alt="" />
                 </div>
             </div>
             <div class="item">
                 <div class="partner-logo-box">
-                    <img src="../assets/images/pro-brand-logo-4.png" alt="" />
+                    <img src="<?php echo $base_url; ?>assets/images/pro-brand-logo-4.png" alt="" />
                 </div>
             </div>
             <div class="item">
                 <div class="partner-logo-box">
-                    <img src="../assets/images/pro-brand-logo-5.png" alt="" />
+                    <img src="<?php echo $base_url; ?>assets/images/pro-brand-logo-5.png" alt="" />
                 </div>
             </div>
             <div class="item">
                 <div class="partner-logo-box">
-                    <img src="../assets/images/pro-brand-logo-6.png" alt="" />
+                    <img src="<?php echo $base_url; ?>assets/images/pro-brand-logo-6.png" alt="" />
                 </div>
             </div>
         </div>
@@ -167,13 +167,13 @@
 </section>
 
 <section class="partner-section">
-    <img src="../assets/images/login-section-pro-bg.jpg" alt="" />
+    <img src="<?php echo $base_url; ?>assets/images/login-section-pro-bg.jpg" alt="" />
 </section>
 
 <script>
     let token = localStorage.getItem('salonToken');
     if (token) {
-        window.location.replace('../salon/dashboard.php');
+        window.location.replace('<?php echo $base_url; ?>salon/dashboard.php');
     }
     $(function() {
         let otpTiming = 60;
@@ -317,7 +317,7 @@
                         $("#verifyOTP").removeAttr('disabled');
                         localStorage.setItem("salonToken", result.token);
                         localStorage.setItem("bmmSalonCategory", result.category);
-                        window.location.replace('../salon/dashboard.php');
+                        window.location.replace('<?php echo $base_url; ?>salon/dashboard.php');
                     },
                     error: function(error) {
                         $("#verifyOTP").removeAttr('disabled');
