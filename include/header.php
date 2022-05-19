@@ -24,25 +24,26 @@
     <meta name="contactName" content="Book My Makeup" />
     <meta name="contactOrganization" content="Book My Makeup" />
 
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/owl.carousel.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/toastr.min.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/custom.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/responsive.css">
-    <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/css/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/css/toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/css/responsive.css">
+    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/jquery.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 
 <body>
+    <input type="hidden" id="base_url" value="<?php echo $base_url; ?>" />
     <div class="responsive-rgba text-right">
     </div>
     <div class="responsive-nav">
         <div class="row">
             <div class="col-6">
-                <a href="login.php" class="btn btn-pink">Sign In</a>
+                <a href="<?php echo $base_url; ?>login" class="btn btn-pink">Sign In</a>
             </div>
             <div class="col-6">
-                <a href="register.php" class="btn btn-pink">Sign Up</a>
+                <a href="<?php echo $base_url; ?>register" class="btn btn-pink">Sign Up</a>
             </div>
         </div>
         <hr>
@@ -53,19 +54,19 @@
                     <li>
                         <a href="#">Ladies <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
                         <ul class="list-unstyled pl-3 responsive-dropdown">
-                            <li><a href="ladies-hair-styling.php">Hair Styling</a></li>
-                            <li><a href="ladies-hair-styling.php">Make Up</a></li>
-                            <li><a href="ladies-hair-styling.php">Hair Texture</a></li>
-                            <li><a href="ladies-hair-styling.php">Hair Treatments</a></li>
-                            <li><a href="ladies-hair-styling.php">Facials & Rituals</a></li>
-                            <li><a href="ladies-hair-styling.php">Hand & Feet</a></li>
-                            <li><a href="ladies-hair-styling.php">Nail Care</a></li>
+                            <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Styling</a></li>
+                            <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Make Up</a></li>
+                            <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Texture</a></li>
+                            <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Treatments</a></li>
+                            <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Facials & Rituals</a></li>
+                            <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hand & Feet</a></li>
+                            <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Nail Care</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#">Salons <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
                         <ul class="list-unstyled pl-3 responsive-dropdown">
-                            <li><a href="hair-masters.php">Hair Masters</a></li>
+                            <li><a href="<?php echo $base_url; ?>hair-masters">Hair Masters</a></li>
                             <li><a href="#">Looks</a></li>
                             <li><a href="#">Geetanjali</a></li>
                             <li><a href="#">VLCC</a></li>
@@ -93,13 +94,13 @@
                                         <div class="menu-common-list">
                                             <div class="nav-submenu-title">Services</div>
                                             <ul>
-                                                <li><a href="/ladies-hair-styling">Hair Styling</a></li>
-                                                <li><a href="/ladies-hair-styling">Make Up</a></li>
-                                                <li><a href="/ladies-hair-styling">Hair Texture</a></li>
-                                                <li><a href="/ladies-hair-styling">Hair Treatments</a></li>
-                                                <li><a href="/ladies-hair-styling">Facials &amp; Rituals</a></li>
-                                                <li><a href="/ladies-hair-styling">Hand &amp; Feet</a></li>
-                                                <li><a href="/ladies-hair-styling">Nail Care</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Styling</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Make Up</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Texture</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Treatments</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Facials &amp; Rituals</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hand &amp; Feet</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Nail Care</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -107,9 +108,9 @@
                                         <div class="menu-common-list">
                                             <div class="nav-submenu-title">Package</div>
                                             <ul>
-                                                <li><a href="/package">Wellness</a></li>
-                                                <li><a href="/package">Stress Buster</a></li>
-                                                <li><a href="/package">Pre Bridal</a></li>
+                                                <li><a href="<?php echo $base_url; ?>package">Wellness</a></li>
+                                                <li><a href="<?php echo $base_url; ?>package">Stress Buster</a></li>
+                                                <li><a href="<?php echo $base_url; ?>package">Pre Bridal</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -117,9 +118,9 @@
                                         <div class="menu-common-list">
                                             <div class="nav-submenu-title">BMM Cards</div>
                                             <ul>
-                                                <li><a href="/bmm-card">Membership Cards</a></li>
-                                                <li><a href="/bmm-card">Gift Cards</a></li>
-                                                <li><a href="/bmm-card">Flexi Cards</a></li>
+                                                <li><a href="<?php echo $base_url; ?>bmm-card">Membership Cards</a></li>
+                                                <li><a href="<?php echo $base_url; ?>bmm-card">Gift Cards</a></li>
+                                                <li><a href="<?php echo $base_url; ?>bmm-card">Flexi Cards</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -127,9 +128,9 @@
                                         <div class="menu-common-list">
                                             <div class="nav-submenu-title">Membership</div>
                                             <ul>
-                                                <li><a href="/bmm-card">Silver</a></li>
-                                                <li><a href="/bmm-card">Gold</a></li>
-                                                <li><a href="/bmm-card">Platinum</a></li>
+                                                <li><a href="<?php echo $base_url; ?>bmm-card">Silver</a></li>
+                                                <li><a href="<?php echo $base_url; ?>bmm-card">Gold</a></li>
+                                                <li><a href="<?php echo $base_url; ?>bmm-card">Platinum</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -195,13 +196,13 @@
                                         <div class="menu-common-list">
                                             <div class="nav-submenu-title">Services</div>
                                             <ul>
-                                                <li><a href="/ladies-hair-styling">Hair Styling</a></li>
-                                                <li><a href="/ladies-hair-styling">Make Up</a></li>
-                                                <li><a href="/ladies-hair-styling">Hair Texture</a></li>
-                                                <li><a href="/ladies-hair-styling">Hair Treatments</a></li>
-                                                <li><a href="/ladies-hair-styling">Facials &amp; Rituals</a></li>
-                                                <li><a href="/ladies-hair-styling">Hand &amp; Feet</a></li>
-                                                <li><a href="/ladies-hair-styling">Nail Care</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Styling</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Make Up</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Texture</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Treatments</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Facials &amp; Rituals</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hand &amp; Feet</a></li>
+                                                <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Nail Care</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -209,9 +210,9 @@
                                         <div class="menu-common-list">
                                             <div class="nav-submenu-title">Package</div>
                                             <ul>
-                                                <li><a href="/package">Wellness</a></li>
-                                                <li><a href="/package">Stress Buster</a></li>
-                                                <li><a href="/package">Pre Bridal</a></li>
+                                                <li><a href="<?php echo $base_url; ?>package">Wellness</a></li>
+                                                <li><a href="<?php echo $base_url; ?>package">Stress Buster</a></li>
+                                                <li><a href="<?php echo $base_url; ?>package">Pre Bridal</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -219,9 +220,9 @@
                                         <div class="menu-common-list">
                                             <div class="nav-submenu-title">BMM Cards</div>
                                             <ul>
-                                                <li><a href="/bmm-card">Membership Cards</a></li>
-                                                <li><a href="/bmm-card">Gift Cards</a></li>
-                                                <li><a href="/bmm-card">Flexi Cards</a></li>
+                                                <li><a href="<?php echo $base_url; ?>bmm-card">Membership Cards</a></li>
+                                                <li><a href="<?php echo $base_url; ?>bmm-card">Gift Cards</a></li>
+                                                <li><a href="<?php echo $base_url; ?>bmm-card">Flexi Cards</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -229,9 +230,9 @@
                                         <div class="menu-common-list">
                                             <div class="nav-submenu-title">Membership</div>
                                             <ul>
-                                                <li><a href="/bmm-card">Silver</a></li>
-                                                <li><a href="/bmm-card">Gold</a></li>
-                                                <li><a href="/bmm-card">Platinum</a></li>
+                                                <li><a href="<?php echo $base_url; ?>bmm-card">Silver</a></li>
+                                                <li><a href="<?php echo $base_url; ?>bmm-card">Gold</a></li>
+                                                <li><a href="<?php echo $base_url; ?>bmm-card">Platinum</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -271,7 +272,7 @@
                     <li>
                         <a href="#">Services <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
                         <ul class="list-unstyled pl-3 responsive-dropdown">
-                            <li><a href="ladies-hair-styling.php">Hair Styling</a></li>
+                            <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Styling</a></li>
                             <li><a href="#">Make Up</a></li>
                             <li><a href="#">Hair Texture</a></li>
                             <li><a href="#">Hair Treatments</a></li>
@@ -293,9 +294,9 @@
                     <li>
                         <a href="#">BMM Cards <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
                         <ul class="list-unstyled pl-3 responsive-dropdown">
-                            <li><a href="cards.php">Membership Cards</a></li>
-                            <li><a href="cards.php">Gift Cards</a></li>
-                            <li><a href="cards.php">Flexi Cards</a></li>
+                            <li><a href="cards">Membership Cards</a></li>
+                            <li><a href="cards">Gift Cards</a></li>
+                            <li><a href="cards">Flexi Cards</a></li>
                         </ul>
                     </li>
                     <li>
@@ -564,8 +565,8 @@
                     </li>
                 </ul>
             </li>
-            <li><a href="blog.php">BMM TV</a></li>
-            <li><a href="blog.php">Quick Booking <i class="fa fa-calendar-alt"></i> </a></li>
+            <li><a href="<?php echo $base_url; ?>blog">BMM TV</a></li>
+            <li><a href="<?php echo $base_url; ?>blog">Quick Booking <i class="fa fa-calendar-alt"></i> </a></li>
             <li>
                 <a href="#">Offers <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
                 <ul class="list-unstyled pl-3 responsive-dropdown">
@@ -612,11 +613,11 @@
                 </li> -->
                 </ul>
             </li>
-            <li><a href="blog.php">Blog</a></li>
+            <li><a href="<?php echo $base_url; ?>blog">Blog</a></li>
         </ul>
     </div>
     <?php
-    if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
+//    if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
     ?>
         <div class="top-stripe">
             <div class="container-fluid">
@@ -641,9 +642,9 @@
                         </div>
                         <ul class="float-right">
                             <li>
-                                <a href="get-app.php"><i class="fas fa-mobile-alt"></i> Get APP</a>
+                                <a href="<?php echo $base_url; ?>get-app"><i class="fas fa-mobile-alt"></i> Get APP</a>
                             </li>
-                            <li><a href="virtual-consultation.php"> <i class="far fa-comments"></i>Makeup Consultant</a></li>
+                            <li><a href="<?php echo $base_url; ?>virtual-consultation"> <i class="far fa-comments"></i>Makeup Consultant</a></li>
                             <li>
                                 <i class="fa fa-phone-alt"></i> &nbsp; 844 855 4942
                             </li>
@@ -653,7 +654,7 @@
             </div>
         </div>
     <?php
-    }
+//    }
     ?>
     <header>
         <div class="container-fluid header-container">
@@ -664,13 +665,16 @@
                     </a>
                 </div>
                 <div class="col-md-3 col-7">
-                    <a href="<?php echo base_url(); ?>index.php" class="logo"><img src="<?php echo base_url(); ?>assets/images/logo.png" class="img-fluid" alt=""></a>
+                    <a href="<?php echo $base_url; ?>" class="logo"><img src="<?php echo $base_url; ?>assets/images/logo.png" class="img-fluid" alt=""></a>
                 </div>
                 <?php
-                if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
+//                if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
                 ?>
                     <div class="col-md-5 offset-md-1">
-                        <input class="form-control advancedAutoComplete" type="text" autocomplete="off" placeholder="Salons, Makeup Artists, Bridal Makeup" />
+                        <div class="autocomplete-box">
+                            <i class="fa fa-search"></i>
+                            <input class="form-control advancedAutoComplete" type="text" autocomplete="off" placeholder="Salons, Makeup Artists, Bridal Makeup" />
+                        </div>
                     </div>
 
                     <div class="col-md-3 col-1 responsive-search-bar">
@@ -682,10 +686,22 @@
                         <div class="top-right-list">
 
                             <div class="top-right-list-item">
-                                <div class="custom-dropdown">
+                                <div class="custom-dropdown dropdown-before-login">
                                     <div class="custom-dropdown-btn">
                                         <a class="sign-up loginBtn"><i class="far fa-user-circle float-left mr-2"></i> <span> Login </span>
                                         </a>
+                                    </div>
+                                </div>
+                                <div class="custom-dropdown dropdown-after-login d-custom-none">
+                                    <div class="custom-dropdown-btn">
+                                        <a class="username"><i class="far fa-user-circle float-left mr-2"></i> <span> Login </span>
+                                        </a>
+                                    </div>
+                                    <div class="custom-dropdown-item">
+                                        <ul>
+                                            <li><a href="<?php echo $base_url; ?>user/profile"><i class="fa fa-user"></i> <span>My Profile</span></a></li>
+                                            <li><a href="#" onclick="logout();"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -695,7 +711,7 @@
                             </div>
 
                             <div class="top-right-list-item">
-                                <a href="cart.php" class="cart-anchor">
+                                <a href="cart" class="cart-anchor">
                                     <i class="fas fa-shopping-bag text-pink icons"></i>
                                     <span class="cart-count-circle">0</span>
                                 </a>
@@ -704,14 +720,14 @@
                         </div>
                     </div>
                 <?php
-                }
+//                }
                 ?>
             </div>
 
         </div>
         </div>
         <?php
-        if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
+//        if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
         ?>
             <nav>
                 <div class="container-fluid">
@@ -728,7 +744,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-3">
-                                        <img src="<?php echo base_url(); ?>assets/images/submenu-salon-female-img.jpg" alt="" class="img-fluid">
+                                        <img src="<?php echo $base_url; ?>assets/images/submenu-salon-female-img.jpg" alt="" class="img-fluid">
                                     </div>
                                 </div>
 
@@ -738,7 +754,7 @@
                                         <div class="menu-common-list">
                                             <div class="nav-submenu-title">Hair Styling</div>
                                             <ul>
-                                                <li><a href="service-list.php">Hair Cut</a></li>
+                                                <li><a href="service-list">Hair Cut</a></li>
                                                 <li><a href="#">Ironing</a></li>
                                                 <li><a href="#">Global Colouring</a></li>
                                                 <li><a href="#">Blow Dry</a></li>
@@ -821,7 +837,7 @@
                                         <div class="menu-common-list">
                                             <div class="nav-submenu-title">Recommended</div>
                                             <ul>
-                                                <li><a href="hair-masters.php">Hair Masters</a></li>
+                                                <li><a href="hair-masters">Hair Masters</a></li>
                                                 <li><a href="#">Looks</a></li>
                                                 <li><a href="#">Geetanjali</a></li>
                                                 <li><a href="#">VLCC</a></li>
@@ -834,7 +850,7 @@
                                     </div>
 
                                     <div class="col-md-3">
-                                        <img src="<?php echo base_url(); ?>assets/images/submenu-salon-female-img.jpg" alt="" class="img-fluid">
+                                        <img src="<?php echo $base_url; ?>assets/images/submenu-salon-female-img.jpg" alt="" class="img-fluid">
                                     </div>
 
                                 </div> -->
@@ -850,12 +866,12 @@
                                             <div class="menu-common-list">
                                                 <div class="nav-submenu-title">Services</ldiv>
                                                     <ul>
-                                                        <li><a href="ladies-service.php#Hair">Hair</a></li>
-                                                        <li><a href="ladies-service.php#ChemicalService">Chemical Service</a></li>
-                                                        <li><a href="ladies-service.php#ColorRoots">Color Roots</a></li>
-                                                        <li><a href="ladies-service.php#HairSPA">Hair SPA</a></li>
-                                                        <li><a href="ladies-service.php#HeadMassage">Head Massage</a></li>
-                                                        <li><a href="ladies-service.php#ManicurePedicure">Manicure/Pedicure</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>ladies-service#Hair">Hair</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>ladies-service#ChemicalService">Chemical Service</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>ladies-service#ColorRoots">Color Roots</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>ladies-service#HairSPA">Hair SPA</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>ladies-service#HeadMassage">Head Massage</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>ladies-service#ManicurePedicure">Manicure/Pedicure</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -866,15 +882,15 @@
                                             <div class="menu-common-list">
                                                 <div class="nav-submenu-title">Packages</div>
                                                 <ul>
-                                                    <li><a href="package.php">Family</a></li>
-                                                    <li><a href="package.php">Eco</a></li>
-                                                    <li><a href="package.php">Gold</a></li>
+                                                    <li><a href="<?php echo $base_url; ?>package">Family</a></li>
+                                                    <li><a href="<?php echo $base_url; ?>package">Eco</a></li>
+                                                    <li><a href="<?php echo $base_url; ?>package">Gold</a></li>
                                                 </ul>
                                                 <div class="nav-submenu-title">BMM Cards</div>
                                                 <ul>
-                                                    <li><a href="cards.php">Membership Cards</a></li>
-                                                    <li><a href="cards.php">Gift Cards</a></li>
-                                                    <li><a href="cards.php">Flexi Cards</a></li>
+                                                    <li><a href="<?php echo $base_url; ?>cards">Membership Cards</a></li>
+                                                    <li><a href="<?php echo $base_url; ?>cards">Gift Cards</a></li>
+                                                    <li><a href="<?php echo $base_url; ?>cards">Flexi Cards</a></li>
                                                 </ul>
 
 
@@ -885,7 +901,7 @@
                                             <div class="menu-common-list">
                                                 <div class="nav-submenu-title">Recommended</div>
                                                 <ul>
-                                                    <li><a href="makeup-artist-1.php">Priyanka Sharma</a></li>
+                                                    <li><a href="<?php echo $base_url; ?>makeup-artist-1">Priyanka Sharma</a></li>
                                                     <li><a href="#">Anshika Sharma</a></li>
                                                     <li><a href="#">Bushra Shahid</a></li>
                                                     <li><a href="#">Manju</a></li>
@@ -899,18 +915,18 @@
                                             <div class="menu-common-list">
                                                 <div class="nav-submenu-title">Offers</ldiv>
                                                     <ul>
-                                                        <li><a href="offers.php">Free Hair Cut</a></li>
-                                                        <li><a href="offers.php">50% off on Manicure</a></li>
-                                                        <li><a href="offers.php">50% off on Pedicure</a></li>
-                                                        <li><a href="offers.php">Free Makeup Trial</a></li>
-                                                        <li><a href="offers.php">Free Nail Care</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>offers">Free Hair Cut</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>offers">50% off on Manicure</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>offers">50% off on Pedicure</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>offers">Free Makeup Trial</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>offers">Free Nail Care</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="col-md-3">
-                                            <img src="<?php echo base_url(); ?>assets/images/wedding-pre-bridal-nav-img.jpg" alt="" class="img-fluid">
+                                            <img src="<?php echo $base_url; ?>assets/images/wedding-pre-bridal-nav-img.jpg" alt="" class="img-fluid">
                                         </div>
 
                                     </div>
@@ -919,7 +935,7 @@
                             </div>
                         </li>
 
-                        <li><a href="bridal-makeup-consultation-form.php">Bridal Makeup</a>
+                        <li><a href="<?php echo $base_url; ?>bridal-makeup-consultation-form">Bridal Makeup</a>
                             <div class="submenu">
 
                                 <div class="">
@@ -945,10 +961,10 @@
                                             <div class="menu-common-list">
                                                 <div class="nav-submenu-title">Bridal Package</ldiv>
                                                     <ul>
-                                                        <li><a href="package.php">Silver</a></li>
-                                                        <li><a href="package.php">Gold</a></li>
-                                                        <li><a href="package.php">Platinum</a></li>
-                                                        <li><a href="package.php">Diamond</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>package">Silver</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>package">Gold</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>package">Platinum</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>package">Diamond</a></li>
                                                     </ul>
 
 
@@ -959,10 +975,10 @@
                                             <div class="menu-common-list">
                                                 <div class="nav-submenu-title">Pre Bridal Package</ldiv>
                                                     <ul>
-                                                        <li><a href="package.php">Silver</a></li>
-                                                        <li><a href="package.php">Gold</a></li>
-                                                        <li><a href="package.php">Platinum</a></li>
-                                                        <li><a href="package.php">Diamond</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>package">Silver</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>package">Gold</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>package">Platinum</a></li>
+                                                        <li><a href="<?php echo $base_url; ?>package">Diamond</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -972,16 +988,16 @@
                                             <div class="menu-common-list">
                                                 <div class="nav-submenu-title">BMM Cards</div>
                                                 <ul>
-                                                    <li><a href="cards.php">Membership Cards</a></li>
-                                                    <li><a href="cards.php">Gift Cards</a></li>
-                                                    <li><a href="cards.php">Flexi Cards</a></li>
+                                                    <li><a href="<?php echo $base_url; ?>cards">Membership Cards</a></li>
+                                                    <li><a href="<?php echo $base_url; ?>cards">Gift Cards</a></li>
+                                                    <li><a href="<?php echo $base_url; ?>cards">Flexi Cards</a></li>
                                                 </ul>
                                             </div>
                                         </div>
 
 
                                         <div class="col-md-3">
-                                            <img src="<?php echo base_url(); ?>assets/images/makeup-artist-nav-img.jpg" alt="" class="img-fluid">
+                                            <img src="<?php echo $base_url; ?>assets/images/makeup-artist-nav-img.jpg" alt="" class="img-fluid">
                                         </div>
 
                                     </div>
@@ -991,26 +1007,26 @@
                         </li>
 
 
-                        <li><a href="makeup-academy.php">Makeup Academy</a></li>
+                        <li><a href="<?php echo $base_url; ?>makeup-academy">Makeup Academy</a></li>
 
-                        <li><a href="cards.php">Cards </a></li>
-                        <li><a href="im-beautiful.php">I'm Beautiful &nbsp; <i class="fa fa-heart"></i> </a>
+                        <li><a href="<?php echo $base_url; ?>cards">Cards </a></li>
+                        <li><a href="<?php echo $base_url; ?>im-beautiful">I'm Beautiful &nbsp; <i class="fa fa-heart"></i> </a>
 
                         <li>
-                            <a href="<?php echo base_url(); ?>bmm-tv.php"> BMM TV</a>
+                            <a href="<?php echo $base_url; ?>bmm-tv"> BMM TV</a>
                         </li>
                         <li>
-                            <a href="book-appointment.php"> Quick Booking &nbsp; <i class="fa fa-calendar-alt"></i> </a>
+                            <a href="<?php echo $base_url; ?>book-appointment"> Quick Booking &nbsp; <i class="fa fa-calendar-alt"></i> </a>
                         </li>
-                        <li class="active-offer-nav"><a href="offers.php">Offers</a>
+                        <li class="active-offer-nav"><a href="offers">Offers</a>
 
                         </li>
 
-                        <li><a href="blog.php">Blog </a>
+                        <li><a href="<?php echo $base_url; ?>blog">Blog </a>
                         </li>
 
                         <li class="p-relative">
-                            <a href="pro/index.php">BMM PRO
+                            <a href="<?php echo $base_url; ?>pro/index">BMM PRO
                                 <!-- <span class="new-tag new">FREE</span> -->
                             </a>
                         </li>
@@ -1020,7 +1036,7 @@
                 </div>
             </nav>
         <?php
-        }
+//        }
         ?>
     </header>
 
@@ -1158,8 +1174,8 @@
                             <div class="form-heading">Sign In - Verify OTP</div>
                             <div class="register-steps register-step2 mt-3">
                                 <div class="form-group">
-                                    <label for="otp_text">OTP</label>
-                                    <input type="text" id="otp_text" placeholder="Enter OTP" class="form-control" maxlength="6" name="otp">
+                                    <label for="otp_text text-center"> <span id="otp-mobile"></span> On this mobile number you'll receive an OTP</label>
+                                    <input type="text" id="otp_text" placeholder="Enter OTP" class="form-control mt-3" maxlength="6" name="otp">
                                 </div>
                                 <div class="form-group"></div>
                                 <label class="resend-seconds"> <span class></span> sec</label>
@@ -1199,15 +1215,15 @@
                                         <div class="form-group">
                                             <label>Gender</label>
                                             <select class="form-control" name="gender">
-                                                <option value="male">Male</option>
                                                 <option value="female">Female</option>
+                                                <option value="male">Male</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label>Mobile Number</label>
-                                    <input type="text" class="form-control" name="mobile_no">
+                                    <input type="text" class="form-control" name="mobile_no" maxlength="10">
                                 </div>
                                 <div class="form-group">
                                     <label>Email Id</label>
@@ -1244,442 +1260,3 @@
             </div>
         </div>
     </div>
-
-    <script>
-        $(function() {
-            const token = localStorage.getItem("token");
-
-            $('.loginBtn').click(function() {
-                $('.modal').modal('hide');
-                $('#loginModal').modal('show');
-            });
-            $('.registerBtn').click(function() {
-                $('.modal').modal('hide');
-                $('#registerModal').modal('show');
-            });
-
-
-            // *****************
-            // Login
-            // *****************
-
-            let otpTiming = 60;
-            let tempToken;
-            let interval;
-
-            $("#loginForm").validate({
-                rules: {
-                    email_mobile: "required",
-                    password: "required",
-                },
-                messages: {
-                    email_mobile: "Please enter Mobile Number or Email id",
-                    password: "Please enter Password",
-                },
-
-                submitHandler: function(form) {
-                    let post_data = {
-                        email_mobile: $('#loginForm [name=email_mobile]').val(),
-                        password: $('#loginForm [name=password]').val(),
-                    }
-                    $("#signInBtn").attr('disabled', true);
-                    $.ajax({
-                        url: `${base_url}/user/auth/login.php`,
-                        type: 'POST',
-                        dataType: 'JSON',
-                        data: JSON.stringify(post_data),
-                        success: function(result) {
-                            $("#signInBtn").removeAttr('disabled');
-                            toastr.success("Sign in successfully");
-                            localStorage.setItem("userToken", result.token);
-                            window.location.replace('user/dashboard.php');
-                        },
-                        error: function(error) {
-                            $("#signInBtn").removeAttr('disabled');
-                            toastr.error(error.responseJSON.message);
-                        }
-                    });
-                }
-            });
-
-            $("#user-signin-with-otp-btn").click(function() {
-                sendOTPForLogin();
-            });
-
-            function sendOTPForLogin() {
-                $('#loginStepTwo input[name=otp]').val("")
-                let post_data = {
-                    mobile_no: $("#loginForm [name=email_mobile]").val(),
-                }
-                if (!!post_data.mobile_no) {
-                    $("#user-signin-with-otp-btn").attr('disabled', true);
-                    $.ajax({
-                        url: base_url + '/user/auth/login-with-otp.php',
-                        type: 'POST',
-                        dataType: 'JSON',
-                        data: JSON.stringify(post_data),
-                        success: function(result) {
-                            $("#user-signin-with-otp-btn").removeAttr('disabled');
-                            $("#loginStepTwo").show();
-                            $("#loginForm").hide();
-                            toastr.success(result.message);
-                            tempToken = result.token;
-                            signInResendSetInterval();
-                        },
-                        error: function(error) {
-                            $("#user-signin-with-otp-btn").removeAttr('disabled');
-                            toastr.error(error.responseJSON.message);
-                        }
-                    });
-                } else {
-                    toastr.error("Please enter Mobile Number");
-                }
-            }
-
-            function signInResendSetInterval() {
-                $('.user-login-resend-btn').hide();
-                $('.resend-seconds').show();
-                $("#user-signin-with-otp-btn").hide();
-                $("#timer-btn").show();
-                let resend_seconds = otpTiming;
-                $('.resend-seconds span').text(resend_seconds);
-                $('#timer-btn span').text(resend_seconds);
-                interval = setInterval(function() {
-                    resend_seconds--;
-                    if (resend_seconds > 1) {
-                        $('.resend-seconds span').text(resend_seconds);
-                        $('#timer-btn span').text(resend_seconds);
-                    } else {
-                        $('.resend-seconds').hide();
-                        $('.user-login-resend-btn').show();
-                        $("#user-signin-with-otp-btn").show();
-                        $("#timer-btn").hide();
-                        clearInterval(interval);
-                        return;
-                    }
-                }, 1000);
-            }
-
-            $('.user-login-resend-btn').click(function() {
-                sendOTPForLogin();
-            });
-
-            $("#loginStepTwo .user-go-back-btn").click(function() {
-                $("#loginStepTwo").hide();
-                $("#loginForm").show();
-                $("#user-user-signin-with-otp-btn").show();
-            });
-
-            $("#loginStepTwo").validate({
-                rules: {
-                    otp: {
-                        required: true,
-                        number: true,
-                        minlength: 4
-                    }
-                },
-                messages: {
-                    otp: {
-                        required: "Please enter OTP",
-                        number: "Please enter a valid OTP",
-                        minlength: "Please enter 4 digit OTP"
-                    }
-                },
-                submitHandler: function(form) {
-                    let post_data = {
-                        otp: $('#loginStepTwo input[name=otp]').val(),
-                        token: tempToken
-                    }
-                    $("#verifyOTP").attr('disabled', true);
-                    $.ajax({
-                        url: base_url + 'user/auth/verify-otp.php',
-                        type: 'POST',
-                        dataType: 'JSON',
-                        data: JSON.stringify(post_data),
-                        success: function(result) {
-                            clearInterval(interval);
-                            toastr.success('OTP successfully verified');
-                            $("#verifyOTP").removeAttr('disabled');
-                            localStorage.setItem("userToken", result.token);
-                            window.location.replace('user/dashboard.php');
-                        },
-                        error: function(error) {
-                            $("#verifyOTP").removeAttr('disabled');
-                            toastr.error(error.responseJSON.message);
-                        }
-                    });
-                }
-            });
-
-            // *****************
-            // registerStepOne
-            // *****************
-
-            $("#registerStepOne").validate({
-                rules: {
-                    name: "required",
-                    mobile_no: "required",
-                    email_id: "required",
-                    gender: "required",
-                },
-                messages: {
-                    name: "Please enter Full Name",
-                    mobile_no: "Please enter Mobile Number",
-                    email_id: "Please enter Email Id",
-                    gender: "Please select Gender",
-                },
-
-                submitHandler: function(form) {
-                    let post_data = {
-                        name: $('#registerStepOne [name=name]').val(),
-                        mobile_no: $('#registerStepOne [name=mobile_no]').val(),
-                        email_id: $('#registerStepOne [name=email_id]').val(),
-                        gender: $('#registerStepOne [name=gender]').val(),
-                    }
-                    $("#registerBtn").attr('disabled', true);
-                    $.ajax({
-                        url: `${base_url}user/auth/signup.php`,
-                        type: 'POST',
-                        dataType: 'JSON',
-                        data: JSON.stringify(post_data),
-                        success: function(result) {
-                            debugger;
-                            $("#registerStepOne #registerBtn").removeAttr('disabled')
-                            $('#registerStepOne').hide();
-                            $('#registerStepTwo').show();
-                            tempToken = result.token;
-                            resendSetInterval();
-                        },
-                        error: function(error) {
-                            $("#registerBtn").removeAttr('disabled');
-                            toastr.error(error.responseJSON.message);
-                        }
-                    });
-                }
-            });
-
-            // *****************
-            // registerStepTwo
-            // *****************
-            function resendSetInterval() {
-                $('.user-register-resend-btn').hide();
-                $('.register-resend-seconds').show();
-                $("#registerBtn").hide();
-                $("#timer-btn").show();
-                let resend_seconds = otpTiming;
-                $('.register-resend-seconds span').text(resend_seconds);
-                $('#timer-btn span').text(resend_seconds);
-                let interval = setInterval(function() {
-                    resend_seconds--;
-                    if (resend_seconds > 1) {
-                        $('.register-resend-seconds span').text(resend_seconds);
-                        $('#timer-btn span').text(resend_seconds);
-                    } else {
-                        $('.register-resend-seconds').hide();
-                        $('.user-register-resend-btn').show();
-                        $("#registerBtn").show();
-                        $("#timer-btn").hide();
-                        clearInterval(interval);
-                        return;
-                    }
-                }, 1000);
-            }
-
-            $('.user-register-resend-btn').click(function() {
-                let post_data = {
-                    token: tempToken
-                }
-                $.ajax({
-                    url: base_url + 'user/auth/resend-otp.php',
-                    type: 'POST',
-                    dataType: 'JSON',
-                    data: JSON.stringify(post_data),
-                    success: function() {
-                        resendSetInterval();
-                    }
-                });
-            });
-
-            $("#registerStepTwo").validate({
-                rules: {
-                    otp: {
-                        required: true,
-                        number: true,
-                        minlength: 4
-                    }
-                },
-                messages: {
-                    otp: {
-                        required: "Please enter OTP",
-                        number: "Please enter a valid OTP",
-                        minlength: "Please enter 4 digit OTP"
-                    }
-                },
-                submitHandler: function(form) {
-                    let post_data = {
-                        otp: $('#registerStepTwo input[name=otp]').val(),
-                        token: tempToken
-                    }
-                    $("#verifyOTP").attr('disabled', true);
-                    $.ajax({
-                        url: base_url + 'user/auth/verify-otp.php',
-                        type: 'POST',
-                        dataType: 'JSON',
-                        data: JSON.stringify(post_data),
-                        success: function(res) {
-                            // $('#registerStepTwo').hide();                            
-                            toastr.success('You have successfully Registered');
-                            localStorage.setItem("userToken", res.token);
-                            $('#registerModal').modal('hide');
-                            $("#verifyOTP").removeAttr('disabled');
-                            window.location.replace('user/dashboard.php');
-                        },
-                        error: function(error) {
-                            $("#verifyOTP").removeAttr('disabled');
-                            toastr.error(error.responseJSON.message);
-                        }
-                    });
-                }
-            });
-
-            $("#registerStepTwo .user-go-back-btn").click(function() {
-                $('#registerStepTwo').hide();
-                $('#registerStepOne').show();
-                $('#registerBtn').show();
-            })
-
-            // *****************
-            // advancedAutoComplete
-            // *****************
-
-            $('.advancedAutoComplete').autoComplete({
-                minLength: 1,
-                resolver: 'custom',
-                formatResult: function(item) {
-                    return {
-                        value: item.name,
-                        text: item.name,
-                        html: [
-                            `${item.name} ${item.genderType ? '['+ item.genderType +']' : '' }<br/><span>${item.category}</span>`,
-                            // `<a href="service-list.php?service_id=${item.id}">${item.name} ${item.genderType ? '['+ item.genderType +']' : '' }<br/><span>${item.category}</span></a>`,
-                        ]
-                    };
-                },
-                events: {
-                    search: function(qry, callback) {
-                        $.ajax(
-                            `${base_url}user/search/get-search-list.php`, {
-                                data: {
-                                    'q': qry
-                                }
-                            }
-                        ).done(function(res) {
-                            let responseData = [];
-                            categoryObj = {
-                                "services": "Services",
-                                "makeup_artist": "Makeup Artist",
-                                "salon": "Salon",
-                            }
-                            for (let key in res.result) {
-                                res.result[key].forEach(val => {
-                                    let obj = {
-                                        id: val.id,
-                                        category: categoryObj[key],
-                                        genderType: val.category,
-                                        name: val.name
-                                    }
-                                    responseData.push(obj);
-                                })
-                            }
-                            callback(responseData)
-                        });
-                    }
-                }
-            });
-
-            $('.advancedAutoComplete').on('autocomplete.select', function(evt, item) {
-                window.location.replace(`service-list.php?service_id=${item.id}`);
-            });
-
-            $('.advancedAutoComplete').on('autocomplete.freevalue', function(evt, value) {});
-
-            // *****************
-            // getAllServices
-            // *****************
-            var getAllServices = function() {
-                $(".loading-wrapper").show();
-                var selectedServices = [];
-                var intoSlug = function(str) {
-                    return str.toLowerCase().split(' ').join('-').replace('&', '');
-                }
-                const url = `${base_url}/user/services/get-services.php`;
-                $.ajax({
-                    url: url,
-                    type: 'GET',
-                    dataType: 'JSON',
-                    success: function(result) {
-                        // console.log(result)
-                        for (let key in result) {
-                            if (key == 'ladies') {
-                                $("#salonServices").append(`
-                            <div class="">
-                                <div id="${key+'-card-body-wrapper'}">
-                                    <div class="row"></div>
-                                </div>
-                            </div>`);
-                                for (let category in result[key]) {
-                                    $(`#salonServices #${key}-card-body-wrapper .row`).append(
-                                        `<div class="col-lg mb-4">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title" data="${category}">${category}</div>
-                                        <ul class="checkbox-wrapper ${intoSlug(category)}"></ul>
-                                        </div>
-                                    </div>
-                                    `
-                                    );
-                                    result[key][category].forEach(val => {
-                                        var x = `#salonServices #${key}-card-body-wrapper .${intoSlug(category)}`;
-                                        $(x).append(`
-                                      <li><a href="service-list.php?service_id=${val.id}">${val.name}</a></li>
-                                    `);
-                                    })
-                                }
-                            }
-                        }
-
-                        $(".loading-wrapper").hide();
-                        $("#salonServices").fadeIn(1000);
-                        $(".services-page .button-wrapper button").fadeIn(1000);
-
-                    }
-                });
-            }
-            getAllServices();
-
-            if (token) {
-                $.ajax({
-                    url: base_url + 'get-info.php?token= ' + token + ' &q=info,services,amenities,timings',
-                    type: 'GET',
-                    dataType: 'JSON',
-                    success: function(result) {
-                        // $('#login_email').text(result.result.info.email_id.slice(0, 7) + '..');
-                        var loginEmail = `<div class="custom-dropdown-btn">
-                                        <a class="sign-up">
-                                        <i class="far fa-user-circle float-left mr-2"></i> <span> ${result.result.info.email_id.slice(0, 7) + '..'} </span>
-                                    </a>
-                                </div>`
-                        $('#loginBtn').prepend(loginEmail);
-                    },
-                    error: function() {
-                        var loginEmail = `<div class="custom-dropdown-common-btn">
-                    <a href="login.php">
-                    <i class="far fa-user-circle float-left mr-2"></i> <span>Sign In</span>
-                    </a>
-                    </div>
-                    `
-                        $('#loginBtn').prepend(loginEmail);
-                    }
-                });
-            }
-        });
-    </script>

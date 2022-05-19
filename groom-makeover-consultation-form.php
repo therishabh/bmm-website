@@ -27,11 +27,6 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-<?php
-include './shared/utilities.php';
-includeWithVariables('./include/header.php', array('page_title' => "Book MY Makeup"));
-?>
-
 <section class="book-appointment-banner">
     <img src="assets/images/groom-makeover-consultation-form.jpg" class="img-fluid">
 </section>
@@ -119,5 +114,3 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
 
     </div>
 </section>
-
-<?php include 'include/footer.php' ?>

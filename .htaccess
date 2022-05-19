@@ -1,2 +1,11 @@
+Options -Indexes
+Options -MultiViews
+
 RewriteEngine On
-RewriteRule ^blog/(.+)/(.+) blogpost.php?id=$1 [L]
+#RewriteCond %{REQUEST_URI} !^/salon/*
+RewriteCond %{SCRIPT_FILENAME} !-d 
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?pn=$1 [NC]
+#
+#RewriteEngine On
+#RewriteRule ^blog/(.+)/(.+) blogpost.php?id=$1 [L]

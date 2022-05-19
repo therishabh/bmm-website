@@ -106,10 +106,10 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
                             <!-- <div class="col-md-12">
                                 <ul class="footer-logos">
                                     <li>
-                                        <img src="<?php echo base_url(); ?>assets/images/footer-logo1.png" alt="">
+                                        <img src="<?php echo $base_url; ?>assets/images/footer-logo1.png" alt="">
                                     </li>
                                     <li>
-                                        <img src="<?php echo base_url(); ?>assets/images/footer-logo2.png" alt="">
+                                        <img src="<?php echo $base_url; ?>assets/images/footer-logo2.png" alt="">
                                     </li>
                                 </ul>
                             </div> -->
@@ -172,7 +172,7 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
                     <div class="col-md-3">
                         <div class="row">
                             <div class="col-md-3">
-                                <img src="<?php echo base_url(); ?>assets/images/footer-icon1.png" class="" alt="">
+                                <img src="<?php echo $base_url; ?>assets/images/footer-icon1.png" class="" alt="">
                             </div>
                             <div class="col-md-9">
                                 <p class="font-weight-bold text-uppercase">1000+ Salons</p>
@@ -184,7 +184,7 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
                     <div class="col-md-3">
                         <div class="row">
                             <div class="col-md-3">
-                                <img src="<?php echo base_url(); ?>assets/images/footer-icon2.png" class="" alt="">
+                                <img src="<?php echo $base_url; ?>assets/images/footer-icon2.png" class="" alt="">
                             </div>
                             <div class="col-md-9">
                                 <p class="font-weight-bold text-uppercase">Flexi Memberships</p>
@@ -196,7 +196,7 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
                     <div class="col-md-3">
                         <div class="row">
                             <div class="col-md-3">
-                                <img src="<?php echo base_url(); ?>assets/images/footer-icon3.png" class="" alt="">
+                                <img src="<?php echo $base_url; ?>assets/images/footer-icon3.png" class="" alt="">
                             </div>
                             <div class="col-md-9">
                                 <p class="font-weight-bold text-uppercase"> Wedding Bliss </p>
@@ -208,7 +208,7 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
                     <div class="col-md-3">
                         <div class="row">
                             <div class="col-md-3">
-                                <img src="<?php echo base_url(); ?>assets/images/footer-icon4.png" class="" alt="">
+                                <img src="<?php echo $base_url; ?>assets/images/footer-icon4.png" class="" alt="">
                             </div>
                             <div class="col-md-9">
                                 <p class="font-weight-bold text-uppercase">Trusted Professionals </p>
@@ -264,26 +264,27 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
     </div>
 </div>
 
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/popper.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/popper.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/fontAwesome.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/owl.carousel.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/config.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/toastr.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.validate.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/custom.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/js//Chart.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/utils.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/utilities.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/bootstrap-autocomplete.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/popper.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/popper.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/fontAwesome.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/config.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/toastr.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/custom.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js//Chart.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/utils.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/utilities.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/bootstrap-autocomplete.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/common.js"></script>
 
 
 <!--gallery script start here-->
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/highslide/highslide-with-gallery.js"></script>
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/highslide/highslide.css" />
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/highslide/highslide-with-gallery.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/highslide/highslide.css" />
 <script type="text/javascript">
-    hs.graphicsDir = '<?php echo base_url(); ?>assets/highslide/graphics/';
+    hs.graphicsDir = '<?php echo $base_url; ?>assets/highslide/graphics/';
     hs.align = 'center';
     hs.transitions = ['expand', 'crossfade'];
     hs.outlineType = 'rounded-white';
@@ -305,6 +306,14 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
     });
 </script>
 <!--gallery script ends here-->
+<?php  if($page=='blog') { ?>
+    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/blog.js"></script>
+<?php } ?>
+    
+<?php  if($page=='service-list') { ?>
+    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/service-list.js"></script>
+<?php } ?>
+
 </body>
 
 </html>

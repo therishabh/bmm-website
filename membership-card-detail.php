@@ -1,7 +1,4 @@
-<?php
-include './shared/utilities.php';
-includeWithVariables('./include/header.php', array('page_title' => "Book MY Makeup"));
-?>
+
 
 <div class="container">
     <div class="row">
@@ -12,6 +9,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
             <p class="card_value"></p>
             <p class="card_validity"></p>
             <p class="category"></p>
+            <p class="card_fee"></p>
         </div>
         <div class="card-banner col-md-6 col-12 m-10" id="card-banner">
             <img src="" class="img-fluid" style="margin-top: 25px; padding:40px;" id="card-img">
@@ -20,11 +18,10 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
     <div class="card-detail-body mt-5"></div>
 </div>
 
-<?php include 'include/footer.php' ?>
 
 <script>
     $(function() {
-    // CARD DETAIL STARTS HERE-------------------------------------------------------
+        // CARD DETAIL STARTS HERE-------------------------------------------------------
         let card_id = getParameterByName('card-id');
         let get_membership_card_detail = function() {
             let card_detail = {
@@ -42,14 +39,15 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                     $('.card_value').html('Get card with value of ' + result.value);
                     $('.card_validity').html('Card Validity will be for ' + result.validity);
                     $('.category').html('Card Category ' + result.category);
-                    $('.card-detail-box').append('<a href="#" class="btn btn-pink buy-card mt-4">Buy Now</a>');
+                    $('.card_fee').html('No Joining Fee, No Annual Fee');
+                    $('.card-detail-box').append('<a href="<?php echo base_url(); ?>membership-card-checkout.php?card-id='+card_id+'" class="btn btn-pink buy-card mt-4">Buy Now</a>');
                     $('#card-img').attr('src', "" + result.image + "").append("#card-banner");
                     $('.card-detail-body').html(result.description);
                 }
             });
         }
-    get_membership_card_detail();
-    // CARD DETAIL ENDS HERE-------------------------------------------------------
+        get_membership_card_detail();
+        // CARD DETAIL ENDS HERE-------------------------------------------------------
 
     });
 </script>

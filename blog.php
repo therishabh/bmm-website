@@ -1,15 +1,11 @@
-<?php
-include './shared/utilities.php';
-includeWithVariables('./include/header.php', array('page_title' => "Book MY Makeup"));
-?>
 
 <section class="blog-main-page">
     <div class="container">
         <div class="row">
             <div class="col-md-8">
 
-                <ul class="blog-filter mb-4">
-                    <li>Bridal Makeup <i class="fa fa-times"></i> </li>
+                <ul class="blog-filter mb-4 d-none" id="blog-filter">
+                    <li><span></span> <i class="fa fa-times" onclick="removeFilter();"></i> </li>
                 </ul>
 
                 <div class="row" id="post-list">
@@ -17,7 +13,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                         <div class="blog-item">
                             <img src="" class="img-fluid">
                             <span class="blog-category"></span>
-                            <!-- <a href="blog-post-1.php">
+                            <!-- <a href="blog-post-1">
                                 <h4>Glossy Makeup Is Officially All Over Instagram Again—And We’re Here</h4>
                             </a> -->
                         </div>
@@ -26,7 +22,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                         <div class="blog-item">
                             <img src="" class="img-fluid">
                             <span class="blog-category">Bridal Makeup</span>
-                            <a href="blog-post-1.php">
+                            <a href="blog-post-1">
                                 <h4>Glossy Makeup Is Officially All Over Instagram Again—And We’re Here</h4>
                             </a>
                         </div>
@@ -35,7 +31,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                         <div class="blog-item">
                             <img src="assets/images/blog-img-1.jpg" class="img-fluid">
                             <span class="blog-category">Bridal Makeup</span>
-                            <a href="blog-post-1.php">
+                            <a href="blog-post-1">
                                 <h4>Glossy Makeup Is Officially All Over Instagram Again—And We’re Here</h4>
                             </a>
                         </div>
@@ -44,7 +40,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                         <div class="blog-item">
                             <img src="assets/images/blog-img-1.jpg" class="img-fluid">
                             <span class="blog-category">Bridal Makeup</span>
-                            <a href="blog-post-1.php">
+                            <a href="blog-post-1">
                                 <h4>Glossy Makeup Is Officially All Over Instagram Again—And We’re Here</h4>
                             </a>
                         </div>
@@ -69,7 +65,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                         <div class="blog-post-box">
                             <img src="assets/images/blog-img-1.jpg" class="img-fluid">
                             <div class="blog-post-box-body">
-                                <a href="blog-post-1.php">
+                                <a href="blog-post-1">
                                     <h4>Cracking the Perfect Work from Home Make-up Look!</h4>
                                 </a>
 
@@ -135,7 +131,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                         <div class="blog-post-box">
                             <img src="assets/images/blog-img-2.jpg" class="img-fluid">
                             <div class="blog-post-box-body">
-                                <a href="blog-post-2.php">
+                                <a href="blog-post-2">
                                     <h4>The Best Eye Care Products to Nourish your Under Eyes</h4>
                                 </a>
                                 <p>These days being at home, unable to step out even for work, the most exerted and probably taken for granted part of us...</p>
@@ -205,7 +201,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                         <div class="blog-post-box">
                             <img src="assets/images/blog-img-3.jpg" class="img-fluid">
                             <div class="blog-post-box-body">
-                                <a href="blog-post-3.php">
+                                <a href="blog-post-3">
                                     <h4>The Bride Story: Your Complete Bridal Package!</h4>
                                 </a>
                             </div>
@@ -215,7 +211,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                         <div class="blog-post-box">
                             <img src="assets/images/blog-img-4.jpg" class="img-fluid">
                             <div class="blog-post-box-body">
-                                <a href="blog-post-4.php">
+                                <a href="blog-post-4">
                                     <h4>Ideas for Best Bridal Outfits for all Indian Wedding Functions!</h4>
                                 </a>
                             </div>
@@ -225,7 +221,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                         <div class="blog-post-box">
                             <img src="assets/images/blog-img-5.jpg" class="img-fluid">
                             <div class="blog-post-box-body">
-                                <a href="blog-post-5.php">
+                                <a href="blog-post-5">
                                     <h4>Make-up Products that are a Must for Every Bride’s Vanity Box!</h4>
                                 </a>
                             </div>
@@ -242,7 +238,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                         <div class="blog-post-box">
                             <img src="assets/images/blog-img-6.jpg" class="img-fluid">
                             <div class="blog-post-box-body">
-                                <a href="blog-post-6.php">
+                                <a href="blog-post-6">
                                     <h4>What are the 5 Best Lipstick Shades to Try in Summers!</h4>
                                 </a>
                                 <p>‘Give a girl the right lipstick and she can rule the world’ is the perfect saying for almost every woman alive on earth. Lip shades are...</p>
@@ -308,7 +304,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                         <div class="blog-post-box">
                             <img src="assets/images/blog-img-8.jpg" class="img-fluid">
                             <div class="blog-post-box-body">
-                                <a href="blog-post-8.php">
+                                <a href="blog-post-8">
                                     <h4>Top 10 Beauty & Make-up Hacks Every Bride Can Rock for her D-day!</h4>
                                 </a>
                                 <p>Weddings count for the most wonderful of days in anyone’s life and they are here to stay forever in one’s memories and...</p>
@@ -376,9 +372,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                 </div>
                 <div class="blog-categories-list" id="categories-list">
                     <ul>
-                        <li>
-                            <a href="#"></a>
-                        </li>
+                        
                     </ul>
                 </div>
 
@@ -389,7 +383,7 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
                 </div>
                 <div class="blog-categories-list" id="recent-post">
                     <ul>
-                        <li><a href="blog-post-1.php"></a></li>
+                        <li><a href="blog-post-1"></a></li>
                     </ul>
                 </div>
             </div>
@@ -402,127 +396,3 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
         <img src="assets/images/stripe-banner-1.jpg" alt="" class="img-fluid">
     </div>
 </section>
-
-<?php include 'include/footer.php' ?>
-
-<script>
-    $(function() {
-        var page_no = "1";
-        var page_count = "10";
-        var category_id = "";
-        let total_pages = "";
-
-        let get_post_listing = function() {
-            let paramsData = {
-                page_no: page_no,
-                page_count: page_count,
-                category_id: category_id,
-            }
-
-            $.ajax({
-                url: base_url + "user/blog/post-list.php",
-                type: "GET",
-                data: paramsData,
-                dataType: "JSON",
-                success: function(result) {
-                    let data = "";
-                    result.result.forEach(function(val) {
-                        data += `<div class="col-md-6">
-                            <div class="blog-item">
-                                <img src="${val.image.name}" class="img-fluid">
-                                <div class="blog-body">
-                                <a href="<?php echo base_url(); ?>detail-post.php?post-id=${val.id}">
-                                <h4>${val.heading}</h4>
-                                </a>
-                                <span class="blog-category">${val.category.name}</span>
-                                </div>
-                            </div>
-                        </div>`;
-                    });
-                    $("#post-list").html(data);
-
-                    // PAGINATION
-                    let paginationLi = `<li class="page-item pagination-previous-btn"><a class="page-link">Previous</a></li>`
-                    total_pages = Math.ceil(result.total / page_count);
-                    for (var i = 1; i <= total_pages; i++) {
-                        if (i == page_no) {
-                            paginationLi += `<li class="page-item pagination-page-no active" data_id="${i}"><a class="page-link">${i}</a></li>`
-                        } else {
-                            paginationLi += `<li class="page-item pagination-page-no" data_id="${i}"><a class="page-link">${i}</a></li>`
-                        }
-                    }
-                    paginationLi += `<li class="page-item pagination-next-btn"><a class="page-link " >Next</a></li>`
-
-                    $("#blog_listing_pagination").html(paginationLi);
-                    if (total_pages == page_no) {
-                        $(".pagination-next-btn").hide();
-                    }
-
-                    if (page_no == 1) {
-                        $(".pagination-previous-btn").hide();
-                    }
-                }
-            });
-        }
-        get_post_listing();
-
-        $("#blog_listing_pagination").on('click', '.pagination-page-no', function() {
-            page_no = $(this).attr('data_id');
-            get_post_listing();
-        })
-
-        $("#blog_listing_pagination").on('click', '.pagination-next-btn', function() {
-            page_no = parseInt(page_no) + 1;
-            get_post_listing();
-
-        })
-        $("#blog_listing_pagination").on('click', '.pagination-previous-btn', function() {
-            page_no = parseInt(page_no) - 1;
-            get_post_listing();
-
-        })
-
-
-        // ------------------------CATEGORIES STARTS HERE------------------------------------------------- 
-        let get_category_list = function() {
-            $.ajax({
-                url: base_url + "user/blog/category-list.php",
-                type: "GET",
-                dataType: "JSON",
-                success: function(result) {
-                    let data = "";
-                    result.result.forEach(function(val) {
-                        data += `<li>
-                                <a href="#" class="social-links">${val.name}</a>
-                            </li>`;
-                    });
-                    $("#categories-list ul").html(data);
-                }
-            });
-        };
-        get_category_list();
-        // ------------------------CATEGORIES ENDS HERE------------------------------------------------- 
-
-
-
-        //--------------------------RECENT POST STARTS HERE---------------------------------------------
-        let get_recentpost_list = function() {
-            $.ajax({
-                url: base_url + "user/blog/recent-post.php",
-                type: "GET",
-                dataType: "JSON",
-                success: function(result) {
-                    let data = "";
-                    result.result.forEach(function(val) {
-                        data += `<li>
-                            <a href="<?php echo base_url(); ?>detail-post.php?post-id=${val.id}" class="social-links">${val.heading}</a>
-                        </li>`;
-                    });
-                    $("#recent-post ul").html(data);
-                }
-            });
-        };
-        get_recentpost_list();
-        //--------------------------RECENT POST ENDS HERE---------------------------------------------
-    });
-</script>

@@ -1,7 +1,4 @@
-<?php
-include './shared/utilities.php';
-includeWithVariables('./include/header.php', array('page_title' => "Book MY Makeup"));
-?>
+
 <section class="section-padding about-page">
 
   <div class="about-the-brand-section">
@@ -33,4 +30,3 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
     </div>
   </div>
 </section>
-<?php include 'include/footer.php' ?>

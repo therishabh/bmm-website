@@ -1,7 +1,4 @@
-<?php
-include './shared/utilities.php';
-includeWithVariables('./include/header.php', array('page_title' => "Book MY Makeup"));
-?>
+
 <section class="makeup-academy-slider">
   <div id="demo" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -335,5 +332,3 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
   </div>
 </section>
 
-
-<?php include 'include/footer.php' ?>

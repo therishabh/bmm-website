@@ -1,7 +1,4 @@
-<?php
-include './shared/utilities.php';
-includeWithVariables('./include/header.php', array('page_title' => "Book MY Makeup"));
-?>
+
 <!-- Product/Service -->
 <section class="cart-details-section">
     <div class="container">
@@ -95,8 +92,6 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
 </div>
 <div class="overlay"></div>
 
-<?php include 'include/footer.php' ?>
-</body>
 <script>
     $(document).ready(function() {
 
@@ -142,5 +137,3 @@ includeWithVariables('./include/header.php', array('page_title' => "Book MY Make
         });
     });
 </script>
-
-</html>

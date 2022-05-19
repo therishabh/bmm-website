@@ -139,7 +139,7 @@
         margin: 5px 0;
     }
     .header-container .logo img {
-        width: 100%;        
+        width: 100%;
     }
     .top-right-list .top-right-list-item .icons {
         font-size: 20px;
@@ -183,7 +183,7 @@
     .responsive-nav {
         display: block;
     }
-    .featured .box-shadow{
+    .featured .box-shadow {
         height: 220px;
     }
     .editor-choice .box-shadow {
@@ -233,9 +233,9 @@
         display: inline-block;
         float: none;
     }
-    .seller-registration-tabs .nav-pills li span{
+    .seller-registration-tabs .nav-pills li span {
         margin-top: 5px;
-        display: inline-block;        
+        display: inline-block;
     }
     .seller-registration-tabs .tab-pane form label {
         margin: 10px 0;
@@ -290,7 +290,7 @@
         border-right: 0;
         margin-bottom: 0;
     }
-    .benifits-container{
+    .benifits-container {
         padding: 0 20px;
     }
     .how-to-apply {
@@ -313,7 +313,7 @@
     .faq-section .main-div .card button span:last-child {
         display: none;
     }
-    .faq-section .main-div .card button .rotate-arrow{
+    .faq-section .main-div .card button .rotate-arrow {
         display: block !important;
     }
     .home-offer-section .home-offer-box span {
@@ -363,18 +363,39 @@
     .login-section .login-form {
         width: 92%;
     }
-    .login-section .login input{
+    .login-section .login input {
         width: 80%;
     }
-    .filter-btn{ display: block; border: 1px solid #ccc; padding:10px 15px; background: #ffffff; text-transform: uppercase; font-weight: bold;}
-    .filter-btn svg{ float:right;}
-    .filter-btn.active svg{ transform: rotate(180deg);}
-    .filter-container{ border-radius: 0px; display: none;}
-    .filter-container.active{ display: block;}
-
-    .makeup-artist-box{ width: 100%; margin: auto; margin-top: 20px; padding:12px;}
-    .makeup-artist-box .main-img{ margin-bottom: 20px;}
-    
+    .filter-btn {
+        display: block;
+        border: 1px solid #ccc;
+        padding: 10px 15px;
+        background: #ffffff;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .filter-btn svg {
+        float: right;
+    }
+    .filter-btn.active svg {
+        transform: rotate(180deg);
+    }
+    .filter-container {
+        border-radius: 0px;
+        display: none;
+    }
+    .filter-container.active {
+        display: block;
+    }
+    .makeup-artist-box {
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+        padding: 12px;
+    }
+    .makeup-artist-box .main-img {
+        margin-bottom: 20px;
+    }
     .salon-featured-tag {
         position: absolute;
         top: -55px;
@@ -382,11 +403,15 @@
     }
     .salon-logo {
         width: 50px;
-        height: 50px;}
-    .makeup-artist-box p.artist-name{ font-size: 18px; margin-top: 10px;}
+        height: 50px;
+    }
+    .makeup-artist-box p.artist-name {
+        font-size: 18px;
+        margin-top: 10px;
+    }
     .makeup-artist-box p {
-        font-size: 14px;}
-
+        font-size: 14px;
+    }
     .blog-post-box-detail h2 {
         font-size: 24px;
         margin-bottom: 12px;
@@ -396,274 +421,304 @@
         padding: 25px 0px;
     }
     .bmm-tv-box h5 {
-        font-size: 16px;}
-
-    .makeup-artist-box p.price{ font-size: 20px;}
-    .makeup-artist-box ul.salon-aminities li{ margin-right: 5px;}
-    .product-box h4{font-size: 18px;
-        font-weight: bold;}
+        font-size: 16px;
+    }
+    .makeup-artist-box p.price {
+        font-size: 20px;
+    }
+    .makeup-artist-box ul.salon-aminities li {
+        margin-right: 5px;
+    }
+    .product-box h4 {
+        font-size: 18px;
+        font-weight: bold;
+    }
     .salon-btns button {
         padding: 8px 24px;
         font-size: 14px;
-        font-weight: 600;}
-    .salon-btns button:first-child{ margin-right: 5px;}
-    .price-img{display: none;}
-    .main-makeup-box h1 {
-        font-size: 18px;}
-    .find-makeup-artists-1-section h2, .find-makeup-artists-1-section h2 a{ font-size: 18px;}
-    .featured .content, .editor-choice .content, .store-in-focus .content{
-        height:70px
+        font-weight: 600;
     }
-    .special-section, .store-in-focus, .category-focus, .featured, .what-new, .editor-choice, .popup-story, .beauty-advice{
+    .salon-btns button:first-child {
+        margin-right: 5px;
+    }
+    .price-img {
+        display: none;
+    }
+    .main-makeup-box h1 {
+        font-size: 18px;
+    }
+    .find-makeup-artists-1-section h2,
+    .find-makeup-artists-1-section h2 a {
+        font-size: 18px;
+    }
+    .featured .content,
+    .editor-choice .content,
+    .store-in-focus .content {
+        height: 70px
+    }
+    .special-section,
+    .store-in-focus,
+    .category-focus,
+    .featured,
+    .what-new,
+    .editor-choice,
+    .popup-story,
+    .beauty-advice {
         padding-bottom: 10px !important;
     }
-    .store-in-focus .col-12{
+    .store-in-focus .col-12 {
         margin-bottom: 15px;
     }
-    .stripe-banner-section{
+    .stripe-banner-section {
         padding: 10px 0;
     }
-    .buy-makup-section{
+    .buy-makup-section {
         padding-top: 0;
     }
-    .box-shadow{
+    .box-shadow {
         height: 240px;
     }
-    .what-new .box-shadow, .popup-story .box-shadow{
+    .what-new .box-shadow,
+    .popup-story .box-shadow {
         height: auto;
     }
-    .editor-choice .content{
+    .editor-choice .content {
         height: 92px;
     }
-    .stripe-banner-section img{
-        padding:0;
+    .stripe-banner-section img {
+        padding: 0;
     }
-    .manage-user-icon,.user-text{
+    .manage-user-icon,
+    .user-text {
         padding: 0 0 15px;
     }
-    .user-edit{
+    .user-edit {
         top: 24px;
     }
-    .user-offers .col-md-4{
+    .user-offers .col-md-4 {
         margin-top: 0 !important;
         margin-top: 40px !important;
     }
-    .beauty-advice .box-shadow{
+    .beauty-advice .box-shadow {
         height: 200px;
     }
-    .user-event table a.btn-pink{
+    .user-event table a.btn-pink {
         padding: 8px 20px;
         white-space: nowrap;
     }
-    .user-pic .col-md-3{
+    .user-pic .col-md-3 {
         margin-top: 20px !important;
     }
-    .user-video .box-shadow{
+    .user-video .box-shadow {
         height: 165px;
     }
-    .cart-product{
+    .cart-product {
         padding: 20px 15px;
     }
-    .cart-product-img img{
+    .cart-product-img img {
         width: 100px;
     }
-    .product-bs{
+    .product-bs {
         margin: 10px 0;
         width: 60%;
     }
-    .cart-increment{
+    .cart-increment {
         width: 50%;
     }
-    .cart-details-section .remove-cart{
+    .cart-details-section .remove-cart {
         margin-bottom: 10px;
         display: inline-block;
     }
-    .cart-product h4{
+    .cart-product h4 {
         margin-top: 10px;
     }
-    .sub-total-parent{
+    .sub-total-parent {
         padding-left: 15px !important;
     }
-    .online-appointment{
+    .online-appointment {
         padding-left: 0px;
         padding-right: 0px;
     }
-    .category-item .item .img{
+    .category-item .item .img {
         height: 380px;
     }
-    .blog-post-small-box.blog-post-box .col-md-8{
+    .blog-post-small-box.blog-post-box .col-md-8 {
         padding-left: 15px !important;
     }
-    .blog-post-small-box.blog-post-box h4{
+    .blog-post-small-box.blog-post-box h4 {
         padding: 0 5px;
     }
     .blog-post-box .blog-post-box-body {
         padding: 10px;
     }
-    .blog-cateogry-title{
+    .blog-cateogry-title {
         margin-top: 20px;
     }
-    .your-contact-form{
+    .your-contact-form {
         width: 100%;
         margin-top: 20px;
         padding: 32px 10px;
     }
-    .saloon-pills-opener{
+    .saloon-pills-opener {
         display: block;
     }
-    .saloon-piils .nav.nav-pills{
+    .saloon-piils .nav.nav-pills {
         display: none;
     }
-    .salon-btns button{
+    .salon-btns button {
         padding: 8px 15px;
     }
-    .saloon-piils #pills-video .col-md-4{
+    .saloon-piils #pills-video .col-md-4 {
         margin: 15px 0;
     }
-    .saloon-piils #pills-membership .box-shadow{
+    .saloon-piils #pills-membership .box-shadow {
         height: 100%;
     }
-    .saloon-piils .nav li{
+    .saloon-piils .nav li {
         width: 100%;
     }
     /* .saloon-piils .nav li:nth-child(3),.saloon-piils .nav li:nth-child(6){
         border-right:1px solid #dadada ;
-    } */    
+    } */
     .saloon-piils .nav li a {
         border-right: 1px solid #dadada;
     }
-    .card-box img{
+    .card-box img {
         margin-bottom: 10px;
     }
-    .input-snipper{
+    .input-snipper {
         width: 50%;
     }
-    .store-icons li{
+    .store-icons li {
         width: 32%;
     }
-    .claim-listing .input-group-prepend{
+    .claim-listing .input-group-prepend {
         width: 40%;
     }
-    .claim-listing button{
+    .claim-listing button {
         padding: 0px 15px;
     }
-    .want-know-more input{
-        margin-bottom:10px;
+    .want-know-more input {
+        margin-bottom: 10px;
     }
-    .cancellation-policy ul{
+    .cancellation-policy ul {
         padding-left: 20px;
     }
-    #beauty-to-go .form-group button{
+    #beauty-to-go .form-group button {
         width: 75px;
     }
-    .how-its-work .container .row:nth-child(4),.how-its-work .container .row:nth-child(2),.how-its-work .container .row:nth-child(1){
+    .how-its-work .container .row:nth-child(4),
+    .how-its-work .container .row:nth-child(2),
+    .how-its-work .container .row:nth-child(1) {
         margin-top: 0 !important;
     }
-    .saloon-video iframe{
+    .saloon-video iframe {
         width: 100%;
     }
-    .saloon-piils .nav li a{
+    .saloon-piils .nav li a {
         padding: 8px 0;
     }
-    .makeup-artist-pics .box-shadow{
+    .makeup-artist-pics .box-shadow {
         height: 156px;
     }
-    .makeup-artist-images .col-md-3{
+    .makeup-artist-images .col-md-3 {
         margin: 10px 0 !important;
     }
-    .policy ul{
+    .policy ul {
         padding-left: 20px;
     }
-    .register-section .login input{
+    .register-section .login input {
         width: 100%;
     }
-    .register-section select{
+    .register-section select {
         margin-bottom: 16px;
     }
-    .register-section .register-first-name{
+    .register-section .register-first-name {
         margin-bottom: 16px;
     }
-    .salon-ho-manage-video .box-shadow{
+    .salon-ho-manage-video .box-shadow {
         height: 156px !important;
     }
-    .manage-user-icon .row.mt-4 .col-md-3{
+    .manage-user-icon .row.mt-4 .col-md-3 {
         margin: 5px 0 !important;
     }
-    .beauty-advice .box-shadow{
+    .beauty-advice .box-shadow {
         height: 156px;
     }
-    .section-padding ul{
+    .section-padding ul {
         padding-left: 20px;
     }
-    .product-image{
+    .product-image {
         padding: 25px 0;
     }
-    .product-thumb ul{
+    .product-thumb ul {
         display: flex;
     }
-    .product-thumb ul{
+    .product-thumb ul {
         flex: 1 1 auto;
     }
-    .product-image img{
+    .product-image img {
         height: 225px;
     }
-    footer h3{
+    footer h3 {
         cursor: pointer;
         display: block;
     }
-    .why-advertise h3{
+    .why-advertise h3 {
         padding-top: 50px;
     }
-    .team img{
+    .team img {
         height: 100%;
     }
-    .why-advertise .col-md-6 .advertise-div:last-child{
+    .why-advertise .col-md-6 .advertise-div:last-child {
         margin-bottom: 30px;
     }
-    .card-box h4{
+    .card-box h4 {
         font-size: 22px;
     }
-    .salon-text{
+    .salon-text {
         padding-top: 20px;
         text-align: center;
     }
-    .saloon h1{
+    .saloon h1 {
         text-align: center;
         font-size: 35px;
     }
-    .saloon-img{
+    .saloon-img {
         padding: 20px 60px;
     }
-    .card-box .btn{
+    .card-box .btn {
         padding: 8px 20px;
         font-size: 14px;
     }
-    .cart-details-section{
+    .cart-details-section {
         background: #fff;
         padding: 20px 0;
-    }    
-    .sub-total{
+    }
+    .sub-total {
         padding: 0;
-    }    
-    .cart-details-section h2{
+    }
+    .cart-details-section h2 {
         padding: 10px 15px !important;
         font-size: 20px;
     }
-    .sub-total .h2-heading, .sub-total h6{
+    .sub-total .h2-heading,
+    .sub-total h6 {
         padding: 10px 15px;
-    }    
-    .product-details-parent,.sub-total-parent{
-        padding-left: 0 !important;
-        padding-right: 0 !important;        
     }
-    .cart-product{
+    .product-details-parent,
+    .sub-total-parent {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .cart-product {
         padding: 10px 30px;
     }
-    .sub-total{
+    .sub-total {
         padding: 10px 15px;
     }
-    .product-details-parent .cart-collapse-btn{
-        margin: 0 15px;        
+    .product-details-parent .cart-collapse-btn {
+        margin: 0 15px;
     }
     #beauty-to-go .form-group input {
         width: 73%;
@@ -672,122 +727,125 @@
         width: 25%;
         text-align: center;
     }
-    .phone-img, .beauty-text{
+    .phone-img,
+    .beauty-text {
         padding-top: 20px;
         padding-bottom: 20px;
     }
-    .invester .col-md-12{
+    .invester .col-md-12 {
         padding-left: 0;
         padding-right: 0;
     }
-    .select-service-parent{
+    .select-service-parent {
         margin-bottom: 16px;
     }
-    .ladies-hair-styling-pagination{
+    .ladies-hair-styling-pagination {
         display: flex;
         justify-content: center !important;
-        padding-left: 0  !important;
+        padding-left: 0 !important;
     }
-    .makeup-academy-slider .carousel-inner{
+    .makeup-academy-slider .carousel-inner {
         width: 100%;
         height: auto;
     }
-    .bmm-acamedy h2{
+    .bmm-acamedy h2 {
         font-size: 28px;
     }
-    .pink-section-title{
+    .pink-section-title {
         margin: 0 auto;
     }
-    .main-makeup-box p{
+    .main-makeup-box p {
         font-size: 15px;
     }
-    .two-p-tag p{
+    .two-p-tag p {
         width: 50%;
         float: left;
     }
-    .user-manage-profile{
+    .user-manage-profile {
         padding: 15px 0;
     }
-    .manage-user-icon .btn{
+    .manage-user-icon .btn {
         padding: 8px 20px;
         font-size: 13px;
     }
-    .makeup-artist-pics h5{
+    .makeup-artist-pics h5 {
         margin-top: 5px;
-    }    
-    .acamedy-accordian .card-header button{
+    }
+    .acamedy-accordian .card-header button {
         position: relative;
         padding-right: 30px;
     }
-    .acamedy-accordian .card span{
+    .acamedy-accordian .card span {
         position: absolute;
-        right:10px;
-        width:14px;
+        right: 10px;
+        width: 14px;
         height: 16px;
         margin: auto 0;
-        top:0;
-        bottom:0;      
+        top: 0;
+        bottom: 0;
     }
-    .acamedy-accordian .card:last-child{
+    .acamedy-accordian .card:last-child {
         margin-bottom: 20px;
     }
-    .acamedy-accordian img ,.acamedy-enquiry img{
+    .acamedy-accordian img,
+    .acamedy-enquiry img {
         display: none;
     }
-    .bmm-acamedy{
+    .bmm-acamedy {
         padding-bottom: 1px;
     }
     /* .manage-user-icon .table-responsive{
         margin: 0 15px;
     } */
-    .book-appointment-banner img{
+    .book-appointment-banner img {
         height: 110px;
     }
-    .makeup-artist-services h6{
+    .makeup-artist-services h6 {
         margin-bottom: 12px;
     }
-    .makeup-artist-upload-dcument .mt-4{
+    .makeup-artist-upload-dcument .mt-4 {
         margin-top: 0 !important;
     }
-    .saloon-piils .photo-gallery .col-md-6,.photo-gallery .col-md-3{
+    .saloon-piils .photo-gallery .col-md-6,
+    .photo-gallery .col-md-3 {
         margin: 0;
     }
-    .saloon-piils .photo-gallery img{
+    .saloon-piils .photo-gallery img {
         margin: 5px 0;
     }
-    .manage-list .nav{
+    .manage-list .nav {
         display: none;
     }
-    .makeup-artist-opener{
+    .makeup-artist-opener {
         display: block;
     }
-    .offer-page-section{
+    .offer-page-section {
         padding: 15px 0 30px;
     }
-    .offer-page-section .offer-price{
-        margin:0 0 10px;
+    .offer-page-section .offer-price {
+        margin: 0 0 10px;
     }
-    .offer-page-section .h2-heading{
+    .offer-page-section .h2-heading {
         margin-bottom: 0;
     }
-    .offer-page-section .btn-pink{
+    .offer-page-section .btn-pink {
         padding: 8px 20px;
         font-size: 14px;
     }
-    .section-padding{
+    .section-padding {
         padding: 15px 0;
     }
-    .offer-page .h2-heading.mt-4{
+    .offer-page .h2-heading.mt-4 {
         margin: 10px 0 0 !important;
     }
-    .pay-form{
-        margin:20px;
+    .pay-form {
+        margin: 20px;
     }
-    .user-dashboard #chart-area{
+    .user-dashboard #chart-area {
         height: 100% !important;
         width: 100% !important;
     }
-    .cansultation{
+    .cansultation {
         padding-bottom: 0;
     }
 }
