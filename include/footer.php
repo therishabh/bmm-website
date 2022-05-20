@@ -309,6 +309,9 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
 <?php  if($page=='blog') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/blog.js"></script>
 <?php } ?>
+<?php  if($page=='detail-post') { ?>
+    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/blog-detail.js"></script>
+<?php } ?>
     
 <?php  if($page=='service-list') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/service-list.js"></script>

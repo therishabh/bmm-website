@@ -12,16 +12,11 @@ if ($page == "") {
 }
 
 if ($page == 'blog') {
-    $blog_id = $explode_data[1];
-    if ($blog_id == '') {
+    $blog_cat_id = $explode_data[1];
+    $blog_cat_name = $explode_data[2];
         include_once './include/header.php';
         include_once "blog.php";
         include './include/footer.php';
-    } else {
-        include_once './include/header.php';
-        include_once "blog-post.php";
-        include './include/footer.php';
-    }
 }
 
 

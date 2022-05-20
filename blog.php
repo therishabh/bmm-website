@@ -1,4 +1,5 @@
-
+<input type="hidden" id="blog_category" value="<?php echo $blog_cat_id; ?>" />
+<input type="hidden" id="blog_category_name" value="<?php echo $blog_cat_name; ?>" />
 <section class="blog-main-page">
     <div class="container">
         <div class="row">
