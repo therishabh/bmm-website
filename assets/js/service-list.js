@@ -156,7 +156,9 @@ $(function () {
             dataType: 'JSON',
             data: JSON.stringify(post_data),
             success: function (result) {
-                alert('cart added');
+               toastr.success('Service added in cart.');
+            }, error:function(result){
+                toastr.error('Service already added.');
             }
         });
     }
