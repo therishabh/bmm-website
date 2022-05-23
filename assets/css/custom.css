@@ -1601,7 +1601,7 @@ ul.footer-logos li img {
 }
 
 .salon-text {
-    padding-top: 50px;
+    padding-top: 30px;
 }
 
 .salon-text svg {
@@ -5797,4 +5797,25 @@ label.register-resend-seconds {
 #nodata img {
     width: 160px;
     margin-bottom: 36px;
+}
+
+.service-detail-list-section {
+    margin: 30px 0px;
+}
+
+.service-detail-list-section .service-wrapper {
+    margin-bottom: 0px;
+}
+
+.service-detail-list-section .service-wrapper .service-wrapper-body {
+    padding: 0px;
+}
+
+.service-detail-list-section .card {
+    margin-bottom: 10px;
+}
+
+.service-detail-list-section .card-header a {
+    color: var(--pink) !important;
+    font-weight: bold;
 }

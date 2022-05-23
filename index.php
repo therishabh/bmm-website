@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(0);
 $data = $_REQUEST['pn'];
 $explode_data = explode('/', $data);
 $page = $explode_data[0];
