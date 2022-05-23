@@ -42,7 +42,55 @@ var user_profile = new function () {
             } else {
                 location.href='/';
             }
-    }
+    };
+    
+    this.getUserWishlist = function() {
+        
+    };
+    
+    this.getUserBookings = function() {
+        
+    };
+    
+    this.getOffersForUser = function() {
+        
+    };
+    
+    this.getUserMemberships = function() {
+        
+    };
+    
+    this.getUserCardStatement = function() {
+        
+    };
+    
+    this.getUserPayments = function() {
+        
+    };
+    
+    this.addMessage = function() {
+        
+    };
+    
+    this.getUserEvents = function() {
+        
+    };
+    
+    this.bookNowEvent = function() {
+        
+    };
+    
+    this.userInviteFriend = function() {
+        
+    };
+    
+    this.getUserInvitedFriendList = function() {
+        
+    };
+    
+    this.getUserPics = function() {
+        
+    };
 };
 
 user_profile.userSessionCheck();

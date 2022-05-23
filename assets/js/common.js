@@ -171,7 +171,7 @@ $(function() {
                             $('.dropdown-after-login').show();
                             username = localStorage.getItem("username");
                             $('.username span').text(username);
-                            cartCount();
+                            common.cartCount();
                             // window.location.replace('user/dashboard');
                         },
                         error: function(error) {
@@ -301,9 +301,14 @@ $(function() {
                             // $('#registerStepTwo').hide();                            
                             toastr.success('You have successfully Registered');
                             localStorage.setItem("userToken", res.token);
+                            localStorage.setItem("username", res.name);
                             $('#registerModal').modal('hide');
                             $("#verifyOTP").removeAttr('disabled');
+                            username = localStorage.getItem("username");
+                            $('.username span').text(username);
                             window.location.replace(__url+'user/profile');
+                            
+                            
                         },
                         error: function(error) {
                             $("#verifyOTP").removeAttr('disabled');
@@ -437,24 +442,6 @@ $(function() {
                 });
             }
             getAllServices();
-
-
-            // *****************
-            // cartCount
-            // *****************
-            const cartCount = function() {
-                $.ajax({
-                    url: `${base_url}user/cart/get-cart-count.php`,
-                    type: 'GET',
-                    dataType: 'JSON',
-                    data: {
-                        token: localStorage.getItem("userToken")
-                    },
-                    success: function(result) {
-                        $('.cart-count-circle').text(result.count);
-                    }
-                });
-            }
             
             //if user already logged in 
             if (userToken) {
@@ -462,7 +449,7 @@ $(function() {
                 $('.dropdown-after-login').show();
                 username = localStorage.getItem("username");
                 $('.username span').text(username);
-                cartCount();
+                common.cartCount();
             }
             
             if (token) {
@@ -500,3 +487,21 @@ $(function() {
             toastr.success('You have successfully Logout');
             $('.cart-count-circle').text(0);
         }
+        
+        
+        var common = new function() {
+           
+           this.cartCount = function() {
+               $.ajax({
+                    url: `${base_url}user/cart/get-cart-count.php`,
+                    type: 'GET',
+                    dataType: 'JSON',
+                    data: {
+                        token: localStorage.getItem("userToken")
+                    },
+                    success: function(result) {
+                        $('.cart-count-circle').text(result.count);
+                    }
+                });
+           } ;
+        }; 
