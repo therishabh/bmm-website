@@ -19,17 +19,17 @@
                                                 <div class="col-md-8">
                                                     <div class="form-group">
                                                         <label>Full Name</label>
-                                                        <input type="text" class="form-control" name="username" value="" />
+                                                        <input type="text" class="form-control" name="username" id="username" value="" />
                                                     </div>
                                                     <div class="form-group">
                                                         <label>Email</label>
-                                                        <input type="email" class="form-control" name="email_id" readonly />
+                                                        <input type="email" class="form-control" name="email_id" id="email_id" readonly />
                                                     </div>
                                                     <div class="form-group">
                                                         <label>Phone</label>
-                                                        <input type="text" class="form-control" name="landline_no" readonly />
+                                                        <input type="text" class="form-control" name="landline_no" id="landline_no" readonly />
                                                     </div>
-                                                    <button type="submit" class="btn btn-pink">Update</button>
+                                                    <button type="button" onclick="user_profile.updateProfileData();" class="btn btn-pink">Update</button>
                                                 </div>
                                             </div>
                                         </form>

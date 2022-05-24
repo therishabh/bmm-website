@@ -1,6 +1,6 @@
 <?php
 if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
-?>
+    ?>
     <footer>
         <div class="footer-stripe-1">
             <div class="container">
@@ -238,7 +238,7 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
         </div>
 
     </footer>
-<?php
+    <?php
 }
 ?>
 <div class="copyright-stripe">
@@ -306,12 +306,26 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
     });
 </script>
 <!--gallery script ends here-->
-<?php  if($page=='blog') { ?>
+<?php if ($page == 'blog') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/blog.js"></script>
 <?php } ?>
-    
-<?php  if($page=='service-list') { ?>
+<?php if ($page == 'detail-post') { ?>
+    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/blog-detail.js"></script>
+<?php } ?>
+
+<?php if ($page == 'service-list') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/service-list.js"></script>
+<?php } ?>
+
+
+
+<?php if ($page == 'user' && $explode_data[1] == 'profile') { ?>
+    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
+    <script type="text/javascript">
+        if (user_profile.userToken) {
+            user_profile.getProfileData();
+        }
+    </script>
 <?php } ?>
 
 </body>
