@@ -211,11 +211,11 @@
 <section class="buy-makup-section combos-section">
     <div class="container">
         <h2 class="text-center h2-heading">Salon Offers</h2>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-4"><a href="https://pages.razorpay.com/pl_GQOyyHIfMDnSqH/view" target="_blank">
                     <div class="product-box"><img src="assets/images/l-service-1.jpg" alt="">
                         <p class="font-weight-bold mt-2">Hair Wash</p>
-                        <!-- <p class="font-weight-bold"><s class="text-red">RS. 350</s><span class="ml-2 text-green">RS. 300</span></p> -->
+                        <p class="font-weight-bold"><s class="text-red">RS. 350</s><span class="ml-2 text-green">RS. 300</span></p>
                         <p class="font-weight-bold"><span class="ml-2 text-green">50% off</span></p>
                     </div>
                 </a></div>
@@ -223,7 +223,7 @@
                 <a href="https://pages.razorpay.com/pl_GQOyyHIfMDnSqH/view" target="_blank">
                     <div class="product-box"><img src="assets/images/l-service-2.jpg" alt="">
                         <p class="font-weight-bold mt-2">Moroccan Wash </p>
-                        <!-- <p class="font-weight-bold"><s class="text-red">RS. 500</s><span class="ml-2 text-green">RS. 400</span></p> -->
+                        <p class="font-weight-bold"><s class="text-red">RS. 500</s><span class="ml-2 text-green">RS. 400</span></p>
                         <p class="font-weight-bold"><span class="ml-2 text-green">25% off</span></p>
                     </div>
                 </a>
@@ -232,12 +232,12 @@
                 <a href="https://pages.razorpay.com/pl_GQOyyHIfMDnSqH/view" target="_blank">
                     <div class="product-box"><img src="assets/images/l-service-3.jpg" alt="">
                         <p class="font-weight-bold mt-2">Blow Dryer</p>
-                        <!-- <p class="font-weight-bold"><s class="text-red">RS. 500</s><span class="ml-2 text-green">RS. 400</span></p> -->
+                         <p class="font-weight-bold"><s class="text-red">RS. 500</s><span class="ml-2 text-green">RS. 400</span></p>
                         <p class="font-weight-bold"><span class="ml-2 text-green">30% off</span></p>
                     </div>
                 </a>
             </div>
-            <!-- <div class="col-md-4">
+            <div class="col-md-4">
                     <a href="https://pages.razorpay.com/pl_GQOyyHIfMDnSqH/view" target="_blank">
                         <div class="product-box"><img src="assets/images/g-service-1.jpg" alt="">
                             <p class="font-weight-bold mt-2">Hair Wash</p>
@@ -260,9 +260,9 @@
                             <p class="font-weight-bold"><s class="text-red">RS. 400</s><span class="ml-2 text-green">RS. 350</span></p>
                         </div>
                     </a>
-                </div> -->
-        </div>
-        <!-- <div class="salon-offers owl-carousel owl-theme">
+                </div>
+        </div> -->
+        <div class="salon-offers owl-carousel owl-theme">
                 <div class="item">
                     <a href="offers">
                         <div class="product-box">
@@ -308,7 +308,7 @@
                         </div>
                     </a>
                 </div>
-            </div> -->
+            </div>
         <!-- <div class="row">
                 <div class="col-md-3">
                     <div class="product-box">
