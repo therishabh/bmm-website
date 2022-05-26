@@ -45,21 +45,39 @@ var service_list = new function () {
                         }
 
                         var banner_image = (val.banner_image) ? val.banner_image : 'https://via.placeholder.com/400x250';
-
+                        if(val.business_type=='salon'){
                         $('#salonData .row').append(`
-                     <div class="col-md-4">
-                     <a href="${__url}hair-masters/${val.id}" class="service-box">
-                        <img src="${banner_image}" alt="" class="img-fluid" />
-                        <div class="service-body">
-                            <h4> ${val.salon_name}</h4>
-                            <p> <i class="fa fa-map-marker-alt"></i> ${val.city}, ${val.state}</p>
-                            <span class="rating"><i class="fas fa-star"></i> ${val.rating}</span>
-                            <hr>
-                            <p class="discountPara dp_${val.id}"></p>
-                        </div>
-                    </a>
-                </div>
+                            <div class="col-md-4">
+                            <a href="${__url}hair-masters/${val.id}" class="service-box">
+                               <img src="${banner_image}" alt="" class="img-fluid" />
+                               <div class="service-body">
+                                   <h4> ${val.salon_name}</h4>
+                                   <p> <i class="fa fa-map-marker-alt"></i> ${val.city}, ${val.state}</p>
+                                   <span class="rating"><i class="fas fa-star"></i> ${val.rating}</span>
+                                   <hr>
+                                   <p class="discountPara dp_${val.id}"></p>
+                               </div>
+                           </a>
+                       </div>
                         `);
+                        }
+                        
+                        if(val.business_type!='salon'){
+                        $('#makeupArtistData .row').append(`
+                            <div class="col-md-4">
+                            <a href="${__url}hair-masters/${val.id}" class="service-box">
+                               <img src="${banner_image}" alt="" class="img-fluid" />
+                               <div class="service-body">
+                                   <h4> ${val.salon_name}</h4>
+                                   <p> <i class="fa fa-map-marker-alt"></i> ${val.city}, ${val.state}</p>
+                                   <span class="rating"><i class="fas fa-star"></i> ${val.rating}</span>
+                                   <hr>
+                                   <p class="discountPara dp_${val.id}"></p>
+                               </div>
+                           </a>
+                       </div>
+                        `);
+                        }
 
                         // if (val.services && val.services.length > 0) {
                         //     val.services.forEach(serviceVal => {
