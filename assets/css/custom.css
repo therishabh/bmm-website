@@ -267,9 +267,9 @@ header {
 }
 
 nav {
-    background: #fff;
+    background: #f3f3f3;
     margin-top: 0px;
-    border: 1px solid #e6dede;
+    /* border: 1px solid #e6dede; */
 }
 
 nav .container-fluid {
@@ -3537,13 +3537,22 @@ nav li:hover .submenu {
     margin-bottom: 20px;
 }
 
-.blog-post-box-detail .blog-category {
+.blog-post-box-detail img {
+    width: 100%;
+    height: auto;
+}
+
+.blog-post-box-detail .blog-category a {
     text-transform: uppercase;
     font-weight: bold;
     color: #f92a63;
     margin-bottom: 5px;
     display: block;
     cursor: pointer;
+}
+
+.blog-post-box-detail .blog-category a:hover {
+    text-decoration: none;
 }
 
 .blog-post-box-detail p {
@@ -3638,7 +3647,7 @@ nav li:hover .submenu {
 
 .menu-common-list .nav-submenu-title {
     font-weight: bold;
-    color: #000 !important;
+    color: var(--pink) !important;
     font-size: 16px;
     text-transform: uppercase;
 }
@@ -5649,6 +5658,10 @@ label.error {
     margin-bottom: 50px;
 }
 
+.blog-item .blog-body {
+    margin-top: 10px;
+}
+
 .blog-item a {
     color: #333;
     transition: 0.45s;
@@ -5818,4 +5831,165 @@ label.register-resend-seconds {
 .service-detail-list-section .card-header a {
     color: var(--pink) !important;
     font-weight: bold;
+}
+
+.cart-anchor {
+    position: relative;
+}
+
+.cart-anchor .cart-count-circle {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 20px;
+    height: 20px;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    border-radius: 50%;
+}
+
+.cart-box-1 .heading {
+    font-size: 18px;
+}
+
+.cart-box-2 .heading {
+    font-size: 18px;
+}
+
+.cart-box-2 .service-cart-list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.coupon-btn {
+    border: 1px dashed #a9abb2;
+    color: #535665;
+    font-size: 14px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 15px;
+    margin: 10px 0 15px;
+    font-weight: 500;
+    height: 55px;
+}
+
+.coupon-btn.coupon-btn-applied {
+    display: flex;
+    justify-content: space-between;
+    cursor: auto;
+    display: none;
+}
+
+.coupon-btn .coupon-remove-btn {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.coupon-btn .coupon-remove-btn:hover {
+    color: #f92a63;
+}
+
+.coupon-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100%;
+    overflow-y: auto;
+    background: #fff;
+    transition: transform .3s ease-out;
+    z-index: 10001;
+    transform: translateX(500px);
+    padding: 25px 32px;
+}
+
+.coupon-modal.active {
+    transform: translateX(0px);
+}
+
+.coupon-modal .coupon-modal-close svg {
+    color: #333;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.overlay {
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #282c3f;
+    opacity: .7;
+    overflow: hidden;
+    display: none;
+}
+
+.apply-coupon-box {
+    display: flex;
+    margin-top: 25px;
+    border: 1px solid #e9e9eb;
+}
+
+.apply-coupon-box .form-control {
+    border-radius: 0px;
+    height: 45px;
+    border: 0px;
+}
+
+.apply-coupon-box .btn {
+    border-radius: 0px;
+    padding: 8px 24px;
+}
+
+.available-coupons {
+    margin-top: 20px;
+    border: 1px solid #e9e9eb;
+    padding: 15px;
+}
+
+.available-coupons .coupon-detail-box {
+    border-bottom: 1px dashed #ccc;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.available-coupons .coupon-detail-box .btn {
+    padding: 6px 20px !important;
+}
+
+.available-coupons h5 {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.available-coupons h6 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.available-coupons p {
+    font-size: 13px;
+}
+
+.available-coupons .coupon-code {
+    border: 1px dashed #a9abb2;
+    color: #535665;
+    font-size: 14px;
+    display: -ms-flexbox;
+    font-weight: 500;
+    display: inline-block;
+    padding: 7px 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
