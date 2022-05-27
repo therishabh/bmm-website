@@ -57,11 +57,38 @@ var user_profile = new function () {
     };
     
     this.getUserMemberships = function() {
-        
+        $.ajax({
+            url: `${base_url}user/membership-card/listing.php`,
+            type: 'GET',
+            dataType: 'JSON',
+            data: {
+                token: localStorage.getItem("userToken")
+            },
+            success: function (result) {
+                console.log(result);
+//                $("#username").val(result.name);
+//                $("#email_id").val(result.email_id);
+//                $("#landline_no").val(result.mobile_no);
+            }
+        });
     };
     
-    this.getUserCardStatement = function() {
-        
+    this.getUserCardStatement = function(cardId) {
+        $.ajax({
+            url: `${base_url}user/membership-card/transaction-list.php`,
+            type: 'GET',
+            dataType: 'JSON',
+            data: {
+                token: localStorage.getItem("userToken"),
+                card_id : cardId
+            },
+            success: function (result) {
+                console.log(result);
+//                $("#username").val(result.name);
+//                $("#email_id").val(result.email_id);
+//                $("#landline_no").val(result.mobile_no);
+            }
+        });
     };
     
     this.getUserPayments = function() {
