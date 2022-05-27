@@ -36,7 +36,7 @@
             <div id="makeupArtistData">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="makeup-artist-box">
+                        <div class="makeup-artist-box service-box">
                             <img src="/assets/images/artist-1.jpg" class="img-fluid" alt="">
                             <p class="artist-name float-left">Anshika Sharma</p>
                             <p class="rating float-right"> <i class="fas fa-star"></i> 4.8</p>
