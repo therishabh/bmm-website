@@ -327,7 +327,9 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
         }
     </script>
 <?php } ?>
-
+<?php if ($page == 'cart') { ?>
+    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/cart.js"></script>
+<?php } ?>
 </body>
 
 </html>
