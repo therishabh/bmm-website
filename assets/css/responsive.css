@@ -1,4 +1,19 @@
 @media screen and (min-width:360px) and (max-width:767px) {
+    .autocomplete-box-parent {
+        display: none;
+    }
+    .autocomplete-box-parent.active {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        background: #fff;
+        padding: 10px;
+        padding-top: 0px;
+    }
     .col-md-3.offset-md-1.text-right {
         display: none;
     }
@@ -114,6 +129,7 @@
         position: relative;
         padding-bottom: 0;
         padding-top: 5px;
+        padding-right: 0px;
     }
     nav,
     .top-stripe,
@@ -151,6 +167,7 @@
     .menu-bar a {
         text-decoration: none;
         margin: 10px 0;
+        color: var(--pink);
     }
     .menu-bar .icons svg {
         color: #000;
@@ -646,7 +663,19 @@
         height: 156px;
     }
     .section-padding ul {
-        padding-left: 20px;
+        padding-left: 0px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .salon-category-tabs li {
+        width: 100%;
+        justify-content: flex-start;
+        font-size: 18px;
+        padding: 10px 0px;
+    }
+    .salon-category-tabs li span {
+        width: 36px;
+        height: 36px;
     }
     .product-image {
         padding: 25px 0;

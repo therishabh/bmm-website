@@ -75,11 +75,16 @@ header {
     width: 80%;
     height: 100%;
     background: #fff;
-    padding: 20px;
+    padding: 0px;
     z-index: 1000000;
     overflow-y: auto;
     transition: all 0.35s ease-in-out;
     box-shadow: 2px 4px 10px rgba(39, 59, 69, 0.4);
+}
+
+.responsive-nav-header {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
 }
 
 .responsive-nav .plus-icon {
@@ -270,6 +275,7 @@ nav {
     background: #f3f3f3;
     margin-top: 0px;
     /* border: 1px solid #e6dede; */
+    box-shadow: rgb(0 0 0 / 10%) 0px 20px 25px, rgb(0 0 0 / 4%) 0px 10px 10px;
 }
 
 nav .container-fluid {

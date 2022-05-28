@@ -38,6 +38,7 @@
         <div class="responsive-rgba text-right">
         </div>
         <div class="responsive-nav">
+            <div class="responsive-nav-header">
             <div class="row">
                 <div class="col-6">
                     <a href="<?php echo $base_url; ?>login" class="btn btn-pink">Sign In</a>
@@ -46,7 +47,7 @@
                     <a href="<?php echo $base_url; ?>register" class="btn btn-pink">Sign Up</a>
                 </div>
             </div>
-            <hr>
+            </div>
             <ul class="list-unstyled">
                 <li>
                     <a href="#"> Salon <span class="float-right"><i class="fas fa-plus plus-icon"></i></span> </a>
@@ -85,59 +86,6 @@
                                 <li><a href="#">Free Makeup Trial</a></li>
                                 <li><a href="#">Free Nail Care</a></li>
                             </ul>
-                        </li>
-                        <li><a href="/">Salon at Home</a>
-                            <div class="submenu">
-                                <div class="">
-                                    <div class="row">
-                                        <div class="col-md">
-                                            <div class="menu-common-list">
-                                                <div class="nav-submenu-title">Services</div>
-                                                <ul>
-                                                    <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Styling</a></li>
-                                                    <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Make Up</a></li>
-                                                    <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Texture</a></li>
-                                                    <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Treatments</a></li>
-                                                    <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Facials &amp; Rituals</a></li>
-                                                    <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hand &amp; Feet</a></li>
-                                                    <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Nail Care</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-md">
-                                            <div class="menu-common-list">
-                                                <div class="nav-submenu-title">Package</div>
-                                                <ul>
-                                                    <li><a href="<?php echo $base_url; ?>package">Wellness</a></li>
-                                                    <li><a href="<?php echo $base_url; ?>package">Stress Buster</a></li>
-                                                    <li><a href="<?php echo $base_url; ?>package">Pre Bridal</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-md">
-                                            <div class="menu-common-list">
-                                                <div class="nav-submenu-title">BMM Cards</div>
-                                                <ul>
-                                                    <li><a href="<?php echo $base_url; ?>bmm-card">Membership Cards</a></li>
-                                                    <li><a href="<?php echo $base_url; ?>bmm-card">Gift Cards</a></li>
-                                                    <li><a href="<?php echo $base_url; ?>bmm-card">Flexi Cards</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-md">
-                                            <div class="menu-common-list">
-                                                <div class="nav-submenu-title">Membership</div>
-                                                <ul>
-                                                    <li><a href="<?php echo $base_url; ?>bmm-card">Silver</a></li>
-                                                    <li><a href="<?php echo $base_url; ?>bmm-card">Gold</a></li>
-                                                    <li><a href="<?php echo $base_url; ?>bmm-card">Platinum</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3"><img src="/images/salon-at-home-nav-img.jpg" alt="" class="img-fluid"></div>
-                                    </div>
-                                </div>
-                            </div>
                         </li>
                         <li>
                             <a href="#">Locations <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
@@ -187,59 +135,6 @@
                                 <li><a href="#">Eco </a></li>
                                 <li><a href="#">Gold</a></li>
                             </ul>
-                        </li>
-                        <li><a href="/">Salon at Home</a>
-                            <div class="submenu">
-                                <div class="">
-                                    <div class="row">
-                                        <div class="col-md">
-                                            <div class="menu-common-list">
-                                                <div class="nav-submenu-title">Services</div>
-                                                <ul>
-                                                    <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Styling</a></li>
-                                                    <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Make Up</a></li>
-                                                    <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Texture</a></li>
-                                                    <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hair Treatments</a></li>
-                                                    <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Facials &amp; Rituals</a></li>
-                                                    <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Hand &amp; Feet</a></li>
-                                                    <li><a href="<?php echo $base_url; ?>ladies-hair-styling">Nail Care</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-md">
-                                            <div class="menu-common-list">
-                                                <div class="nav-submenu-title">Package</div>
-                                                <ul>
-                                                    <li><a href="<?php echo $base_url; ?>package">Wellness</a></li>
-                                                    <li><a href="<?php echo $base_url; ?>package">Stress Buster</a></li>
-                                                    <li><a href="<?php echo $base_url; ?>package">Pre Bridal</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-md">
-                                            <div class="menu-common-list">
-                                                <div class="nav-submenu-title">BMM Cards</div>
-                                                <ul>
-                                                    <li><a href="<?php echo $base_url; ?>bmm-card">Membership Cards</a></li>
-                                                    <li><a href="<?php echo $base_url; ?>bmm-card">Gift Cards</a></li>
-                                                    <li><a href="<?php echo $base_url; ?>bmm-card">Flexi Cards</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-md">
-                                            <div class="menu-common-list">
-                                                <div class="nav-submenu-title">Membership</div>
-                                                <ul>
-                                                    <li><a href="<?php echo $base_url; ?>bmm-card">Silver</a></li>
-                                                    <li><a href="<?php echo $base_url; ?>bmm-card">Gold</a></li>
-                                                    <li><a href="<?php echo $base_url; ?>bmm-card">Platinum</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3"><img src="/images/salon-at-home-nav-img.jpg" alt="" class="img-fluid"></div>
-                                    </div>
-                                </div>
-                            </div>
                         </li>
                         <li>
                             <a href="#">Recommended <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
@@ -345,228 +240,17 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Salon at Home <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                    <ul class="list-unstyled pl-3 responsive-dropdown">
-                        <li>
-                            <a href="#">Services <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                            <ul class="list-unstyled pl-3 responsive-dropdown">
-                                <li><a href="#">Hair Styling</a></li>
-                                <li><a href="#">Hair Styling</a></li>
-                                <li><a href="#">Make Up</a></li>
-                                <li><a href="#">Hair Texture</a></li>
-                                <li><a href="#">Hair Treatments</a></li>
-                                <li><a href="#">Facials & Rituals</a></li>
-                                <li><a href="#">Hand & Feet</a></li>
-                                <li><a href="#">Nail Care</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Recommended <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                            <ul class="list-unstyled pl-3 responsive-dropdown">
-                                <li><a href="#">Priyanka Sharma</a></li>
-                                <li><a href="#">Anshika Sharma</a></li>
-                                <li><a href="#">Bushra Shahid</a></li>
-                                <li><a href="#">Manju</a></li>
-                                <li><a href="#">Neha Sharma</a></li>
-                                <li><a href="#">Manjari</a></li>
-                                <li><a href="#">Afsheen</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Package <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                            <ul class="list-unstyled pl-3 responsive-dropdown">
-                                <li><a href="#">Wellness</a></li>
-                                <li><a href="#">Stress Buster</a></li>
-                                <li><a href="#">Pre Bridal</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">BMM Cards <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                            <ul class="list-unstyled pl-3 responsive-dropdown">
-                                <li><a href="#">Membership Cards</a></li>
-                                <li><a href="#">Gift Cards</a></li>
-                                <li><a href="#">Flexi Cards</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Membership <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                            <ul class="list-unstyled pl-3 responsive-dropdown">
-                                <li><a href="#">Silver</a></li>
-                                <li><a href="#">Gold</a></li>
-                                <li><a href="#">Platinum</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
+                    <a href="#">Makeup Academy</a>
+                </li> 
                 <li>
-                    <a href="#">Buy <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                    <ul class="list-unstyled pl-3 responsive-dropdown">
-                        <li>
-                            <a href="#">Makeup <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                            <ul class="list-unstyled pl-3 responsive-dropdown">
-                                <li><a href="#">Face</a></li>
-                                <li><a href="#">Eyes</a></li>
-                                <li><a href="#">Lips</a></li>
-                                <li><a href="#">Nails</a></li>
-                                <li><a href="#">Tools & Brushes</a></li>
-                                <li><a href="#">Top Brands</a></li>
-                                <li><a href="#">Trending</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Skin <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                            <ul class="list-unstyled pl-3 responsive-dropdown">
-                                <li><a href="#">Cleaners</a></li>
-                                <li><a href="#">Moisturizers</a></li>
-                                <li><a href="#">Masks</a></li>
-                                <li><a href="#">Eye Care</a></li>
-                                <li><a href="#">Skin Care </a></li>
-                                <li><a href="#">Body Care </a></li>
-                                <li><a href="#">Lips Care </a></li>
-                                <li><a href="#">Hands & Feet</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Hair <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                            <ul class="list-unstyled pl-3 responsive-dropdown">
-                                <li><a href="#">Hair Care</a></li>
-                                <li><a href="#">Tools & Accessories</a></li>
-                                <li><a href="#">Hair Styling</a></li>
-                                <li><a href="#">Top Brands</a></li>
-                                <li><a href="#">Shop by Concern </a></li>
-                                <li><a href="#">Trending</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Mom & Baby <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                            <ul class="list-unstyled pl-3 responsive-dropdown">
-                                <li><a href="#">Baby & Kids Care</a></li>
-                                <li><a href="#">Maternity Care</a></li>
-                                <li><a href="#">Nursing & Feeding</a></li>
-                                <li><a href="#">Health & Safety</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Appliances <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                            <ul class="list-unstyled pl-3 responsive-dropdown">
-                                <li><a href="#">Hair Styling Tools</a></li>
-                                <li><a href="#">Hair Removal Tools</a></li>
-                                <li><a href="#">Shaving Tools</a></li>
-                                <li><a href="#">Face/Skin/Tools</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Men <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                            <ul class="list-unstyled pl-3 responsive-dropdown">
-                                <li><a href="#">Shaving</a></li>
-                                <li><a href="#">Beard Care</a></li>
-                                <li><a href="#">Hair Care</a></li>
-                                <li><a href="#">Skin Care</a></li>
-                                <li><a href="#">Bath & Body</a></li>
-                                <li><a href="#">Top Brand</a></li>
-                                <li><a href="#">Grooming Kids</a></li>
-                                <li><a href="#">Wellness</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
+                    <a href="#">Cards</a>
+                </li> 
                 <li>
-                    <a href="#">Brands <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                    <ul class="list-unstyled pl-3 responsive-dropdown">
-                        <li>
-                            <a href="#">Affordable Brands <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                            <ul class="list-unstyled pl-3 responsive-dropdown">
-                                <li><a href="#">Lanvin</a></li>
-                                <li><a href="#">BodyHerbals</a></li>
-                                <li><a href="#">Maybelline</a></li>
-                                <li><a href="#">L'oreal Paris</a></li>
-                                <li><a href="#">La Monk</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">BMM Cards <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                            <ul class="list-unstyled pl-3 responsive-dropdown">
-                                <li><a href="#">Membership Cards</a></li>
-                                <li><a href="#">Gift Cards</a></li>
-                                <li><a href="#">Flexi Cards</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Brands A-Z Popular <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                            <ul class="list-unstyled pl-3 responsive-dropdown">
-                                <li><a href="#">Lakme</a></li>
-                                <li><a href="#">Maybelline</a></li>
-                                <li><a href="#">L'oreal Paris</a></li>
-                                <li><a href="#">La Monk</a></li>
-                                <li><a href="#">Lanvin</a></li>
-                                <li><a href="#">BodyHerbals</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Featured <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                            <ul class="list-unstyled pl-3 responsive-dropdown">
-                                <li><a href="#">Lakme</a></li>
-                                <li><a href="#">Maybelline</a></li>
-                                <li><a href="#">L'oreal Paris</a></li>
-                                <li><a href="#">La Monk</a></li>
-                                <li><a href="#">Lanvin</a></li>
-                                <li><a href="#">BodyHerbals</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">New Launches <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                            <ul class="list-unstyled pl-3 responsive-dropdown">
-                                <li><a href="#">Lakme</a></li>
-                                <li><a href="#">Maybelline</a></li>
-                                <li><a href="#">L'oreal Paris</a></li>
-                                <li><a href="#">La Monk</a></li>
-                                <li><a href="#">Lanvin</a></li>
-                                <li><a href="#">BodyHerbals</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">I'm Beautiful <i class="fa fa-heart"></i> <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                    <ul class="list-unstyled pl-3 responsive-dropdown">
-                        <li>
-                            <a href="#">Makeup <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                            <ul class="list-unstyled pl-3 responsive-dropdown">
-                                <li><a href="#">HD Makeup</a></li>
-                                <li><a href="#">Bridal Makeup</a></li>
-                                <li><a href="#">Party Makeup</a></li>
-                                <li><a href="#">WFH Makeup</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Hair Styling <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                            <ul class="list-unstyled pl-3 responsive-dropdown">
-                                <li><a href="#">Hair Cut</a></li>
-                                <li><a href="#">Ironing</a></li>
-                                <li><a href="#">Global Colouring</a></li>
-                                <li><a href="#">Blow Dry</a></li>
-                                <li><a href="#">Root Touch Up</a></li>
-                                <li><a href="#">Shampoo & Conditioning</a></li>
-                                <li><a href="#">Head Massage</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Bridal Wear <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
-                            <ul class="list-unstyled pl-3 responsive-dropdown">
-                                <li><a href="#">Saree</a></li>
-                                <li><a href="#">Lenghas</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Trending</a>
-                        </li>
-                        <li>
-                            <a href="#">Star of the Month</a>
-                        </li>
-                    </ul>
-                </li>
+                    <a href="#">I'm Beautiful </a>
+                </li> 
+               
                 <li><a href="<?php echo $base_url; ?>blog">BMM TV</a></li>
-                <li><a href="<?php echo $base_url; ?>blog">Quick Booking <i class="fa fa-calendar-alt"></i> </a></li>
+                <li><a href="<?php echo $base_url; ?>blog">Quick Booking </a></li>
                 <li>
                     <a href="#">Offers <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
                     <ul class="list-unstyled pl-3 responsive-dropdown">
@@ -614,6 +298,9 @@
                     </ul>
                 </li>
                 <li><a href="<?php echo $base_url; ?>blog">Blog</a></li>
+                <li>
+                    <a href="#">BMM PRO </a>
+                </li> 
             </ul>
         </div>
         <?php
@@ -670,7 +357,7 @@
                     <?php
 //                if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
                     ?>
-                    <div class="col-md-5 offset-md-1">
+                    <div class="col-md-5 offset-md-1 autocomplete-box-parent">
                         <div class="autocomplete-box">
                             <i class="fa fa-search"></i>
                             <input class="form-control advancedAutoComplete" type="text" autocomplete="off" placeholder="Salons, Makeup Artists, Bridal Makeup" />
