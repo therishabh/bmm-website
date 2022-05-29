@@ -1,5 +1,5 @@
 
-<section class="section-padding cancellation-policy">
+<section class="section-padding cancellation-policy policy-page">
     <div class="container">
         <h2 class="he-heading">Cancellation Policy </h2>
         <hr>
