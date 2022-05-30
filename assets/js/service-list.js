@@ -48,7 +48,7 @@ var service_list = new function () {
                         if(val.business_type=='salon'){
                         $('#salonData .row').append(`
                             <div class="col-md-4">
-                            <a href="${__url}hair-masters/${val.id}" class="service-box">
+                            <a href="${__url}salon-details/${val.id}" class="service-box">
                                <img src="${banner_image}" alt="" class="img-fluid" />
                                <div class="service-body">
                                    <h4> ${val.salon_name}</h4>
@@ -65,7 +65,7 @@ var service_list = new function () {
                         if(val.business_type!='salon'){
                         $('#makeupArtistData .row').append(`
                             <div class="col-md-4">
-                            <a href="${__url}hair-masters/${val.id}" class="service-box">
+                            <a href="${__url}salon-details/${val.id}" class="service-box">
                                <img src="${banner_image}" alt="" class="img-fluid" />
                                <div class="service-body">
                                    <h4> ${val.salon_name}</h4>
@@ -94,7 +94,7 @@ var service_list = new function () {
                         if (val.is_bridal_service_provide) {
                             $('#bridalData .row').append(`
                               <div class="col-md-4">
-                               <a href="${__url}hair-masters/${val.id}" class="service-box">
+                               <a href="${__url}salon-details/${val.id}" class="service-box">
                              <img src="${banner_image}" alt="" class="img-fluid" />
                               <div class="service-body">
                               <h4> ${val.salon_name}</h4>
@@ -110,7 +110,7 @@ var service_list = new function () {
                         if (val.is_luxury_service_provide) {
                             $('#luxeData .row').append(`
                               <div class="col-md-4">
-                                  <a href="${__url}hair-masters/${val.id}" class="service-box">
+                                  <a href="${__url}salon-details/${val.id}" class="service-box">
                                       <img src="${banner_image}" alt="" class="img-fluid" />
                                       <div class="service-body">
                                           <h4> ${val.salon_name}</h4>
@@ -128,7 +128,7 @@ var service_list = new function () {
                         $('#serviceData').append(`
                     <div class="service-wrapper">
                         <div class="service-wrapper-header">
-                            <h4><a href="${__url}hair-masters/${val.id}">${val.salon_name}</a></h4>
+                            <h4><a href="${__url}salon-details/${val.id}">${val.salon_name}</a></h4>
                             <p> <i class="fa fa-map-marker-alt"></i> ${val.city}, ${val.state}</p>
                         </div>
                         <div class="service-wrapper-body">
