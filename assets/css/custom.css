@@ -6052,3 +6052,22 @@ label.register-resend-seconds {
 .policy-page ul {
     margin-left: 20px;
 }
+
+.booking-box {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #f1f1f1;
+    box-shadow: rgb(0 0 0 / 10%) 0px 20px 25px, rgb(0 0 0 / 4%) 0px 10px 10px;
+    margin-bottom: 25px;
+}
+
+.booking-header {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.booking-body {
+    padding-top: 15px;
+}
