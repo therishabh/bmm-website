@@ -1,6 +1,6 @@
 
 
-<section class="section-padding">
+<section class="section-padding policy-page">
     <div class="container">
         <h2 class="he-heading">Shipping Policy</h2>
         <hr>

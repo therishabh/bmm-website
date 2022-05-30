@@ -100,7 +100,7 @@ $(document).ready(function() {
         $('body').removeClass('overflow-hidden')
     });
     $('.responsive-search-bar').click(function() {
-        $('.search-div').toggleClass('active');
+        $('.autocomplete-box-parent').toggleClass('active');
     });
     $('.responsive-nav a').click(function() {
         $(this).children('span').children('svg').toggleClass('fa-minus')
@@ -113,9 +113,9 @@ $(document).ready(function() {
     $('.categories-heading').click(function() {
         $('.categories-fotter').slideToggle();
     });
-    $('.footer-popular-heading').click(function() {
-        $('.copyright-stripe-ul').slideToggle();
-    });
+    // $('.footer-popular-heading').click(function() {
+    //     $('.copyright-stripe-ul').slideToggle();
+    // });
 
     $('.genderList').change(function() {
         var selectedGender = $(this).val();

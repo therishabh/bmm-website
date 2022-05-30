@@ -26,39 +26,29 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
                             <div class="col-md">
                                 <h3>Quick Links <span class="float-right footer-down-arrow"><i class="fas fa-chevron-down"></i></span></h3>
                                 <ul class="footer-links">
-                                    <li><a href="ladies-hair-styling.php">Salon</a></li>
-                                    <li><a href="ladies-hair-styling.php">Makeup Artist</a></li>
-                                    <li><a href="ladies-hair-styling.php">Bridal Makeup</a></li>
-                                    <li><a href="makeup-academy.php">Makeup Academy</a></li>
-                                    <li><a href="bmm-tv.php">BMM Tv</a></li>
-                                    <li><a href="im-beautiful.php">I'm Beautiful</a></li>
-                                    <li><a href="book-appointment.php">Quick Booking</a></li>
-
-                                    <!-- <li><a href="addasalon.php">Add a Salon</a></li>
-                                    <li><a href="seller-registration.php">Seller Registration</a></li>
-                                    <li><a href="salon-registration.php">Register as Salon</a></li>
-                                    <li><a href="makeup-artist-registration.php">Register as Makeup Artist</a></li> -->
-
-                                    <!-- <li><a href="#">BMM Community</a></li> -->
-                                    <!-- <li><a href="business-app.php">Business App</a></li>
-                                    <li><a href="advertise-with-us.php">Advertise with Us</a></li> -->
+                                    <li><a href="service-list/1">Salon</a></li>
+                                    <li><a href="service-list/1">Makeup Artist</a></li>
+                                    <li><a href="service-list/1">Bridal Makeup</a></li>
+                                    <li><a href="makeup-academy">Makeup Academy</a></li>
+                                    <li><a href="bmm-tv">BMM TV</a></li>
+                                    <li><a href="im-beautiful">I'm Beautiful</a></li>
+                                    <li><a href="book-appointment">Quick Booking</a></li>
                                 </ul>
                             </div>
                             <div class="col-md">
                                 <h3>Register <span class="float-right footer-down-arrow"><i class="fas fa-chevron-down"></i></span></h3>
                                 <ul class="footer-links">
-                                    <li><a href="pro/index.php">BMM PRO</a></li>
-                                    <li><a href="pro/index.php">List your Salon</a></li>
-                                    <li><a href="pro/index.php">Register Makeup Artist</a></li>
-                                    <li><a href="influencer-program.php">Influencer Program</a></li>
-                                    <li><a href="seller-registration.php">Makeup Trainers</a></li>
+                                    <li><a href="pro/index">BMM PRO</a></li>
+                                    <li><a href="pro/index">List your Salon</a></li>
+                                    <li><a href="pro/index">Register Makeup Artist</a></li>
+                                    <li><a href="influencer-program">Influencer Program</a></li>
+                                    <li><a href="seller-registration">Makeup Trainers</a></li>
                                 </ul>
                                 <hr>
                                 <h3>Help <span class="float-right footer-down-arrow"><i class="fas fa-chevron-down"></i></span></h3>
                                 <ul class="footer-links">
-                                    <li><a href="contact.php">Contact Us</a></li>
-                                    <li><a href="faq.php">FAQ</a></li>
-                                    <li><a href="how-it-works.php">How it Works</a></li>
+                                    <li><a href="contact">Contact Us</a></li>
+                                    <li><a href="faq">FAQ</a></li>
                                 </ul>
                             </div>
 
@@ -66,16 +56,16 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
                             <div class="col-md">
                                 <h3>Discover <span class="float-right footer-down-arrow"><i class="fas fa-chevron-down"></i></span></h3>
                                 <ul class="footer-links">
-                                    <li><a href="about.php">About Us</a></li>
-                                    <li><a href="investors.php">Our Investors</a></li>
-                                    <li><a href="careers.php">Careers</a></li>
-                                    <li><a href="press-center.php">Press Center</a></li>
-                                    <li><a href="">BMM Blog</a></li>
+                                    <li><a href="about">About Us</a></li>
+                                    <li><a href="investors">Our Investors</a></li>
+                                    <li><a href="careers">Careers</a></li>
+                                    <li><a href="press-center">Press Center</a></li>
+                                    <li><a href="blog">BMM Blog</a></li>
                                 </ul>
                             </div>
 
                             <div class="col-md-3">
-                                <h3>Book Salons <i class="fa fa-map-marker-alt"></i> <span class="float-right footer-down-arrow"><i class="fas fa-chevron-down"></i></span></h3>
+                                <h3>Book Salons <span class="float-right footer-down-arrow"><i class="fas fa-chevron-down"></i></span></h3>
                                 <ul class="fotter-links2">
                                     <li><a href="#">Delhi</a> </li>
                                     <li><a href="#">Chandigarh</a> </li>
@@ -100,66 +90,8 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
                                     <li><a href="#">Lucknow </a> </li>
                                 </ul>
                             </div>
-
                         </div>
-                        <div class="row">
-                            <!-- <div class="col-md-12">
-                                <ul class="footer-logos">
-                                    <li>
-                                        <img src="<?php echo $base_url; ?>assets/images/footer-logo1.png" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="<?php echo $base_url; ?>assets/images/footer-logo2.png" alt="">
-                                    </li>
-                                </ul>
-                            </div> -->
-                            <!-- <div class="col-md-4">
-                                <h3>Customer Care</h3>
-                                <i class="fa fa-mobile-alt"></i> &nbsp; 9876543210<br><br>
-                                <i class="fa fa-envelope"></i> &nbsp; support@bookmymakeup.in
-                            </div> -->
-                            <!-- <div class="col-md-4">
-                               
-                            </div> -->
-                            <!-- <div class="col-md-4">
-                                <h3>Newsletter</h3>
-                                <div class="input-group mb-3 newsletter-input-group">
-                                    <input type="text" class="form-control" placeholder="Eneter your email">
-                                    <div class="input-group-append">
-                                        <span class="input-group-text">Subscribe</span>
-                                    </div>
-                                </div>
-                            </div> -->
-                        </div>
-
                     </div>
-                    <!-- <div class="col-md-3">
-                        <div class="row">
-                            <div class="col-md">
-                                <h3 class="categories-heading">Categories <span class="float-right footer-down-arrow"><i class="fas fa-chevron-down"></i></span></h3>
-                                <div class="row categories-fotter">
-                                <div class="col-md-5">
-                                <ul>
-                                    <li><a href="#">Salon</a></li>
-                                    <li><a href="#">Wedding</a></li>
-                                    <li><a href="#">Trends </a></li>
-                                    <li><a href="#">Luxury </a></li>
-                                  
-                                </ul>
-                                </div>
-                                <div class="col-md-7">
-                                <ul>
-                                   
-                                    <li><a href="#">I'm Beautiful </a></li>
-                                    <li><a href="#">Makeup Artist </a></li>
-                                    <li><a href="#">Salon at Home</a></li>
-                                    <li><a href="#">Offers & SALE</a></li>
-                                </ul>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -243,11 +175,10 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
 ?>
 <div class="copyright-stripe">
     <ul class="copyright-stripe-ul">
-        <li><a href="terms-conditions.php">Terms &amp; Conditions</a></li>
-        <li><a href="shipping-policy.php">Shipping Policy</a></li>
-        <li><a href="cancellation-policy.php">Cancellation Policy</a></li>
-        <li><a href="privacy-policy.php">Privacy Policy</a></li>
-        <!-- <li><a href="disclaimer.php">Disclaimer</a></li> -->
+        <li><a href="terms-conditions">Terms &amp; Conditions</a></li>
+        <li><a href="shipping-policy">Shipping Policy</a></li>
+        <li><a href="cancellation-policy">Cancellation Policy</a></li>
+        <li><a href="privacy-policy">Privacy Policy</a></li>
     </ul>
     <div class="clearfix"></div>
     <p>© 2021-22 Book My Makeup Pvt. Ltd. All Rights Reserved. </p>
@@ -327,7 +258,9 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
         }
     </script>
 <?php } ?>
-
+<?php if ($page == 'cart') { ?>
+    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/cart.js"></script>
+<?php } ?>
 </body>
 
 </html>
