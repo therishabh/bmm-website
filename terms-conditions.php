@@ -1,5 +1,5 @@
 
-   <section class="section-padding">
+   <section class="section-padding policy-page">
       <div class="container">
          <h2 class="he-heading">Terms & Conditions</h2>
          <hr>

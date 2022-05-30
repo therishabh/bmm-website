@@ -113,9 +113,9 @@ $(document).ready(function() {
     $('.categories-heading').click(function() {
         $('.categories-fotter').slideToggle();
     });
-    $('.footer-popular-heading').click(function() {
-        $('.copyright-stripe-ul').slideToggle();
-    });
+    // $('.footer-popular-heading').click(function() {
+    //     $('.copyright-stripe-ul').slideToggle();
+    // });
 
     $('.genderList').change(function() {
         var selectedGender = $(this).val();

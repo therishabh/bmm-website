@@ -5,6 +5,7 @@
             <div class="carousel-item active">
                 <a href="makeup-academy">
                     <img src="assets/images/slide8.jpg" alt="" class="desktop-view">
+                    <img src="assets/images/slide1-m.jpg" alt="" class="mobile-view">
                 </a>
             </div>
             <div class="carousel-item">
@@ -263,52 +264,52 @@
                 </div>
         </div> -->
         <div class="salon-offers owl-carousel owl-theme">
-                <div class="item">
-                    <a href="offers">
-                        <div class="product-box">
-                            <img src="assets/images/combo1.jpg" alt="">
-                            <p class="font-weight-bold mt-2">Hair Masters</p>
-                            <p class="font-weight-bold"><s class="text-red">RS. 1000</s><span class="ml-2 text-green">RS. 500</span></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="offer-1">
-                        <div class="product-box">
-                            <img src="assets/images/combo2.jpg" alt="">
-                            <p class="font-weight-bold mt-2">Geetanjali </p>
-                            <p class="font-weight-bold"><s class="text-red">RS. 1000</s><span class="ml-2 text-green">RS. 500</span></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="offers">
-                        <div class="product-box">
-                            <img src="assets/images/combo3.jpg" alt="">
-                            <p class="font-weight-bold mt-2">Looks Salon</p>
-                            <p class="font-weight-bold"><s class="text-red">RS. 1000</s><span class="ml-2 text-green">RS. 500</span></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="offers">
-                        <div class="product-box">
-                            <img src="assets/images/combo4.jpg" alt="">
-                            <p class="font-weight-bold mt-2">Hair Masters</p>
-                            <p class="font-weight-bold"><s class="text-red">RS. 1000</s><span class="ml-2 text-green">RS. 500</span></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="offers">
-                        <div class="product-box">
-                            <img src="assets/images/combo5.jpg" alt="">
-                            <p class="font-weight-bold mt-2">Geetanjali</p>
-                            <p class="font-weight-bold"><s class="text-red">RS. 1000</s><span class="ml-2 text-green">RS. 500</span></p>
-                        </div>
-                    </a>
-                </div>
+            <div class="item">
+                <a href="offers">
+                    <div class="product-box">
+                        <img src="assets/images/combo1.jpg" alt="">
+                        <p class="font-weight-bold mt-2">Hair Masters</p>
+                        <p class="font-weight-bold"><s class="text-red">RS. 1000</s><span class="ml-2 text-green">RS. 500</span></p>
+                    </div>
+                </a>
             </div>
+            <div class="item">
+                <a href="offer-1">
+                    <div class="product-box">
+                        <img src="assets/images/combo2.jpg" alt="">
+                        <p class="font-weight-bold mt-2">Geetanjali </p>
+                        <p class="font-weight-bold"><s class="text-red">RS. 1000</s><span class="ml-2 text-green">RS. 500</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="offers">
+                    <div class="product-box">
+                        <img src="assets/images/combo3.jpg" alt="">
+                        <p class="font-weight-bold mt-2">Looks Salon</p>
+                        <p class="font-weight-bold"><s class="text-red">RS. 1000</s><span class="ml-2 text-green">RS. 500</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="offers">
+                    <div class="product-box">
+                        <img src="assets/images/combo4.jpg" alt="">
+                        <p class="font-weight-bold mt-2">Hair Masters</p>
+                        <p class="font-weight-bold"><s class="text-red">RS. 1000</s><span class="ml-2 text-green">RS. 500</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="offers">
+                    <div class="product-box">
+                        <img src="assets/images/combo5.jpg" alt="">
+                        <p class="font-weight-bold mt-2">Geetanjali</p>
+                        <p class="font-weight-bold"><s class="text-red">RS. 1000</s><span class="ml-2 text-green">RS. 500</span></p>
+                    </div>
+                </a>
+            </div>
+        </div>
         <!-- <div class="row">
                 <div class="col-md-3">
                     <div class="product-box">
@@ -1186,4 +1187,3 @@
             </div>
         </div>
     </section> -->
-

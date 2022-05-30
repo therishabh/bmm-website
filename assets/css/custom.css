@@ -6048,3 +6048,7 @@ label.register-resend-seconds {
     text-transform: uppercase;
     font-size: 18px;
 }
+
+.policy-page ul {
+    margin-left: 20px;
+}
