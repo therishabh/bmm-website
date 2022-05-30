@@ -6,7 +6,7 @@
 
 
 var cart_cl = new function () {
-
+    this.__url = $('#base_url').val();
     this.salonId;
     this.total_price = 0;
     this.total_tax = 0;
@@ -237,7 +237,9 @@ var cart_cl = new function () {
             }),
             success: function (res) {
                 if(res.payment_status=='success'){
-                    location.href ='';
+                    location.href = cart_cl.__url+`payment-success/${order_number}`;
+                } else {
+                    location.href = cart_cl.__url+`payment-failed/${order_number}`;
                 }
             }
         });
