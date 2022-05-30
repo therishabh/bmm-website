@@ -2750,7 +2750,7 @@ input:focus {
 .seller-registration-tabs {
     padding: 60px 50px;
     height: 100%;
-    position: fixed;
+    position: static;
     right: 0;
     top: 0;
     overflow: auto;

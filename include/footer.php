@@ -1,6 +1,6 @@
 <?php
 if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
-    ?>
+?>
     <footer>
         <div class="footer-stripe-1">
             <div class="container">
@@ -23,32 +23,26 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
                                 </ul>
 
                             </div>
-                            <div class="col-md">
+                            <!-- <div class="col-md">
                                 <h3>Quick Links <span class="float-right footer-down-arrow"><i class="fas fa-chevron-down"></i></span></h3>
                                 <ul class="footer-links">
-                                    <li><a href="service-list/1">Salon</a></li>
-                                    <li><a href="service-list/1">Makeup Artist</a></li>
-                                    <li><a href="service-list/1">Bridal Makeup</a></li>
-                                    <li><a href="makeup-academy">Makeup Academy</a></li>
-                                    <li><a href="bmm-tv">BMM TV</a></li>
-                                    <li><a href="im-beautiful">I'm Beautiful</a></li>
-                                    <li><a href="book-appointment">Quick Booking</a></li>
+                                    <li><a href="<?php echo $base_url; ?>service-list/1">Salon</a></li>
+                                    <li><a href="<?php echo $base_url; ?>service-list/1">Makeup Artist</a></li>
+                                    <li><a href="<?php echo $base_url; ?>service-list/1">Bridal Makeup</a></li>
+                                    <li><a href="<?php echo $base_url; ?>makeup-academy">Makeup Academy</a></li>
+                                    <li><a href="<?php echo $base_url; ?>bmm-tv">BMM TV</a></li>
+                                    <li><a href="<?php echo $base_url; ?>im-beautiful">I'm Beautiful</a></li>
+                                    <li><a href="<?php echo $base_url; ?>book-appointment">Quick Booking</a></li>
                                 </ul>
-                            </div>
+                            </div> -->
                             <div class="col-md">
                                 <h3>Register <span class="float-right footer-down-arrow"><i class="fas fa-chevron-down"></i></span></h3>
                                 <ul class="footer-links">
-                                    <li><a href="pro/index">BMM PRO</a></li>
-                                    <li><a href="pro/index">List your Salon</a></li>
-                                    <li><a href="pro/index">Register Makeup Artist</a></li>
-                                    <li><a href="influencer-program">Influencer Program</a></li>
-                                    <li><a href="seller-registration">Makeup Trainers</a></li>
-                                </ul>
-                                <hr>
-                                <h3>Help <span class="float-right footer-down-arrow"><i class="fas fa-chevron-down"></i></span></h3>
-                                <ul class="footer-links">
-                                    <li><a href="contact">Contact Us</a></li>
-                                    <li><a href="faq">FAQ</a></li>
+                                    <li><a href="<?php echo $base_url; ?>pro/index">BMM PRO</a></li>
+                                    <li><a href="<?php echo $base_url; ?>pro/index">List your Salon</a></li>
+                                    <li><a href="<?php echo $base_url; ?>pro/index">Register Makeup Artist</a></li>
+                                    <li><a href="<?php echo $base_url; ?>influencer-program">Influencer Program</a></li>
+                                    <li><a href="<?php echo $base_url; ?>seller-registration">Makeup Trainers</a></li>
                                 </ul>
                             </div>
 
@@ -56,11 +50,19 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
                             <div class="col-md">
                                 <h3>Discover <span class="float-right footer-down-arrow"><i class="fas fa-chevron-down"></i></span></h3>
                                 <ul class="footer-links">
-                                    <li><a href="about">About Us</a></li>
-                                    <li><a href="investors">Our Investors</a></li>
-                                    <li><a href="careers">Careers</a></li>
-                                    <li><a href="press-center">Press Center</a></li>
-                                    <li><a href="blog">BMM Blog</a></li>
+                                    <li><a href="<?php echo $base_url; ?>about">About Us</a></li>
+                                    <li><a href="<?php echo $base_url; ?>investors">Our Investors</a></li>
+                                    <li><a href="<?php echo $base_url; ?>careers">Careers</a></li>
+                                    <li><a href="<?php echo $base_url; ?>press-center">Press Center</a></li>
+                                    <li><a href="<?php echo $base_url; ?>blog">BMM Blog</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md">
+                                <h3>Help <span class="float-right footer-down-arrow"><i class="fas fa-chevron-down"></i></span></h3>
+                                <ul class="footer-links">
+                                    <li><a href="<?php echo $base_url; ?>contact">Contact Us</a></li>
+                                    <li><a href="<?php echo $base_url; ?>faq">FAQ</a></li>
                                 </ul>
                             </div>
 
@@ -170,15 +172,15 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
         </div>
 
     </footer>
-    <?php
+<?php
 }
 ?>
 <div class="copyright-stripe">
     <ul class="copyright-stripe-ul">
-        <li><a href="terms-conditions">Terms &amp; Conditions</a></li>
-        <li><a href="shipping-policy">Shipping Policy</a></li>
-        <li><a href="cancellation-policy">Cancellation Policy</a></li>
-        <li><a href="privacy-policy">Privacy Policy</a></li>
+        <li><a href="<?php echo $base_url; ?>terms-conditions">Terms &amp; Conditions</a></li>
+        <li><a href="<?php echo $base_url; ?>shipping-policy">Shipping Policy</a></li>
+        <li><a href="<?php echo $base_url; ?>cancellation-policy">Cancellation Policy</a></li>
+        <li><a href="<?php echo $base_url; ?>privacy-policy">Privacy Policy</a></li>
     </ul>
     <div class="clearfix"></div>
     <p>© 2021-22 Book My Makeup Pvt. Ltd. All Rights Reserved. </p>

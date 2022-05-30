@@ -327,7 +327,7 @@
     <div class="text-center col-md-6 mx-auto">
       <h2 class="h2-heading">Join as a Trainer</h2>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure magnam distinctio eum ea dolorum laboriosam officia aspernatur id possimus odit, asperiores numquam ducimus in error. Doloremque id repellat asperiores eveniet!</p>
-      <a href="seller-registration.php" class="btn btn-pink">Join Now</a>
+      <a href="<?php echo $base_url; ?>seller-registration" class="btn btn-pink">Join Now</a>
     </div>
   </div>
 </section>

@@ -309,16 +309,6 @@
         <div class="top-stripe">
             <div class="container-fluid">
                 <div class="row">
-                    <!-- <div class="col-md-4 offset-md-1">
-                                <ul>
-                                    <li>
-                                        <a href=""><i class="fas fa-phone-alt"></i> 9876543210</a>
-                                    </li>
-                                    <li>
-                                        <a href=""><i class="fas fa-envelope"></i> book@bookmymakeup.in</a>
-                                    </li>
-                                </ul>
-                            </div> -->
                     <div class="col-md-12">
                         <div class="float-left">
                             <ul>
