@@ -4,10 +4,6 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <!--                <div class="white-box p-4 cart-box-1">
-                                    <div class="heading mb-3">Mr. Rohit Verma</div>
-                                    <div class="heading"><span>9911060952</span> <button class="btn btn-pink btn-sm ml-3">Verify</button></div>
-                                </div>-->
                 <div class="white-box p-4 cart-box-1">
                     <div class="heading mb-3" id='username'></div>
                     <div class="heading"><span id='landline_no'></span> <i class="fas fa-check-circle text-success"></i> </div>
@@ -20,9 +16,6 @@
 
                     </div>
                 </div>
-
-
-
             </div>
             <div class="col-md-4 pl-0 sub-total-parent">
                 <div class="sub-total col-md-12 white-box p-4">
@@ -35,10 +28,10 @@
                         </div>
                         <div class="coupon-remove-btn">REMOVE</div>
                     </div>
-                    <h6>Price (2 items) <span class="float-right">₹ 650</span> </h6>
-                    <h6>GST <span class="float-right">₹ 100</span> </h6>
-                    <h6 class="bb-none">Total Price <span class="float-right text-pink">₹ 750</span> </h6>
-                    <button class="btn btn-block btn-pink">Checkout</button>
+                    <h6>Price (2 items) <span class="float-right">₹ <span id="total_price"></span></span> </h6>
+                    <h6>GST <span class="float-right">₹ <span id="total_tax"></span></span> </h6>
+                    <h6 class="bb-none">Total Price <span class="float-right text-pink">₹ <span id="total_amount"></span></span> </h6>
+                    <button class="btn btn-block btn-pink" onclick="cart_cl.checkout();">Checkout</button>
                 </div>
             </div>
             <!-- <button class="btn btn-pink float-right">Proceed to Pay</button> -->
@@ -48,7 +41,7 @@
 </section>
 
 <!-- Register Modal -->
-<div class="modal coupon-modal" id="couponModal">
+<div class="modal " id="couponModal">
     <div class="modal-dialog">
         <div class="modal-content">
 
@@ -60,10 +53,10 @@
             </div>
             <div class="modal-body">
 
-                <div class="apply-coupon-box col-lg-12 row">
-                    <input type="text" placeholder="Enter coupon code" class="form-control col-lg-8" />
+                <div class=" col-lg-12 row">
+                    <input type="text" placeholder="Enter coupon code" class="form-control col-lg-8" id="text_coupon" />
                     <div class='col-lg-4'>
-                        <button class="btn btn-pink">APPLY</button>
+                        <button class="btn btn-pink" onclick="cart_cl.couponApplyText();">APPLY</button>
                     </div>
                 </div>
 

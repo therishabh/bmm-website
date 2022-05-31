@@ -378,7 +378,7 @@ $(function () {
         if (item.category == 'Services') {
             window.location.replace(`${__url}service-list/${item.id}`);
         } else if (item.category == 'Salon') {
-            window.location.replace(`${__url}hair-masters/${item.id}`);
+            window.location.replace(`${__url}salon-details/${item.id}`);
         } else if (item.category == 'Makeup Artist') {
             window.location.replace(`${__url}makeup-artist/${item.id}`);
             console.log(item);

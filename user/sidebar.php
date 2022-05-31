@@ -20,9 +20,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="<?php echo $base_url; ?>user/membership"><i class="fa fa-user-plus icon"></i> Membership</a>
                                 </li>
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a class="nav-link" href="<?php echo $base_url; ?>user/payments"><i class="fa fa-rupee-sign icon"></i> Payments</a>
-                                </li>
+                                </li> -->
                                 <li class="nav-item">
                                     <a class="nav-link" href="<?php echo $base_url; ?>user/makeup-consultant"><i class="far fa-comment-dots icon"></i> Makeup Consultant </a>
                                 </li>

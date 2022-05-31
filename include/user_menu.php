@@ -19,9 +19,9 @@
         <li class="nav-item">
             <a class="nav-link" href="user-membership.php"><i class="fa fa-user-plus icon"></i> Membership</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" href="user-payments.php"><i class="fa fa-rupee-sign icon"></i> Payments</a>
-        </li>
+        </li> -->
         <li class="nav-item">
             <a class="nav-link" href="user-makeup-consultant.php"><i class="far fa-comment-dots icon"></i> Makeup Consultant </a>
         </li>

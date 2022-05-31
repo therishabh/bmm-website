@@ -17,7 +17,8 @@ html {
 }
 
 body {
-    font-family: "Source Sans Pro", sans-serif;
+    /* font-family: "Source Sans Pro", sans-serif; */
+    font-family: "Roboto", sans-serif;
     font-size: 14px;
     line-height: 20px;
     background: #fff;
@@ -359,7 +360,7 @@ nav ul li a {
     display: block;
     padding: 0px 13px;
     line-height: 50px;
-    font-weight: 600;
+    font-weight: normal;
 }
 
 nav ul li a:hover {
@@ -1363,6 +1364,8 @@ nav li .submenu .nav .nav-item a.btn {
 .manage-list {
     background: #fff;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
 }
 
 .manage-list ul li {
@@ -2750,7 +2753,7 @@ input:focus {
 .seller-registration-tabs {
     padding: 60px 50px;
     height: 100%;
-    position: fixed;
+    position: static;
     right: 0;
     top: 0;
     overflow: auto;
@@ -3654,7 +3657,7 @@ nav li:hover .submenu {
 .menu-common-list .nav-submenu-title {
     font-weight: bold;
     color: var(--pink) !important;
-    font-size: 16px;
+    font-size: 14px;
     text-transform: uppercase;
 }
 
@@ -4643,7 +4646,7 @@ p.description {
 
 .cart-item-box .cart-item-img {
     background: #ffffff 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px #0000029;
+    box-shadow: 0px 3px 6px #000000;
     border: 1px solid #dbdbdb;
     border-radius: 6px;
     padding: 15px;
@@ -6051,4 +6054,23 @@ label.register-resend-seconds {
 
 .policy-page ul {
     margin-left: 20px;
+}
+
+.booking-box {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #f1f1f1;
+    box-shadow: rgb(0 0 0 / 10%) 0px 20px 25px, rgb(0 0 0 / 4%) 0px 10px 10px;
+    margin-bottom: 25px;
+}
+
+.booking-header {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.booking-body {
+    padding-top: 15px;
 }
