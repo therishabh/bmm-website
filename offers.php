@@ -54,3 +54,59 @@
         </div>
     </div>
 </section>
+
+<hr>
+<section class="section-padding">
+    <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="demo" class="carousel slide" data-ride="carousel">
+
+
+
+                        <!-- The slideshow -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/images/stripe-banner-1.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/stripe-banner-2.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/stripe-banner-3.jpg" alt="" class="img-fluid">
+                            </div>
+
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <a href="#">
+                        <img src="assets/images/haircut-offer-1.jpg" class="img-fluid" alt="">
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="#">
+                        <img src="assets/images/haircut-offer-2.jpg" class="img-fluid" alt="">
+                    </a>
+                </div>
+                <div class="col-md-12 mt-5">
+                    <a href="#">
+                        <img src="assets/images/free-haircut.jpg" class="img-fluid" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+

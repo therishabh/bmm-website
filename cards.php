@@ -1,134 +1,60 @@
-
 <img src="assets/images/card-slide1.jpg" alt="">
 
 <section class="what-new pt-4">
-
+    <h2 class="text-center h2-heading">CARDS</h2>
     <div class="container">
-        <h2 class="text-center h2-heading">CARDS</h2>
-        <div class="row">
-            <div class="col-md-6 col-12 m-10">
-                <a href="https://pages.razorpay.com/pl_GPJy4JRpwQ8TkO/view" target="_blank" class="box-shadow">
-                    <img src="assets/images/image17.jpg" class="img-fluid">
-                </a>
-            </div>
-            <div class="col-md-6 col-12 m-10">
-                <a href="https://pages.razorpay.com/pl_GPJy4JRpwQ8TkO/view" target="_blank" class="box-shadow">
-                    <img src="assets/images/image18.jpg" class="img-fluid">
-                </a>
-            </div>
-            <div class="col-md-6 col-12 m-10">
-                <a href="https://pages.razorpay.com/pl_GPJy4JRpwQ8TkO/view" target="_blank" class="box-shadow">
-                    <img src="assets/images/image19.jpg" class="img-fluid">
-                </a>
-            </div>
-            <div class="col-md-6 col-12 m-10">
-                <a href="https://pages.razorpay.com/pl_GPJy4JRpwQ8TkO/view" target="_blank" class="box-shadow">
-                    <img src="assets/images/image20.jpg" class="img-fluid">
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="bmm-tv-playlist-section bmm-card-playlist-section">
-    <div class="container">
-
-
-        <h3>ALL Cards</h3>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="bmm-tv-box">
-                    <img src="assets/images/membership-card.png" class="img-fluid" alt="">
-                    <h5>Card Information</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="bmm-tv-box">
-                    <img src="assets/images/gift-card.png" class="img-fluid" alt="">
-                    <h5>Card Information</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="bmm-tv-box">
-                    <img src="assets/images/membership-card.png" class="img-fluid" alt="">
-                    <h5>Card Information</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="bmm-tv-box">
-                    <img src="assets/images/gift-card.png" class="img-fluid" alt="">
-                    <h5>Card Information</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="bmm-tv-box">
-                    <img src="assets/images/membership-card.png" class="img-fluid" alt="">
-                    <h5>Card Information</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="bmm-tv-box">
-                    <img src="assets/images/gift-card.png" class="img-fluid" alt="">
-                    <h5>Card Information</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="bmm-tv-box">
-                    <img src="assets/images/membership-card.png" class="img-fluid" alt="">
-                    <h5>Card Information</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="bmm-tv-box">
-                    <img src="assets/images/gift-card.png" class="img-fluid" alt="">
-                    <h5>Card Information</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="bmm-tv-box">
-                    <img src="assets/images/membership-card.png" class="img-fluid" alt="">
-                    <h5>Card Information</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="bmm-tv-box">
-                    <img src="assets/images/gift-card.png" class="img-fluid" alt="">
-                    <h5>Card Information</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="bmm-tv-box">
-                    <img src="assets/images/membership-card.png" class="img-fluid" alt="">
-                    <h5>Card Information</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="bmm-tv-box">
-                    <img src="assets/images/gift-card.png" class="img-fluid" alt="">
-                    <h5>Card Information</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="bmm-tv-box">
-                    <img src="assets/images/membership-card.png" class="img-fluid" alt="">
-                    <h5>Card Information</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="bmm-tv-box">
-                    <img src="assets/images/gift-card.png" class="img-fluid" alt="">
-                    <h5>Card Information</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="bmm-tv-box">
-                    <img src="assets/images/membership-card.png" class="img-fluid" alt="">
-                    <h5>Card Information</h5>
+        <div class="row" id="card-list">
+            <div class="col-lg-6 mb-4">
+                <div class="card" style="padding: 30px; margin:30px">
+                    <img src="" class="img-fluid">
+                    <div class="card-body">
+                        <h3 class="card-name"></h3>
+                        <ul>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<script>
+    $(function() {
 
+        //CARD LISTING STARTS HERE----------------------------------
+        get_card_listing = function() {
+            $.ajax({
+                url: base_url + "/user/bmm-card/listing.php",
+                type: "GET",
+                dataType: "JSON",
+                success: function(result) {
+                    // console.log(result);
+                    let data = "";
+                    result.result.forEach(function(val) {
+                        data += `<div class="col-lg-6 mb-4">
+                            <div class="card" style="padding: 30px; margin:30px">
+                            <img src="${val.image}" class="img-fluid">
+                            <div class="card-body">
+                            <h3>${val.card_name}</h3>
+                            <ul>
+                                <li>Exclusive Benefits on card price of ${val.price}</li>
+                                <li>Get card with value of ${val.value}.</li>
+                                <li>Card Validity for ${val.validity}.</li>
+                                <li>Card Category : ${val.category}.</li>
+                                <li>No Joining Fee , No Annual Fee</li>
+                            </ul>
+                            <a href="membership-card-checkout?card-id=${val.id}" class="btn btn-pink buy-card m-2">Buy Now</a>
+                            <a href="membership-card-detail?card-id=${val.id}" class="btn btn-pink know-more m-2">Know More</a>
+                            </div>
+                            </div>
+                        </div>`
+                    });
+                    $("#card-list").html(data);
+                }
+            });
+        };
+        get_card_listing();
+        //CARD LISTING ENDS HERE------------------------------------
 
+    });
+</script>
