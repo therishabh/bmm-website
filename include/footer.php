@@ -281,6 +281,10 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
 <?php if ($page == 'salon-details') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/salon-details.js"></script>
 <?php } ?>
+<?php if ($page == 'payment-status') { ?>
+    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/payment-status.js"></script>
+<?php } ?>    
+    
 </body>
 
 </html>
