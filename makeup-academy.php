@@ -37,8 +37,9 @@
     <div class="text-center col-md-10 mx-auto">
       <h2>BMM Makeup Academy</h2>
       <p>
-        You will be trained by highly qualified,experienced professionals online and then practice sessions on our partner salons across India.Once trained & certified you will be placed among the top of salon chains in India.Why Wait ? Start your journey and Register Now.
+        You will be trained by highly qualified,experienced professionals online and then practice sessions on our partner salons across India.Once trained & certified you will be placed among the top of salon chains in India.Why Wait ? Start your journey and Join as a Trainer.
       </p>
+      <a href="<?php echo $base_url; ?>seller-registration" class="btn btn-pink">Join Now</a>
     </div>
   </div>
 </section>
@@ -228,24 +229,6 @@
           <li>Eyelashes extensions course</li>
         </ol>
 
-
-
-        <!-- <h2>Enquiry Now</h2>
-        <form class="academy-enquiry-form">
-          <div class="form-group">
-            <label>FIRST NAME & LAST NAME</label>
-            <input type="text" class="form-control" placeholder="Enter Your Name">
-          </div>
-          <div class="form-group">
-            <label>CONTACT NUMBER</label>
-            <input type="tel" class="form-control" placeholder="Enter Your Conatct Number">
-          </div>
-          <div class="form-group">
-            <label>MESSAGE</label>
-            <textarea class="form-control" placeholder="Enter Your Conatct Number" rows="8"></textarea>            
-          </div>
-          <button class="btn send-msg-btn">SEND MESSAGE</button>
-        </form> -->
       </div>
     </div>
   </div>
@@ -320,15 +303,3 @@
 
   </div>
 </section>
-
-<hr>
-<section class="text-center section-padding">
-  <div class="container">
-    <div class="text-center col-md-6 mx-auto">
-      <h2 class="h2-heading">Join as a Trainer</h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure magnam distinctio eum ea dolorum laboriosam officia aspernatur id possimus odit, asperiores numquam ducimus in error. Doloremque id repellat asperiores eveniet!</p>
-      <a href="<?php echo $base_url; ?>seller-registration" class="btn btn-pink">Join Now</a>
-    </div>
-  </div>
-</section>
-

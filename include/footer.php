@@ -63,11 +63,12 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
                                 <ul class="footer-links">
                                     <li><a href="<?php echo $base_url; ?>contact">Contact Us</a></li>
                                     <li><a href="<?php echo $base_url; ?>faq">FAQ</a></li>
+                                    <li><a href="<?php echo $base_url; ?>how-it-works">How It Works</a></li>
                                 </ul>
                             </div>
 
                             <div class="col-md-3">
-                                <h3>Book Salons <span class="float-right footer-down-arrow"><i class="fas fa-chevron-down"></i></span></h3>
+                                <h3>Book Salons <i class="fa fa-map-marker-alt"></i> <span class="float-right footer-down-arrow"><i class="fas fa-chevron-down"></i></span></h3>
                                 <ul class="fotter-links2">
                                     <li><a href="#">Delhi</a> </li>
                                     <li><a href="#">Chandigarh</a> </li>

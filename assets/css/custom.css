@@ -17,7 +17,8 @@ html {
 }
 
 body {
-    font-family: "Source Sans Pro", sans-serif;
+    /* font-family: "Source Sans Pro", sans-serif; */
+    font-family: "Roboto", sans-serif;
     font-size: 14px;
     line-height: 20px;
     background: #fff;
@@ -359,7 +360,7 @@ nav ul li a {
     display: block;
     padding: 0px 13px;
     line-height: 50px;
-    font-weight: 600;
+    font-weight: normal;
 }
 
 nav ul li a:hover {
@@ -1363,6 +1364,8 @@ nav li .submenu .nav .nav-item a.btn {
 .manage-list {
     background: #fff;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
 }
 
 .manage-list ul li {
@@ -3654,7 +3657,7 @@ nav li:hover .submenu {
 .menu-common-list .nav-submenu-title {
     font-weight: bold;
     color: var(--pink) !important;
-    font-size: 16px;
+    font-size: 14px;
     text-transform: uppercase;
 }
 
