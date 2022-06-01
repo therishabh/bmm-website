@@ -237,9 +237,9 @@ var cart_cl = new function () {
             }),
             success: function (res) {
                 if(res.payment_status=='success'){
-                    location.href = cart_cl.__url+`payment-success/${order_number}`;
+                    location.href = cart_cl.__url+`payment-status/${order_number}`;
                 } else {
-                    location.href = cart_cl.__url+`payment-failed/${order_number}`;
+                    location.href = cart_cl.__url+`payment-status/${order_number}`;
                 }
             }
         });
