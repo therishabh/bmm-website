@@ -1,5 +1,6 @@
 
 <input type="hidden" id="salon-id" value="<?php echo $explode_data[1]; ?>" />
+<input type="hidden" id="service-id" value="<?php echo $explode_data[2]; ?>" />
 
 <section class="saloon">
     <div class="container-fluid">
@@ -8,10 +9,10 @@
                 <img src="<?php echo $base_url; ?>assets/images/hair-masters.png" class="img-fluid">
             </div>
             <div class="col-md-8 salon-text">
-                <h1>Hair Masters</h1>
-                <p> <i class="fa fa-map-marker-alt"></i> Punjabi Bagh, New Delhi</p>
-                <p><i class="fa fa-tags"></i> &nbsp; 20% off &nbsp; | &nbsp; BMM001</p>
-                <span class="rating"><i class="fas fa-star"></i> 3.9</span>
+                <h1 id="salon_name"></h1>
+                <p> <i class="fa fa-map-marker-alt"></i> <span id="salon_address"></span></p>
+                <p><i class="fa fa-tags"></i> <span id="salon_discounts"> </span></p>
+                <!--<span class="rating"><i class="fas fa-star"></i> 3.9</span>-->
             </div>
         </div>
     </div>
@@ -19,24 +20,25 @@
 
 <section class="service-detail-list-section">
     <div class="container">
-
+        <div id="highlight_service d-none">
         <div class="service-wrapper">
             <div class="service-wrapper-body">
                 <div class="service-wrapper-list alert-danger" id="1">
                     <div>
-                        <h5>Hair Cut [ladies] </h5>
+                        <h5 id="highlight_service_name"> </h5>
                         <div>
-                            <span class="discounted_price">Rs. 90</span>
+                            <span class="discounted_price" id="highlight_service_price">Rs. 90</span>
                         </div>
                     </div>
                     <div>
-                        <button class="btn btn-pink bookServiceBtn">Book</button>
+                        <button class="btn btn-pink bookServiceBtn" id="highlight_service_book">Book</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <hr>
+        </div>
         <h3>All Services</h3>
         <div id="accordion">
 

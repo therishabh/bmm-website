@@ -1,16 +1,17 @@
 <input type="hidden" id="service-id" value="<?php echo $explode_data[1]; ?>" />
 <input type="hidden" id="service-str" value="<?php echo $explode_data[2]; ?>" />
+<input type="hidden" id="type" value="<?php echo $explode_data[3]; ?>" />
 <section class="section-padding bg-light-gray">
     <div class="container">
         <div class="salon-category-tab-parents">
             <div class="row">
                 <div class="col-md-12">
                     <ul class="salon-category-tabs">
-                        <li data="salonsTab" class="active"> <span><img src="<?php echo $base_url; ?>/assets/images/salon-category-icon1.png" alt=""></span> Salons</li>
-                        <li data="servicesTab"> <span><img src="<?php echo $base_url; ?>/assets/images/salon-category-icon2.png" alt=""></span> Services</li>
-                        <li data="makeupArtistTab"> <span><img src="<?php echo $base_url; ?>/assets/images/salon-category-icon5.png" alt=""></span> Makeup Artist</li>
-                        <li data="bridalTab"> <span><img src="<?php echo $base_url; ?>/assets/images/salon-category-icon3.png" alt=""></span> Bridal Makeup</li>
-                        <li data="luxeTab"> <span><img src="<?php echo $base_url; ?>/assets/images/salon-category-icon4.png" alt=""></span> LUXE</li>
+                        <li data="salonsTab" class="d-none" id="salonsTab_li"> <span><img src="<?php echo $base_url; ?>/assets/images/salon-category-icon1.png" alt=""></span> Salons</li>
+                        <li data="servicesTab" class="d-none" id="servicesTab_li"> <span><img src="<?php echo $base_url; ?>/assets/images/salon-category-icon2.png" alt=""></span> Services</li>
+                        <li data="makeupArtistTab" class="d-none" id="makeupArtistTab_li" class="d-none"> <span><img src="<?php echo $base_url; ?>/assets/images/salon-category-icon5.png" alt=""></span> Makeup Artist</li>
+                        <li data="bridalTab" class="d-none" id="bridalTab_li"> <span><img src="<?php echo $base_url; ?>/assets/images/salon-category-icon3.png" alt=""></span> Bridal Makeup</li>
+                        <li data="luxeTab" class="d-none" id="luxeTab_li"> <span><img src="<?php echo $base_url; ?>/assets/images/salon-category-icon4.png" alt=""></span> LUXE</li>
                     </ul>
                 </div>
             </div>
