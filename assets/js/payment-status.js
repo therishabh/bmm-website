@@ -23,6 +23,7 @@ var order_status = new function() {
                 console.log(result.status);
                 if(result.status=='success'){
                     $("#success").removeClass('d-none');
+                    $("#success_amt").html(result.total_paid_amount);
                 } else {
                     $("#failure").removeClass('d-none');
                 }
