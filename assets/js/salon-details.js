@@ -7,10 +7,13 @@
 const __url = $("#base_url").val();
 const token = localStorage.getItem("userToken");
 var salon_details = new function () {
+    this.cartItemsArray = [];
+    this.cartIDArray = [];
 
     this.init = function () {
-
+//        console.log(salon_details.cartItemsArray);
         var salonId = $("#salon-id").val();
+        var serviceId = $("#service-id").val();
         $.ajax({
             url: `${base_url}user/salon/detail.php`,
             type: 'GET',
@@ -18,9 +21,29 @@ var salon_details = new function () {
             data: {
                 token: localStorage.getItem("userToken"),
                 salon_id: salonId,
-                q: "services"
+                q: "services,info,coupons"
             },
             success: function (res) {
+                let info  = res.result.info;
+                $("#salon_name").html(info.salon_name);
+                $("#salon_address").html(info.address+', '+info.city+', '+info.state);
+                
+                let coupons = res.result.coupons;
+                var coupon_html = '';
+                var i = 0;
+                coupons.forEach(function (el){
+                    if(i>0){
+                        coupon_html += ' | ';
+                    }
+                    if(el.discount_percent==""){
+                        coupon_html += el.flat_discount_amount+' flat discount USE '+el.coupon_code;
+                    } else {
+                        coupon_html += el.flat_discount_amount+' % discount USE '+el.coupon_code;
+                    }
+                    i++;
+                });
+                $("#salon_discounts").html(coupon_html);
+                
                 let services = res.result.services;
                 let type = [];
                 let type_services = {};
@@ -50,6 +73,15 @@ var salon_details = new function () {
 
 
                     for (var i = 0; i < type_services[item].length; i++) {
+                        
+                        if(serviceId==type_services[item][i].id){
+                            console.log(serviceId);
+                            $("#highlight_service").removeClass('d-none');
+                            $("#highlight_service_name").html(`${type_services[item][i].name} [${type_services[item][i].category}] `);
+                            $("#highlight_service_price").html(`Rs. ${type_services[item][i].discounted_price}`);
+                            $("#highlight_service_book").attr('onclick',`salon_details.bookService(${type_services[item][i].id})`);
+                        }
+                        
                         html += `<div class="service-wrapper-list">`;
                         html += `<div>`;
                         html += `<h5>${type_services[item][i].name} [${type_services[item][i].category}] </h5>`;
@@ -58,7 +90,14 @@ var salon_details = new function () {
                         html += `</div>`;
                         html += `</div>`;
                         html += `<div>`;
-                        html += `<button class="btn btn-pink bookServiceBtn" onclick="salon_details.bookService(${type_services[item][i].id});">Book</button>`;
+                        if((salon_details.cartItemsArray).indexOf(type_services[item][i].id)==-1){
+                            html += `<button class="btn btn-pink bookServiceBtn" onclick="salon_details.bookService(${type_services[item][i].id},this);">Book</button>`;
+                        } else{
+                            var index = (salon_details.cartItemsArray).indexOf(type_services[item][i].id);
+                            html += `<button class="btn bg-light bookServiceBtn" onclick="salon_details.removeService(${salon_details.cartIDArray[index]});">Remove</button>`;
+                        }
+                        
+                        
                         html += `</div>`;
                         html += `</div>`;
                     }
@@ -76,18 +115,41 @@ var salon_details = new function () {
             }
         });
     };
+    
+    this.getCartItems = function(){
+         $.ajax({
+            url: `${base_url}user/cart/get-cart-items.php`,
+            type: 'GET',
+            dataType: 'JSON',
+            data: {
+                token: localStorage.getItem("userToken")
+            },
+            success: function (res) {
+                if(res.result){
+                (res.result.services).forEach(function (service) {
+                    salon_details.cartItemsArray.push(service.salon_service_id);
+                    salon_details.cartIDArray.push(service.cart_id);
+                });
+            }
+            },
+            complete:function(){
+                salon_details.init();
+            }
+        });
+        
+    };
 
-    this.bookService = function (serviceId) {
+    this.bookService = function (serviceId,this_) {
         if (!token) {
             $('#loginModal').modal('show');
             // addToCart();
         } else {
-            salon_details.addToCart(serviceId);
+            salon_details.addToCart(serviceId,this_);
             common.cartCount();
         }
     };
     
-    this.addToCart = function (serviceId) {
+    this.addToCart = function (serviceId,this_) {
         var post_data = {
             token: token,
             service_id: serviceId
@@ -100,16 +162,32 @@ var salon_details = new function () {
             success: function (result) {
                 toastr.success('Service added in cart.');
                 common.cartCount();
+//                $(this__).attr('onclick',`salon_details.removeService()`)
             }, error: function (result) {
                 toastr.error(result.responseJSON.message);
                 common.cartCount();
             }
         });
     }
+    
+    this.removeService = function (service_id) {
+        $.ajax({
+            url: `${base_url}user/cart/remove-from-cart.php`,
+            type: 'POST',
+            dataType: 'JSON',
+            data: JSON.stringify({
+                token: localStorage.getItem("userToken"),
+                id: service_id
+            }),
+            success: function (res) {
+                toastr.success(res.message);
+                common.cartCount();
+            }
+        });
+    };
 
 };
 
 
 
-
-salon_details.init();
+salon_details.getCartItems();

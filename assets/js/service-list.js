@@ -3,11 +3,38 @@ const __url = $("#base_url").val();
 const token = localStorage.getItem("userToken");
 const urlParams = new URLSearchParams(window.location.search);
 const service_id = ($("#service-id").val() == 'n') ? '' : $("#service-id").val();
-const str = $("#service-str").val();
+let str = $("#service-str").val();
+const type = $("#type").val();
 
 
 var service_list = new function () {
     this.getListingResult = function () {
+        if(type!=''){
+            str = '';
+        }
+        if (type==1) {
+            $("#salonsTab_li").removeClass('d-none');
+            $("#servicesTab_li").removeClass('d-none');
+            $("#bridalTab_li").removeClass('d-none');
+            $("#luxeTab_li").removeClass('d-none');
+        } else
+        if (type==2) {
+            $("#salonsTab_li").removeClass('d-none');
+            $("#servicesTab_li").removeClass('d-none');
+            $("#bridalTab_li").removeClass('d-none');
+            $("#luxeTab_li").removeClass('d-none');
+        } else
+        if (type==3) {
+            $("#salonsTab_li").removeClass('d-none');
+            $("#servicesTab_li").removeClass('d-none');
+        } else {
+            $("#salonsTab_li").removeClass('d-none');
+            $("#servicesTab_li").removeClass('d-none');
+            $("#bridalTab_li").removeClass('d-none');
+            $("#luxeTab_li").removeClass('d-none');
+            $("#makeupArtistTab_li").removeClass('d-none');
+        }
+        
         // var cartCount = '';
         $(".loading-wrapper").show();
         $.ajax({
@@ -43,12 +70,11 @@ var service_list = new function () {
                                     `
                             });
                         }
-
                         var banner_image = (val.banner_image) ? val.banner_image : 'https://via.placeholder.com/400x250';
-                        if(val.business_type=='salon'){
-                        $('#salonData .row').append(`
+                        if (val.business_type == 'salon') {
+                            $('#salonData .row').append(`
                             <div class="col-md-4">
-                            <a href="${__url}salon-details/${val.id}" class="service-box">
+                            <a href="${__url}salon-details/${val.id}/${service_id}" class="service-box">
                                <img src="${banner_image}" alt="" class="img-fluid" />
                                <div class="service-body">
                                    <h4> ${val.salon_name}</h4>
@@ -61,9 +87,10 @@ var service_list = new function () {
                        </div>
                         `);
                         }
-                        
-                        if(val.business_type!='salon'){
-                        $('#makeupArtistData .row').append(`
+
+                        if (type == 2) {
+                            if (val.business_type != 'salon') {
+                                $('#makeupArtistData .row').append(`
                             <div class="col-md-4">
                             <a href="${__url}salon-details/${val.id}" class="service-box">
                                <img src="${banner_image}" alt="" class="img-fluid" />
@@ -77,6 +104,7 @@ var service_list = new function () {
                            </a>
                        </div>
                         `);
+                            }
                         }
 
                         // if (val.services && val.services.length > 0) {

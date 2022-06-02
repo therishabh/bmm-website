@@ -427,7 +427,7 @@ $(function () {
                             result[key][category].forEach(val => {
                                 var x = `#salonServices #${key}-card-body-wrapper .${intoSlug(category)}`;
                                 $(x).append(`
-                                      <li><a href="${__url}service-list/${val.id}/1">${val.name}</a></li>
+                                      <li><a href="${__url}service-list/${val.id}/n/1">${val.name}</a></li>
                                     `);
                             })
                         }
@@ -455,7 +455,7 @@ $(function () {
                             result[key][category].forEach(val => {
                                 var x = `#gentsServices #${key}-card-body-wrapper .${intoSlug(category)}`;
                                 $(x).append(`
-                                      <li><a href="${__url}service-list/${val.id}">${val.name}</a></li>
+                                      <li><a href="${__url}service-list/${val.id}/n/3">${val.name}</a></li>
                                     `);
                             })
                         }
