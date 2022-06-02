@@ -1,37 +1,4 @@
-<?php
-if (isset($_POST['submit'])) {
-    $full_name = $_POST['full_name'];
-    $gender = $_POST['gender'];
-    $contact = $_POST['contact'];
-    $servicetypeLadies = $_POST['servicetypeLadies'];
-    $servicetypeGents = $_POST['servicetypeGents'];
-    $email = $_POST['email'];
-    $date = $_POST['date'];
-    $city = $_POST['city'];
-    $time = $_POST['time'];
-
-    $to = 'esteps.in@gmail.com';
-    $subject = 'Salon Booking Form';
-    $message = "Full Name :" . $full_name . "\n" .
-        "Gender :" . $gender . "\n" .
-        "Contact :" . $contact . "\n" .
-        "Ladies Service Type :" . $servicetypeLadies . "\n" .
-        "Gents Service Type :" . $servicetypeGents . "\n" .
-        "Email :" . $email . "\n" .
-        "Date :" . $date . "\n" .
-        "City :" . $city . "\n" .
-        "Time :" . $time;
-    $headers = "From: " . $email;
-
-    if (mail($to, $subject, $message, $headers)) {
-        // echo "<h1>Sent Successfully! Thank you"." ".$name.", We will contact you shortly!</h1>";
-        echo "<script>window.open('index.php#commonMsg'); </script>";
-    } else {
-        echo "Something went wrong!";
-    }
-}
-?>
-
+<input type="hidden" id="salon-id" value="<?php echo $explode_data[1]; ?>" />
 
 <section class="saloon">
     <div class="container-fluid">
