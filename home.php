@@ -309,6 +309,15 @@
                     </div>
                 </a>
             </div>
+            <div class="item">
+                <a href="offers">
+                    <div class="product-box">
+                        <img src="assets/images/combo6.jpg" alt="">
+                        <p class="font-weight-bold mt-2">Hair Masters</p>
+                        <p class="font-weight-bold"><s class="text-red">RS. 1000</s><span class="ml-2 text-green">RS. 500</span></p>
+                    </div>
+                </a>
+            </div>
         </div>
         <!-- <div class="row">
                 <div class="col-md-3">
