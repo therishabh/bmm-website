@@ -1,6 +1,6 @@
 <?php
 if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
-?>
+    ?>
     <footer>
         <div class="footer-stripe-1">
             <div class="container">
@@ -173,7 +173,7 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
         </div>
 
     </footer>
-<?php
+    <?php
 }
 ?>
 <div class="copyright-stripe">
@@ -269,7 +269,7 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
         }
     </script>
 <?php } ?>
-    <?php if ($page == 'user' && $explode_data[1] == 'my-bookings') { ?>
+<?php if ($page == 'user' && $explode_data[1] == 'my-bookings') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
     <script type="text/javascript">
         if (user_profile.userToken) {
@@ -290,7 +290,16 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
 <?php if ($page == 'salon-info') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/salon-info.js"></script>
 <?php } ?>     
-    
+<?php if ($page == 'membership-card-detail') { ?>
+    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/membership-card-detail.js"></script>
+<?php } ?> 
+<?php if ($page == 'cards') { ?>
+    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/cards.js"></script>
+<?php } ?>    
+<?php if ($page == 'membership-card-checkout') { ?>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/membership-card-checkout.js"></script>
+<?php } ?>   
 </body>
 
 </html>
