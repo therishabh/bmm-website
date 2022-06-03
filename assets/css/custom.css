@@ -6074,3 +6074,35 @@ label.register-resend-seconds {
 .booking-body {
     padding-top: 15px;
 }
+
+.bmm-cards {
+    padding: 15px;
+    min-height: 450px;
+}
+
+.bmm-cards .card-body {
+    padding: 0px;
+    padding-top: 20px;
+}
+
+.bmm-cards .card-body h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--pink);
+}
+
+.bmm-cards .bmm-card-btns {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.bmm-cards ul {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 20px;
+}
+
+.bmm-cards ul li {
+    /* list-style: none; */
+}

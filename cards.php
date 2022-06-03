@@ -4,8 +4,8 @@
     <h2 class="text-center h2-heading">CARDS</h2>
     <div class="container">
         <div class="row" id="card-list">
-            <div class="col-lg-6 mb-4">
-                <div class="card" style="padding: 30px; margin:30px">
+            <div class="col-lg-4 mb-4">
+                <div class="card bmm-cards">
                     <img src="" class="img-fluid">
                     <div class="card-body">
                         <h3 class="card-name"></h3>
@@ -31,8 +31,8 @@
                     // console.log(result);
                     let data = "";
                     result.result.forEach(function(val) {
-                        data += `<div class="col-lg-6 mb-4">
-                            <div class="card" style="padding: 30px; margin:30px">
+                        data += `<div class="col-lg-4 mb-4">
+                            <div class="card bmm-cards">
                             <img src="${val.image}" class="img-fluid">
                             <div class="card-body">
                             <h3>${val.card_name}</h3>
@@ -43,8 +43,10 @@
                                 <li>Card Category : ${val.category}.</li>
                                 <li>No Joining Fee , No Annual Fee</li>
                             </ul>
-                            <a href="membership-card-checkout?card-id=${val.id}" class="btn btn-pink buy-card m-2">Buy Now</a>
-                            <a href="membership-card-detail?card-id=${val.id}" class="btn btn-pink know-more m-2">Know More</a>
+                            <div class="bmm-card-btns">
+                            <a href="membership-card-checkout?card-id=${val.id}" class="btn btn-pink buy-card">Buy Now</a>
+                            <a href="membership-card-detail?card-id=${val.id}" class="btn btn-pink know-more">Know More</a>
+                            </div>
                             </div>
                             </div>
                         </div>`
