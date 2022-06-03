@@ -1,4 +1,4 @@
-<img src="assets/images/card-slide1.jpg" alt="">
+<img src="assets/images/card-slide1.jpg" alt="" class="card-header-banner">
 
 <section class="what-new pt-4">
     <h2 class="text-center h2-heading">CARDS</h2>

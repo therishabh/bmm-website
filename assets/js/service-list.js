@@ -1,4 +1,3 @@
-
 const __url = $("#base_url").val();
 const token = localStorage.getItem("userToken");
 const urlParams = new URLSearchParams(window.location.search);
@@ -7,54 +6,54 @@ let str = $("#service-str").val();
 const type = $("#type").val();
 
 
-var service_list = new function () {
-    this.getListingResult = function () {
-        if(type!=''){
-            str = '';
-        }
-        if (type==1) {
-            $("#salonsTab_li").removeClass('d-none');
-            $("#servicesTab_li").removeClass('d-none');
-            $("#bridalTab_li").removeClass('d-none');
-            $("#luxeTab_li").removeClass('d-none');
-        } else
-        if (type==2) {
-            $("#salonsTab_li").removeClass('d-none');
-            $("#servicesTab_li").removeClass('d-none');
-            $("#bridalTab_li").removeClass('d-none');
-            $("#luxeTab_li").removeClass('d-none');
-        } else
-        if (type==3) {
-            $("#salonsTab_li").removeClass('d-none');
-            $("#servicesTab_li").removeClass('d-none');
-        } else {
-            $("#salonsTab_li").removeClass('d-none');
-            $("#servicesTab_li").removeClass('d-none');
-            $("#bridalTab_li").removeClass('d-none');
-            $("#luxeTab_li").removeClass('d-none');
-            $("#makeupArtistTab_li").removeClass('d-none');
-        }
-        
-        // var cartCount = '';
-        $(".loading-wrapper").show();
-        $.ajax({
-            url: base_url + `/user/search/get-listing-result.php`,
-            type: 'GET',
-            data: {
-                service_id: service_id,
-                str: str
-            },
-            dataType: 'JSON',
-            success: function (result) {
-                result = result.result;
-                //console.log(result);
+var service_list = new function() {
+        this.getListingResult = function() {
+                if (type != '') {
+                    str = '';
+                }
+                if (type == 1) {
+                    $("#salonsTab_li").removeClass('d-none');
+                    $("#servicesTab_li").removeClass('d-none');
+                    $("#bridalTab_li").removeClass('d-none');
+                    $("#luxeTab_li").removeClass('d-none');
+                } else
+                if (type == 2) {
+                    $("#salonsTab_li").removeClass('d-none');
+                    $("#servicesTab_li").removeClass('d-none');
+                    $("#bridalTab_li").removeClass('d-none');
+                    $("#luxeTab_li").removeClass('d-none');
+                } else
+                if (type == 3) {
+                    $("#salonsTab_li").removeClass('d-none');
+                    $("#servicesTab_li").removeClass('d-none');
+                } else {
+                    $("#salonsTab_li").removeClass('d-none');
+                    $("#servicesTab_li").removeClass('d-none');
+                    $("#bridalTab_li").removeClass('d-none');
+                    $("#luxeTab_li").removeClass('d-none');
+                    $("#makeupArtistTab_li").removeClass('d-none');
+                }
 
-                if (result && result.length > 0) {
-                    result.forEach((val, key) => {
-                        var serviceWrapper = '';
-                        if (val.services && val.services.length > 0) {
-                            val.services.forEach(serviceVal => {
-                                serviceWrapper += `
+                // var cartCount = '';
+                $(".loading-wrapper").show();
+                $.ajax({
+                            url: base_url + `/user/search/get-listing-result.php`,
+                            type: 'GET',
+                            data: {
+                                service_id: service_id,
+                                str: str
+                            },
+                            dataType: 'JSON',
+                            success: function(result) {
+                                    result = result.result;
+                                    //console.log(result);
+
+                                    if (result && result.length > 0) {
+                                        result.forEach((val, key) => {
+                                                    var serviceWrapper = '';
+                                                    if (val.services && val.services.length > 0) {
+                                                        val.services.forEach(serviceVal => {
+                                                                    serviceWrapper += `
                                     <div class="service-wrapper-list" id="${serviceVal.id}">
                                         <div>
                                             <h5>${serviceVal.name} [${serviceVal.category}] </h5>
@@ -74,6 +73,9 @@ var service_list = new function () {
                         if (val.business_type == 'salon') {
                             $('#salonData .row').append(`
                             <div class="col-md-4">
+                            <div class="wishlist-icon">
+                                <i class="far fa-heart"></i>
+                            </div>
                             <a href="${__url}salon-details/${val.id}/${service_id}" class="service-box">
                                <img src="${banner_image}" alt="" class="img-fluid" />
                                <div class="service-body">
@@ -219,5 +221,13 @@ $('body').on('click', '.bookServiceBtn', function () {
     }
 });
 
+
+$("body").on("click", ".wishlist-icon", function () {
+    if ($(this).find(".fa-heart").attr("data-prefix") == "fas") {
+        $(this).find(".fa-heart").attr("data-prefix", "far");
+      } else {
+        $(this).find(".fa-heart").attr("data-prefix", "fas");
+      }
+  });
 
 service_list.getListingResult();

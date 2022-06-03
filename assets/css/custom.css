@@ -6106,3 +6106,21 @@ label.register-resend-seconds {
 .bmm-cards ul li {
     /* list-style: none; */
 }
+
+.wishlist-icon {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    z-index: 1000;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.wishlist-icon svg {
+    color: var(--pink);
+    font-size: 18px;
+}
+
+.card-header-banner {
+    width: 100%;
+}
