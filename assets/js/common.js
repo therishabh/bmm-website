@@ -516,7 +516,7 @@ function logout() {
     $('.dropdown-before-login').show();
     toastr.success('You have successfully Logout');
     $('.cart-count-circle').text(0);
-    location.href = __url+'home';
+    location.href = $('#base_url').val()+'home';
 }
 
 

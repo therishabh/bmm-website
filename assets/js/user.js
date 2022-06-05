@@ -58,59 +58,59 @@ var user_profile = new function () {
             },
             success: function (res) {
                 var data = res.result;
-                data.forEach(function(el){
-var html = "";
-html += `<div class="booking-box">`;
-html += `<div class="booking-header">`;
-html += `<div>`;
-html += `<h4>${el.salon.salon_name}</h4>`;
-html += `<p><i class="fa fa-map-marker-alt"></i> ${el.salon.city}, ${el.salon.state}</p>`;
-html += `</div>`;
-html += `<div>`;
-html += `<b class="text-success">Paid</b>`;
+                data.forEach(function (el) {
+                    var html = "";
+                    html += `<div class="booking-box">`;
+                    html += `<div class="booking-header">`;
+                    html += `<div>`;
+                    html += `<h4>${el.salon.salon_name}</h4>`;
+                    html += `<p><i class="fa fa-map-marker-alt"></i> ${el.salon.city}, ${el.salon.state}</p>`;
+                    html += `</div>`;
+                    html += `<div>`;
+                    html += `<b class="text-success">Paid</b>`;
 //html += `<b class="text-danger">Payment Failed</b>`;
 //html += `<b class="text-warning">Payment Pending</b>`;
-html += `</div>`;
-html += `</div>`;
-html += `<div class="booking-body">`;
-html += `<div class="row">`;
-html += `<div class="col-md-6">`;
-html += `<p><b>Order ID</b> : ${el.order_id}</p>`;
-html += `<p><b>Date & Time</b> : ${el.transaction_at}</p>`;
-var coupon_code = (el.coupon_code)?el.coupon_code: '-';
-html += `<p><b>Coupon Code</b> : ${coupon_code}</p>`;
-html += `</div>`;
-html += `<div class="col-md-6">`;
+                    html += `</div>`;
+                    html += `</div>`;
+                    html += `<div class="booking-body">`;
+                    html += `<div class="row">`;
+                    html += `<div class="col-md-6">`;
+                    html += `<p><b>Order ID</b> : ${el.order_id}</p>`;
+                    html += `<p><b>Date & Time</b> : ${el.transaction_at}</p>`;
+                    var coupon_code = (el.coupon_code) ? el.coupon_code : '-';
+                    html += `<p><b>Coupon Code</b> : ${coupon_code}</p>`;
+                    html += `</div>`;
+                    html += `<div class="col-md-6">`;
 
-html += `<p><b>Total Amount</b> : Rs. ${el.total_amount}</p>`;
-html += `<p><b>Tax </b> : Rs. ${el.tax_amount}</p>`;
-html += `<p><b>Final Amount</b> : Rs. ${el.final_amount}</p>`;
-html += `</div>`;
-html += `<div class="col-md-12">`;
-html += `<div class="table-responsive">`;
-html += `<table class="table table-bordered">`;
-html += `<thead>`;
-html += `<tr>`;
-html += `<th>Service</th>`;
-html += `<th>Price</th>`;
-html += `</tr>`;
-html += `</thead>`;
-html += `<tbody>`;
-(el.services).forEach(function(el_i){
-html += `<tr>`;
-html += `<td>${el_i.name} [${el_i.category}]</td>`;
-html += `<td>Rs. ${el_i.discounted_price}</td>`;
-html += `</tr>`;
-});                                                        
-html+= `</tbody>`;
-html+= `</table>`;
-html+= `</div>`;
-html+= `</div>`;
-html+= `</div>`;
-html+= `</div>`;
-html+= `</div>`;
+                    html += `<p><b>Total Amount</b> : Rs. ${el.total_amount}</p>`;
+                    html += `<p><b>Tax </b> : Rs. ${el.tax_amount}</p>`;
+                    html += `<p><b>Final Amount</b> : Rs. ${el.final_amount}</p>`;
+                    html += `</div>`;
+                    html += `<div class="col-md-12">`;
+                    html += `<div class="table-responsive">`;
+                    html += `<table class="table table-bordered">`;
+                    html += `<thead>`;
+                    html += `<tr>`;
+                    html += `<th>Service</th>`;
+                    html += `<th>Price</th>`;
+                    html += `</tr>`;
+                    html += `</thead>`;
+                    html += `<tbody>`;
+                    (el.services).forEach(function (el_i) {
+                        html += `<tr>`;
+                        html += `<td>${el_i.name} [${el_i.category}]</td>`;
+                        html += `<td>Rs. ${el_i.discounted_price}</td>`;
+                        html += `</tr>`;
+                    });
+                    html += `</tbody>`;
+                    html += `</table>`;
+                    html += `</div>`;
+                    html += `</div>`;
+                    html += `</div>`;
+                    html += `</div>`;
+                    html += `</div>`;
 
-                $("#booking_boxes").append(html);
+                    $("#booking_boxes").append(html);
                 });
             }
         });
