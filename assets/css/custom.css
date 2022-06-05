@@ -6126,3 +6126,17 @@ label.register-resend-seconds {
 .inner-header img {
     width: 100%;
 }
+
+#availableCardModal .modal-body {
+    padding: 25px;
+}
+
+.membership-card-box {
+    border: 1px solid #ccc;
+    padding: 15px;
+    display: none;
+}
+
+#partialPaymentInput {
+    display: none;
+}
