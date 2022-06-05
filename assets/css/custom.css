@@ -2583,10 +2583,8 @@ button:focus {
     outline: none !important;
 }
 
-.makeup-academy-slider .carousel-inner {
-    width: 1350px;
-    height: 300px;
-    margin: auto;
+.makeup-academy-slider .carousel-inner img {
+    width: 100%;
 }
 
 .bmm-acamedy {
@@ -6122,5 +6120,9 @@ label.register-resend-seconds {
 }
 
 .card-header-banner {
+    width: 100%;
+}
+
+.inner-header img {
     width: 100%;
 }
