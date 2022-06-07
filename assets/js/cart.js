@@ -266,11 +266,12 @@ $(document).ready(function() {
     });
 
     $('.card-btn-apply').click(function() {
-        $('#availableCardModal').modal('show');
+        $('#availableCardBox').show();
+        $('.card-btn-apply').hide();
     });
 
     $('#apply-card').click(function() {
-        $('#availableCardModal').modal('hide');
+        $('#availableCardBox').hide();
         $('.card-btn-apply').hide();
         $('.membership-card-box').show();
     });

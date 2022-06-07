@@ -6140,3 +6140,19 @@ label.register-resend-seconds {
 #partialPaymentInput {
     display: none;
 }
+
+#availableCardBox {
+    border: 1px solid #ccc;
+    padding: 15px;
+    display: none;
+}
+
+#availableCardBox h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+#apply-card {
+    margin: 0px;
+}
