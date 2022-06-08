@@ -60,22 +60,25 @@ mcc.get_membership_card_detail();
                 data: JSON.stringify(card_detail),
                 dataType: "JSON",
                 success: function(result) {
-                    // console.log(result);
+                     console.log(result);
                     var options = result.result;
                     options.handler = function(response) {
+                        console.log(response);
                         let checkoutResponse = {
-                            token: "dTJHMVdWUkNoYkJCazNtQ1ZVeWVLdz09",
+                            token:localStorage.getItem("userToken"),
                         }
                         checkoutResponse = {
                             ...checkoutResponse,
                             ...response,
                         }
+                        console.log(checkoutResponse);
                         $.ajax({
                             url: base_url + "/user/bmm-card/checkout-response.php",
                             type: "POST",
                             data: JSON.stringify(checkoutResponse),
                             dataType: "JSON",
                             success: function(result) {
+                                console.log(result);
                                 $("#checkout-btn").attr('disabled', false);
                                 setTimeout(function() {
                                     window.location.href = $('#base_url').val()+"membership-card-success";
@@ -106,3 +109,5 @@ mcc.get_membership_card_detail();
         })
         // CHECKOUT ENDS HERE---------------------------------------------------
     });
+    
+    

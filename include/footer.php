@@ -300,6 +300,14 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/membership-card-checkout.js"></script>
 <?php } ?>   
+<?php if ($page == 'user' && $explode_data[1] == 'wishlist') { ?>
+    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
+    <script type="text/javascript">
+        if (user_profile.userToken) {
+            user_profile.getUserWishlist();
+        }
+    </script>
+<?php } ?>
 </body>
 
 </html>

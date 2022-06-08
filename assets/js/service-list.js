@@ -73,7 +73,7 @@ var service_list = new function() {
                         if (val.business_type == 'salon') {
                             $('#salonData .row').append(`
                             <div class="col-md-4">
-                            <div class="wishlist-icon">
+                            <div class="wishlist-icon" onclick="service_list.addToWishlist('${val.id}')" id="salon_${val.id}">
                                 <i class="far fa-heart"></i>
                             </div>
                             <a href="${__url}salon-details/${val.id}/${service_id}" class="service-box">
@@ -205,7 +205,63 @@ var service_list = new function() {
                 common.cartCount();
             }
         });
-    }
+    };
+    
+    this.addToWishlist = function(salon_id){
+        var post_data = {
+            token: token,
+            salon_id: salon_id
+        }
+        $.ajax({
+            url: base_url + `/user/favourite/add-to-favourite.php`,
+            type: 'POST',
+            dataType: 'JSON',
+            data: JSON.stringify(post_data),
+            success: function (result) {
+                toastr.success('Added to wishlist.');
+                $("#salon_"+salon_id).attr('onclick',`service_list.removeFromWishList('${salon_id}')`);
+                $("#salon_"+salon_id).find(".fa-heart").attr("data-prefix", "fas");
+            }, error: function (result) {
+                toastr.error(result.responseJSON.message);
+                $("#salon_"+salon_id).find(".fa-heart").attr("data-prefix", "far");
+            }
+        });
+    };
+    
+    this.removeFromWishList = function(salon_id) {
+        var post_data = {
+            token: token,
+            salon_id: salon_id
+        }
+        $.ajax({
+            url: base_url + `/user/favourite/remove-favourite.php`,
+            type: 'POST',
+            dataType: 'JSON',
+            data: JSON.stringify(post_data),
+            success: function (result) {
+                toastr.success('Removed from wishlist.');
+                $("#salon_"+salon_id).attr('onclick',`service_list.addToWishlist('${salon_id}')`);
+                $("#salon_"+salon_id).find(".fa-heart").attr("data-prefix", "far");
+            }, error: function (result) {
+                toastr.error(result.responseJSON.message);
+                $("#salon_"+salon_id).find(".fa-heart").attr("data-prefix", "fas");
+            }
+        });
+    };
+    
+    this.getWishList = function() {
+        $.ajax({
+            url: `${base_url}user/favourite/get-favourite-list.php`,
+            type: 'GET',
+            dataType: 'JSON',
+            data: {
+                token: localStorage.getItem("userToken")
+            },
+            success: function (result) {
+                console.log(result);
+            }
+        });
+    };
 };
 
 
@@ -221,13 +277,14 @@ $('body').on('click', '.bookServiceBtn', function () {
     }
 });
 
-
-$("body").on("click", ".wishlist-icon", function () {
-    if ($(this).find(".fa-heart").attr("data-prefix") == "fas") {
-        $(this).find(".fa-heart").attr("data-prefix", "far");
-      } else {
-        $(this).find(".fa-heart").attr("data-prefix", "fas");
-      }
-  });
+//
+//$("body").on("click", ".wishlist-icon", function () {
+//    if ($(this).find(".fa-heart").attr("data-prefix") == "fas") {
+//        $(this).find(".fa-heart").attr("data-prefix", "far");
+//      } else {
+//        $(this).find(".fa-heart").attr("data-prefix", "fas");
+//      }
+//  });
 
 service_list.getListingResult();
+service_list.getWishList();
