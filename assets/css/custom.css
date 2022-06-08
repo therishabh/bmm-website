@@ -2583,10 +2583,8 @@ button:focus {
     outline: none !important;
 }
 
-.makeup-academy-slider .carousel-inner {
-    width: 1350px;
-    height: 300px;
-    margin: auto;
+.makeup-academy-slider .carousel-inner img {
+    width: 100%;
 }
 
 .bmm-acamedy {
@@ -6123,4 +6121,38 @@ label.register-resend-seconds {
 
 .card-header-banner {
     width: 100%;
+}
+
+.inner-header img {
+    width: 100%;
+}
+
+#availableCardModal .modal-body {
+    padding: 25px;
+}
+
+.membership-card-box {
+    border: 1px solid #ccc;
+    padding: 15px;
+    display: none;
+}
+
+#partialPaymentInput {
+    display: none;
+}
+
+#availableCardBox {
+    border: 1px solid #ccc;
+    padding: 15px;
+    display: none;
+}
+
+#availableCardBox h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+#apply-card {
+    margin: 0px;
 }
