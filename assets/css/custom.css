@@ -6075,12 +6075,16 @@ label.register-resend-seconds {
 
 .bmm-cards {
     padding: 15px;
-    min-height: 450px;
+    /* min-height: 450px; */
+}
+
+.bmm-cards img {
+    max-height: 175px;
 }
 
 .bmm-cards .card-body {
     padding: 0px;
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 .bmm-cards .card-body h3 {
@@ -6095,14 +6099,31 @@ label.register-resend-seconds {
     gap: 15px;
 }
 
+.bmm-cards .bmm-card-btns .btn {
+    padding: 5px 15px;
+}
+
 .bmm-cards ul {
     margin: 0px;
     padding: 0px;
-    margin-left: 20px;
+    margin-left: 0px;
 }
 
 .bmm-cards ul li {
-    /* list-style: none; */
+    list-style: none;
+    position: relative;
+    padding-left: 20px;
+}
+
+.bmm-cards ul li::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--pink);
 }
 
 .wishlist-icon {
