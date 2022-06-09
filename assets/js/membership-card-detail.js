@@ -18,7 +18,7 @@ $(function() {
                     $('.card_validity').html('Card Validity will be for ' + result.validity);
                     $('.category').html('Card Category ' + result.category);
                     $('.card_fee').html('No Joining Fee, No Annual Fee');
-                    $('.card-detail-box').append('<a href="<?php echo base_url(); ?>membership-card-checkout.php?card-id='+card_id+'" class="btn btn-pink buy-card mt-4">Buy Now</a>');
+                    $('.card-detail-box').append('<a href="'+$("#base_url").val()+'membership-card-checkout/'+card_id+'" class="btn btn-pink buy-card mt-4">Buy Now</a>');
                     $('#card-img').attr('src', "" + result.image + "").append("#card-banner");
                     $('.card-detail-body').html(result.description);
                 }

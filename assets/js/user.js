@@ -45,7 +45,40 @@ var user_profile = new function () {
     };
 
     this.getUserWishlist = function () {
-
+        $.ajax({
+            url: `${base_url}user/favourite/get-favourite-list.php`,
+            type: 'GET',
+            dataType: 'JSON',
+            data: {
+                token: localStorage.getItem("userToken")
+            },
+            success: function (res) {
+                var result = res.result;
+                result.forEach(function(el){
+                    var html = '';
+                    html += `<div class="col-md-4">`;
+                    html += `<div class="makeup-artist-box">`;
+                    html += `<img src="assets/images/salon-shop-1.jpg" class="img-fluid" alt="">`;
+                    html += `<p class="artist-name float-left">${el.salon_name}</p>`;
+                    html += `<p class="rating float-right"><i class="fas fa-star"></i> ${el.rating}</p>`;
+                    html += `<div class="clearfix"></div>`;
+                    html += `<p class="float-left">${el.city},${el.state}</p>`;
+                    html += `<p class="float-right">18 Reviews</p>`;
+                    html += `<div class="clearfix"></div>`;
+//                    html += `<p><small>Makeup at your venue</small></p>`;
+//                    html += `<p class="price float-left"><i class="fas fa-rupee-sign"></i> 499</p>`;
+//                    html += `<p class="artist-caption float-right">For Bride's Regular Makeup</p>`;
+//                    html += `<div class="clearfix"></div>`;
+                    html += `<hr>`;
+                    html += `<div class="text-center">`;
+                    html += `<a href="${common.__url}salon-details/${el.id}" class="btn btn-pink">Book Now</a>`;
+                    html += `</div>`;
+                    html += `</div>`;
+                    html += `</div>`;
+                    $("#wishlist_data").append(html);
+                });
+            }
+        });
     };
 
     this.getUserBookings = function () {

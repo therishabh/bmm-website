@@ -20,7 +20,7 @@
 
 <section class="service-detail-list-section">
     <div class="container">
-        <div id="highlight_service d-none">
+        <div id="highlight_service" class=" d-none">
         <div class="service-wrapper">
             <div class="service-wrapper-body">
                 <div class="service-wrapper-list alert-danger" id="1">

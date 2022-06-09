@@ -545,4 +545,13 @@ var common = new function () {
             $('#loginModal').modal('show');
         }
     };
+    
+    this.wishlistRedirect = function () {
+        if (localStorage.getItem("userToken")) {
+            location.href = common.__url + 'user/wishlist';
+        } else {
+            $('.modal').modal('hide');
+            $('#loginModal').modal('show');
+        }
+    };
 }; 

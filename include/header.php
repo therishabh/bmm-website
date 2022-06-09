@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="en">
 
     <head>
@@ -383,7 +383,7 @@
                                 </div>
                             </div>
 
-                            <div class="top-right-list-item">
+                            <div class="top-right-list-item" onclick="common.wishlistRedirect();">
                                 <i class="far fa-heart text-pink icons"></i>
                             </div>
 
