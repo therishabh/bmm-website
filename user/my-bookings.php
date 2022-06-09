@@ -9,16 +9,24 @@
                             <div class="col-md-12">
 
                                 <div class="row mb-3 h2-heading m-0">
-                                    <div class="col-md-8 pl-0">
+                                    <div class="col-md-6 pl-0">
                                         <h2 class="h2-heading border-0 mb-0">My Bookings</h2>
                                     </div>
-                                    <div class="col-md-4 pr-0">
-                                        <input type="text" placeholder="Search by Order Id..." class="form-control" />
+                                    <div class="col-md-6 pr-0">
+                                        <div class="input-group search-bar-main">
+                                            <i class="fa fa-search seacrh-icons"></i>
+                                            <input type="text" class="form-control" placeholder="Search by order id" aria-label="" aria-describedby="basic-addon1">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary" type="button">
+                                                    Search
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div id="booking_boxes">
-                                    
+
                                 </div>
 
 
