@@ -6177,3 +6177,32 @@ label.register-resend-seconds {
 #apply-card {
     margin: 0px;
 }
+
+.card-detail-page {
+    padding: 50px 0px;
+}
+
+.bmm-card-detail ul {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 0px;
+}
+
+.bmm-card-detail ul li {
+    list-style: none;
+    position: relative;
+    padding-left: 24px;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.bmm-card-detail ul li::before {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--pink);
+}

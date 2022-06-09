@@ -5,22 +5,29 @@
             <div class="col-md-8">
                 <div class="white-box p-5 cart-box-1">
                     <div class="heading mb-3" id="username"></div>
-                    <div class="heading mb-3" ><span id="landline_no"></span> <i class="fas fa-check-circle text-success"></i> </div>
+                    <div class="heading mb-3"><span id="landline_no"></span> <i class="fas fa-check-circle text-success"></i> </div>
                 </div>
 
-                <div class="white-box p-2 cart-box-1 mt-2">
+                <div class="white-box p-4 cart-box-1 mt-2">
                     <div class="row" id="card-list">
-                        <div class="card-banner col-md-6 col-12 m-10" id="card-banner">
-                            <img src="" class="img-fluid" style="margin-top: 25px; padding:40px;" id="card-img">
+                        <div class="col-md-6">
+                            <div class="card-banner" id="card-banner">
+                                <img src="" class="img-thumbnail" id="card-img">
+                            </div>
                         </div>
-                        <div class="card-detail-box col-md-6 col-12 m-10" id="card-detail">
-                            <h3 class="card_name mt-3" style="color:#f92a63"></h3>
-                            <!-- <p>No Joining Fee, No Annual Fee</p> -->
-                            <p class="card_price"></p>
-                            <p class="card_value"></p>
-                            <p class="card_validity"></p>
-                            <p class="category"></p>
-                            <p class="card_fee"></p>
+                        <div class="col-md-6">
+                            <div class="card-detail-box" id="card-detail">
+                                <h2 class="h2-heading card_name"></h2>
+                                <div class="bmm-card-detail">
+                                    <ul>
+                                        <li class="card_price"></li>
+                                        <li class="card_value"></li>
+                                        <li class="card_validity"></li>
+                                        <li class="category"></li>
+                                        <li class="card_fee"></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -42,4 +49,3 @@
 </section>
 
 <div class="overlay"></div>
-
