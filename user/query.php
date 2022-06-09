@@ -10,19 +10,16 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Query For</label>
-                                        <select name="" id="" class="form-control">
-                                            <option>Reason one</option>
-                                            <option>Reason two</option>
-                                        </select>
+                                        <label>Title</label>
+                                        <input type="text" class="form-control" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Priority</label>
+                                        <label>Category</label>
                                         <select name="" id="" class="form-control">
-                                            <option>High</option>
-                                            <option>Low</option>
+                                            <option>one</option>
+                                            <option>two</option>
                                         </select>
                                     </div>
                                 </div>
@@ -41,21 +38,34 @@
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
-                                        <th>Index</th>
-                                        <th>Query For</th>
-                                        <th>View Detail</th>
+                                        <th>Serial Number</th>
+                                        <th>Title</th>
+                                        <th>Category</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>Reason one</td>
-                                        <td><a href="#">View Detail</a></td>
+                                        <td>Title one</td>
+                                        <td>one</td>
+                                        <td><span class="text-warning">Pending</span></td>
+                                        <td><a href="query-detail">View Detail</a></td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td>Reason one</td>
-                                        <td><a href="#">View Detail</a></td>
+                                        <td>Title Two</td>
+                                        <td>one</td>
+                                        <td><span class="text-success">Close</span></td>
+                                        <td><a href="query-detail">View Detail</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Title Three</td>
+                                        <td>one</td>
+                                        <td><span class="text-warning">Pending</span></td>
+                                        <td><a href="query-detail">View Detail</a></td>
                                     </tr>
                                 </tbody>
                             </table>
