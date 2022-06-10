@@ -64,7 +64,7 @@
         const token = localStorage.getItem("salonToken");
         if (token) {
 
-           
+
 
             // ** service secton begin here ** //
             var selectedServices = [];
@@ -74,27 +74,27 @@
                 return str.toLowerCase().split(' ').join('-').replace('&', '');
             }
 
-            var getSalonSelectedServices = function() {
-                const url = `${base_url}/salon/get-info.php`;
-                $.ajax({
-                    url: url,
-                    type: 'GET',
-                    dataType: 'JSON',
-                    data: {
-                        token: token,
-                        q: "services"
-                    },
-                    success: function(result) {
-                        const services = result.result.services;
-                        if (services && services.length > 0) {
-                            services.forEach(val => {
-                                selectedServices.push(parseInt(val.id));
-                            })
-                        }
-                        getAllServices();
-                    }
-                });
-            }
+            // var getSalonSelectedServices = function() {
+            //     const url = `${base_url}/salon/info/get-info.php`;
+            //     $.ajax({
+            //         url: url,
+            //         type: 'GET',
+            //         dataType: 'JSON',
+            //         data: {
+            //             token: token,
+            //             q: "services"
+            //         },
+            //         success: function(result) {
+            //             // const services = result.result.services;
+            //             // if (services && services.length > 0) {
+            //             //     // services.forEach(val => {
+            //             //     //     // selectedServices.push(parseInt(val.id));
+            //             //     // })
+            //             // }
+            //             getAllServices();
+            //         }
+            //     });
+            // }
 
             var getAllServices = function() {
                 const url = `${base_url}/common/get-services.php`;
@@ -200,10 +200,11 @@
                         $(".loading-wrapper").hide();
                         $("#salonServices").fadeIn(1000);
                         $(".services-page .button-wrapper button").fadeIn(1000);
-
                     }
                 });
             }
+
+            getAllServices();
 
 
 
@@ -217,8 +218,8 @@
                 }
             });
 
-         
-            getSalonSelectedServices();
+
+            // getSalonSelectedServices();
             // ** service secton ends here ** //
 
             $('#addPackageForm').validate({
@@ -244,12 +245,8 @@
                     "discounted_price": $('[name=discounted_price]').val(),
                     "services": selectedServices
                 }
-                console.log(post_data);
-            }
-
-            const PackageAjex = function(post_data) {
                 $.ajax({
-                    url: base_url + '/salon/packages/add-package.php',
+                    url: base_url + '/salon/packages/add.php',
                     type: 'POST',
                     dataType: 'JSON',
                     data: JSON.stringify(post_data),

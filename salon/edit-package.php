@@ -67,7 +67,7 @@
 
             const allPackage = function() {
                 $.ajax({
-                    url: `${base_url}/salon/packages/get-package-info.php`,
+                    url: `${base_url}/salon/packages/get-info.php`,
                     type: 'GET',
                     dataType: 'JSON',
                     data: {
@@ -116,7 +116,7 @@
 
             const PackageAjex = function(post_data) {
                 $.ajax({
-                    url: base_url + '/salon/packages/update-package.php',
+                    url: base_url + '/salon/packages/update.php',
                     type: 'POST',
                     dataType: 'JSON',
                     data: JSON.stringify(post_data),
@@ -150,7 +150,7 @@
             }
 
             var getSalonSelectedServices = function() {
-                const url = `${base_url}/salon/get-info.php`;
+                const url = `${base_url}/salon/info/get-info.php`;
                 $.ajax({
                     url: url,
                     type: 'GET',

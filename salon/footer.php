@@ -15,7 +15,7 @@
             const salon_name = localStorage.getItem('salonName');
             const salonCategory = localStorage.getItem('bmmSalonCategory');
             if (!salon_name) {
-                const url = `${base_url}/salon/get-info.php`;
+                const url = `${base_url}/salon/info/get-info.php`;
                 $.ajax({
                     url: url,
                     type: 'GET',

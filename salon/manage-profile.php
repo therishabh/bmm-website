@@ -292,11 +292,11 @@
                 $("#makeupArtistInfoSection").show();
                 $("#salonInfoSection").remove();
             } else {
-                $("#salonInfoSection").show();
+                $("#salonInfoSection").css('display', 'flex');
                 $("#makeupArtistInfoSection").remove();
             }
 
-            const url = `${base_url}/salon/get-info.php`;
+            const url = `${base_url}/salon/info/get-info.php`;
             $.ajax({
                 url: url,
                 type: 'GET',
@@ -355,7 +355,7 @@
                     }
                 }
                 $.ajax({
-                    url: `${base_url}/salon/add-info.php`,
+                    url: `${base_url}/salon/info/add-info.php`,
                     type: 'POST',
                     dataType: 'JSON',
                     data: JSON.stringify(post_data),
@@ -419,7 +419,7 @@
                     },
                 }
                 $.ajax({
-                    url: `${base_url}/salon/add-info.php`,
+                    url: `${base_url}/salon/info/add-info.php`,
                     type: 'POST',
                     dataType: 'JSON',
                     data: JSON.stringify(post_data),

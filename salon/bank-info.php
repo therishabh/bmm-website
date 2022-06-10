@@ -81,7 +81,7 @@
             }
 
             var getBankInfo = function() {
-                const url = `${base_url}/salon/get-info.php`;
+                const url = `${base_url}/salon/info/get-info.php`;
                 $.ajax({
                     url: url,
                     type: 'GET',

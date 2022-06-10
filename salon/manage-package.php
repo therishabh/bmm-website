@@ -132,7 +132,7 @@
         if (token) {
             const allPackage = function() {
                 $.ajax({
-                    url: `${base_url}/salon/packages/list-package.php`,
+                    url: `${base_url}/salon/packages/listing.php`,
                     type: 'GET',
                     dataType: 'JSON',
                     data: {
@@ -142,33 +142,29 @@
                         console.log(result.result[0].services);
                         // console.log(result.result[0].services);
                         let tr = '';
-                        let serviceList = '';
                         let i = 0;
                         $.each(result.result, function(key, value) {
+
+                            let serviceList = '';
+                            $.each(value.services, function(k, val) {
+                                serviceList += `<li>${val.name}</li>`;
+                            });
                             tr += `<tr>
-                          <td> ${value.package_name} <span class="service-id d-none">${value.id}</span></td>
-                          <td> ${value.description} </td>
-                          <td> ${value.category} </td>
-                          <td> ${value.mrp_price} </td>
-                          <td> ${value.discounted_price} </td>
-                          <td id="serviceList"><ul></ul></td>
-                          <td class="text-center">
-                          <ul class="action-list">
-                          <li><a href="edit-package.php?id=${value.id}"><i class="fa fa-pencil"></i></a></li>
-                          <li class="remove-package"><i class="fa fa-trash"></i></li>
-                          </ul>
-                          </td></tr>`;
+                                <td> ${value.package_name} <span class="service-id d-none">${value.id}</span></td>
+                                <td> ${value.description} </td>
+                                <td> ${value.category} </td>
+                                <td> ${value.mrp_price} </td>
+                                <td> ${value.discounted_price} </td>
+                                <td id="serviceList"><ul>${serviceList}</ul></td>
+                                <td class="text-center">
+                                <ul class="action-list">
+                                <li><a href="edit-package.php?id=${value.id}"><i class="fa fa-pencil"></i></a></li>
+                                <li class="remove-package"><i class="fa fa-trash"></i></li>
+                                </ul>
+                                </td></tr>`;
                         });
                         $(".table-loading-wrap").addClass('display-none');
                         $('#packageData tbody').append(tr);
-
-                        for (let i = 0; i < result.result.length; i++) {
-                            $.each(result.result[i].services, function(key, value) {
-                                serviceList += `<li>${value.name}</li>`;
-                            });
-                        }
-                        $('#serviceList ul').append(serviceList);
-
                     }
                 });
             }
@@ -183,7 +179,7 @@
                         'package_id': package_id,
                     }
                     $.ajax({
-                        url: base_url + '/salon/packages/delete-package.php',
+                        url: base_url + '/salon/packages/delete.php',
                         type: 'POST',
                         dataType: 'JSON',
                         data: JSON.stringify(removePackage),
