@@ -252,6 +252,11 @@ cart_cl.init();
 
 $(document).ready(function() {
 
+    $(".delivery-address-add-box-btn").click(function() {
+        $(this).hide();
+        $(".add-delivery-address-form").show();
+    });
+
     $('.coupon-btn-apply').click(function() {
         $('#couponModal').modal('show');
     });
