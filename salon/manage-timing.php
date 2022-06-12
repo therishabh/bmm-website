@@ -124,7 +124,7 @@
                     timingArr.push(serviceObj);
                 });
 
-                const url = `${base_url}/salon/add-info.php`;
+                const url = `${base_url}/salon/info/add-info.php`;
                 const postData = {
                     token: token,
                     timings: timingArr

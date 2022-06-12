@@ -1,4 +1,3 @@
-
 <section class="slide-section">
     <div id="slides" class="carousel slide" data-ride="carousel">
         <!-- The slideshow -->
@@ -380,6 +379,7 @@
                         $('#proRegisterStepThree').show();
                         toastr.success('OTP successfully validated');
                         $("#verifyOTP").removeAttr('disabled');
+                        token = res.token;
                     },
                     error: function(error) {
                         $("#verifyOTP").removeAttr('disabled');
@@ -425,7 +425,7 @@
                 let confirmPassword = $('#proRegisterStepThree [name=confirmPassword]').val();
                 if (password == confirmPassword) {
                     let post_data = {
-                        token: tempToken,
+                        token: token,
                         password: password
                     }
                     $("#stepThreeSubmitBtn").attr('disabled', true);

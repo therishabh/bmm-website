@@ -53,7 +53,7 @@
             }
 
             var getServicePricing = function() {
-                const url = `${base_url}/salon/get-service-price.php`;
+                const url = `${base_url}/salon/services/get-service-price.php`;
                 $.ajax({
                     url: url,
                     type: 'GET',
@@ -132,7 +132,7 @@
                     }
                     servicePricingArr.push(serviceObj);
                 });
-                const url = `${base_url}/salon/set-services-price.php`;
+                const url = `${base_url}/salon/services/set-price.php`;
                 const postData = JSON.stringify({
                     token: token,
                     pricing: servicePricingArr
