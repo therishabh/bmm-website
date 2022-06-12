@@ -15,6 +15,7 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-lg-12">
+                        <div class="table-responsive">
                         <table class="table table-bordered" id="timingTable">
                             <thead>
                                 <tr>
@@ -28,6 +29,7 @@
                             <tbody>
                             </tbody>
                         </table>
+                        </div>
                     </div>
                 </div>
             </div>

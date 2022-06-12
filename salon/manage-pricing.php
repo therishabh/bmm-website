@@ -10,12 +10,13 @@
     <div id="salonPricing" class="display-none">
         <div class="card mb-3">
             <div class="card-header">
-                Manage Pricing
+            
             </div>
             <div class="card-body">
                 <div class="row">
                     <div class="col-lg-12">
-                        <table class="table table-bordered" id="servicePricingTable">
+                        <div class="table-responsive">
+                                 <table class="table table-bordered" id="servicePricingTable">
                             <thead>
                                 <tr>
                                     <th scope="col" class="text-center" width="4%">#</th>
@@ -29,6 +30,8 @@
                             <tbody>
                             </tbody>
                         </table>
+                        </div>
+
                     </div>
                 </div>
             </div>

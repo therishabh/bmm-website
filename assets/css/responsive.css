@@ -1,4 +1,10 @@
 @media screen and (min-width:360px) and (max-width:767px) {
+    h2 {
+        font-size: 24px;
+    }
+    .custom-dropdown-btn {
+        display: none;
+    }
     .autocomplete-box-parent {
         display: none;
     }
@@ -378,10 +384,11 @@
         line-height: 26px;
     }
     .login-section .login-form {
-        width: 92%;
+        margin-top: 20px;
     }
-    .login-section .login input {
-        width: 80%;
+    .login-btn {
+        font-size: 13px;
+        padding: 4px 12px;
     }
     .filter-btn {
         display: block;

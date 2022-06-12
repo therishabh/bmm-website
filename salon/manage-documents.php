@@ -9,6 +9,7 @@
             Salon Documents
         </div>
         <div class="card-body">
+            <div class="table-responsive">
             <table class="table table-bordered documents-table">
                 <thead>
                     <tr>
@@ -33,6 +34,7 @@
                     </tr>
                 </tbody>
             </table>
+            </div>
         </div>
     </div>
 
@@ -41,7 +43,8 @@
             Contact Person Documents
         </div>
         <div class="card-body">
-            <table class="table table-bordered documents-table">
+        <div class="table-responsive">   
+        <table class="table table-bordered documents-table">
                 <thead>
                     <tr>
                         <th>Document Name</th>
@@ -72,8 +75,11 @@
                     </tr>
                 </tbody>
             </table>
+        
         </div>
+        </div> 
     </div>
+
 
     <div class="card mt-4">
         <div class="card-header">
