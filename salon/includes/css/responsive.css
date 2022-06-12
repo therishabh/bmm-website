@@ -43,4 +43,7 @@
     .responsive-rgba.active {
         left: 0 !important;
     }
+    .logoutLi {
+        display: block;
+    }
 }

@@ -74,6 +74,12 @@
                         Gallery
                     </a>
                 </li>
+                <li class="logoutLi">
+                    <a href="" onclick="logout();">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        Logout
+                    </a>
+                </li>
             </ul>
         </section>
     </div>

@@ -553,3 +553,7 @@ ul.action-list li i:hover {
 #left-pannel-mobile.active {
     left: 0px;
 }
+
+.logoutLi {
+    display: none;
+}
