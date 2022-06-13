@@ -63,7 +63,7 @@ var cart_cl = new function() {
                     html += '<div class="heading">';
                     html += `<s> &#8377; &nbsp; ${service.mrp_price}</s>`;
                     html += `<span class="font-weight-bold ml-2"> &#8377; &nbsp; ${service.discounted_price}</span>`;
-                    html += '<i class="fa fa-trash text-pink cursor-pointer" style="font-size:12px;margin:1px;margin-left:10px;" onclick="cart_cl.removeService(' + "'" + service.cart_id + "'" + ');"></i>';
+                    html += '<i class="fa fa-trash text-pink cursor-pointer" style="font-size:12px;margin:1px;margin-left:10px;" onclick="cart_cl.removeService(' + "'" + service.service_id + "'" + ');"></i>';
                     html += '</div>';
                     html += '</div>';
                     cart_cl.total_price += parseInt(service.discounted_price);
@@ -132,7 +132,8 @@ var cart_cl = new function() {
             dataType: 'JSON',
             data: JSON.stringify({
                 token: localStorage.getItem("userToken"),
-                id: service_id
+                service_id: service_id,
+                package_id:""
             }),
             success: function(res) {
                 toastr.success(res.message);

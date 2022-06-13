@@ -13,21 +13,43 @@ var service_list = new function() {
                 }
                 if (type == 1) {
                     $("#salonsTab_li").removeClass('d-none');
+                    $("#salonsTab_li").addClass('active');
+                    $("#salonsTab").addClass('d-custom-block');
                     $("#servicesTab_li").removeClass('d-none');
                     $("#bridalTab_li").removeClass('d-none');
                     $("#luxeTab_li").removeClass('d-none');
+//                    $("#makeupArtistTab_li").removeClass('d-none');
                 } else
                 if (type == 2) {
-                    $("#salonsTab_li").removeClass('d-none');
-                    $("#servicesTab_li").removeClass('d-none');
-                    $("#bridalTab_li").removeClass('d-none');
+//                    $("#salonsTab_li").removeClass('d-none');
+//                    $("#servicesTab_li").removeClass('d-none');
+//                    $("#bridalTab_li").removeClass('d-none');
                     $("#luxeTab_li").removeClass('d-none');
+                    $("#makeupArtistTab_li").removeClass('d-none');
+                    $("#makeupArtistTab_li").addClass('active');
+                    $("#makeupArtistTab").addClass('d-custom-block');
                 } else
                 if (type == 3) {
                     $("#salonsTab_li").removeClass('d-none');
+                    $("#salonsTab_li").addClass('active');
+                    $("#salonsTab").addClass('d-custom-block');
                     $("#servicesTab_li").removeClass('d-none');
+//                    $("#bridalTab_li").removeClass('d-none');
+//                    $("#luxeTab_li").removeClass('d-none');
+//                    $("#makeupArtistTab_li").removeClass('d-none');
+                } else 
+                if (type == 4) {
+//                    $("#salonsTab_li").removeClass('d-none');
+//                    $("#servicesTab_li").removeClass('d-none');
+                    $("#bridalTab_li").removeClass('d-none');
+                    $("#bridalTab_li").addClass('active');
+                    $("#bridalTab").addClass('d-custom-block');
+                    $("#luxeTab_li").removeClass('d-none');
+//                    $("#makeupArtistTab_li").removeClass('d-none');
                 } else {
                     $("#salonsTab_li").removeClass('d-none');
+                    $("#salonsTab_li").addClass('active');
+                    $("#salonsTab").addClass('d-custom-block');
                     $("#servicesTab_li").removeClass('d-none');
                     $("#bridalTab_li").removeClass('d-none');
                     $("#luxeTab_li").removeClass('d-none');
@@ -94,16 +116,17 @@ var service_list = new function() {
                             if (val.business_type != 'salon') {
                                 $('#makeupArtistData .row').append(`
                             <div class="col-md-4">
-                            <a href="${__url}salon-details/${val.id}" class="service-box">
+                            <div href="${__url}salon-details/${val.id}" class="makeup-artist-box service-box">
                                <img src="${banner_image}" alt="" class="img-fluid" />
-                               <div class="service-body">
-                                   <h4> ${val.salon_name}</h4>
-                                   <p> <i class="fa fa-map-marker-alt"></i> ${val.city}, ${val.state}</p>
-                                   <span class="rating"><i class="fas fa-star"></i> ${val.rating}</span>
-                                   <hr>
-                                   <p class="discountPara dp_${val.id}"></p>
-                               </div>
-                           </a>
+                               <p class="artist-name float-left"> ${val.salon_name}</p>
+                                <p class="rating float-right"> <i class="fas fa-star"></i> ${val.rating}</p>
+                                <div class="clearfix"></div>
+                                <p class="float-left">42 booked</p>
+                                <p class="float-right">18 Reviews</p>
+                                <div class="clearfix"></div>
+                                <p><small>Makeup at your venue</small></p>
+
+                           </div>
                        </div>
                         `);
                             }

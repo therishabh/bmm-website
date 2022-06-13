@@ -308,6 +308,14 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
         }
     </script>
 <?php } ?>
+<?php if ($page == 'user' && $explode_data[1] == 'bmm-tv') { ?>
+    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
+    <script type="text/javascript">
+        if (user_profile.userToken) {
+            user_profile.bmmtv();
+        }
+    </script>
+<?php } ?>
 </body>
 
 </html>

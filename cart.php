@@ -34,57 +34,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6" id="no_address_found">
                                 <div class="delivery-address-inner-box">
+                                    
                                     <div>
-                                        <label class="radio-container billing-radio-btn">
-                                            <input type="radio" name="existing_address" value="">
-                                            <span class="checkmark"></span> </label>
-                                    </div>
-                                    <div>
-                                        <h4>Rohit Verma</h4>
-                                        <p>45, Shiv Vihar, <br>North East Delhi, Delhi - 110094<br>INDIA</p>
-                                        <ul>
-                                            <li><a href="#">Edit</a></li>
-                                            <li><a href="#">Remove</a></li>
-                                        </ul>
+                                        <p>No address found.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="delivery-address-inner-box">
-                                    <div>
-                                        <label class="radio-container billing-radio-btn">
-                                            <input type="radio" name="existing_address" value="">
-                                            <span class="checkmark"></span> </label>
-                                    </div>
-                                    <div>
-                                        <h4>Rohit Verma</h4>
-                                        <p>104, Maujpur, <br>North East Delhi, Delhi - 110053<br>INDIA</p>
-                                        <ul>
-                                        <li><a href="#">Edit</a></li>
-                                            <li><a href="#">Remove</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="delivery-address-inner-box">
-                                    <div>
-                                        <label class="radio-container billing-radio-btn">
-                                            <input type="radio" name="existing_address" value="">
-                                            <span class="checkmark"></span> </label>
-                                    </div>
-                                    <div>
-                                        <h4>Rohit Verma</h4>
-                                        <p>45, Shiv Vihar, <br>North East Delhi, Delhi - 110094<br>INDIA</p>
-                                        <ul>
-                                            <li><a href="#">Edit</a></li>
-                                            <li><a href="#">Remove</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                           
                         </div>
                     </div>
                 </div>

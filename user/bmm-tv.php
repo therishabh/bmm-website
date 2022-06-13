@@ -27,39 +27,8 @@
 
                                         <section class="beauty-advice">
                                             <div class="">
-                                                <div class="row">
-                                                    <div class="col-md-6 col-12 m-10">
-                                                        <a href="https://www.youtube.com/watch?v=UpU8sAXzYEs" target="_blank" class="box-shadow">
-                                                            <img src="assets/images/bmm-tv-thumb.jpg" class="img-fluid">
-                                                            <div class="content">
-                                                                <h6 class="content-title">The Dermat Report </h6>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="col-md-6 col-12 m-10">
-                                                        <a href="#" target="_blank" class="box-shadow">
-                                                            <img src="assets/images/bmm-tv-thumb-2.jpg" class="img-fluid">
-                                                            <div class="content">
-                                                                <h6 class="content-title">Get The Perfect Hair Blowout Right At Home! </h6>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="col-md-6 col-12 m-10">
-                                                        <a href="#" target="_blank" class="box-shadow">
-                                                            <img src="assets/images/bmm-tv-thumb-3.jpg" class="img-fluid">
-                                                            <div class="content">
-                                                                <h6 class="content-title">Beauty Routine Finder </h6>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="col-md-6 col-12 m-10">
-                                                        <a href="#" target="_blank" class="box-shadow">
-                                                            <img src="assets/images/bmm-tv-thumb-4.jpg" class="img-fluid">
-                                                            <div class="content">
-                                                                <h6 class="content-title">Tips And Tricks Of The Stars Decoded </h6>
-                                                            </div>
-                                                        </a>
-                                                    </div>
+                                                <div class="row" id="bmm-tv-data">
+                                                    
                                                 </div>
                                             </div>
                                         </section>

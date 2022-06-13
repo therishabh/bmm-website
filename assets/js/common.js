@@ -433,6 +433,58 @@ $(function () {
                         }
                         $(".loading-wrapper").hide();
                         $("#salonServices").fadeIn(1000);
+                        
+                        $("#makeupArtistServices").append(`
+                                  <div class="">
+                                <div id="${key + '-card-body-wrapper'}">
+                                    <div class="row"></div>
+                                </div>
+                                  </div>`);
+                        for (let category in result[key]) {
+                            $(`#makeupArtistServices #${key}-card-body-wrapper .row`).append(
+                                    `<div class="col-lg mb-4">
+                                    <div class="menu-common-list">
+                                        <div class="nav-submenu-title" data="${category}">${category}</div>
+                                        <ul class="checkbox-wrapper ${intoSlug(category)}"></ul>
+                                        </div>
+                                    </div>
+                                    `
+                                    );
+                            result[key][category].forEach(val => {
+                                var x = `#makeupArtistServices #${key}-card-body-wrapper .${intoSlug(category)}`;
+                                $(x).append(`
+                                      <li><a href="${__url}service-list/${val.id}/n/2">${val.name}</a></li>
+                                    `);
+                            })
+                        }
+                        $(".loading-wrapper").hide();
+                        $("#makeupArtistServices").fadeIn(1000);
+                        
+                        $("#bridalMakeupServices").append(`
+                                  <div class="">
+                                <div id="${key + '-card-body-wrapper'}">
+                                    <div class="row"></div>
+                                </div>
+                                  </div>`);
+                        for (let category in result[key]) {
+                            $(`#bridalMakeupServices #${key}-card-body-wrapper .row`).append(
+                                    `<div class="col-lg mb-4">
+                                    <div class="menu-common-list">
+                                        <div class="nav-submenu-title" data="${category}">${category}</div>
+                                        <ul class="checkbox-wrapper ${intoSlug(category)}"></ul>
+                                        </div>
+                                    </div>
+                                    `
+                                    );
+                            result[key][category].forEach(val => {
+                                var x = `#bridalMakeupServices #${key}-card-body-wrapper .${intoSlug(category)}`;
+                                $(x).append(`
+                                      <li><a href="${__url}service-list/${val.id}/n/4">${val.name}</a></li>
+                                    `);
+                            })
+                        }
+                        $(".loading-wrapper").hide();
+                        $("#bridalMakeupServices").fadeIn(1000);
                     }
 
                     if (key == 'gents') {
