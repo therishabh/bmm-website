@@ -103,7 +103,7 @@
             });
 
             $(".services-page").on('click', '.submit-btn', function() {
-                const url = `${base_url}/salon/add-info.php`;
+                const url = `${base_url}/salon/info/add-info.php`;
                 const postData = JSON.stringify({
                     token: token,
                     amenities: selectedAmenities

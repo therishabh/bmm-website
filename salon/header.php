@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./includes/css/zoom.css">
     <link rel="stylesheet" href="./includes/css/components.css">
     <link rel="stylesheet" href="./includes/css/style.css">
+    <link rel="stylesheet" href="./includes/css/responsive.css">
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 </head>
 
@@ -29,6 +30,7 @@
                 </a>
             </div>
             <div class="user-info-wrapper">
+                <div id="nav-toggle-btn"><i class="fa fa-bars" aria-hidden="true"></i></div>
                 <div class="salon-name" id="headerSalonName"></div>
                 <div class="logout-btn">
                     <button onclick="logout();">Logout</button>
