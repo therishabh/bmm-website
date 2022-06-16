@@ -6,76 +6,76 @@ let str = $("#service-str").val();
 const type = $("#type").val();
 
 
-var service_list = new function() {
-        this.getListingResult = function() {
-                if (type != '') {
-                    str = '';
-                }
-                if (type == 1) {
-                    $("#salonsTab_li").removeClass('d-none');
-                    $("#salonsTab_li").addClass('active');
-                    $("#salonsTab").addClass('d-custom-block');
-                    $("#servicesTab_li").removeClass('d-none');
-                    $("#bridalTab_li").removeClass('d-none');
-                    $("#luxeTab_li").removeClass('d-none');
+var service_list = new function () {
+    this.getListingResult = function () {
+        if (type != '') {
+            str = '';
+        }
+        if (type == 1) {
+            $("#salonsTab_li").removeClass('d-none');
+            $("#salonsTab_li").addClass('active');
+            $("#salonsTab").addClass('d-custom-block');
+//            $("#servicesTab_li").removeClass('d-none');
+            $("#bridalTab_li").removeClass('d-none');
+            $("#luxeTab_li").removeClass('d-none');
 //                    $("#makeupArtistTab_li").removeClass('d-none');
-                } else
-                if (type == 2) {
+        } else
+        if (type == 2) {
 //                    $("#salonsTab_li").removeClass('d-none');
 //                    $("#servicesTab_li").removeClass('d-none');
-//                    $("#bridalTab_li").removeClass('d-none');
-                    $("#luxeTab_li").removeClass('d-none');
-                    $("#makeupArtistTab_li").removeClass('d-none');
-                    $("#makeupArtistTab_li").addClass('active');
-                    $("#makeupArtistTab").addClass('d-custom-block');
-                } else
-                if (type == 3) {
-                    $("#salonsTab_li").removeClass('d-none');
-                    $("#salonsTab_li").addClass('active');
-                    $("#salonsTab").addClass('d-custom-block');
-                    $("#servicesTab_li").removeClass('d-none');
+                    $("#bridalTab_li").removeClass('d-none');
+            $("#luxeTab_li").removeClass('d-none');
+            $("#makeupArtistTab_li").removeClass('d-none');
+            $("#makeupArtistTab_li").addClass('active');
+            $("#makeupArtistTab").addClass('d-custom-block');
+        } else
+        if (type == 3) {
+            $("#salonsTab_li").removeClass('d-none');
+            $("#salonsTab_li").addClass('active');
+            $("#salonsTab").addClass('d-custom-block');
+//            $("#servicesTab_li").removeClass('d-none');
 //                    $("#bridalTab_li").removeClass('d-none');
 //                    $("#luxeTab_li").removeClass('d-none');
 //                    $("#makeupArtistTab_li").removeClass('d-none');
-                } else 
-                if (type == 4) {
+        } else
+        if (type == 4) {
 //                    $("#salonsTab_li").removeClass('d-none');
 //                    $("#servicesTab_li").removeClass('d-none');
-                    $("#bridalTab_li").removeClass('d-none');
-                    $("#bridalTab_li").addClass('active');
-                    $("#bridalTab").addClass('d-custom-block');
-                    $("#luxeTab_li").removeClass('d-none');
+            $("#bridalTab_li").removeClass('d-none');
+            $("#bridalTab_li").addClass('active');
+            $("#bridalTab").addClass('d-custom-block');
+            $("#luxeTab_li").removeClass('d-none');
 //                    $("#makeupArtistTab_li").removeClass('d-none');
-                } else {
-                    $("#salonsTab_li").removeClass('d-none');
-                    $("#salonsTab_li").addClass('active');
-                    $("#salonsTab").addClass('d-custom-block');
-                    $("#servicesTab_li").removeClass('d-none');
-                    $("#bridalTab_li").removeClass('d-none');
-                    $("#luxeTab_li").removeClass('d-none');
-                    $("#makeupArtistTab_li").removeClass('d-none');
-                }
+        } else {
+            $("#salonsTab_li").removeClass('d-none');
+            $("#salonsTab_li").addClass('active');
+            $("#salonsTab").addClass('d-custom-block');
+            $("#servicesTab_li").removeClass('d-none');
+            $("#bridalTab_li").removeClass('d-none');
+            $("#luxeTab_li").removeClass('d-none');
+            $("#makeupArtistTab_li").removeClass('d-none');
+        }
 
-                // var cartCount = '';
-                $(".loading-wrapper").show();
-                $.ajax({
-                            url: base_url + `/user/search/get-listing-result.php`,
-                            type: 'GET',
-                            data: {
-                                service_id: service_id,
-                                str: str
-                            },
-                            dataType: 'JSON',
-                            success: function(result) {
-                                    result = result.result;
-                                    //console.log(result);
+        // var cartCount = '';
+        $(".loading-wrapper").show();
+        $.ajax({
+            url: base_url + `/user/search/get-listing-result.php`,
+            type: 'GET',
+            data: {
+                service_id: service_id,
+                str: str
+            },
+            dataType: 'JSON',
+            success: function (result) {
+                result = result.result;
+                //console.log(result);
 
-                                    if (result && result.length > 0) {
-                                        result.forEach((val, key) => {
-                                                    var serviceWrapper = '';
-                                                    if (val.services && val.services.length > 0) {
-                                                        val.services.forEach(serviceVal => {
-                                                                    serviceWrapper += `
+                if (result && result.length > 0) {
+                    result.forEach((val, key) => {
+                        var serviceWrapper = '';
+                        if (val.services && val.services.length > 0) {
+                            val.services.forEach(serviceVal => {
+                                serviceWrapper += `
                                     <div class="service-wrapper-list" id="${serviceVal.id}">
                                         <div>
                                             <h5>${serviceVal.name} [${serviceVal.category}] </h5>
@@ -93,21 +93,53 @@ var service_list = new function() {
                         }
                         var banner_image = (val.banner_image) ? val.banner_image : 'https://via.placeholder.com/400x250';
                         if (val.business_type == 'salon') {
+                            var serviceWrapper_i = '';
+                            if (val.services && val.services.length > 0) {
+                                val.services.forEach(serviceVal => {
+                                    serviceWrapper_i += `
+                                    
+                                    <div  id="${serviceVal.id}" class="col-lg-12">
+                                        <div>
+                                            <h6>${serviceVal.name} [${serviceVal.category}] </h6>
+                                            <div>
+                                            ${serviceVal.mrp_price == 0 ? '' : `<s>Rs. ${serviceVal.mrp_price}</s>`}
+                                            <span class="discounted_price">Rs. ${serviceVal.discounted_price}</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-pink bookServiceBtn">Book</button>
+                                        </div>
+                                    </div>    
+                                    `
+                                });
+                            }
+
                             $('#salonData .row').append(`
                             <div class="col-md-4">
                             <div class="wishlist-icon" onclick="service_list.addToWishlist('${val.id}')" id="salon_${val.id}">
                                 <i class="far fa-heart"></i>
                             </div>
-                            <a href="${__url}salon-details/${val.id}/${service_id}" class="service-box">
-                               <img src="${banner_image}" alt="" class="img-fluid" />
-                               <div class="service-body">
-                                   <h4> ${val.salon_name}</h4>
-                                   <p> <i class="fa fa-map-marker-alt"></i> ${val.city}, ${val.state}</p>
-                                   <span class="rating"><i class="fas fa-star"></i> ${val.rating}</span>
-                                   <hr>
-                                   <p class="discountPara dp_${val.id}"></p>
+                            <div class="service-box">
+                                <div onclick='location.href="${__url}salon-details/${val.id}/${service_id}"'>                            
+                                    <img src="${banner_image}" alt="" class="img-fluid" />
+                                    <div class="service-body">
+                                        <h4> ${val.salon_name}</h4>
+                                        <p> <i class="fa fa-map-marker-alt"></i> ${val.city}, ${val.state}</p>
+                                        <span class="rating"><i class="fas fa-star"></i> ${val.rating}</span>
+
+
+                                        <hr>
+                                        <p class="discountPara dp_${val.id}"></p>
+                                         </div>
+                                    </div>
+                                             <hr>
+                                         <div class="service-body" >
+                                            ${serviceWrapper_i}    
+                                         </div>  
                                </div>
-                           </a>
+                            
+                           </div>
+                          
                        </div>
                         `);
                         }
@@ -177,7 +209,7 @@ var service_list = new function() {
                                `)
                         }
 
-
+                        
                         $('#serviceData').append(`
                     <div class="service-wrapper">
                         <div class="service-wrapper-header">
@@ -229,8 +261,8 @@ var service_list = new function() {
             }
         });
     };
-    
-    this.addToWishlist = function(salon_id){
+
+    this.addToWishlist = function (salon_id) {
         var post_data = {
             token: token,
             salon_id: salon_id
@@ -242,16 +274,16 @@ var service_list = new function() {
             data: JSON.stringify(post_data),
             success: function (result) {
                 toastr.success('Added to wishlist.');
-                $("#salon_"+salon_id).attr('onclick',`service_list.removeFromWishList('${salon_id}')`);
-                $("#salon_"+salon_id).find(".fa-heart").attr("data-prefix", "fas");
+                $("#salon_" + salon_id).attr('onclick', `service_list.removeFromWishList('${salon_id}')`);
+                $("#salon_" + salon_id).find(".fa-heart").attr("data-prefix", "fas");
             }, error: function (result) {
                 toastr.error(result.responseJSON.message);
-                $("#salon_"+salon_id).find(".fa-heart").attr("data-prefix", "far");
+                $("#salon_" + salon_id).find(".fa-heart").attr("data-prefix", "far");
             }
         });
     };
-    
-    this.removeFromWishList = function(salon_id) {
+
+    this.removeFromWishList = function (salon_id) {
         var post_data = {
             token: token,
             salon_id: salon_id
@@ -263,16 +295,16 @@ var service_list = new function() {
             data: JSON.stringify(post_data),
             success: function (result) {
                 toastr.success('Removed from wishlist.');
-                $("#salon_"+salon_id).attr('onclick',`service_list.addToWishlist('${salon_id}')`);
-                $("#salon_"+salon_id).find(".fa-heart").attr("data-prefix", "far");
+                $("#salon_" + salon_id).attr('onclick', `service_list.addToWishlist('${salon_id}')`);
+                $("#salon_" + salon_id).find(".fa-heart").attr("data-prefix", "far");
             }, error: function (result) {
                 toastr.error(result.responseJSON.message);
-                $("#salon_"+salon_id).find(".fa-heart").attr("data-prefix", "fas");
+                $("#salon_" + salon_id).find(".fa-heart").attr("data-prefix", "fas");
             }
         });
     };
-    
-    this.getWishList = function() {
+
+    this.getWishList = function () {
         $.ajax({
             url: `${base_url}user/favourite/get-favourite-list.php`,
             type: 'GET',

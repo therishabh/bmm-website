@@ -51,9 +51,10 @@ $(function () {
                 data: JSON.stringify(post_data),
                 success: function (result) {
                     $("#signInBtn").removeAttr('disabled');
-                    toastr.success("Sign in successfully");
+                    toastr.success(result.message);
                     localStorage.setItem("userToken", result.token);
-                    $('.loginBtn span').text(username);
+                    localStorage.setItem("username", result.name);
+                    $('.loginBtn span').text(result.name);
                     $('.modal').modal('hide');
                     // window.location.replace('user/dashboard');
                 },
