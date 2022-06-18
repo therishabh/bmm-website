@@ -6240,3 +6240,53 @@
             float: right;
             margin-top: 20px;
         }
+        
+        .custom-breadcrumb {
+            border-radius: 10px;
+        }
+        
+        .custom-breadcrumb .breadcrumb {
+            background: #fff;
+            border-radius: 10px;
+        }
+        
+        .custom-breadcrumb .breadcrumb a {
+            color: var(--pink);
+        }
+        
+        .maekup-artist-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .makeup-artist-checkbox {
+            width: 18px;
+            height: 18px;
+        }
+        
+        .filter-inner-box {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        
+        .filter-inner-box:last-child {
+            border: 0px;
+            margin-bottom: 0px;
+        }
+        
+        .filter-inner-box h6 {
+            font-weight: bold;
+        }
+        
+        .filter-inner-box ul {
+            margin: 10px 0px;
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        
+        .filter-inner-box ul li {
+            list-style: none;
+        }

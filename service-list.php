@@ -6,6 +6,16 @@
         <div class="salon-category-tab-parents">
             <div class="row">
                 <div class="col-md-12">
+
+                    <nav class="custom-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Salon</a></li>
+                            <li class="breadcrumb-item"><a href="#">Hair Styling</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Hair Cut</li>
+                        </ol>
+                    </nav>
+
                     <ul class="salon-category-tabs">
                         <li data="salonsTab" class="d-none" id="salonsTab_li"> <span><img src="<?php echo $base_url; ?>/assets/images/salon-category-icon1.png" alt=""></span> Salons</li>
                         <li data="servicesTab" class="d-none" id="servicesTab_li"> <span><img src="<?php echo $base_url; ?>/assets/images/salon-category-icon2.png" alt=""></span> Services</li>
@@ -29,7 +39,51 @@
         </div>
 
         <div id="servicesTab" class="custom-tab-content">
-            <div id="serviceData">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0">Filters</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="filter-inner-box">
+                                <h6>Gender</h6>
+                                <ul>
+                                    <li>
+                                        <label> <input type="checkbox" /> Female</label>
+                                    </li>
+                                    <li>
+                                        <label> <input type="checkbox" /> Male</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="filter-inner-box">
+                                <h6>Categories</h6>
+                                <ul>
+                                    <li>
+                                        <label> <input type="checkbox" /> Category one</label>
+                                    </li>
+                                    <li>
+                                        <label> <input type="checkbox" /> Category two</label>
+                                    </li>
+                                    <li>
+                                        <label> <input type="checkbox" /> Category three</label>
+                                    </li>
+                                    <li>
+                                        <label> <input type="checkbox" /> Category four</label>
+                                    </li>
+                                    <li>
+                                        <label> <input type="checkbox" /> Category five</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div id="serviceData">
+                    </div>
+                </div>
             </div>
         </div>
 
