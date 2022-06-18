@@ -11,15 +11,14 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Title</label>
-                                        <input type="text" class="form-control" />
+                                        <input type="text" class="form-control" id="title" required />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Category</label>
-                                        <select name="" id="" class="form-control">
-                                            <option>one</option>
-                                            <option>two</option>
+                                        <select name="" id="category-list" class="form-control" required>
+                                            
                                         </select>
                                     </div>
                                 </div>
@@ -27,9 +26,9 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Description</label>
-                                        <textarea class="form-control"></textarea>
+                                        <textarea class="form-control" id="description" required></textarea>
                                     </div>
-                                    <button type="button" onclick="" class="btn btn-pink">Submit</button>
+                                    <button type="button" onclick="user_profile.querySave();" class="btn btn-pink">Submit</button>
                                 </div>
                             </div>
                         </form>
@@ -45,28 +44,8 @@
                                         <th>Action</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Title one</td>
-                                        <td>one</td>
-                                        <td><span class="text-warning">Pending</span></td>
-                                        <td><a href="query-detail">View Detail</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Title Two</td>
-                                        <td>one</td>
-                                        <td><span class="text-success">Close</span></td>
-                                        <td><a href="query-detail">View Detail</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Title Three</td>
-                                        <td>one</td>
-                                        <td><span class="text-warning">Pending</span></td>
-                                        <td><a href="query-detail">View Detail</a></td>
-                                    </tr>
+                                <tbody id="query_tbody">
+                                    
                                 </tbody>
                             </table>
                         </div>

@@ -29,9 +29,9 @@
                                 <!-- <li class="nav-item">
                                                         <a class="nav-link" href="<?php echo $base_url; ?>user/bmm-network"><i class="fas fa-network-wired icon"></i> BMM Network</a>
                                                     </li> -->
-                                <li class="nav-item">
+<!--                                <li class="nav-item">
                                     <a class="nav-link" href="<?php echo $base_url; ?>user/bmm-tv"><i class="fa fa-tv icon"></i> BMM TV</a>
-                                </li>
+                                </li>-->
 <!--                                <li class="nav-item">
                                     <a class="nav-link" href="<?php echo $base_url; ?>user/events"><i class="far fa-calendar-check icon"></i>Events</a>
                                 </li>-->

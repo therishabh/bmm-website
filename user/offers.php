@@ -10,28 +10,9 @@
                                     <div class="col-md-12">
                                         <h2 class="h2-heading">Offers for You</h2>
                                     </div>
-
-                                    <div class="col-md-4">
-                                        <img src="assets/images/combo1.jpg" class="img-thumbnail" alt="">
-                                        <a href="#" class="btn btn-pink btn-block mt-2">Redeem Now</a>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="assets/images/combo2.jpg" class="img-thumbnail" alt="">
-                                        <a href="#" class="btn btn-pink btn-block mt-2">Redeem Now</a>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="assets/images/combo3.jpg" class="img-thumbnail" alt="">
-                                        <a href="#" class="btn btn-pink btn-block mt-2">Redeem Now</a>
-                                    </div>
-                                    <div class="col-md-4 mt-5">
-                                        <img src="assets/images/combo4.jpg" class="img-thumbnail" alt="">
-                                        <a href="#" class="btn btn-pink btn-block mt-2">Redeem Now</a>
-                                    </div>
-                                    <div class="col-md-4 mt-5">
-                                        <img src="assets/images/combo5.jpg" class="img-thumbnail" alt="">
-                                        <a href="#" class="btn btn-pink btn-block mt-2">Redeem Now</a>
-                                    </div>
-
+                                    <span class="row col-lg-12" id="offers">
+                                    
+                                    </span>
 
 
                                 </div>

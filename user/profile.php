@@ -29,6 +29,25 @@
                                                         <label>Phone</label>
                                                         <input type="text" class="form-control" name="landline_no" id="landline_no" readonly />
                                                     </div>
+                                                    <div class="form-group">
+                                                        <label>Date of Birth</label>
+                                                        <input type="date" class="form-control" name="dob" id="dob"  />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Date of Anniversary</label>
+                                                        <input type="date" class="form-control" name="doa" id="doa" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Date of Anniversary</label>
+                                                        <input type="date" class="form-control" name="doa" id="doa" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Gender</label>
+                                                        <select id="gender">
+                                                            <option value="male">Male</option>
+                                                            <option value="female">Female</option>
+                                                        </select>
+                                                    </div>
                                                     <button type="button" onclick="user_profile.updateProfileData();" class="btn btn-pink">Update</button>
                                                 </div>
                                             </div>

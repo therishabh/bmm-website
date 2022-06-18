@@ -1,3 +1,6 @@
+<input type="hidden" id="query_id" value="<?php echo $explode_data[2]; ?>" />
+
+
 <section class="user-manage-profile">
     <div class="container">
         <div class="row">

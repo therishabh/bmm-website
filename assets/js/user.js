@@ -15,25 +15,37 @@ var user_profile = new function () {
                 $("#username").val(result.name);
                 $("#email_id").val(result.email_id);
                 $("#landline_no").val(result.mobile_no);
+                $("#dob").val(result.dob);
+                $("#doa").val(result.doa);
+                $("#gender").val(result.gender);
             }
         });
     };
 
     this.updateProfileData = function () {
         var name = $("#username").val();
+        var dob = $("#dob").val();
+        console.log(dob);
+        var doa = $("#doa").val();
+        var gender = $("#gender").val();
+        console.log(doa);
         $.ajax({
             url: `${base_url}user/profile/update-info.php`,
             type: 'POST',
             dataType: 'JSON',
             data: JSON.stringify({
                 token: localStorage.getItem("userToken"),
-                name: name
+                name: name,
+                dob : dob,
+                doa : doa,
+                gender:gender
             }),
             success: function (result) {
-                console.log(result);
+                toastr.success(result.message);
 
             }
         });
+        
     };
 
     this.userSessionCheck = function () {
@@ -143,6 +155,7 @@ var user_profile = new function () {
                     html += `<p><b>Date & Time</b> : ${el.transaction_at}</p>`;
                     var coupon_code = (el.coupon_code) ? el.coupon_code : '-';
                     html += `<p><b>Coupon Code</b> : ${coupon_code}</p>`;
+                    html += `<p><b>Service OTP</b> : ${el.service_start_otp}</p>`;
                     html += `</div>`;
                     html += `<div class="col-md-6">`;
 
@@ -181,7 +194,27 @@ var user_profile = new function () {
     };
 
     this.getOffersForUser = function () {
+        $.ajax({
+            url: `${base_url}user/cart/get-coupon-list.php`,
+            type: 'GET',
+            dataType: 'JSON',
+            data: {
+                token: localStorage.getItem("userToken")
+            },
+            success: function (res) {
+                var result = res.result;
+                result.forEach(function (el) {
+                    var html = '';
+                    html += `<div class="col-md-4">`;
+                    html += `<img src="assets/images/combo1.jpg" class="img-thumbnail" alt="">`;
+                    html += `<a href="#" class="btn btn-pink btn-block mt-2">Redeem Now</a>`;
+                    html += `</div>`;
+                    $("#offers").append(html);
+                });
 
+
+            }
+        });
     };
 
     this.getUserMemberships = function () {
@@ -304,7 +337,115 @@ var user_profile = new function () {
     
     this.getQueryCategoryList = function() {
         
+        $.ajax({
+            url: `${base_url}user/query/category-list.php`,
+            type: 'GET',
+            dataType: 'JSON',
+            data: {
+                token: localStorage.getItem("userToken")
+            },
+            success: function (res) {
+                var category = res.result;
+                category.forEach(function(el){
+                    $("#category-list").append(`<option value="${el.id}">${el.name}</option>`);
+                });
+                
+            },
+            complete : function(res) {
+                user_profile.getQueryList();
+            }
+        });
     };
+    
+    this.getQueryList = function() {
+        
+        $.ajax({
+            url: `${base_url}user/query/listing.php`,
+            type: 'GET',
+            dataType: 'JSON',
+            data: {
+                token: localStorage.getItem("userToken")
+            },
+            success: function (res) {
+                console.log(res.result);
+                var query = res.result;
+                var i = 1;
+                $("#query_tbody").html('');
+                query.forEach(function(el){
+                    var html = "";
+                    html += `<tr>`;
+                    html += `<td>${i}</td>`;
+                    html += `<td>${el.title}</td>`;
+                    if(el.category!=null){
+                        html += `<td>${el.category.name}</td>`;
+                    } else {
+                        html += `<td>-</td>`;
+                    }
+                    if((el.query_status).toLowerCase()=='closed'){
+                        html += `<td><span class="text-success">${el.query_status}</span></td>`;
+                    } else {
+                        html += `<td><span class="text-warning">${el.query_status}</span></td>`;
+                    }
+                    html += `<td><a href="query-detail/${el.id}">View Detail</a></td>`;
+                    html += `</tr>`;
+                    $("#query_tbody").append(html);
+                    i++;
+                });
+            }
+        });
+    };
+    
+    this.querySave = function() {
+        var title = $("#title").val();
+        var category_list = $("#category-list").val();
+        var description = $("#description").val();
+        if(title.trim()=='' || description.trim()==''){
+            toastr.error("Kindly fill all enquiry details.");
+            return false;
+        }
+        
+         $.ajax({
+            url: `${base_url}user/query/add-new-query.php`,
+            type: 'POST',
+            dataType: 'JSON',
+            data: JSON.stringify({
+                token: localStorage.getItem("userToken"),
+                title: title,
+                category_id : category_list,
+                description : description
+            }),
+            success: function (result) {
+                toastr.success(result.message);
+                $("#title").val('');
+                $("#description").val('');
+                user_profile.getQueryList();
+            }
+        });
+         
+         
+    };
+    
+    
+    this.query_detail = function() {
+        var query_id = $("#query_id").val();
+        $.ajax({
+            url: `${base_url}user/query/listing.php`,
+            type: 'GET',
+            dataType: 'JSON',
+            data: {
+                token: localStorage.getItem("userToken")
+            },
+            success: function (res) {
+                console.lof
+                var category = res.result;
+                category.forEach(function(el){
+                    $("#category-list").append(`<option value="${el.id}">${el.name}</option>`);
+                });
+                
+            }
+        });
+        
+    }
 };
 
 user_profile.userSessionCheck();

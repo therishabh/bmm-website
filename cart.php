@@ -6,6 +6,7 @@
                 <div class="white-box p-4 cart-box-1">
                     <div class="heading mb-3" id='username'></div>
                     <div class="heading"><span id='landline_no'></span> <i class="fas fa-check-circle text-success"></i> </div>
+                    <div class="heading"><span id='email'></span>  </div>
                 </div>
 
                 <div class="white-box p-4 cart-box-2 mt-3">
@@ -49,10 +50,10 @@
 
                 <div class="white-box p-4 cart-box-3 mt-3">
                     <div class="overflow-hidden delivery-address-add-box delivery-address-add-box-btn">
-                        <h4 id="desktop-address-heading1"> <span>+</span> Add a New Address</h4>
+                        <h4 id="desktop-address-heading1"> <span>+</span> Add a New Billing Address</h4>
                     </div>
                     <div class="add-delivery-address-form">
-                        <h3 class="heading-tertiary-24" id="desktop-address-heading2">Add a New Address</h3>
+                        <h3 class="heading-tertiary-24" id="desktop-address-heading2">Add a New Billing Address</h3>
                         <div class="overflow-hidden mt-4" id="desktop-address-form">
                             <form action="" id="" name="" method="post">
                                 <div class="row">

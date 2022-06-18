@@ -5,8 +5,8 @@
 <section class="saloon">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4 saloon-img d-flex justyfy-content-center align-items-center">
-                <img src="<?php echo $base_url; ?>assets/images/hair-masters.png" class="img-fluid">
+            <div class="col-md-4 saloon-img d-flex justyfy-content-center align-items-center" id="banner_image">
+                
             </div>
             <div class="col-md-8 salon-text">
                 <h1 id="salon_name"></h1>

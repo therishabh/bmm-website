@@ -9,6 +9,8 @@ const token = localStorage.getItem("userToken");
 var salon_details = new function () {
     this.cartItemsArray = [];
     this.cartIDArray = [];
+    this.cartPackageArray = [];
+    this.cartPackageIDArray = [];
 
     this.init = function () {
 //        console.log(salon_details.cartItemsArray);
@@ -27,7 +29,7 @@ var salon_details = new function () {
                 let info = res.result.info;
                 $("#salon_name").html(info.salon_name);
                 $("#salon_address").html(info.address + ', ' + info.city + ', ' + info.state);
-
+                $("#banner_image").html(`<img src="${info.banner_image}" class="img-fluid">`);
                 let coupons = res.result.coupons;
                 var coupon_html = '';
                 var i = 0;
@@ -91,10 +93,10 @@ var salon_details = new function () {
                         html += `</div>`;
                         html += `<div>`;
                         if ((salon_details.cartItemsArray).indexOf(type_services[item][i].id) == -1) {
-                            html += `<button class="btn btn-pink bookServiceBtn" onclick="salon_details.bookService(${type_services[item][i].id},'');">Book</button>`;
+                            html += `<button class="btn btn-pink bookServiceBtn" onclick="salon_details.bookService(${type_services[item][i].id},'',this);">Book</button>`;
                         } else {
                             var index = (salon_details.cartItemsArray).indexOf(type_services[item][i].id);
-                            html += `<button class="btn bg-light bookServiceBtn" onclick="salon_details.removeService(${salon_details.cartIDArray[index]});">Remove</button>`;
+                            html += `<button class="btn bg-light bookServiceBtn" onclick="salon_details.removeService(${salon_details.cartIDArray[index]},'',this);">Remove</button>`;
                         }
 
 
@@ -126,10 +128,19 @@ var salon_details = new function () {
             },
             success: function (res) {
                 if (res.result) {
-                    (res.result.services).forEach(function (service) {
-                        salon_details.cartItemsArray.push(service.salon_service_id);
-                        salon_details.cartIDArray.push(service.cart_id);
-                    });
+                    if (res.result.services != undefined) {
+                        (res.result.services).forEach(function (service) {
+                            salon_details.cartItemsArray.push(service.service_id);
+                            salon_details.cartIDArray.push(service.service_id);
+
+                        });
+                    }
+                    if (res.result.packages != undefined) {
+                        (res.result.packages).forEach(function (package) {
+                            salon_details.cartPackageArray.push(package.id);
+                            salon_details.cartPackageIDArray.push(package.id);
+                        });
+                    }
                 }
             },
             complete: function () {
@@ -140,21 +151,21 @@ var salon_details = new function () {
 
     };
 
-    this.bookService = function (serviceId, packageId) {
+    this.bookService = function (serviceId, packageId, this_) {
         if (!token) {
             $('#loginModal').modal('show');
             // addToCart();
         } else {
-            salon_details.addToCart(serviceId, packageId);
+            salon_details.addToCart(serviceId, packageId, this_);
             common.cartCount();
         }
     };
 
-    this.addToCart = function (serviceId, packageId) {
+    this.addToCart = function (service_id, package_id, this_) {
         var post_data = {
             token: token,
-            service_id: serviceId,
-            package_id:packageId
+            service_id: service_id,
+            package_id: package_id
         }
         $.ajax({
             url: base_url + `/user/cart/add-to-cart.php`,
@@ -164,6 +175,11 @@ var salon_details = new function () {
             success: function (result) {
                 toastr.success('Service added in cart.');
                 common.cartCount();
+                $(this_).removeClass('btn-pink');
+                $(this_).addClass('bg-light');
+                $(this_).html('Remove');
+                $(this_).attr('onclick',`salon_details.removeService('${service_id}','${package_id}',this)`);
+                
 //                $(this__).attr('onclick',`salon_details.removeService()`)
             }, error: function (result) {
                 toastr.error(result.responseJSON.message);
@@ -172,18 +188,25 @@ var salon_details = new function () {
         });
     }
 
-    this.removeService = function (service_id) {
+    this.removeService = function (service_id, package_id, this_) {
+        console.log(this_);
         $.ajax({
             url: `${base_url}user/cart/remove-from-cart.php`,
             type: 'POST',
             dataType: 'JSON',
             data: JSON.stringify({
                 token: localStorage.getItem("userToken"),
-                id: service_id
+                service_id: service_id,
+                package_id: package_id
             }),
             success: function (res) {
                 toastr.success(res.message);
                 common.cartCount();
+                
+                $(this_).removeClass('bg-light');
+                $(this_).addClass('btn-pink');
+                $(this_).html('Book');
+                $(this_).attr('onclick',`salon_details.bookService('${service_id}','${package_id}',this)`);
             }
         });
     };
@@ -206,12 +229,12 @@ var salon_details = new function () {
                 if (packages.length > 0) {
                     $("#packages").removeClass('d-none');
                     html += `<div class="card">`;
-                   
+
                     html += `<div id="collapse_packages" class="collapse show" data-parent="#accordion">`;
                     html += `<div class="card-body">`;
                     html += `<div class="service-wrapper">`;
                     html += `<div class="service-wrapper-body">`;
-                    
+
                     packages.forEach(function (el) {
                         html += `<div class="service-wrapper-list">`;
                         html += `<div>`;
@@ -221,18 +244,18 @@ var salon_details = new function () {
                         html += `</div>`;
                         html += `</div>`;
                         html += `<div>`;
-                        if ((salon_details.cartItemsArray).indexOf(el.id) == -1) {
-                            html += `<button class="btn btn-pink bookServiceBtn" onclick="salon_details.bookService('',${el.id});">Book</button>`;
+                        if ((salon_details.cartPackageArray).indexOf(el.id) == -1) {
+                            html += `<button class="btn btn-pink bookServiceBtn" onclick="salon_details.bookService('',${el.id},this);">Book</button>`;
                         } else {
-                            var index = (salon_details.cartItemsArray).indexOf(el.id);
-                            html += `<button class="btn bg-light bookServiceBtn" onclick="salon_details.removeService(${salon_details.cartIDArray[index]});">Remove</button>`;
+                            var index = (salon_details.cartPackageArray).indexOf(el.id);
+                            html += `<button class="btn bg-light bookServiceBtn" onclick="salon_details.removeService('',${salon_details.cartPackageIDArray[index]},this);">Remove</button>`;
                         }
 
 
                         html += `</div>`;
                         html += `</div>`;
                     });
-                    
+
                     html + `</div>`;
                     html + `</div>`;
                     html + `</div>`;

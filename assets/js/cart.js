@@ -5,7 +5,7 @@
  */
 
 
-var cart_cl = new function() {
+var cart_cl = new function () {
     this.__url = $('#base_url').val();
     this.salonId;
     this.total_price = 0;
@@ -15,7 +15,7 @@ var cart_cl = new function() {
     this.current_coupon = '';
     this.membership_card_id = '';
 
-    this.init = function() {
+    this.init = function () {
         if (!localStorage.getItem("userToken")) {
             location.href = common.__url + 'home';
         } else {
@@ -25,7 +25,7 @@ var cart_cl = new function() {
         }
     };
 
-    this.getUserDetails = function() {
+    this.getUserDetails = function () {
         $.ajax({
             url: `${base_url}user/profile/info.php`,
             type: 'GET',
@@ -33,14 +33,24 @@ var cart_cl = new function() {
             data: {
                 token: localStorage.getItem("userToken")
             },
-            success: function(result) {
+            success: function (result) {
                 $("#username").html(result.name);
                 $("#landline_no").html(result.mobile_no);
+                
+                if(result.email_id!=''){
+                    $("#email").html(result.email_id);
+                    if(result.is_email_verified==1){
+                        $("#email").append('<i class="fas fa-check-circle text-success"></i>');
+                    } else {
+                        $("#email").append(` <a href="${common.__url}user/profile">Verify</a>`);
+                    }
+                }
+                
             }
         });
     };
 
-    this.getCartItems = function(myCallback) {
+    this.getCartItems = function (myCallback) {
         $.ajax({
             url: `${base_url}user/cart/get-cart-items.php`,
             type: 'GET',
@@ -48,7 +58,7 @@ var cart_cl = new function() {
             data: {
                 token: localStorage.getItem("userToken")
             },
-            success: function(res) {
+            success: function (res) {
                 $('#salon_name').html(res.result.salon_info.salon_name);
                 $('#salon_address').html(res.result.salon_info.city + ', ' + res.result.salon_info.state);
                 cart_cl.salonId = res.result.salon_info.id;
@@ -56,23 +66,44 @@ var cart_cl = new function() {
                 cart_cl.total_tax = 0;
                 cart_cl.total_amount = 0;
                 $('#service-list').html('');
-                (res.result.services).forEach(function(service) {
-                    var html = '';
-                    html += '<div class="service-cart-list">';
-                    html += `<div class="heading">${service.name} [${service.category}] </div>`;
-                    html += '<div class="heading">';
-                    html += `<s> &#8377; &nbsp; ${service.mrp_price}</s>`;
-                    html += `<span class="font-weight-bold ml-2"> &#8377; &nbsp; ${service.discounted_price}</span>`;
-                    html += '<i class="fa fa-trash text-pink cursor-pointer" style="font-size:12px;margin:1px;margin-left:10px;" onclick="cart_cl.removeService(' + "'" + service.service_id + "'" + ');"></i>';
-                    html += '</div>';
-                    html += '</div>';
-                    cart_cl.total_price += parseInt(service.discounted_price);
-                    $('#service-list').append(html);
-                });
+
+                if (res.result.services != undefined) {
+                    $('#service-list').append("<hr><h6><b>Services</b></h6>");
+                    (res.result.services).forEach(function (service) {
+                        var html = '';
+                        html += '<div class="service-cart-list">';
+                        html += `<div class="heading">${service.name} [${service.category}] </div>`;
+                        html += '<div class="heading">';
+                        html += `<s> &#8377; &nbsp; ${service.mrp_price}</s>`;
+                        html += `<span class="font-weight-bold ml-2"> &#8377; &nbsp; ${service.discounted_price}</span>`;
+                        html += '<i class="fa fa-trash text-pink cursor-pointer" style="font-size:12px;margin:1px;margin-left:10px;" onclick="cart_cl.removeService(' + "'" + service.service_id + "',''" + ');"></i>';
+                        html += '</div>';
+                        html += '</div>';
+                        cart_cl.total_price += parseInt(service.discounted_price);
+                        $('#service-list').append(html);
+                    });
+                }
+                
+                if (res.result.packages != undefined) {
+                    $('#service-list').append("<hr><h6><b>Packages</b></h6>");
+                    (res.result.packages).forEach(function (service) {
+                        var html = '';
+                        html += '<div class="service-cart-list">';
+                        html += `<div class="heading">${service.name} [${service.category}] </div>`;
+                        html += '<div class="heading">';
+                        html += `<s> &#8377; &nbsp; ${service.mrp_price}</s>`;
+                        html += `<span class="font-weight-bold ml-2"> &#8377; &nbsp; ${service.discounted_price}</span>`;
+                        html += '<i class="fa fa-trash text-pink cursor-pointer" style="font-size:12px;margin:1px;margin-left:10px;" onclick="cart_cl.removeService(' + "'','" + service.id + "'" + ');"></i>';
+                        html += '</div>';
+                        html += '</div>';
+                        cart_cl.total_price += parseInt(service.discounted_price);
+                        $('#service-list').append(html);
+                    });
+                }
                 cart_cl.total_price = parseFloat(cart_cl.total_price).toFixed(2);
 
             },
-            complete: function(res) {
+            complete: function (res) {
                 myCallback();
                 $("#total_price").html(cart_cl.total_price);
                 cart_cl.total_tax = parseFloat(cart_cl.total_price * (cart_cl.tax_per / 100)).toFixed(2);
@@ -83,7 +114,7 @@ var cart_cl = new function() {
         });
     };
 
-    this.getCouponForSalon = function() {
+    this.getCouponForSalon = function () {
         if (cart_cl.salonId) {
 
             $.ajax({
@@ -93,11 +124,11 @@ var cart_cl = new function() {
                 data: {
                     token: localStorage.getItem("userToken")
                 },
-                success: function(res) {
+                success: function (res) {
 
                     let coupons_arr = res.result.coupons;
                     var html = '';
-                    coupons_arr.every(function(el, index, arr) {
+                    coupons_arr.every(function (el, index, arr) {
                         console.log(el);
                         html += `<div class="coupon-detail-box mb-10">`;
                         html += `<div class='col-lg-12 row'>`;
@@ -119,13 +150,13 @@ var cart_cl = new function() {
         }
     };
 
-    this.useClick = function(el) {
+    this.useClick = function (el) {
         var coupon_code = $(el).parents('.coupon-detail-box').find('.coupon-code').text().trim();
 
         cart_cl.couponApply(coupon_code);
     };
 
-    this.removeService = function(service_id) {
+    this.removeService = function (service_id,package_id) {
         $.ajax({
             url: `${base_url}user/cart/remove-from-cart.php`,
             type: 'POST',
@@ -133,9 +164,9 @@ var cart_cl = new function() {
             data: JSON.stringify({
                 token: localStorage.getItem("userToken"),
                 service_id: service_id,
-                package_id:""
+                package_id: package_id
             }),
-            success: function(res) {
+            success: function (res) {
                 toastr.success(res.message);
                 cart_cl.getCartItems(cart_cl.getCouponForSalon);
                 common.cartCount();
@@ -143,7 +174,7 @@ var cart_cl = new function() {
         });
     };
 
-    this.couponApply = function(code) {
+    this.couponApply = function (code) {
         $.ajax({
             url: `${base_url}user/cart/apply-coupon.php`,
             type: 'POST',
@@ -152,7 +183,7 @@ var cart_cl = new function() {
                 token: localStorage.getItem("userToken"),
                 coupon_code: code
             }),
-            success: function(res) {
+            success: function (res) {
                 toastr.success("Coupon code applied successfully.");
                 $('.applied-coupon-code').text(code);
                 $('#couponModal').modal('hide');
@@ -160,18 +191,18 @@ var cart_cl = new function() {
                 $('.coupon-btn-applied').css('display', 'flex');
                 cart_cl.current_coupon = code;
             },
-            error: function(res) {
+            error: function (res) {
                 toastr.error(res.responseJSON.message);
             }
         });
     };
 
-    this.couponApplyText = function() {
+    this.couponApplyText = function () {
         var text_coupon = $("#text_coupon").val();
         cart_cl.couponApply(text_coupon);
     };
 
-    this.checkout = function() {
+    this.checkout = function () {
         $.ajax({
             url: `${base_url}user/cart/service-checkout.php`,
             type: 'POST',
@@ -182,7 +213,7 @@ var cart_cl = new function() {
                 membership_card_id: cart_cl.membership_card_id,
                 amount_deduct_from_card: 0
             }),
-            success: function(res) {
+            success: function (res) {
                 console.log(res);
                 //                toastr.success(res.message);
 
@@ -192,7 +223,7 @@ var cart_cl = new function() {
                  * The entire list of Checkout fields is available at
                  * https://docs.razorpay.com/docs/checkout-form#checkout-fields
                  */
-                options.handler = function(response) {
+                options.handler = function (response) {
                     //ajax call checkout-response.php
                     console.log("payment success");
                     cart_cl.checkoutResponse(response, res.result.order_number);
@@ -207,7 +238,7 @@ var cart_cl = new function() {
                 options.theme.image_padding = false;
 
                 options.modal = {
-                    ondismiss: function() {
+                    ondismiss: function () {
                         console.log("This code runs when the popup is closed");
                     },
                     // Boolean indicating whether pressing escape key
@@ -225,7 +256,7 @@ var cart_cl = new function() {
         });
     };
 
-    this.checkoutResponse = function(res, order_number) {
+    this.checkoutResponse = function (res, order_number) {
         $.ajax({
             url: `${base_url}user/cart/service-checkout-response.php`,
             type: 'POST',
@@ -237,7 +268,7 @@ var cart_cl = new function() {
                 razorpay_payment_id: res.razorpay_payment_id,
                 razorpay_signature: res.razorpay_signature
             }),
-            success: function(res) {
+            success: function (res) {
                 if (res.payment_status == 'success') {
                     location.href = cart_cl.__url + `payment-status/${order_number}`;
                 } else {
@@ -251,38 +282,38 @@ var cart_cl = new function() {
 
 cart_cl.init();
 
-$(document).ready(function() {
+$(document).ready(function () {
 
-    $(".delivery-address-add-box-btn").click(function() {
+    $(".delivery-address-add-box-btn").click(function () {
         $(this).hide();
         $(".add-delivery-address-form").show();
     });
 
-    $('.coupon-btn-apply').click(function() {
+    $('.coupon-btn-apply').click(function () {
         $('#couponModal').modal('show');
     });
 
-    $('.coupon-modal-close').click(function() {
+    $('.coupon-modal-close').click(function () {
         $('#couponModal').modal('hide');
     });
 
-    $('.coupon-remove-btn').click(function() {
+    $('.coupon-remove-btn').click(function () {
         $('.coupon-btn-applied').hide();
         $('.coupon-btn-apply').show();
     });
 
-    $('.card-btn-apply').click(function() {
+    $('.card-btn-apply').click(function () {
         $('#availableCardBox').show();
         $('.card-btn-apply').hide();
     });
 
-    $('#apply-card').click(function() {
+    $('#apply-card').click(function () {
         $('#availableCardBox').hide();
         $('.card-btn-apply').hide();
         $('.membership-card-box').show();
     });
 
-    $('[name=membership-card]').click(function() {
+    $('[name=membership-card]').click(function () {
         if ($(this).val() == 'card_partial_pay') {
             $('#partialPaymentInput').show();
         } else {

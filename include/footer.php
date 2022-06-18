@@ -319,6 +319,22 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
 <?php if ($page == 'hair-masters') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/hair-masters.js"></script>
 <?php } ?> 
+<?php if ($page == 'user' && $explode_data[1] == 'offers') { ?>
+    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
+    <script type="text/javascript">
+    if (user_profile.userToken) {
+        user_profile.getOffersForUser();
+    }
+    </script>
+<?php } ?>
+<?php if ($page == 'user' && $explode_data[1] == 'query') { ?>
+    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
+    <script type="text/javascript">
+    if (user_profile.userToken) {
+        user_profile.getQueryCategoryList();
+    }
+    </script>
+<?php } ?>    
 </body>
 
 </html>
