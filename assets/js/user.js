@@ -56,40 +56,71 @@ var user_profile = new function () {
                 var result = res.result;
                 result.forEach(function(el){
                     var html = '';
-                    html += `<div class="col-md-4">`;
-                    html += `<div class="makeup-artist-box">`;
-                    html += `<img src="assets/images/salon-shop-1.jpg" class="img-fluid" alt="">`;
-                    html += `<p class="artist-name float-left">${el.salon_name}</p>`;
-                    html += `<p class="rating float-right"><i class="fas fa-star"></i> ${el.rating}</p>`;
-                    html += `<div class="clearfix"></div>`;
-                    html += `<p class="float-left">${el.city},${el.state}</p>`;
-                    html += `<p class="float-right">18 Reviews</p>`;
-                    html += `<div class="clearfix"></div>`;
-//                    html += `<p><small>Makeup at your venue</small></p>`;
-//                    html += `<p class="price float-left"><i class="fas fa-rupee-sign"></i> 499</p>`;
-//                    html += `<p class="artist-caption float-right">For Bride's Regular Makeup</p>`;
-//                    html += `<div class="clearfix"></div>`;
-                    html += `<hr>`;
-                    html += `<div class="text-center">`;
-                    html += `<a href="${common.__url}salon-details/${el.id}" class="btn btn-pink">Book Now</a>`;
-                    html += `</div>`;
-                    html += `</div>`;
+                    html += `<div class="col-md-6">`;
+                        html += `<div class="wishlist-icon" onclick="user_profile.removeFromWishList('${el.id}')" id="salon_${el.id}">`;
+                            html += `<i class="fas fa-heart"></i>`;
+                        html += `</div>`;
+                        html += `<a href="${common.__url}salon-details/${el.id}" class="service-box">`;
+                            html += `<img src="${el.banner_image}" class="img-fluid" alt="">`;
+                            html += `<div class="service-body">`;
+
+                                html += `<h4>${el.salon_name}</h4>`;
+                                html += `<p> <i class="fa fa-map-marker-alt"></i> ${el.city},${el.state}</p>`;
+                                html += `<span class="rating"><i class="fas fa-star"></i> ${el.rating}</span>`;
+                                html += `<hr>`;
+                                html += `<p class="discountPara dp_1">`;
+                                (el.coupons).forEach((couponVal, index) => {
+                                    html += `<i class="fa fa-tags"></i> &nbsp;`;
+                                    if (couponVal.discount_percent){
+                                        html += `${couponVal.discount_percent} % off`+ ` : <b>${couponVal.coupon_code}</b> &nbsp;`;
+                                    } else {
+                                        html +=  `${couponVal.flat_discount_amount} Flat Discount : <b>${couponVal.coupon_code}</b> &nbsp;`;
+                                    }
+                                });
+                                html += `</p>`;
+                            html += `</div>`;
+                        html += `</a>`;
                     html += `</div>`;
                     $("#wishlist_data").append(html);
                 });
             }
         });
     };
+    
+    this.removeFromWishList = function(salon_id) {
+        var post_data = {
+            token: user_profile.userToken,
+            salon_id: salon_id
+        }
+        $.ajax({
+            url: base_url + `/user/favourite/remove-favourite.php`,
+            type: 'POST',
+            dataType: 'JSON',
+            data: JSON.stringify(post_data),
+            success: function (result) {
+                toastr.success('Removed from wishlist.');
+                $("#salon_"+salon_id).parent().hide();
+            }, error: function (result) {
+                toastr.error(result.responseJSON.message);
+                $("#salon_"+salon_id).find(".fa-heart").attr("data-prefix", "fas");
+            }
+        });
+    };
 
     this.getUserBookings = function () {
+        let order_id = $("#booking_number").val();
+        var data = {};
+        data['token'] = localStorage.getItem("userToken");
+        if(order_id.trim()!=''){
+            data['order_id'] = order_id;
+        }
         $.ajax({
             url: `${base_url}user/booking/listing.php`,
             type: 'GET',
             dataType: 'JSON',
-            data: {
-                token: localStorage.getItem("userToken")
-            },
+            data: data,
             success: function (res) {
+                $("#booking_boxes").html("");
                 var data = res.result;
                 data.forEach(function (el) {
                     var html = "";
@@ -242,6 +273,37 @@ var user_profile = new function () {
 
     this.getUserPics = function () {
 
+    };
+    
+    this.bmmtv = function() {
+        $.ajax({
+            url: `${base_url}user/bmm-tv/listing.php`,
+            type: 'GET',
+            dataType: 'JSON',
+            data: {
+                token: localStorage.getItem("userToken")
+            },
+            success: function (result) {
+                let bmmtv = result.result;
+                bmmtv.forEach(function(el){
+                    var html = '';
+                    html += `<div class="col-md-6 col-12 m-10">`;
+                    html += `<a href="${el.video_url}" target="_blank" class="box-shadow">`;
+                    html += `<img src="assets/images/bmm-tv-thumb.jpg" class="img-fluid">`;
+                    html += `<div class="content">`;
+                    html += `<h6 class="content-title">${el.heading} </h6>`;
+                    html += `</div>`;
+                    html += `</a>`;
+                    html += `</div>`;
+                    $("#bmm-tv-data").append(html);
+                });
+              
+            }
+        });
+    };
+    
+    this.getQueryCategoryList = function() {
+        
     };
 };
 

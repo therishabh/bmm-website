@@ -15,9 +15,9 @@
                                     <div class="col-md-6 pr-0">
                                         <div class="input-group search-bar-main">
                                             <i class="fa fa-search seacrh-icons"></i>
-                                            <input type="text" class="form-control" placeholder="Search by order id" aria-label="" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="Search by order id" aria-label="" aria-describedby="basic-addon1" id="booking_number">
                                             <div class="input-group-append">
-                                                <button class="btn btn-primary" type="button">
+                                                <button class="btn btn-primary" type="button" onclick="user_profile.getUserBookings();">
                                                     Search
                                                 </button>
                                             </div>

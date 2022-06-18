@@ -29,7 +29,7 @@
 
         <div id="nodata"></div>
 
-        <div id="salonsTab" class="custom-tab-content d-custom-block">
+        <div id="salonsTab" class="custom-tab-content ">
             <div class="loading-wrapper">
                 <img src="<?php echo $base_url; ?>/assets/images/loader.gif" alt="loading">
             </div>
@@ -90,7 +90,7 @@
         <div id="makeupArtistTab" class="custom-tab-content">
             <div id="makeupArtistData">
                 <div class="row">
-                    <div class="col-md-4">
+<!--                    <div class="col-md-4">
                         <div class="makeup-artist-box service-box">
                             <img src="/assets/images/artist-1.jpg" class="img-fluid" alt="">
                             <p class="artist-name float-left">Anshika Sharma</p>
@@ -104,7 +104,7 @@
                             <p class="price float-left"><i class="fas fa-rupee-sign"></i> 2000</p>
                             <p class="artist-caption float-right">For Bride's Regular Makeup</p>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
 

@@ -256,25 +256,25 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
 <?php if ($page == 'user' && $explode_data[1] == 'profile') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
     <script type="text/javascript">
-        if (user_profile.userToken) {
-            user_profile.getProfileData();
-        }
+    if (user_profile.userToken) {
+        user_profile.getProfileData();
+    }
     </script>
 <?php } ?>
 <?php if ($page == 'user' && $explode_data[1] == 'membership') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
     <script type="text/javascript">
-        if (user_profile.userToken) {
-            user_profile.getUserMemberships();
-        }
+    if (user_profile.userToken) {
+        user_profile.getUserMemberships();
+    }
     </script>
 <?php } ?>
 <?php if ($page == 'user' && $explode_data[1] == 'my-bookings') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
     <script type="text/javascript">
-        if (user_profile.userToken) {
-            user_profile.getUserBookings();
-        }
+    if (user_profile.userToken) {
+        user_profile.getUserBookings();
+    }
     </script>
 <?php } ?>
 <?php if ($page == 'cart') { ?>
@@ -303,11 +303,22 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
 <?php if ($page == 'user' && $explode_data[1] == 'wishlist') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
     <script type="text/javascript">
-        if (user_profile.userToken) {
-            user_profile.getUserWishlist();
-        }
+    if (user_profile.userToken) {
+        user_profile.getUserWishlist();
+    }
     </script>
 <?php } ?>
+<?php if ($page == 'user' && $explode_data[1] == 'bmm-tv') { ?>
+    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
+    <script type="text/javascript">
+    if (user_profile.userToken) {
+        user_profile.bmmtv();
+    }
+    </script>
+<?php } ?>
+<?php if ($page == 'hair-masters') { ?>
+    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/hair-masters.js"></script>
+<?php } ?> 
 </body>
 
 </html>
