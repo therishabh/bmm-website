@@ -204,6 +204,11 @@
             padding: 8px 36px;
         }
         
+        .btn-sm {
+            font-size: 80%;
+            padding: 5px 24px;
+        }
+        
         .btn-brown {
             background: #321f18;
             color: #fff;
