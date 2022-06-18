@@ -39,58 +39,14 @@
         </div>
 
         <div id="servicesTab" class="custom-tab-content">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4 class="mb-0">Filters</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="filter-inner-box">
-                                <h6>Gender</h6>
-                                <ul>
-                                    <li>
-                                        <label> <input type="checkbox" /> Female</label>
-                                    </li>
-                                    <li>
-                                        <label> <input type="checkbox" /> Male</label>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="filter-inner-box">
-                                <h6>Categories</h6>
-                                <ul>
-                                    <li>
-                                        <label> <input type="checkbox" /> Category one</label>
-                                    </li>
-                                    <li>
-                                        <label> <input type="checkbox" /> Category two</label>
-                                    </li>
-                                    <li>
-                                        <label> <input type="checkbox" /> Category three</label>
-                                    </li>
-                                    <li>
-                                        <label> <input type="checkbox" /> Category four</label>
-                                    </li>
-                                    <li>
-                                        <label> <input type="checkbox" /> Category five</label>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-9">
-                    <div id="serviceData">
-                    </div>
-                </div>
+            <div id="serviceData">
             </div>
         </div>
 
         <div id="makeupArtistTab" class="custom-tab-content">
             <div id="makeupArtistData">
                 <div class="row">
-<!--                    <div class="col-md-4">
+                    <!--                    <div class="col-md-4">
                         <div class="makeup-artist-box service-box">
                             <img src="/assets/images/artist-1.jpg" class="img-fluid" alt="">
                             <p class="artist-name float-left">Anshika Sharma</p>
