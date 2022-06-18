@@ -1,4 +1,3 @@
-
 <section class="makeup-artist-1">
     <div class="container">
         <div class="row">
@@ -100,11 +99,11 @@
                 </div>
                 <div class="services-pricing">
                     <div class="services-heading">
-                        <h2 class="h2-heading">Services & Pricing</h2>
+                        <h2 class="h2-heading">Info</h2>
                     </div>
 
                     <div class="row">
-                        <div class="col-md-6">
+                        <!-- <div class="col-md-6">
                             <div class="services-pricing-div">
                                 <div class="services-pricing-child">
                                     <a href="#">
@@ -140,7 +139,7 @@
                                 </div>
                             </div>
 
-                        </div>
+                        </div> -->
 
                         <div class="col-md-6">
                             <div class="services-pricing-div">
@@ -203,7 +202,60 @@
 
                 </div>
             </div>
+            <div class="col-md-12">
+                <div class="services-pricing">
+                    <div class="services-heading maekup-artist-heading">
+                        <h2 class="h2-heading">Services & Pricing</h2>
+                        <button class="btn btn-pink bookServiceBtn d-custom-none">Book</button>
+                    </div>
 
+                    <div class="service-wrapper">
+                        <div class="service-wrapper-body p-0">
+
+                            <div class="service-wrapper-list">
+                                <div>
+                                    <h5>AirBrush Bridal Makeup </h5>
+                                    <div>
+
+                                        <span class="discounted_price">Rs. 20000</span>
+                                    </div>
+                                </div>
+                                <div>
+                                <input type="checkbox" class="makeup-artist-checkbox" />
+                                </div>
+                            </div>
+
+                            <div class="service-wrapper-list">
+                                <div>
+                                    <h5>Bridal Makeup </h5>
+                                    <div>
+
+                                        <span class="discounted_price">Rs. 12000</span>
+                                    </div>
+                                </div>
+                                <div>
+                                <input type="checkbox" class="makeup-artist-checkbox" />
+                                </div>
+                            </div>
+
+                            <div class="service-wrapper-list">
+                                <div>
+                                    <h5>Guest Makeup </h5>
+                                    <div>
+
+                                        <span class="discounted_price">Rs. 3000</span>
+                                    </div>
+                                </div>
+                                <div>
+                                <input type="checkbox" class="makeup-artist-checkbox" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -263,3 +315,16 @@
 </section>
 
 <script src="assets/highslide/highslide-with-gallery.js"></script>
+
+<script>
+    $(function(){
+        $('.makeup-artist-checkbox').click(function(){
+            if($('.makeup-artist-checkbox:checked').length){
+                $('.bookServiceBtn').show();
+            }
+            else{
+                $('.bookServiceBtn').hide();
+            }
+        })
+    })
+</script>
