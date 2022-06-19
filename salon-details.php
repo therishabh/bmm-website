@@ -20,6 +20,50 @@
 
 <section class="service-detail-list-section">
     <div class="container">
+
+    <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0">Filters</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="filter-inner-box">
+                                <h6>Gender</h6>
+                                <ul>
+                                    <li>
+                                        <label> <input type="checkbox" /> Female</label>
+                                    </li>
+                                    <li>
+                                        <label> <input type="checkbox" /> Male</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="filter-inner-box">
+                                <h6>Categories</h6>
+                                <ul>
+                                    <li>
+                                        <label> <input type="checkbox" /> Category one</label>
+                                    </li>
+                                    <li>
+                                        <label> <input type="checkbox" /> Category two</label>
+                                    </li>
+                                    <li>
+                                        <label> <input type="checkbox" /> Category three</label>
+                                    </li>
+                                    <li>
+                                        <label> <input type="checkbox" /> Category four</label>
+                                    </li>
+                                    <li>
+                                        <label> <input type="checkbox" /> Category five</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+
         <div id="highlight_service" class=" d-none">
             <div class="service-wrapper">
                 <div class="service-wrapper-body">
@@ -50,5 +94,7 @@
 
         <h3>All Services</h3>
         <div id="accordion"></div>
+                </div>
+    </div>
     </div>
 </section>

@@ -5,8 +5,8 @@
             <div class="col-md-8">
                 <div class="white-box p-4 cart-box-1">
                     <div class="heading mb-3" id='username'></div>
-                    <div class="heading"><span id='landline_no'></span> <i class="fas fa-check-circle text-success"></i> </div>
-                    <div class="heading"><span id='email'></span>  </div>
+                    <div class="heading"><span id='landline_no'></span> <i class="fas fa-check-circle text-success"></i> <a href="#" class="btn btn-pink btn-sm" data-toggle="modal" data-target="#verifyNumberModal">Verify</a> </div>
+                    <div class="heading"><span id='email'></span> <a href="#" class="btn btn-pink btn-sm" data-toggle="modal" data-target="#verifyEmailModal">Verify</a>   </div>
                 </div>
 
                 <div class="white-box p-4 cart-box-2 mt-3">
@@ -308,4 +308,49 @@
 
         </div>
     </div>
+</div>
+
+
+<!-- The Modal -->
+<div class="modal" id="verifyNumberModal">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Verify Mobile</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body text-center p-4">
+        <input type="text" class="form-control" placeholder="Enter mobile number" />
+        <button type="button" class="btn btn-pink mt-3">Verify</button>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+<!-- The Modal -->
+<div class="modal" id="verifyEmailModal">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Verify Email</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body text-center p-4">
+        <input type="text" class="form-control" placeholder="Enter Email id" />
+        <button type="button" class="btn btn-pink mt-3">Verify</button>
+      </div>
+
+
+    </div>
+  </div>
 </div>
