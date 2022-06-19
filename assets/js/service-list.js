@@ -23,7 +23,7 @@ var service_list = new function () {
         if (type == 2) {
 //                    $("#salonsTab_li").removeClass('d-none');
 //                    $("#servicesTab_li").removeClass('d-none');
-                    $("#bridalTab_li").removeClass('d-none');
+            $("#bridalTab_li").removeClass('d-none');
             $("#luxeTab_li").removeClass('d-none');
             $("#makeupArtistTab_li").removeClass('d-none');
             $("#makeupArtistTab_li").addClass('active');
@@ -98,7 +98,7 @@ var service_list = new function () {
                                 val.services.forEach(serviceVal => {
                                     serviceWrapper_i += `
                                     
-                                    <div  id="${serviceVal.id}" class="col-lg-12">
+                                    <div  id="${serviceVal.id}" class="col-lg-12 ">
                                         <div>
                                             <h6>${serviceVal.name} [${serviceVal.category}] </h6>
                                             <div>
@@ -107,7 +107,7 @@ var service_list = new function () {
                                             </div>
                                         </div>
                                         <div>
-                                            <button class="btn btn-pink bookServiceBtn">Book</button>
+                                            <button class="btn btn-pink" onclick="service_list.bookServiceSalon(${serviceVal.id},this);">Book</button>
                                         </div>
                                     </div>    
                                     `
@@ -209,7 +209,7 @@ var service_list = new function () {
                                `)
                         }
 
-                        
+
                         $('#serviceData').append(`
                     <div class="service-wrapper">
                         <div class="service-wrapper-header">
@@ -238,6 +238,9 @@ var service_list = new function () {
                     $('#nodata').html('<div><img src="assets/images/nodata.png" /><h5>Data is not available...</h5></div>')
                 }
 
+            },
+            complete: function () {
+                service_list.serviceInfo();
             }
         });
     }
@@ -245,7 +248,8 @@ var service_list = new function () {
     this.addToCart = function () {
         var post_data = {
             token: token,
-            service_id: serviceId
+            service_id: serviceId,
+            package_id: ''
         }
         $.ajax({
             url: base_url + `/user/cart/add-to-cart.php`,
@@ -314,6 +318,58 @@ var service_list = new function () {
             },
             success: function (result) {
                 console.log(result);
+            }
+        });
+    };
+
+    this.bookServiceSalon = function (serviceId, this__) {
+        var post_data = {
+            token: token,
+            service_id: serviceId,
+            package_id: ''
+        }
+        $.ajax({
+            url: base_url + `/user/cart/add-to-cart.php`,
+            type: 'POST',
+            dataType: 'JSON',
+            data: JSON.stringify(post_data),
+            success: function (result) {
+                toastr.success('Service added in cart.');
+                common.cartCount();
+            }, error: function (result) {
+                toastr.error(result.responseJSON.message);
+                common.cartCount();
+            }
+        });
+    };
+
+    this.serviceInfo = function () {
+        $.ajax({
+            url: base_url + `/user/search/get-service-info.php`,
+            type: 'GET',
+            data: {
+                service_id: service_id,
+            },
+            dataType: 'JSON',
+            success: function (res) {
+                var data = res.result;
+                if (type != '') {
+                    $("#level1").html('Search');
+                }
+                if (type == 1) {
+                    $("#level1").html('Salon');
+                }
+                if (type == 2) {
+                    $("#level1").html('Makeup Artist');
+                }
+                if (type == 3) {
+                    $("#level1").html(`Men's`);
+                }
+                if (type == 4) {
+                    $("#level1").html('Bridal Makeup');
+                }
+                $("#level2").html(data.type);
+                $("#level3").html(data.name);
             }
         });
     };

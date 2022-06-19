@@ -9,38 +9,16 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <h2 class="h2-heading">My Pic</h2>
-                                        <h5 class="float-left">Photos</h5>
-                                        <a href="#" class="btn btn-pink float-right">Upload Photos</a>
+                                        <!--<h5 class="float-left">Photos</h5>-->
+                                        <a href="javascript:user_profile.openUpload();" class="btn btn-pink float-right">Upload Photos</a>
+                                        <input type="file" id="myfile" name="myfile" style="display:none;" onchange="user_profile.uploadImage(this);">
                                         <div class="clearfix"></div>
-                                        <div class="row mt-4 user-pic">
-                                            <div class="col-md-3">
-                                                <img src="assets/images/bmm-post-1.jpg" class="img-thumbnail">
-                                            </div>
-                                            <div class="col-md-3">
-                                                <img src="assets/images/bmm-post-1.jpg" class="img-thumbnail">
-                                            </div>
-                                            <div class="col-md-3">
-                                                <img src="assets/images/bmm-post-1.jpg" class="img-thumbnail">
-                                            </div>
-                                            <div class="col-md-3">
-                                                <img src="assets/images/bmm-post-1.jpg" class="img-thumbnail">
-                                            </div>
-                                            <div class="col-md-3 mt-4">
-                                                <img src="assets/images/bmm-post-1.jpg" class="img-thumbnail">
-                                            </div>
-                                            <div class="col-md-3 mt-4">
-                                                <img src="assets/images/bmm-post-1.jpg" class="img-thumbnail">
-                                            </div>
-                                            <div class="col-md-3 mt-4">
-                                                <img src="assets/images/bmm-post-1.jpg" class="img-thumbnail">
-                                            </div>
-                                            <div class="col-md-3 mt-4">
-                                                <img src="assets/images/bmm-post-1.jpg" class="img-thumbnail">
-                                            </div>
+                                        <div class="row mt-4 user-pic" id="user-pic">
+                                            
                                         </div>
 
 
-                                        <hr>
+<!--                                        <hr>
                                         <h5 class="float-left">Videos</h5>
                                         <a href="#" class="btn btn-pink float-right">Upload Videos</a>
                                         <div class="clearfix"></div>
@@ -73,7 +51,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </section>
+                                        </section>-->
 
                                     </div>
 

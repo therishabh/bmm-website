@@ -21,7 +21,7 @@ var cart_cl = new function () {
         } else {
             cart_cl.getUserDetails();
             cart_cl.getCartItems(cart_cl.getCouponForSalon);
-
+            cart_cl.getUserAddress();
         }
     };
 
@@ -277,6 +277,29 @@ var cart_cl = new function () {
             }
         });
     };
+    
+    this.getUserAddress = function() {
+        $.ajax({
+            url: `${base_url}user/address/listing.php`,
+            type: 'GET',
+            dataType: 'JSON',
+            data: {
+                token: localStorage.getItem("userToken")
+            },
+            success: function (res) {
+                var addresses = res.result;
+                if(addresses.length==0){
+                    $("#no_address_found").show();
+                    $("#address_row").hide();
+                } else {
+                    $("#no_address_found").hide();
+                    $("#address_row").show();
+                }
+            }
+        });
+    };
+    
+    
 
 };
 

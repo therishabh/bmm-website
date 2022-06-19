@@ -9,10 +9,10 @@
 
                     <nav class="custom-breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Salon</a></li>
-                            <li class="breadcrumb-item"><a href="#">Hair Styling</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Hair Cut</li>
+                            <li class="breadcrumb-item"><a href="<?php echo $base_url; ?>">Home</a></li>
+                            <li class="breadcrumb-item"><a href="javascript:void(0);" id="level1">-</a></li>
+                            <li class="breadcrumb-item"><a href="javascript:void(0);" id="level2">-</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"  id="level3">-</li>
                         </ol>
                     </nav>
 

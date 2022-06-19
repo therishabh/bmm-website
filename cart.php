@@ -16,8 +16,21 @@
                 </div>
 
                 <div class="white-box p-4 cart-box-3 mt-3">
+                    <h4 id="desktop-address-heading1"> Choose your Booking Date </h4>
+                    <input type="date" id="booking_date"  class="form-control"/>
+                </div>
+                <div class="white-box p-4 cart-box-3 mt-3">
+                    <h4 id="desktop-address-heading1"> Choose your Time Slot </h4>
+                    <select id="booking_slot">
+                        <option>Choose Time Slot</option>
+                        <option></option>
+                    </select>
+                </div>
+
+                <div class="white-box p-4 cart-box-3 mt-3">
                     <div class="delivery-address-box">
                         <div class="row">
+                            <span class="row col-lg-12" id="address_row">
                             <div class="col-lg-6">
                                 <div class="delivery-address-inner-box">
                                     <div>
@@ -29,21 +42,22 @@
                                         <h4>Rohit Verma</h4>
                                         <p>104, Maujpur, <br>North East Delhi, Delhi - 110053<br>INDIA</p>
                                         <ul>
-                                        <li><a href="#">Edit</a></li>
+                                            <li><a href="#">Edit</a></li>
                                             <li><a href="#">Remove</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
+                            </span>
                             <div class="col-lg-6" id="no_address_found">
                                 <div class="delivery-address-inner-box">
-                                    
+
                                     <div>
                                         <p>No address found.</p>
                                     </div>
                                 </div>
                             </div>
-                           
+
                         </div>
                     </div>
                 </div>
@@ -215,7 +229,7 @@
             <!-- <button class="btn btn-pink float-right">Proceed to Pay</button> -->
         </div>
     </div>
-    </div>
+</div>
 </section>
 
 <!-- Register Modal -->

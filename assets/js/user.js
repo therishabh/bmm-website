@@ -36,16 +36,16 @@ var user_profile = new function () {
             data: JSON.stringify({
                 token: localStorage.getItem("userToken"),
                 name: name,
-                dob : dob,
-                doa : doa,
-                gender:gender
+                dob: dob,
+                doa: doa,
+                gender: gender
             }),
             success: function (result) {
                 toastr.success(result.message);
 
             }
         });
-        
+
     };
 
     this.userSessionCheck = function () {
@@ -66,40 +66,40 @@ var user_profile = new function () {
             },
             success: function (res) {
                 var result = res.result;
-                result.forEach(function(el){
+                result.forEach(function (el) {
                     var html = '';
                     html += `<div class="col-md-6">`;
-                        html += `<div class="wishlist-icon" onclick="user_profile.removeFromWishList('${el.id}')" id="salon_${el.id}">`;
-                            html += `<i class="fas fa-heart"></i>`;
-                        html += `</div>`;
-                        html += `<a href="${common.__url}salon-details/${el.id}" class="service-box">`;
-                            html += `<img src="${el.banner_image}" class="img-fluid" alt="">`;
-                            html += `<div class="service-body">`;
+                    html += `<div class="wishlist-icon" onclick="user_profile.removeFromWishList('${el.id}')" id="salon_${el.id}">`;
+                    html += `<i class="fas fa-heart"></i>`;
+                    html += `</div>`;
+                    html += `<a href="${common.__url}salon-details/${el.id}" class="service-box">`;
+                    html += `<img src="${el.banner_image}" class="img-fluid" alt="">`;
+                    html += `<div class="service-body">`;
 
-                                html += `<h4>${el.salon_name}</h4>`;
-                                html += `<p> <i class="fa fa-map-marker-alt"></i> ${el.city},${el.state}</p>`;
-                                html += `<span class="rating"><i class="fas fa-star"></i> ${el.rating}</span>`;
-                                html += `<hr>`;
-                                html += `<p class="discountPara dp_1">`;
-                                (el.coupons).forEach((couponVal, index) => {
-                                    html += `<i class="fa fa-tags"></i> &nbsp;`;
-                                    if (couponVal.discount_percent){
-                                        html += `${couponVal.discount_percent} % off`+ ` : <b>${couponVal.coupon_code}</b> &nbsp;`;
-                                    } else {
-                                        html +=  `${couponVal.flat_discount_amount} Flat Discount : <b>${couponVal.coupon_code}</b> &nbsp;`;
-                                    }
-                                });
-                                html += `</p>`;
-                            html += `</div>`;
-                        html += `</a>`;
+                    html += `<h4>${el.salon_name}</h4>`;
+                    html += `<p> <i class="fa fa-map-marker-alt"></i> ${el.city},${el.state}</p>`;
+                    html += `<span class="rating"><i class="fas fa-star"></i> ${el.rating}</span>`;
+                    html += `<hr>`;
+                    html += `<p class="discountPara dp_1">`;
+                    (el.coupons).forEach((couponVal, index) => {
+                        html += `<i class="fa fa-tags"></i> &nbsp;`;
+                        if (couponVal.discount_percent) {
+                            html += `${couponVal.discount_percent} % off` + ` : <b>${couponVal.coupon_code}</b> &nbsp;`;
+                        } else {
+                            html += `${couponVal.flat_discount_amount} Flat Discount : <b>${couponVal.coupon_code}</b> &nbsp;`;
+                        }
+                    });
+                    html += `</p>`;
+                    html += `</div>`;
+                    html += `</a>`;
                     html += `</div>`;
                     $("#wishlist_data").append(html);
                 });
             }
         });
     };
-    
-    this.removeFromWishList = function(salon_id) {
+
+    this.removeFromWishList = function (salon_id) {
         var post_data = {
             token: user_profile.userToken,
             salon_id: salon_id
@@ -111,10 +111,10 @@ var user_profile = new function () {
             data: JSON.stringify(post_data),
             success: function (result) {
                 toastr.success('Removed from wishlist.');
-                $("#salon_"+salon_id).parent().hide();
+                $("#salon_" + salon_id).parent().hide();
             }, error: function (result) {
                 toastr.error(result.responseJSON.message);
-                $("#salon_"+salon_id).find(".fa-heart").attr("data-prefix", "fas");
+                $("#salon_" + salon_id).find(".fa-heart").attr("data-prefix", "fas");
             }
         });
     };
@@ -123,7 +123,7 @@ var user_profile = new function () {
         let order_id = $("#booking_number").val();
         var data = {};
         data['token'] = localStorage.getItem("userToken");
-        if(order_id.trim()!=''){
+        if (order_id.trim() != '') {
             data['order_id'] = order_id;
         }
         $.ajax({
@@ -305,10 +305,54 @@ var user_profile = new function () {
     };
 
     this.getUserPics = function () {
+        $.ajax({
+            url: `${base_url}user/gallery/listing-images.php`,
+            type: 'GET',
+            dataType: 'JSON',
+            data: {
+                token: localStorage.getItem("userToken")
+            },
+            success: function (result) {
+                $("#user-pic").html('');
+                let pic = result.result;
+                pic.forEach(function (el) {
+                    var html = '';
+                    html += `<div class="col-md-3 mt-4">`;
+                    html += `<img src="${el.url}" class="img-thumbnail">`;
+                    html += `</div>`;
+                    $("#user-pic").append(html);
+                });
 
+            }
+        });
     };
-    
-    this.bmmtv = function() {
+
+    this.openUpload = function () {
+        $('#myfile').click();
+    };
+
+    this.uploadImage = function (this_) {
+        var formdata = false;
+        if (window.FormData) {
+            formdata = new FormData();
+        }
+        console.log(this_.files);
+        formdata.append("files[]", this_.files[0],this_.files[0].name);
+        formdata.append("token", localStorage.getItem("userToken"));
+        jQuery.ajax({
+            url: `${base_url}user/gallery/upload-images.php`,
+            type: "POST",
+            data: formdata,
+            processData: false,
+            contentType: false,
+            success: function (res) {
+                toastr.success(res.message);
+                user_profile.getUserPics();
+            }
+        });
+    };
+
+    this.bmmtv = function () {
         $.ajax({
             url: `${base_url}user/bmm-tv/listing.php`,
             type: 'GET',
@@ -318,7 +362,7 @@ var user_profile = new function () {
             },
             success: function (result) {
                 let bmmtv = result.result;
-                bmmtv.forEach(function(el){
+                bmmtv.forEach(function (el) {
                     var html = '';
                     html += `<div class="col-md-6 col-12 m-10">`;
                     html += `<a href="${el.video_url}" target="_blank" class="box-shadow">`;
@@ -330,13 +374,13 @@ var user_profile = new function () {
                     html += `</div>`;
                     $("#bmm-tv-data").append(html);
                 });
-              
+
             }
         });
     };
-    
-    this.getQueryCategoryList = function() {
-        
+
+    this.getQueryCategoryList = function () {
+
         $.ajax({
             url: `${base_url}user/query/category-list.php`,
             type: 'GET',
@@ -346,19 +390,19 @@ var user_profile = new function () {
             },
             success: function (res) {
                 var category = res.result;
-                category.forEach(function(el){
+                category.forEach(function (el) {
                     $("#category-list").append(`<option value="${el.id}">${el.name}</option>`);
                 });
-                
+
             },
-            complete : function(res) {
+            complete: function (res) {
                 user_profile.getQueryList();
             }
         });
     };
-    
-    this.getQueryList = function() {
-        
+
+    this.getQueryList = function () {
+
         $.ajax({
             url: `${base_url}user/query/listing.php`,
             type: 'GET',
@@ -371,17 +415,17 @@ var user_profile = new function () {
                 var query = res.result;
                 var i = 1;
                 $("#query_tbody").html('');
-                query.forEach(function(el){
+                query.forEach(function (el) {
                     var html = "";
                     html += `<tr>`;
                     html += `<td>${i}</td>`;
                     html += `<td>${el.title}</td>`;
-                    if(el.category!=null){
+                    if (el.category != null) {
                         html += `<td>${el.category.name}</td>`;
                     } else {
                         html += `<td>-</td>`;
                     }
-                    if((el.query_status).toLowerCase()=='closed'){
+                    if ((el.query_status).toLowerCase() == 'closed') {
                         html += `<td><span class="text-success">${el.query_status}</span></td>`;
                     } else {
                         html += `<td><span class="text-warning">${el.query_status}</span></td>`;
@@ -394,25 +438,25 @@ var user_profile = new function () {
             }
         });
     };
-    
-    this.querySave = function() {
+
+    this.querySave = function () {
         var title = $("#title").val();
         var category_list = $("#category-list").val();
         var description = $("#description").val();
-        if(title.trim()=='' || description.trim()==''){
+        if (title.trim() == '' || description.trim() == '') {
             toastr.error("Kindly fill all enquiry details.");
             return false;
         }
-        
-         $.ajax({
+
+        $.ajax({
             url: `${base_url}user/query/add-new-query.php`,
             type: 'POST',
             dataType: 'JSON',
             data: JSON.stringify({
                 token: localStorage.getItem("userToken"),
                 title: title,
-                category_id : category_list,
-                description : description
+                category_id: category_list,
+                description: description
             }),
             success: function (result) {
                 toastr.success(result.message);
@@ -421,31 +465,71 @@ var user_profile = new function () {
                 user_profile.getQueryList();
             }
         });
-         
-         
+
+
     };
-    
-    
-    this.query_detail = function() {
+
+
+    this.query_detail = function () {
         var query_id = $("#query_id").val();
         $.ajax({
-            url: `${base_url}user/query/listing.php`,
+            url: `${base_url}user/query/detail.php`,
             type: 'GET',
             dataType: 'JSON',
             data: {
-                token: localStorage.getItem("userToken")
+                token: localStorage.getItem("userToken"),
+                query_id: query_id
             },
             success: function (res) {
-                console.lof
-                var category = res.result;
-                category.forEach(function(el){
-                    $("#category-list").append(`<option value="${el.id}">${el.name}</option>`);
+                var data = res.result;
+                $("#query_title").html(data.title);
+                $("#query_body").html('');
+                var reply = data.replies;
+
+                reply.forEach(function (el) {
+                    var html = '';
+                    html += `<div class="chat-box-left">`;
+                    html += `<div class="inner-chat-box">`;
+                    html += `<div class="chat-user-title">${el.replied_by}</div>`;
+                    html += `<div>`;
+                    html += `<p>`;
+                    html += `${el.reply_text}`;
+                    html += `</p>`;
+                    html += `</div>`;
+                    html += `</div>`;
+                    html += `</div>`;
+                    $("#query_body").append(html);
                 });
-                
+
+
             }
         });
-        
-    }
+
+    };
+
+    this.replyQuery = function () {
+        var query_id = $("#query_id").val();
+        var description = $("#description").val();
+        $.ajax({
+            url: `${base_url}user/query/reply.php`,
+            type: 'POST',
+            dataType: 'JSON',
+            data: JSON.stringify({
+                token: localStorage.getItem("userToken"),
+                query_id: query_id,
+                description: description
+            }),
+            success: function (result) {
+                toastr.success(result.message);
+                $("#description").val('');
+                user_profile.query_detail();
+
+            }, error: function (result) {
+                toastr.error(result.responseJSON.message);
+            }
+        });
+    };
+
 };
 
 user_profile.userSessionCheck();
