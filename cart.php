@@ -23,7 +23,7 @@
                     <h4 id="desktop-address-heading1"> Choose your Time Slot </h4>
                     <select id="booking_slot">
                         <option>Choose Time Slot</option>
-                        <option></option>
+                        
                     </select>
                 </div>
 
@@ -31,23 +31,9 @@
                     <div class="delivery-address-box">
                         <div class="row">
                             <span class="row col-lg-12" id="address_row">
-                            <div class="col-lg-6">
-                                <div class="delivery-address-inner-box">
-                                    <div>
-                                        <label class="radio-container billing-radio-btn">
-                                            <input type="radio" name="existing_address" checked="" value="">
-                                            <span class="checkmark"></span> </label>
-                                    </div>
-                                    <div>
-                                        <h4>Rohit Verma</h4>
-                                        <p>104, Maujpur, <br>North East Delhi, Delhi - 110053<br>INDIA</p>
-                                        <ul>
-                                            <li><a href="#">Edit</a></li>
-                                            <li><a href="#">Remove</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                            
+                                
+                            
                             </span>
                             <div class="col-lg-6" id="no_address_found">
                                 <div class="delivery-address-inner-box">
@@ -72,7 +58,7 @@
                             <form action="" id="" name="" method="post">
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <div class="form-group"> <label>Full Name <span class="text-danger">*</span></label><input alt="is_alphanumeric" name="full_name" id="desktop-full_name" type="text" class="form-control" maxlength="50"></div>
+                                        <div class="form-group"> <label>Full Name <span class="text-danger">*</span></label><input alt="is_alphanumeric" name="full_name" id="desktop-full_name" type="text" class="form-control" maxlength="50" required=""></div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group"> <label>Phone Number <span class="text-danger">*</span></label>
@@ -82,30 +68,30 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label>Building Number</label>
-                                            <input type="text" name="building_no" id="desktop-building_no" class="form-control" maxlength="50">
+                                            <input type="text" name="building_no" id="desktop-building_no" class="form-control" maxlength="50"  required="">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
-                                        <div class="form-group"> <label>Street Address <span class="text-danger">*</span></label> <input name="street_address" id="desktop-street_address" type="text" class="form-control" maxlength="50"> </div>
+                                        <div class="form-group"> <label>Street Address <span class="text-danger">*</span></label> <input name="street_address" id="desktop-street_address" type="text" class="form-control" maxlength="50" required=""> </div>
                                     </div>
                                     <div class="col-lg-6 d-none">
                                         <div class="form-group">
                                             <label>Area <span class="text-danger">*</span></label>
-                                            <input type="text" name="area" id="desktop-area" class="form-control" maxlength="50">
+                                            <input type="text" name="area" id="desktop-area" class="form-control" maxlength="50"  required="">
                                         </div>
                                     </div>
                                     <div class="col-lg-6 d-none">
                                         <div class="form-group">
                                             <label>Country <span class="text-danger">*</span></label>
-                                            <select name="country_id" id="desktop-country_id" class="form-control">
-                                                <option selected="" value="99">India</option>
+                                            <select name="country_id" id="desktop-country_id" class="form-control"  required="">
+                                                <option selected="" value="IN">India</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label>State/Province/Area: <span class="text-danger">*</span></label>
-                                            <select name="state_name" id="desktop-state_name" class="form-control loadoptions" data-listtype="city" data-listid="desktop-city_name">
+                                            <select name="state_name" id="desktop-state_name" class="form-control loadoptions" data-listtype="city" data-listid="desktop-city_name"  required="">
                                                 <option value="">Select</option>
                                                 <option value="Andhra Pradesh">Andhra Pradesh</option>
                                                 <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -148,7 +134,7 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label>City <span class="text-danger">*</span></label>
-                                            <select name="city_name" data-selval="" id="desktop-city_name" class="form-control"></select>
+                                            <input type="text"  name="city_name" data-selval="" id="desktop-city_name" class="form-control" required=""/>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -156,11 +142,11 @@
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group"><label>Landmark</label>
-                                            <input type="text" name="delivery_instructions" id="desktop-delivery_instructions" class="form-control" maxlength="50">
+                                            <input type="text" name="delivery_landmark" id="desktop-delivery_landmark" class="form-control" maxlength="50">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
-                                        <div class="form-group"> <button class="btn btn-pink" id="">Add Address</button> </div>
+                                        <div class="form-group"> <button class="btn btn-pink" onclick="cart_cl.addBillingAddress();">Add Address</button> </div>
                                     </div>
                                     <div class="col-lg-6 mt-4">
                                         <div class="form-group"> <label> <input value="1" id="" name="is_default" type="checkbox"> Use as my default address</label> </div>
@@ -182,32 +168,32 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="text" placeholder="Enter card number" class="form-control" />
+                                    <input type="text" placeholder="Enter card number" class="form-control" id="card_number" />
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="text" placeholder="Enter Expiry Date" class="form-control" />
+                                    <input type="date" placeholder="Enter Expiry Date" class="form-control" id="expiry_date" />
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group text-center mb-0">
-                                    <button class="btn btn-pink" id="apply-card">APPLY</button>
+                                    <button class="btn btn-pink"  onclick="cart_cl.membershipCardVerify();">APPLY</button>
                                     <button class="btn btn-secondary" id="">CANCEL</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="membership-card-box">
+                    <div class="membership-card-box" id="membership_card_info">
                         <div class="form-group mb-1">
-                            <label><b> Card Number</b> : 1234 1234 1234</label>
-                            <label><b> Expiry Date</b> : 06/2025</label>
-                            <label><b> Total Amount</b> : Rs. 5000/-</label>
-                            <label><b> Balance Amount</b> : Rs. 3500/-</label>
+                            <label><b> Card Number</b> : <span id="c_number"></span></label>
+                            <label><b> Expiry Date</b> : <span id="c_expiry"></span></label>
+                            <label><b> Total Amount</b> : Rs. <span id="c_total_amount"></span>/-</label>
+                            <label><b> Balance Amount</b> : Rs. <span id="c_balance_amount"></span>/-</label>
                         </div>
                         <div class="form-group m-0 p-0">
-                            <label> <input type="radio" name="membership-card" checked value="card_full_pay" /> Pay full amount with card</label>
+                            <label> <input type="radio" name="membership-card" value="card_full_pay" /> Pay full amount with card</label>
                             <label> <input type="radio" name="membership-card" value="card_partial_pay" /> Pay Partial amount with card</label>
                             <input type="text" class="form-control" placeholder="Enter partial amount" id="partialPaymentInput" />
                         </div>
