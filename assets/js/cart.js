@@ -36,16 +36,16 @@ var cart_cl = new function () {
             success: function (result) {
                 $("#username").html(result.name);
                 $("#landline_no").html(result.mobile_no);
-                
-                if(result.email_id!=''){
+
+                if (result.email_id != '') {
                     $("#email").html(result.email_id);
-                    if(result.is_email_verified==1){
+                    if (result.is_email_verified == 1) {
                         $("#email").append('<i class="fas fa-check-circle text-success"></i>');
                     } else {
                         $("#email").append(` <a href="${common.__url}user/profile">Verify</a>`);
                     }
                 }
-                
+
             }
         });
     };
@@ -83,7 +83,7 @@ var cart_cl = new function () {
                         $('#service-list').append(html);
                     });
                 }
-                
+
                 if (res.result.packages != undefined) {
                     $('#service-list').append("<hr><h6><b>Packages</b></h6>");
                     (res.result.packages).forEach(function (service) {
@@ -143,6 +143,9 @@ var cart_cl = new function () {
                     });
 
 
+                },
+                complete: function () {
+                    cart_cl.getSalonTimings();
                 }
             });
         } else {
@@ -156,7 +159,7 @@ var cart_cl = new function () {
         cart_cl.couponApply(coupon_code);
     };
 
-    this.removeService = function (service_id,package_id) {
+    this.removeService = function (service_id, package_id) {
         $.ajax({
             url: `${base_url}user/cart/remove-from-cart.php`,
             type: 'POST',
@@ -203,6 +206,19 @@ var cart_cl = new function () {
     };
 
     this.checkout = function () {
+        var radio_card_payment = $('input[name="membership-card"]:checked').val();
+        var card_pay=0;
+        if(radio_card_payment=="card_full_pay"){
+            card_pay=cart_cl.total_amount;
+        } else if(radio_card_payment=="card_partial_pay"){
+            card_pay = $("#partialPaymentInput").val();
+        } else{
+            card_pay =0;
+        }
+        var booking_date = $('#booking_date').val();
+        var booking_slot = $('#booking_slot').val();
+        var existing_address = $('input[name="existing_address"]:checked').val();
+        console.log(existing_address);
         $.ajax({
             url: `${base_url}user/cart/service-checkout.php`,
             type: 'POST',
@@ -211,7 +227,11 @@ var cart_cl = new function () {
                 token: localStorage.getItem("userToken"),
                 coupon_code: cart_cl.current_coupon,
                 membership_card_id: cart_cl.membership_card_id,
-                amount_deduct_from_card: 0
+                amount_deduct_from_card: card_pay,
+                booking_date:booking_date,
+                booking_time_slot:booking_slot,
+                billing_address_id:existing_address,
+                venue_address_id:""
             }),
             success: function (res) {
                 console.log(res);
@@ -252,7 +272,11 @@ var cart_cl = new function () {
                 var rzp = new Razorpay(options);
                 rzp.open();
 
+            },
+            error: function (res) {
+                toastr.error(res.responseJSON.message);
             }
+            
         });
     };
 
@@ -277,8 +301,8 @@ var cart_cl = new function () {
             }
         });
     };
-    
-    this.getUserAddress = function() {
+
+    this.getUserAddress = function () {
         $.ajax({
             url: `${base_url}user/address/listing.php`,
             type: 'GET',
@@ -288,18 +312,198 @@ var cart_cl = new function () {
             },
             success: function (res) {
                 var addresses = res.result;
-                if(addresses.length==0){
+                if (addresses.length == 0) {
                     $("#no_address_found").show();
                     $("#address_row").hide();
                 } else {
                     $("#no_address_found").hide();
                     $("#address_row").show();
+                    $("#address_row").html('');
+                    addresses.forEach(function (el) {
+                        var html = '';
+                        html += `<div class="col-lg-6">`;
+                        html += `<div class="delivery-address-inner-box">`;
+                        html += `<div>`;
+                        html += `<label class="radio-container billing-radio-btn">`;
+                        html += `<input type="radio" name="existing_address"  value="${el.id}">`;
+                        html += `<span class="checkmark"></span> </label>`;
+                        html += `</div>`;
+                        html += `<div>`;
+                        html += `<h4>${el.full_name}</h4>`;
+                        html += `<p>${el.area} <br>${el.building} ${el.landmark} <br>${el.city}, ${el.state}, ${el.country} <br> ${el.pincode}</p>`;
+                        html += `<ul>`;
+//                        html += `<li><a onclick="cart_cl.editAddress(${el.id});">Edit</a></li>`;
+                        html += `<li><a onclick="cart_cl.deleteAddress(${el.id});"   >Remove</a></li>`;
+                        html += `</ul>`;
+                        html += `</div>`;
+                        html += `</div>`;
+                        html += `</div>`;
+                        $("#address_row").append(html);
+                    });
+
                 }
             }
         });
     };
-    
-    
+
+    this.getSalonTimings = function () {
+        if (cart_cl.salonId) {
+
+            $.ajax({
+                url: `${base_url}user/salon/detail.php?salon_id=${cart_cl.salonId}&q=timings`,
+                type: 'GET',
+                dataType: 'JSON',
+                data: {
+                    token: localStorage.getItem("userToken")
+                },
+                success: function (res) {
+                    var timings = res.result.timings;
+                    const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                    const d = new Date();
+                    let day = weekday[d.getDay()];
+
+                    let  day_open = '';
+                    let day_close = '';
+                    timings.forEach(function (el) {
+                        if (el.day == day) {
+                            day_open = el.open_at;
+                            day_close = el.close_at;
+                        }
+                    });
+
+                    const currentDate = new Date();
+
+                    const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+                    let name = month[currentDate.getMonth()];
+
+                    const currentDayOfMonth = currentDate.getDate();
+                    const currentYear = currentDate.getFullYear();
+
+                    const dateString = name + "" + currentDayOfMonth + ", " + currentYear;
+                    let dt1 = new Date(dateString + " " + day_open);
+                    console.log(dt1);
+                    let dt2 = new Date(dateString + " " + day_close);
+                    console.log(dt2);
+                    var diff_btw_time = cart_cl.diff_minutes(dt1, dt2);
+                    console.log(diff_btw_time);
+                    var number_of_slots = Math.ceil(diff_btw_time / 120);
+                    console.log(number_of_slots);
+
+                    for (var i = 0; i < number_of_slots; i++) {
+                        var slot_1 = new Date(dt1);
+                        var datetext_1 = slot_1.toTimeString();
+                        datetext_1 = datetext_1.split(' ')[0];
+                        var slot_2 = new Date(dt1.setHours(dt1.getHours() + 2));
+                        if (dt1 > dt2) {
+                            var slot_2 = new Date(dt2);
+                            var datetext_2 = slot_2.toTimeString();
+                            datetext_2 = datetext_2.split(' ')[0];
+                            $("#booking_slot").append(`<option value="${i + 1}">${datetext_1} to ${datetext_2} </option>`);
+                        } else {
+                            var datetext_2 = slot_2.toTimeString();
+                            datetext_2 = datetext_2.split(' ')[0];
+                            $("#booking_slot").append(`<option value="${i + 1}">${datetext_1} to ${datetext_2} </option>`);
+                        }
+                    }
+                }
+            });
+        }
+    }
+
+
+    this.diff_minutes = function (dt2, dt1)
+    {
+
+        var diff = (dt2.getTime() - dt1.getTime()) / 1000;
+        diff /= 60;
+        return Math.abs(Math.round(diff));
+
+    };
+
+    this.addBillingAddress = function () {
+        var fullName = $("#desktop-full_name").val();
+        var phoneNumber = $("#desktop-phone_number").val();
+        var buildingNumber = $("#desktop-building_no").val();
+        var streetAddress = $("#desktop-street_address").val();
+        var state = $("#desktop-state_name").val();
+        var city = $("#desktop-city_name").val();
+        var pincode = $("#desktop-pincode").val();
+        var landmark = $("#desktop-delivery_landmark").val();
+        var country = $("#desktop-country_id").val();
+        $.ajax({
+            url: `${base_url}user/address/add-address.php`,
+            type: 'POST',
+            dataType: 'JSON',
+            data: JSON.stringify({
+                token: localStorage.getItem("userToken"),
+                "full_name": fullName,
+                "mobile_no": phoneNumber,
+                "building": buildingNumber,
+                "area": streetAddress,
+                "pincode": pincode,
+                "landmark": landmark,
+                "city": city,
+                "state": state,
+                "country": country
+            }),
+            success: function (res) {
+                toastr.success(res.message);
+                cart_cl.getUserAddress();
+            },
+            error: function (res) {
+                toastr.error(res.responseJSON.message);
+            }
+        });
+
+    };
+
+
+    this.deleteAddress = function (id) {
+        $.ajax({
+            url: `${base_url}user/address/delete-address.php`,
+            type: 'POST',
+            dataType: 'JSON',
+            data: JSON.stringify({
+                token: localStorage.getItem("userToken"),
+                "address_id": id
+            }),
+            success: function (res) {
+                toastr.success(res.message);
+                cart_cl.getUserAddress();
+            },
+            error: function (res) {
+                toastr.error(res.responseJSON.message);
+            }
+        });
+    };
+
+    this.membershipCardVerify = function () {
+        var card_number = $("#card_number").val();
+        var card_expiry = $("#expiry_date").val();
+        $.ajax({
+            url: `${base_url}user/cart/verify-membership-card.php`,
+            type: 'POST',
+            dataType: 'JSON',
+            data: JSON.stringify({
+                token: localStorage.getItem("userToken"),
+                "card_number": card_number,
+                "card_expiry": card_expiry
+            }),
+            success: function (res) {
+                cart_cl.membership_card_id = res.card_id;
+                $("#membership_card_info").show();
+                $("#availableCardBox").hide();
+                $("#c_number").html(card_number);
+                $("#c_expiry").html(card_expiry);
+                $("#c_total_amount").html(res.card_value);
+                $("#c_balance_amount").html(res.card_remaining_amount);
+            },
+            error: function (res) {
+                toastr.error(res.responseJSON.message);
+            }
+        });
+    };
 
 };
 

@@ -233,6 +233,7 @@ var user_profile = new function() {
                     html += `<div class="col-md-4 border mr-2" id="mc_s${el.id}" onclick="user_profile.getUserCardStatement(${el.id})">`;
                     html += `<p>`;
                     html += `<b>Type:</b> ${el.card_name}<br>`;
+                    html += `<b>Card Nummber:</b> ${el.card_number}<br>`;
                     html += `<b>Card Expiry:</b> ${el.card_expiry}<br>`;
                     html += `<b>Card Price:</b> ${el.card_price}<br>`;
                     html += `<b>Card Value:</b> ${el.card_value}<br>`;
