@@ -8,7 +8,7 @@
                             <div class="col-md-12">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <h2 class="h2-heading">My Pic</h2>
+                                        <h3 class="h3-heading">My Pic</h3>
                                         <!--<h5 class="float-left">Photos</h5>-->
                                         <a href="javascript:user_profile.openUpload();" class="btn btn-pink float-right">Upload Photos</a>
                                         <input type="file" id="myfile" name="myfile" style="display:none;" onchange="user_profile.uploadImage(this);">
