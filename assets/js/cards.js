@@ -21,7 +21,7 @@ var cards = new function () {
                                 <li>No Joining Fee , No Annual Fee</li>
                             </ul>
                             <div class="bmm-card-btns">
-                            <a href="membership-card-checkout/${val.id}" class="btn btn-pink buy-card">Buy Now</a>
+                            <a href="javascript:cards.cardRedirect(${val.id});" class="btn btn-pink buy-card">Buy Now</a>
                             <a href="membership-card-detail/${val.id}" class="btn btn-pink know-more">Know More</a>
                             </div>
                             </div>
@@ -31,6 +31,15 @@ var cards = new function () {
                 $("#card-list").html(data);
             }
         });
+    };
+    
+    this.cardRedirect = function(id) {
+       if (localStorage.getItem("userToken")) {
+            location.href = `membership-card-checkout/${id}`;
+        } else {
+            $(".modal").modal("hide");
+            $("#loginModal").modal("show");
+        }
     };
 
 };

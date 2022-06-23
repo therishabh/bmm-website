@@ -1,5 +1,12 @@
 var mcc = new function() {
     this.getUserDetails = function() {
+        if (localStorage.getItem("userToken")) {
+            //nothing
+        } else {
+            location.href = '/';
+        }
+        
+        
         $.ajax({
             url: `${base_url}user/profile/info.php`,
             type: 'GET',
