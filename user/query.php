@@ -5,7 +5,7 @@
             <div class="col-md-9">
                 <div class="manage-user-icon">
                     <div class="col-md-12">
-                        <h2 class="h2-heading">Query</h2>
+                        <h3 class="h3-heading">Query</h3>
                         <form action="" id="">
                             <div class="row">
                                 <div class="col-md-6">

@@ -1,8 +1,8 @@
-var user_profile = new function () {
+var user_profile = new function() {
 
     this.userToken = localStorage.getItem("userToken");
 
-    this.getProfileData = function () {
+    this.getProfileData = function() {
         $.ajax({
             url: `${base_url}user/profile/info.php`,
             type: 'GET',
@@ -10,8 +10,8 @@ var user_profile = new function () {
             data: {
                 token: localStorage.getItem("userToken")
             },
-            success: function (result) {
-//                console.log(result);
+            success: function(result) {
+                //                console.log(result);
                 $("#username").val(result.name);
                 $("#email_id").val(result.email_id);
                 $("#landline_no").val(result.mobile_no);
@@ -22,7 +22,7 @@ var user_profile = new function () {
         });
     };
 
-    this.updateProfileData = function () {
+    this.updateProfileData = function() {
         var name = $("#username").val();
         var dob = $("#dob").val();
         console.log(dob);
@@ -40,7 +40,7 @@ var user_profile = new function () {
                 doa: doa,
                 gender: gender
             }),
-            success: function (result) {
+            success: function(result) {
                 toastr.success(result.message);
 
             }
@@ -48,7 +48,7 @@ var user_profile = new function () {
 
     };
 
-    this.userSessionCheck = function () {
+    this.userSessionCheck = function() {
         if (user_profile.userToken) {
             return true;
         } else {
@@ -56,7 +56,7 @@ var user_profile = new function () {
         }
     };
 
-    this.getUserWishlist = function () {
+    this.getUserWishlist = function() {
         $.ajax({
             url: `${base_url}user/favourite/get-favourite-list.php`,
             type: 'GET',
@@ -64,11 +64,11 @@ var user_profile = new function () {
             data: {
                 token: localStorage.getItem("userToken")
             },
-            success: function (res) {
+            success: function(res) {
                 var result = res.result;
-                result.forEach(function (el) {
+                result.forEach(function(el) {
                     var html = '';
-                    html += `<div class="col-md-6">`;
+                    html += `<div class="col-md-4">`;
                     html += `<div class="wishlist-icon" onclick="user_profile.removeFromWishList('${el.id}')" id="salon_${el.id}">`;
                     html += `<i class="fas fa-heart"></i>`;
                     html += `</div>`;
@@ -99,7 +99,7 @@ var user_profile = new function () {
         });
     };
 
-    this.removeFromWishList = function (salon_id) {
+    this.removeFromWishList = function(salon_id) {
         var post_data = {
             token: user_profile.userToken,
             salon_id: salon_id
@@ -109,17 +109,18 @@ var user_profile = new function () {
             type: 'POST',
             dataType: 'JSON',
             data: JSON.stringify(post_data),
-            success: function (result) {
+            success: function(result) {
                 toastr.success('Removed from wishlist.');
                 $("#salon_" + salon_id).parent().hide();
-            }, error: function (result) {
+            },
+            error: function(result) {
                 toastr.error(result.responseJSON.message);
                 $("#salon_" + salon_id).find(".fa-heart").attr("data-prefix", "fas");
             }
         });
     };
 
-    this.getUserBookings = function () {
+    this.getUserBookings = function() {
         let order_id = $("#booking_number").val();
         var data = {};
         data['token'] = localStorage.getItem("userToken");
@@ -131,10 +132,10 @@ var user_profile = new function () {
             type: 'GET',
             dataType: 'JSON',
             data: data,
-            success: function (res) {
+            success: function(res) {
                 $("#booking_boxes").html("");
                 var data = res.result;
-                data.forEach(function (el) {
+                data.forEach(function(el) {
                     var html = "";
                     html += `<div class="booking-box">`;
                     html += `<div class="booking-header">`;
@@ -144,8 +145,8 @@ var user_profile = new function () {
                     html += `</div>`;
                     html += `<div>`;
                     html += `<b class="text-success">Paid</b>`;
-//html += `<b class="text-danger">Payment Failed</b>`;
-//html += `<b class="text-warning">Payment Pending</b>`;
+                    //html += `<b class="text-danger">Payment Failed</b>`;
+                    //html += `<b class="text-warning">Payment Pending</b>`;
                     html += `</div>`;
                     html += `</div>`;
                     html += `<div class="booking-body">`;
@@ -173,7 +174,7 @@ var user_profile = new function () {
                     html += `</tr>`;
                     html += `</thead>`;
                     html += `<tbody>`;
-                    (el.services).forEach(function (el_i) {
+                    (el.services).forEach(function(el_i) {
                         html += `<tr>`;
                         html += `<td>${el_i.name} [${el_i.category}]</td>`;
                         html += `<td>Rs. ${el_i.discounted_price}</td>`;
@@ -193,7 +194,7 @@ var user_profile = new function () {
         });
     };
 
-    this.getOffersForUser = function () {
+    this.getOffersForUser = function() {
         $.ajax({
             url: `${base_url}user/cart/get-coupon-list.php`,
             type: 'GET',
@@ -201,9 +202,9 @@ var user_profile = new function () {
             data: {
                 token: localStorage.getItem("userToken")
             },
-            success: function (res) {
+            success: function(res) {
                 var result = res.result;
-                result.forEach(function (el) {
+                result.forEach(function(el) {
                     var html = '';
                     html += `<div class="col-md-4">`;
                     html += `<img src="assets/images/combo1.jpg" class="img-thumbnail" alt="">`;
@@ -217,7 +218,7 @@ var user_profile = new function () {
         });
     };
 
-    this.getUserMemberships = function () {
+    this.getUserMemberships = function() {
         $.ajax({
             url: `${base_url}user/membership-card/listing.php`,
             type: 'GET',
@@ -225,9 +226,9 @@ var user_profile = new function () {
             data: {
                 token: localStorage.getItem("userToken")
             },
-            success: function (res) {
+            success: function(res) {
                 var result = res.result;
-                result.forEach(function (el) {
+                result.forEach(function(el) {
                     var html = '';
                     html += `<div class="col-md-4 border mr-2" id="mc_s${el.id}" onclick="user_profile.getUserCardStatement(${el.id})">`;
                     html += `<p>`;
@@ -247,7 +248,7 @@ var user_profile = new function () {
         });
     };
 
-    this.getUserCardStatement = function (cardId) {
+    this.getUserCardStatement = function(cardId) {
         $.ajax({
             url: `${base_url}user/membership-card/transaction-list.php`,
             type: 'GET',
@@ -256,11 +257,11 @@ var user_profile = new function () {
                 token: localStorage.getItem("userToken"),
                 card_id: cardId
             },
-            success: function (res) {
+            success: function(res) {
                 var trans = res.transactions;
                 $("#tbody_trans").html('');
                 if (trans.length > 0) {
-                    trans.forEach(function (el) {
+                    trans.forEach(function(el) {
                         var html = '';
                         html += `<tr>`;
                         html += `<td>${el.date_time}</td>`;
@@ -280,31 +281,31 @@ var user_profile = new function () {
         });
     };
 
-    this.getUserPayments = function () {
+    this.getUserPayments = function() {
 
     };
 
-    this.addMessage = function () {
+    this.addMessage = function() {
 
     };
 
-    this.getUserEvents = function () {
+    this.getUserEvents = function() {
 
     };
 
-    this.bookNowEvent = function () {
+    this.bookNowEvent = function() {
 
     };
 
-    this.userInviteFriend = function () {
+    this.userInviteFriend = function() {
 
     };
 
-    this.getUserInvitedFriendList = function () {
+    this.getUserInvitedFriendList = function() {
 
     };
 
-    this.getUserPics = function () {
+    this.getUserPics = function() {
         $.ajax({
             url: `${base_url}user/gallery/listing-images.php`,
             type: 'GET',
@@ -312,10 +313,10 @@ var user_profile = new function () {
             data: {
                 token: localStorage.getItem("userToken")
             },
-            success: function (result) {
+            success: function(result) {
                 $("#user-pic").html('');
                 let pic = result.result;
-                pic.forEach(function (el) {
+                pic.forEach(function(el) {
                     var html = '';
                     html += `<div class="col-md-3 mt-4">`;
                     html += `<img src="${el.url}" class="img-thumbnail">`;
@@ -327,17 +328,17 @@ var user_profile = new function () {
         });
     };
 
-    this.openUpload = function () {
+    this.openUpload = function() {
         $('#myfile').click();
     };
 
-    this.uploadImage = function (this_) {
+    this.uploadImage = function(this_) {
         var formdata = false;
         if (window.FormData) {
             formdata = new FormData();
         }
         console.log(this_.files);
-        formdata.append("files[]", this_.files[0],this_.files[0].name);
+        formdata.append("files[]", this_.files[0], this_.files[0].name);
         formdata.append("token", localStorage.getItem("userToken"));
         jQuery.ajax({
             url: `${base_url}user/gallery/upload-images.php`,
@@ -345,14 +346,14 @@ var user_profile = new function () {
             data: formdata,
             processData: false,
             contentType: false,
-            success: function (res) {
+            success: function(res) {
                 toastr.success(res.message);
                 user_profile.getUserPics();
             }
         });
     };
 
-    this.bmmtv = function () {
+    this.bmmtv = function() {
         $.ajax({
             url: `${base_url}user/bmm-tv/listing.php`,
             type: 'GET',
@@ -360,9 +361,9 @@ var user_profile = new function () {
             data: {
                 token: localStorage.getItem("userToken")
             },
-            success: function (result) {
+            success: function(result) {
                 let bmmtv = result.result;
-                bmmtv.forEach(function (el) {
+                bmmtv.forEach(function(el) {
                     var html = '';
                     html += `<div class="col-md-6 col-12 m-10">`;
                     html += `<a href="${el.video_url}" target="_blank" class="box-shadow">`;
@@ -379,7 +380,7 @@ var user_profile = new function () {
         });
     };
 
-    this.getQueryCategoryList = function () {
+    this.getQueryCategoryList = function() {
 
         $.ajax({
             url: `${base_url}user/query/category-list.php`,
@@ -388,20 +389,20 @@ var user_profile = new function () {
             data: {
                 token: localStorage.getItem("userToken")
             },
-            success: function (res) {
+            success: function(res) {
                 var category = res.result;
-                category.forEach(function (el) {
+                category.forEach(function(el) {
                     $("#category-list").append(`<option value="${el.id}">${el.name}</option>`);
                 });
 
             },
-            complete: function (res) {
+            complete: function(res) {
                 user_profile.getQueryList();
             }
         });
     };
 
-    this.getQueryList = function () {
+    this.getQueryList = function() {
 
         $.ajax({
             url: `${base_url}user/query/listing.php`,
@@ -410,12 +411,12 @@ var user_profile = new function () {
             data: {
                 token: localStorage.getItem("userToken")
             },
-            success: function (res) {
+            success: function(res) {
                 console.log(res.result);
                 var query = res.result;
                 var i = 1;
                 $("#query_tbody").html('');
-                query.forEach(function (el) {
+                query.forEach(function(el) {
                     var html = "";
                     html += `<tr>`;
                     html += `<td>${i}</td>`;
@@ -439,7 +440,7 @@ var user_profile = new function () {
         });
     };
 
-    this.querySave = function () {
+    this.querySave = function() {
         var title = $("#title").val();
         var category_list = $("#category-list").val();
         var description = $("#description").val();
@@ -458,7 +459,7 @@ var user_profile = new function () {
                 category_id: category_list,
                 description: description
             }),
-            success: function (result) {
+            success: function(result) {
                 toastr.success(result.message);
                 $("#title").val('');
                 $("#description").val('');
@@ -470,7 +471,7 @@ var user_profile = new function () {
     };
 
 
-    this.query_detail = function () {
+    this.query_detail = function() {
         var query_id = $("#query_id").val();
         $.ajax({
             url: `${base_url}user/query/detail.php`,
@@ -480,13 +481,13 @@ var user_profile = new function () {
                 token: localStorage.getItem("userToken"),
                 query_id: query_id
             },
-            success: function (res) {
+            success: function(res) {
                 var data = res.result;
                 $("#query_title").html(data.title);
                 $("#query_body").html('');
                 var reply = data.replies;
 
-                reply.forEach(function (el) {
+                reply.forEach(function(el) {
                     var html = '';
                     html += `<div class="chat-box-left">`;
                     html += `<div class="inner-chat-box">`;
@@ -507,7 +508,7 @@ var user_profile = new function () {
 
     };
 
-    this.replyQuery = function () {
+    this.replyQuery = function() {
         var query_id = $("#query_id").val();
         var description = $("#description").val();
         $.ajax({
@@ -519,12 +520,13 @@ var user_profile = new function () {
                 query_id: query_id,
                 description: description
             }),
-            success: function (result) {
+            success: function(result) {
                 toastr.success(result.message);
                 $("#description").val('');
                 user_profile.query_detail();
 
-            }, error: function (result) {
+            },
+            error: function(result) {
                 toastr.error(result.responseJSON.message);
             }
         });

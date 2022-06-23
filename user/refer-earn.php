@@ -8,7 +8,7 @@
                             <div class="col-md-12">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <h2 class="h2-heading">Refer & Earn</h2>
+                                        <h3 class="h3-heading">Refer & Earn</h3>
 
                                         <h5>Invite your Friend</h5>
                                         <div class="row">

@@ -8,9 +8,9 @@
                         <div class="row">
                             <div class="col-md-12">
 
-                                <div class="row mb-3 h2-heading m-0">
+                                <div class="row mb-3 h3-heading m-0">
                                     <div class="col-md-6 pl-0">
-                                        <h2 class="h2-heading border-0 mb-0">My Bookings</h2>
+                                        <h3 class="h3-heading border-0 mb-0">My Bookings</h3>
                                     </div>
                                     <div class="col-md-6 pr-0">
                                         <div class="input-group search-bar-main">
