@@ -6,7 +6,7 @@
                 <div class="white-box p-4 cart-box-1">
                     <div class="heading mb-3" id='username'></div>
                     <div class="heading"><span id='landline_no'></span> <i class="fas fa-check-circle text-success"></i> <a href="#" class="btn btn-pink btn-sm" data-toggle="modal" data-target="#verifyNumberModal">Verify</a> </div>
-                    <div class="heading"><span id='email'></span> <a href="#" class="btn btn-pink btn-sm" data-toggle="modal" data-target="#verifyEmailModal">Verify</a>   </div>
+                    <div class="heading"><span id='email'></span> <a href="#" class="btn btn-pink btn-sm" data-toggle="modal" data-target="#verifyEmailModal">Verify</a> </div>
                 </div>
 
                 <div class="white-box p-4 cart-box-2 mt-3">
@@ -17,13 +17,13 @@
 
                 <div class="white-box p-4 cart-box-3 mt-3">
                     <h4 id="desktop-address-heading1"> Choose your Booking Date </h4>
-                    <input type="date" id="booking_date"  class="form-control"/>
+                    <input type="date" id="booking_date" class="form-control" />
                 </div>
                 <div class="white-box p-4 cart-box-3 mt-3">
                     <h4 id="desktop-address-heading1"> Choose your Time Slot </h4>
                     <select id="booking_slot">
                         <option>Choose Time Slot</option>
-                        
+
                     </select>
                 </div>
 
@@ -31,9 +31,9 @@
                     <div class="delivery-address-box">
                         <div class="row">
                             <span class="row col-lg-12" id="address_row">
-                            
-                                
-                            
+
+
+
                             </span>
                             <div class="col-lg-6" id="no_address_found">
                                 <div class="delivery-address-inner-box">
@@ -68,7 +68,7 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label>Building Number</label>
-                                            <input type="text" name="building_no" id="desktop-building_no" class="form-control" maxlength="50"  required="">
+                                            <input type="text" name="building_no" id="desktop-building_no" class="form-control" maxlength="50" required="">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -77,13 +77,13 @@
                                     <div class="col-lg-6 d-none">
                                         <div class="form-group">
                                             <label>Area <span class="text-danger">*</span></label>
-                                            <input type="text" name="area" id="desktop-area" class="form-control" maxlength="50"  required="">
+                                            <input type="text" name="area" id="desktop-area" class="form-control" maxlength="50" required="">
                                         </div>
                                     </div>
                                     <div class="col-lg-6 d-none">
                                         <div class="form-group">
                                             <label>Country <span class="text-danger">*</span></label>
-                                            <select name="country_id" id="desktop-country_id" class="form-control"  required="">
+                                            <select name="country_id" id="desktop-country_id" class="form-control" required="">
                                                 <option selected="" value="IN">India</option>
                                             </select>
                                         </div>
@@ -91,7 +91,7 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label>State/Province/Area: <span class="text-danger">*</span></label>
-                                            <select name="state_name" id="desktop-state_name" class="form-control loadoptions" data-listtype="city" data-listid="desktop-city_name"  required="">
+                                            <select name="state_name" id="desktop-state_name" class="form-control loadoptions" data-listtype="city" data-listid="desktop-city_name" required="">
                                                 <option value="">Select</option>
                                                 <option value="Andhra Pradesh">Andhra Pradesh</option>
                                                 <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -134,7 +134,7 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label>City <span class="text-danger">*</span></label>
-                                            <input type="text"  name="city_name" data-selval="" id="desktop-city_name" class="form-control" required=""/>
+                                            <input type="text" name="city_name" data-selval="" id="desktop-city_name" class="form-control" required="" />
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -163,6 +163,13 @@
                     <div class="coupon-btn coupon-btn-apply text-right cursor-pointer"><i class="fas fa-tags"></i> <span class="ml-3">Apply Coupon</span> </div>
                     <div class="coupon-btn card-btn-apply text-right cursor-pointer"><i class="fas fa-credit-card"></i> <span class="ml-3">Do You have Membership Card?</span> </div>
 
+                    <div id="cardDropdown">
+                    <select class="form-control">
+                        <option>Card 1</option>
+                        <option>Card 2</option>
+                    </select>
+                    </div>
+
                     <div id="availableCardBox">
                         <h5>Enter membership card details</h5>
                         <div class="row">
@@ -178,7 +185,7 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group text-center mb-0">
-                                    <button class="btn btn-pink"  onclick="cart_cl.membershipCardVerify();">APPLY</button>
+                                    <button class="btn btn-pink" onclick="cart_cl.membershipCardVerify();">APPLY</button>
                                     <button class="btn btn-secondary" id="">CANCEL</button>
                                 </div>
                             </div>
@@ -215,7 +222,7 @@
             <!-- <button class="btn btn-pink float-right">Proceed to Pay</button> -->
         </div>
     </div>
-</div>
+    </div>
 </section>
 
 <!-- Register Modal -->
@@ -299,44 +306,44 @@
 
 <!-- The Modal -->
 <div class="modal" id="verifyNumberModal">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
 
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title">Verify Mobile</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Verify Mobile</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
 
-      <!-- Modal body -->
-      <div class="modal-body text-center p-4">
-        <input type="text" class="form-control" placeholder="Enter mobile number" />
-        <button type="button" class="btn btn-pink mt-3">Verify</button>
-      </div>
+            <!-- Modal body -->
+            <div class="modal-body text-center p-4">
+                <input type="text" class="form-control" placeholder="Enter mobile number" />
+                <button type="button" class="btn btn-pink mt-3">Verify</button>
+            </div>
 
 
+        </div>
     </div>
-  </div>
 </div>
 
 <!-- The Modal -->
 <div class="modal" id="verifyEmailModal">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
 
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title">Verify Email</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Verify Email</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
 
-      <!-- Modal body -->
-      <div class="modal-body text-center p-4">
-        <input type="text" class="form-control" placeholder="Enter Email id" />
-        <button type="button" class="btn btn-pink mt-3">Verify</button>
-      </div>
+            <!-- Modal body -->
+            <div class="modal-body text-center p-4">
+                <input type="text" class="form-control" placeholder="Enter Email id" />
+                <button type="button" class="btn btn-pink mt-3">Verify</button>
+            </div>
 
 
+        </div>
     </div>
-  </div>
 </div>

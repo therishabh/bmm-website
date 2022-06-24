@@ -320,7 +320,7 @@ var user_profile = new function() {
                 pic.forEach(function(el) {
                     var html = '';
                     html += `<div class="col-md-3 mt-4">`;
-                    html += `<img src="${el.url}" class="img-thumbnail">`;
+                    html += `<div class="my-pic-wrapper"><img src="${el.url}" class="img-thumbnail my-pic-list"><span><i class="fa fa-trash-alt"></i></span></div>`;
                     html += `</div>`;
                     $("#user-pic").append(html);
                 });
@@ -432,7 +432,12 @@ var user_profile = new function() {
                     } else {
                         html += `<td><span class="text-warning">${el.query_status}</span></td>`;
                     }
-                    html += `<td><a href="query-detail/${el.id}">View Detail</a></td>`;
+                    html += `<td>
+                    <ul class="action-list">
+                    <li><a class="btn btn-secondary btn-sm" href="query-detail/${el.id}">View Detail</a> </li>
+                    <li title="Remove"><i class="fa fa-trash-alt"></i></li>
+                    </ul
+                    </td>`;
                     html += `</tr>`;
                     $("#query_tbody").append(html);
                     i++;
