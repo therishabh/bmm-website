@@ -557,3 +557,26 @@ ul.action-list li i:hover {
 .logoutLi {
     display: none;
 }
+
+.package-wrapper {
+    background: #fff;
+    text-align: center;
+    padding: 25px 0px;
+}
+
+.package-wrapper h2 {
+    text-transform: uppercase;
+    color: #f92b62;
+}
+
+.package-wrapper ul {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
+.package-wrapper ul li {
+    list-style: none;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 10px;
+}

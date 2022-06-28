@@ -74,6 +74,12 @@
                         Gallery
                     </a>
                 </li>
+                <li>
+                    <a href="subscription" class="<?php echo strpos($_SERVER['REQUEST_URI'], 'subscription') !== false ? 'active' : '' ?>">
+                        <i class="fa fa-credit-card" aria-hidden="true"></i>
+                        Subscription
+                    </a>
+                </li>
                 <li class="logoutLi">
                     <a href="" onclick="logout();">
                         <i class="fa fa-sign-out" aria-hidden="true"></i>

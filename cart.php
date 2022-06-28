@@ -5,8 +5,8 @@
             <div class="col-md-8">
                 <div class="white-box p-4 cart-box-1">
                     <div class="heading mb-3" id='username'></div>
-                    <div class="heading"><span id='landline_no'></span> <i class="fas fa-check-circle text-success"></i> <a href="#" class="btn btn-pink btn-sm" data-toggle="modal" data-target="#verifyNumberModal">Verify</a> </div>
-                    <div class="heading"><span id='email'></span> <a href="#" class="btn btn-pink btn-sm" data-toggle="modal" data-target="#verifyEmailModal">Verify</a> </div>
+                    <div class="heading"><span id='landline_no'></span> <i class="fas fa-check-circle text-success"></i> </div>
+                    <div class="heading"><span id='email'></span> </div>
                 </div>
 
                 <div class="white-box p-4 cart-box-2 mt-3">
@@ -16,15 +16,23 @@
                 </div>
 
                 <div class="white-box p-4 cart-box-3 mt-3">
-                    <h4 id="desktop-address-heading1"> Choose your Booking Date </h4>
-                    <input type="date" id="booking_date" class="form-control" />
+                    <h6 id="desktop-address-heading1"> Choose your Booking Date </h6>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="date" id="booking_date" class="form-control" />
+                        </div>
+                    </div>
                 </div>
                 <div class="white-box p-4 cart-box-3 mt-3">
-                    <h4 id="desktop-address-heading1"> Choose your Time Slot </h4>
-                    <select id="booking_slot">
-                        <option>Choose Time Slot</option>
+                    <h6 id="desktop-address-heading1"> Choose your Time Slot </h6>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <select id="booking_slot" class="form-control">
+                                <option>Choose Time Slot</option>
+                            </select>
+                        </div>
+                    </div>
 
-                    </select>
                 </div>
 
                 <div class="white-box p-4 cart-box-3 mt-3">
@@ -164,10 +172,10 @@
                     <div class="coupon-btn card-btn-apply text-right cursor-pointer"><i class="fas fa-credit-card"></i> <span class="ml-3">Do You have Membership Card?</span> </div>
 
                     <div id="cardDropdown">
-                    <select class="form-control">
-                        <option>Card 1</option>
-                        <option>Card 2</option>
-                    </select>
+                        <select class="form-control">
+                            <option>Card 1</option>
+                            <option>Card 2</option>
+                        </select>
                     </div>
 
                     <div id="availableCardBox">
