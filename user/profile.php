@@ -19,7 +19,18 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Email</label>
-                                            <input type="email" class="form-control" name="email_id" id="email_id" readonly />
+                                            <div class="input-group mb-3">
+                                                <input type="email" class="form-control" name="email_id" id="email_id" readonly />
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text"><i class="fa fa-check text-success"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <input type="email" class="form-control" name="email_id" id="email_id" readonly />
+                                                <div class="input-group-append">
+                                                  <a href="#"> <span class="input-group-text font-weight-bold anchor-text">Verify</span></a> 
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">

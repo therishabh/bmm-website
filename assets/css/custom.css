@@ -6415,3 +6415,12 @@
             display: none;
             margin-bottom: 10px;
         }
+        
+        .anchor-text {
+            color: #3989f4;
+        }
+        
+        .anchor-text:hover {
+            text-decoration: none;
+            color: #3989f4;
+        }
