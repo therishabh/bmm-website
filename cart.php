@@ -75,6 +75,9 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
+                                        <div class="form-group"><label>Pincode <span class="text-danger">*</span></label> <input name="pincode" id="desktop-pincode" type="text" class="form-control" required="" maxlength="6" minlength="6"> </div>
+                                    </div>
+                                    <div class="col-lg-6">
                                         <div class="form-group"> <label>Street Address <span class="text-danger">*</span></label> <input name="street_address" id="desktop-street_address" type="text" class="form-control" maxlength="50" required=""> </div>
                                     </div>
                                     <div class="col-lg-6 d-none">
@@ -140,9 +143,7 @@
                                             <input type="text" name="city_name" data-selval="" id="desktop-city_name" class="form-control" required="" />
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group"><label>Pincode <span class="text-danger">*</span></label> <input name="pincode" id="desktop-pincode" type="text" class="form-control" required="" maxlength="6" minlength="6"> </div>
-                                    </div>
+                                   
                                     <div class="col-lg-6">
                                         <div class="form-group"><label>Landmark</label>
                                             <input type="text" name="delivery_landmark" id="desktop-delivery_landmark" class="form-control" maxlength="50">
