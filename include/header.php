@@ -377,17 +377,20 @@
                                     <div class="custom-dropdown-item">
                                         <ul>
                                             <li><a href="<?php echo $base_url; ?>user/profile"><i class="fa fa-user"></i> <span>My Profile</span></a></li>
+                                            <li><a href="<?php echo $base_url; ?>user/my-bookings"><i class="fa fa-users"></i> <span>Bookings</span></a></li>
+                                            <li><a href="<?php echo $base_url; ?>user/offers"><i class="fa fa-money-bill-wave"></i> <span>Offers</span></a></li>
+                                            <li><a href="<?php echo $base_url; ?>user/membership"><i class="fa fa-user-plus"></i> <span> Membership</span></a></li>
                                             <li><a href="#" onclick="logout();"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="top-right-list-item" onclick="common.wishlistRedirect();">
+                            <div class="top-right-list-item top-right-icon" onclick="common.wishlistRedirect();">
                                 <i class="far fa-heart text-pink icons"></i>
                             </div>
 
-                            <div class="top-right-list-item">
+                            <div class="top-right-list-item top-right-icon">
                                 <a onclick='common.cartRedirect();' class="cart-anchor">
                                     <i class="fas fa-shopping-bag text-pink icons"></i>
                                     <span class="cart-count-circle">0</span>
@@ -485,7 +488,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-3">
-                                    <img src="<?php echo $base_url; ?>assets/images/submenu-salon-female-img.jpg" alt="" class="img-fluid">
+                                    <img src="<?php echo $base_url; ?>assets/images/submenu-salon-male-img.jpg" alt="" class="img-fluid">
                                 </div>
                             </div>
 
