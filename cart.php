@@ -16,25 +16,20 @@
                 </div>
 
                 <div class="white-box p-4 cart-box-3 mt-3">
-                    <h6 id="desktop-address-heading1"> Choose your Booking Date </h6>
                     <div class="row">
                         <div class="col-md-6">
+                            <label> Choose your Booking Date </label>
                             <input type="date" id="booking_date" class="form-control" />
                         </div>
-                    </div>
-                </div>
-                <div class="white-box p-4 cart-box-3 mt-3">
-                    <h6 id="desktop-address-heading1"> Choose your Time Slot </h6>
-                    <div class="row">
                         <div class="col-md-6">
+                            <label>Choose your Time Slot</label>
                             <select id="booking_slot" class="form-control">
                                 <option>Choose Time Slot</option>
                             </select>
                         </div>
                     </div>
-
                 </div>
-
+              
                 <div class="white-box p-4 cart-box-3 mt-3">
                     <div class="delivery-address-box">
                         <div class="row">
