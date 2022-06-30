@@ -262,16 +262,21 @@ var user_profile = new function() {
                 var trans = res.transactions;
                 $("#tbody_trans").html('');
                 if (trans.length > 0) {
+                    var i=1;
                     trans.forEach(function(el) {
+                        console.log(el);
                         var html = '';
                         html += `<tr>`;
-                        html += `<td>${el.date_time}</td>`;
-                        html += `<td>${el.amount_spent}</td>`;
-                        html += `<td>${el.salon}</td>`;
-                        html += `<td>${el.order_no}</td>`;
+                        html += `<td>${i}</td>`;
+                        html += `<td>${el.order_id}</td>`;
+                        html += `<td>${el.amount_paid}</td>`;
+                        html += `<td>${el.final_amount}</td>`;
+                        html += `<td>${el.transaction_at}</td>`;
+                        html += `<td>${el.salon_info.salon_name}</td>`;
                         html += `</tr> `;
+                        i++;
+                        $("#tbody_trans").append(html);
                     });
-                    $("#tbody_trans").append(html);
                 } else {
                     var html = '';
                     html += `<tr><td colspan="4">No Transaction Done</td></tr>`;
@@ -320,11 +325,31 @@ var user_profile = new function() {
                 pic.forEach(function(el) {
                     var html = '';
                     html += `<div class="col-md-3 mt-4">`;
-                    html += `<div class="my-pic-wrapper"><img src="${el.url}" class="img-thumbnail my-pic-list"><span><i class="fa fa-trash-alt"></i></span></div>`;
+                    html += `<div class="my-pic-wrapper"><img src="${el.url}" class="img-thumbnail my-pic-list"><span onclick="user_profile.deletePic(${el.id});"><i class="fa fa-trash-alt"></i></span></div>`;
                     html += `</div>`;
                     $("#user-pic").append(html);
                 });
 
+            }
+        });
+    };
+    
+    this.deletePic = function(id) {
+        $.ajax({
+            url: `${base_url}user/gallery/delete-image.php`,
+            type: 'POST',
+            dataType: 'JSON',
+            data: JSON.stringify({
+                token: localStorage.getItem("userToken"),
+                image_id: id
+            }),
+            success: function(result) {
+                toastr.success(result.message);
+                user_profile.getUserPics();
+
+            },
+            error: function(result) {
+                toastr.error(result.responseJSON.message);
             }
         });
     };
@@ -435,7 +460,7 @@ var user_profile = new function() {
                     html += `<td>
                     <ul class="action-list">
                     <li><a class="btn btn-secondary btn-sm" href="query-detail/${el.id}">View Detail</a> </li>
-                    <li title="Remove"><i class="fa fa-trash-alt"></i></li>
+                    <li title="Remove"><i class="fa fa-trash-alt" onclick="user_profile.deleteQuery(${el.id});"></i></li>
                     </ul
                     </td>`;
                     html += `</tr>`;
@@ -534,6 +559,61 @@ var user_profile = new function() {
             },
             error: function(result) {
                 toastr.error(result.responseJSON.message);
+            }
+        });
+    };
+    
+    this.deleteQuery = function(id) {
+        $.ajax({
+            url: `${base_url}user/query/delete.php`,
+            type: 'POST',
+            dataType: 'JSON',
+            data: JSON.stringify({
+                token: localStorage.getItem("userToken"),
+                query_id: id
+            }),
+            success: function(result) {
+                toastr.success(result.message);
+                user_profile.getQueryList();
+
+            },
+            error: function(result) {
+                toastr.error(result.responseJSON.message);
+            }
+        });
+    };
+    
+    this.referList = function() {
+        $.ajax({
+            url: `${base_url}user/refer-and-earn/get-refer-list.php`,
+            type: 'GET',
+            dataType: 'JSON',
+            data: {
+                token: localStorage.getItem("userToken")
+            },
+            success: function(res) {
+                console.log(res);
+                var data = res.result;
+                $("#query_title").html(data.title);
+                $("#query_body").html('');
+                var reply = data.replies;
+
+                reply.forEach(function(el) {
+                    var html = '';
+                    html += `<div class="chat-box-left">`;
+                    html += `<div class="inner-chat-box">`;
+                    html += `<div class="chat-user-title">${el.replied_by}</div>`;
+                    html += `<div>`;
+                    html += `<p>`;
+                    html += `${el.reply_text}`;
+                    html += `</p>`;
+                    html += `</div>`;
+                    html += `</div>`;
+                    html += `</div>`;
+                    $("#query_body").append(html);
+                });
+
+
             }
         });
     };

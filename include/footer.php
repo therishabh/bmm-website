@@ -197,7 +197,7 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
         </div>
     </div>
 </div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.js" integrity="sha512-RCgrAvvoLpP7KVgTkTctrUdv7C6t7Un3p1iaoPr1++3pybCyCsCZZN7QEHMZTcJTmcJ7jzexTO+eFpHk4OCFAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/popper.min.js"></script>
 <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/popper.min.js"></script>
@@ -256,25 +256,25 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
 <?php if ($page == 'user' && $explode_data[1] == 'profile') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
     <script type="text/javascript">
-    if (user_profile.userToken) {
-        user_profile.getProfileData();
-    }
+        if (user_profile.userToken) {
+            user_profile.getProfileData();
+        }
     </script>
 <?php } ?>
 <?php if ($page == 'user' && $explode_data[1] == 'membership') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
     <script type="text/javascript">
-    if (user_profile.userToken) {
-        user_profile.getUserMemberships();
-    }
+        if (user_profile.userToken) {
+            user_profile.getUserMemberships();
+        }
     </script>
 <?php } ?>
 <?php if ($page == 'user' && $explode_data[1] == 'my-bookings') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
     <script type="text/javascript">
-    if (user_profile.userToken) {
-        user_profile.getUserBookings();
-    }
+        if (user_profile.userToken) {
+            user_profile.getUserBookings();
+        }
     </script>
 <?php } ?>
 <?php if ($page == 'cart') { ?>
@@ -303,17 +303,17 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
 <?php if ($page == 'user' && $explode_data[1] == 'wishlist') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
     <script type="text/javascript">
-    if (user_profile.userToken) {
-        user_profile.getUserWishlist();
-    }
+        if (user_profile.userToken) {
+            user_profile.getUserWishlist();
+        }
     </script>
 <?php } ?>
 <?php if ($page == 'user' && $explode_data[1] == 'bmm-tv') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
     <script type="text/javascript">
-    if (user_profile.userToken) {
-        user_profile.bmmtv();
-    }
+        if (user_profile.userToken) {
+            user_profile.bmmtv();
+        }
     </script>
 <?php } ?>
 <?php if ($page == 'hair-masters') { ?>
@@ -322,35 +322,43 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
 <?php if ($page == 'user' && $explode_data[1] == 'offers') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
     <script type="text/javascript">
-    if (user_profile.userToken) {
-        user_profile.getOffersForUser();
-    }
+        if (user_profile.userToken) {
+            user_profile.getOffersForUser();
+        }
     </script>
 <?php } ?>
 <?php if ($page == 'user' && $explode_data[1] == 'query') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
     <script type="text/javascript">
-    if (user_profile.userToken) {
-        user_profile.getQueryCategoryList();
-    }
+        if (user_profile.userToken) {
+            user_profile.getQueryCategoryList();
+        }
     </script>
 <?php } ?>    
 <?php if ($page == 'user' && $explode_data[1] == 'query-detail') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
     <script type="text/javascript">
-    if (user_profile.userToken) {
-        user_profile.query_detail();
-    }
+        if (user_profile.userToken) {
+            user_profile.query_detail();
+        }
     </script>
 <?php } ?>    
 <?php if ($page == 'user' && $explode_data[1] == 'my-pics') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
     <script type="text/javascript">
-    if (user_profile.userToken) {
-        user_profile.getUserPics();
-    }
+        if (user_profile.userToken) {
+            user_profile.getUserPics();
+        }
     </script>
-<?php } ?>    
+<?php } ?>   
+<?php if ($page == 'user' && $explode_data[1] == 'refer-earn') { ?>
+    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
+    <script type="text/javascript">
+        if (user_profile.userToken) {
+            user_profile.referList();
+        }
+    </script>
+<?php } ?>  
 </body>
 
 </html>

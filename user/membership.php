@@ -21,10 +21,12 @@
                                             <table class="table table-bordered">
                                                 <thead>
                                                     <tr>
-                                                        <th>Date & Time</th>
+                                                        <th>S.No.</th>
                                                         <th>Order Number</th>
+                                                        <th>Amount Paid</th>
+                                                        <th>Final Amount</th>
+                                                        <th>Transaction At</th>
                                                         <th>Salon</th>
-                                                        <th>Spent Amount/Point</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody id="tbody_trans">
