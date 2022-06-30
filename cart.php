@@ -19,9 +19,11 @@
                     <h6 id="desktop-address-heading1"> Choose your Booking Date & Slot </h6>
                     <div class="row">
                         <div class="col-md-6">
+                            <label> Choose your Booking Date </label>
                             <input type="date" id="booking_date" class="form-control" />
                         </div>
                         <div class="col-md-6">
+                            <label>Choose your Time Slot</label>
                             <select id="booking_slot" class="form-control">
                                 <option>Choose Time Slot</option>
                             </select>
@@ -73,6 +75,9 @@
                                             <label>Building Number</label>
                                             <input type="text" name="building_no" id="desktop-building_no" class="form-control" maxlength="50" required="">
                                         </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group"><label>Pincode <span class="text-danger">*</span></label> <input name="pincode" id="desktop-pincode" type="text" class="form-control" required="" maxlength="6" minlength="6"> </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group"> <label>Street Address <span class="text-danger">*</span></label> <input name="street_address" id="desktop-street_address" type="text" class="form-control" maxlength="50" required=""> </div>
@@ -140,9 +145,7 @@
                                             <input type="text" name="city_name" data-selval="" id="desktop-city_name" class="form-control" required="" />
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group"><label>Pincode <span class="text-danger">*</span></label> <input name="pincode" id="desktop-pincode" type="text" class="form-control" required="" maxlength="6" minlength="6"> </div>
-                                    </div>
+                                   
                                     <div class="col-lg-6">
                                         <div class="form-group"><label>Landmark</label>
                                             <input type="text" name="delivery_landmark" id="desktop-delivery_landmark" class="form-control" maxlength="50">

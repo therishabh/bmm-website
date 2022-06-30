@@ -6424,3 +6424,12 @@
             text-decoration: none;
             color: #3989f4;
         }
+        
+        .top-right-icon svg {
+            cursor: pointer;
+            transition: all 0.45s;
+        }
+        
+        .top-right-icon svg:hover {
+            color: #ff99b5 !important;
+        }
