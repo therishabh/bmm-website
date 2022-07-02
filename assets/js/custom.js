@@ -230,3 +230,10 @@ $(function() {
         $('.location-custom-modal-btn').text(thisVal);
     });
 });
+
+$(function() {
+    $('.course-info-nav li a').click(function() {
+        $('.course-info-nav li a').removeClass('active');
+        $(this).addClass('active');
+    });
+})

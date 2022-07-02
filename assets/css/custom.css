@@ -5810,6 +5810,7 @@
             background: #f4f4f4;
             border: 1px solid rgba(151, 151, 151, 0.1);
             padding-left: 40px;
+            font-size: 15px;
         }
         
         #nodata>div {
@@ -6433,3 +6434,108 @@
         .top-right-icon svg:hover {
             color: #ff99b5 !important;
         }
+        
+        section.course-details-page {
+            padding: 50px 0px;
+        }
+        
+        section.course-details-page p {
+            font-size: 18px;
+            line-height: 30px;
+        }
+        
+        section.course-details-page .apply-box {
+            background: #f1f1f1;
+            padding: 30px 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        section.course-details-page .apply-box .course-type {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        
+        section.course-details-page .apply-box .course-type span {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--pink);
+        }
+        
+        section.course-details-page .apply-box .course-price {
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 25px;
+        }
+        
+        ul.course-info-nav {
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            gap: 20px;
+            border-bottom: 3px solid #ccc;
+            margin-top: 30px;
+        }
+        
+        ul.course-info-nav li {
+            list-style: none;
+        }
+        
+        ul.course-info-nav li a {
+            display: block;
+            font-size: 18px;
+            color: #333;
+            padding: 10px 10px;
+            font-weight: 600;
+        }
+        
+        ul.course-info-nav li a.active {
+            border-bottom: 3px solid var(--pink);
+            margin-bottom: -4px;
+            color: var(--pink);
+        }
+        
+        ul.course-info-nav li a:hover {
+            text-decoration: none;
+        }
+        
+        .course-more-detail-box {
+            padding: 25px 0px;
+        }
+        
+        ol.syllabus-list {
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        ol.syllabus-list li {
+            list-style: none;
+            display: block;
+            font-size: 18px;
+            color: #333;
+            padding: 5px 0px;
+            font-weight: 600;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        ol.syllabus-list li::after {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 0;
+            width: 12px;
+            height: 12px;
+            background: var(--pink);
+            border-radius: 4px;
+            transform: rotate(45deg);
+        }
+        /* #about,
+        #syllabus {
+            scroll-padding-top: 400px;
+        } */

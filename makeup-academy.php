@@ -37,18 +37,118 @@
     <div class="text-center col-md-10 mx-auto">
       <h2>BMM Makeup Academy</h2>
       <p>
-        You will be trained by highly qualified,experienced professionals online and then practice sessions on our partner salons across India.Once trained & certified you will be placed among the top of salon chains in India.Why Wait ? Start your journey and Join as a Trainer.
+        You will be trained by highly qualified,experienced professionals online and then practice sessions on our partner salons across India.Once trained & certified you will be placed among the top of salon chains in India.
       </p>
-      <a href="<?php echo $base_url; ?>seller-registration" class="btn btn-pink">Join Now</a>
     </div>
   </div>
 </section>
 
 <hr>
 
+<div class="acamedy-accordian">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-7">
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link w-100 text-left" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Hairstyling Course
+                  <span class="float-right"><i class="fas fa-chevron-down icon"></i></span>
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, esse? Omnis minus doloribus assumenda velit dolor sequi quidem rerum non aut, labore vitae in reiciendis aperiam iure corrupti similique suscipit!</p>
+                <a href="course-details" class="btn btn-pink">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed w-100 text-left" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Makeup & Hairstyling Course
+                  <span class="float-right"><i class="fas fa-chevron-down icon"></i></span>
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, esse? Omnis minus doloribus assumenda velit dolor sequi quidem rerum non aut, labore vitae in reiciendis aperiam iure corrupti similique suscipit!</p>
+                <a href="course-details" class="btn btn-pink">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed w-100 text-left" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Salon Management
+                  <span class="float-right"><i class="fas fa-chevron-down icon"></i></span>
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, esse? Omnis minus doloribus assumenda velit dolor sequi quidem rerum non aut, labore vitae in reiciendis aperiam iure corrupti similique suscipit!</p>
+                <a href="course-details" class="btn btn-pink">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed w-100 text-left" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="headingFour">Celebrity's Makeup
+                  <span class="float-right"><i class="fas fa-chevron-down icon"></i></span>
+                </button>
+              </h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+              <div class="card-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, esse? Omnis minus doloribus assumenda velit dolor sequi quidem rerum non aut, labore vitae in reiciendis aperiam iure corrupti similique suscipit!</p>
+                <a href="course-details" class="btn btn-pink">View Details</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="card">
+            <div class="card-header" id="headingFive">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed w-100 text-left" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="headingFive">Nail Art
+                  <span class="float-right"><i class="fas fa-chevron-down icon"></i></span>
+                </button>
+              </h5>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+              <div class="card-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, esse? Omnis minus doloribus assumenda velit dolor sequi quidem rerum non aut, labore vitae in reiciendis aperiam iure corrupti similique suscipit!</p>
+                <a href="course-details" class="btn btn-pink">View Details</a>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </div>
+      </div>
+      <div class="col-md-5">
+        <img src="assets/images/bmm-academy-accordian1.png" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
 <section class="our-partners">
   <div class="container">
-    <h2 class="text-center h2-heading">Our Partners</h2>
+    <h2 class="text-center h2-heading">Participating Salon</h2>
 
     <div class="our-partners-slider owl-carousel owl-theme">
 
@@ -88,86 +188,6 @@
   </div>
 </section>
 
-<hr>
-<div class="acamedy-accordian">
-  <div class="container">
-    <div class="row">
-
-      <div class="col-md-7">
-        <div id="accordion">
-          <div class="card">
-            <div class="card-header" id="headingOne">
-              <h5 class="mb-0">
-                <button class="btn btn-link w-100 text-left" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Hairstyling Course
-                  <span class="float-right"><i class="fas fa-chevron-down icon"></i></span>
-                </button>
-              </h5>
-            </div>
-
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-              <div class="card-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, esse? Omnis minus doloribus assumenda velit dolor sequi quidem rerum non aut, labore vitae in reiciendis aperiam iure corrupti similique suscipit!</p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header" id="headingTwo">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed w-100 text-left" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Makeup & Hairstyling Course
-                  <span class="float-right"><i class="fas fa-chevron-down icon"></i></span>
-                </button>
-              </h5>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-              <div class="card-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, esse? Omnis minus doloribus assumenda velit dolor sequi quidem rerum non aut, labore vitae in reiciendis aperiam iure corrupti similique suscipit!</p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header" id="headingThree">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed w-100 text-left" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Salon Management
-                  <span class="float-right"><i class="fas fa-chevron-down icon"></i></span>
-                </button>
-              </h5>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-              <div class="card-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, esse? Omnis minus doloribus assumenda velit dolor sequi quidem rerum non aut, labore vitae in reiciendis aperiam iure corrupti similique suscipit!</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header" id="headingFour">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed w-100 text-left" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="headingFour">Celebrity's Makeup
-                  <span class="float-right"><i class="fas fa-chevron-down icon"></i></span>
-                </button>
-              </h5>
-            </div>
-            <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-              <div class="card-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, esse? Omnis minus doloribus assumenda velit dolor sequi quidem rerum non aut, labore vitae in reiciendis aperiam iure corrupti similique suscipit!</p>
-              </div>
-            </div>
-          </div>
-
-
-
-
-        </div>
-      </div>
-      <div class="col-md-5">
-        <img src="assets/images/bmm-academy-accordian1.png" class="img-fluid">
-      </div>
-    </div>
-  </div>
-</div>
 
 <section class="partners">
   <div class="container">
