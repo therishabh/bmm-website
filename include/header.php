@@ -250,7 +250,7 @@
                 </li> 
 
                 <li><a href="<?php echo $base_url; ?>blog">BMM TV</a></li>
-                <li><a href="<?php echo $base_url; ?>blog">Quick Booking </a></li>
+                <!-- <li><a href="<?php echo $base_url; ?>blog">Quick Booking </a></li> -->
                 <li>
                     <a href="#">Offers <span class="float-right"><i class="fas fa-plus plus-icon"></i></span></a>
                     <ul class="list-unstyled pl-3 responsive-dropdown">
@@ -505,9 +505,9 @@
                     <li>
                         <a href="<?php echo $base_url; ?>bmm-tv"> BMM TV</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="<?php echo $base_url; ?>book-appointment"> Quick Booking &nbsp; <i class="fa fa-calendar-alt"></i> </a>
-                    </li>
+                    </li> -->
                     <li class="active-offer-nav"><a href="offers">Offers</a>
 
                     </li>
