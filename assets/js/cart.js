@@ -36,7 +36,9 @@ var cart_cl = new function () {
             success: function (result) {
                 $("#username").html(result.name);
                 $("#landline_no").html(result.mobile_no);
-
+                if (result.is_mobile_verified == 1) {
+                    $("#landline_no").append('<i class="fas fa-check-circle text-success"></i>');
+                }
                 if (result.email_id != '') {
                     $("#email").html(result.email_id);
                     if (result.is_email_verified == 1) {
@@ -74,7 +76,9 @@ var cart_cl = new function () {
                         html += '<div class="service-cart-list">';
                         html += `<div class="heading">${service.name} [${service.category}] </div>`;
                         html += '<div class="heading">';
-                        html += `<s> &#8377; &nbsp; ${service.mrp_price}</s>`;
+                        if (service.mrp_price > 0) {
+                            html += `<s> &#8377; &nbsp; ${service.mrp_price}</s>`;
+                        }
                         html += `<span class="font-weight-bold ml-2"> &#8377; &nbsp; ${service.discounted_price}</span>`;
                         html += '<i class="fa fa-trash text-pink cursor-pointer" style="font-size:12px;margin:1px;margin-left:10px;" onclick="cart_cl.removeService(' + "'" + service.service_id + "',''" + ');"></i>';
                         html += '</div>';
@@ -91,7 +95,9 @@ var cart_cl = new function () {
                         html += '<div class="service-cart-list">';
                         html += `<div class="heading">${service.name} [${service.category}] </div>`;
                         html += '<div class="heading">';
-                        html += `<s> &#8377; &nbsp; ${service.mrp_price}</s>`;
+                        if (service.mrp_price > 0) {
+                            html += `<s> &#8377; &nbsp; ${service.mrp_price}</s>`;
+                        }
                         html += `<span class="font-weight-bold ml-2"> &#8377; &nbsp; ${service.discounted_price}</span>`;
                         html += '<i class="fa fa-trash text-pink cursor-pointer" style="font-size:12px;margin:1px;margin-left:10px;" onclick="cart_cl.removeService(' + "'','" + service.id + "'" + ');"></i>';
                         html += '</div>';
@@ -117,20 +123,48 @@ var cart_cl = new function () {
             },
             complete: function (res) {
                 myCallback();
-                $("#total_price").html(cart_cl.total_price);
-                cart_cl.total_tax = parseFloat(cart_cl.total_price * (cart_cl.tax_per / 100)).toFixed(2);
-                $("#total_tax").html(cart_cl.total_tax);
-                cart_cl.total_amount = (parseFloat(cart_cl.total_price) + parseFloat(cart_cl.total_tax)).toFixed(2)
-                $("#total_amount").html(cart_cl.total_amount);
+                $("#gst_per_label").html(cart_cl.tax_per + "%");
+                $("#membership_amount").html('0');
+                $("#coupon_discount").html('0');
+                cart_cl.calc();
             }
         });
     };
+
+    this.calc = function () {
+
+        $("#total_price").html(cart_cl.total_price);
+        cart_cl.total_tax = parseFloat(cart_cl.total_price * (cart_cl.tax_per / 100)).toFixed(2);
+        $("#total_tax").html(cart_cl.total_tax);
+        cart_cl.total_amount = (parseFloat(cart_cl.total_price) + parseFloat(cart_cl.total_tax)).toFixed(2)
+        $("#total_amount").html(cart_cl.total_amount);
+        var radio_card_payment = $('input[name="membership-card"]:checked').val();
+        var card_pay = 0;
+        if (radio_card_payment == "card_full_pay") {
+            if (parseInt($("#c_balance_amount").html()) >= cart_cl.total_amount) {
+                card_pay = cart_cl.total_amount;
+            } else {
+                card_pay = parseInt($("#c_balance_amount").html());
+            }
+        } else if (radio_card_payment == "card_partial_pay") {
+            if (parseInt($("#c_balance_amount").html()) >= $("#partialPaymentInput").val()) {
+                card_pay = $("#partialPaymentInput").val();
+            } else {
+                card_pay = parseInt($("#c_balance_amount").html());
+            }
+        } else {
+            card_pay = 0;
+        }
+        $("#membership_amount").html(card_pay);
+        var net_pay = cart_cl.total_amount - card_pay;
+        $("#net_pay").html(parseFloat(net_pay).toFixed(2));
+    }
 
     this.getCouponForSalon = function () {
         if (cart_cl.salonId) {
 
             $.ajax({
-                url: `${base_url}user/salon/detail.php?salon_id=${cart_cl.salonId}&q=coupons`,
+                url: `${base_url}user/cart/get-coupon-list.php`,
                 type: 'GET',
                 dataType: 'JSON',
                 data: {
@@ -138,7 +172,7 @@ var cart_cl = new function () {
                 },
                 success: function (res) {
 
-                    let coupons_arr = res.result.coupons;
+                    let coupons_arr = res.result;
                     var html = '';
                     coupons_arr.every(function (el, index, arr) {
                         console.log(el);
@@ -157,7 +191,7 @@ var cart_cl = new function () {
 
                 },
                 complete: function () {
-                    
+
                 }
             });
         } else {
@@ -326,6 +360,7 @@ var cart_cl = new function () {
                 var addresses = res.result;
                 if (addresses.length == 0) {
                     $("#no_address_found").show();
+                    $("#address_row").html('');
                     $("#address_row").hide();
                 } else {
                     $("#no_address_found").hide();
@@ -490,7 +525,7 @@ var cart_cl = new function () {
     };
 
     this.membershipCardVerify = function () {
-        var card_number = $("#card_number").val();
+        var card_number = $('#card_number').val();
         var card_expiry = $("#expiry_date").val();
         $.ajax({
             url: `${base_url}user/cart/verify-membership-card.php`,
@@ -517,6 +552,25 @@ var cart_cl = new function () {
         });
     };
 
+    this.membershipCardList = function () {
+        $.ajax({
+            url: `${base_url}user/membership-card/listing.php`,
+            type: 'GET',
+            dataType: 'JSON',
+            data: {
+                token: localStorage.getItem("userToken")
+            },
+            success: function (res) {
+                var list = res.result;
+                var html = '<option>Choose membership card.</option>';
+                list.forEach(function (el) {
+                    html += `<option value="${el.card_number}">${el.card_number}</option>`;
+                });
+                $("#card_number").html(html);
+                ;
+            }
+        });
+    };
 };
 
 cart_cl.init();
@@ -537,6 +591,7 @@ $(document).ready(function () {
     });
 
     $('.coupon-remove-btn').click(function () {
+        cart_cl.current_coupon = '';
         $('.coupon-btn-applied').hide();
         $('.coupon-btn-apply').show();
     });
@@ -545,6 +600,8 @@ $(document).ready(function () {
         $('#availableCardBox').show();
         $('#cardDropdown').show();
         $('.card-btn-apply').hide();
+
+        cart_cl.membershipCardList();
     });
 
     $('#apply-card').click(function () {
@@ -563,7 +620,7 @@ $(document).ready(function () {
     });
 
     $('#booking_date').change(function () {
-        if($('#booking_date').val()!=''){
+        if ($('#booking_date').val() != '') {
             cart_cl.getSalonTimings($('#booking_date').val());
         }
     });

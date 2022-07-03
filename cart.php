@@ -5,7 +5,7 @@
             <div class="col-md-8">
                 <div class="white-box p-4 cart-box-1">
                     <div class="heading mb-3" id='username'></div>
-                    <div class="heading"><span id='landline_no'></span> <i class="fas fa-check-circle text-success"></i> </div>
+                    <div class="heading"><span id='landline_no'></span>  </div>
                     <div class="heading"><span id='email'></span> </div>
                 </div>
 
@@ -30,7 +30,7 @@
                         </div>
                     </div>
                 </div>
-               
+
 
                 <div class="white-box p-4 cart-box-3 mt-3">
                     <div class="delivery-address-box">
@@ -72,7 +72,7 @@
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <label>Building Number</label>
+                                            <label>Building Number <span class="text-danger">*</span></label>
                                             <input type="text" name="building_no" id="desktop-building_no" class="form-control" maxlength="50" required="">
                                         </div>
                                     </div>
@@ -145,7 +145,7 @@
                                             <input type="text" name="city_name" data-selval="" id="desktop-city_name" class="form-control" required="" />
                                         </div>
                                     </div>
-                                   
+
                                     <div class="col-lg-6">
                                         <div class="form-group"><label>Landmark</label>
                                             <input type="text" name="delivery_landmark" id="desktop-delivery_landmark" class="form-control" maxlength="50">
@@ -167,22 +167,27 @@
                 <div class="sub-total col-md-12 white-box p-4">
                     <h4 class="font-weight-bold">SUBTOTAL</h4>
                     <div class="coupon-btn coupon-btn-apply text-right cursor-pointer"><i class="fas fa-tags"></i> <span class="ml-3">Apply Coupon</span> </div>
-                    <div class="coupon-btn card-btn-apply text-right cursor-pointer"><i class="fas fa-credit-card"></i> <span class="ml-3">Do You have Membership Card?</span> </div>
 
-                    <div id="cardDropdown">
-                        <select class="form-control">
-                            <option>Card 1</option>
-                            <option>Card 2</option>
-                        </select>
+                    <div class="coupon-btn coupon-btn-applied hidden-container">
+                        <div>
+                            <div class="font-weight-bold applied-coupon-code"></div>
+                            <small>Offer applied on the bill</small>
+                        </div>
+                        <div class="coupon-remove-btn">REMOVE</div>
                     </div>
 
+                    <div class="coupon-btn card-btn-apply text-right cursor-pointer"><i class="fas fa-credit-card"></i> <span class="ml-3">Do You have Membership Card?</span> </div>
                     <div id="availableCardBox">
                         <h5>Enter membership card details</h5>
                         <div class="row">
-                            <div class="col-md-12">
+<!--                            <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="text" placeholder="Enter card number" class="form-control" id="card_number" />
+                                    <input type="text" placeholder="Enter card number" class="form-control"  />
                                 </div>
+                            </div>-->
+                            <div class="col-md-12" id="cardDropdown">
+                                <select class="form-control" id="card_number" name="card_number">
+                                </select>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
@@ -206,29 +211,26 @@
                             <label><b> Balance Amount</b> : Rs. <span id="c_balance_amount"></span>/-</label>
                         </div>
                         <div class="form-group m-0 p-0">
-                            <label> <input type="radio" name="membership-card" value="card_full_pay" /> Pay full amount with card</label>
-                            <label> <input type="radio" name="membership-card" value="card_partial_pay" /> Pay Partial amount with card</label>
-                            <input type="text" class="form-control" placeholder="Enter partial amount" id="partialPaymentInput" />
+                            <label> <input type="radio" name="membership-card" value="card_full_pay"  onchange="cart_cl.calc();" /> Pay full amount with card</label>
+                            <label> <input type="radio" name="membership-card" value="card_partial_pay"  onchange="cart_cl.calc();" /> Pay Partial amount with card</label>
+                            <input type="text" class="form-control" placeholder="Enter partial amount" id="partialPaymentInput" onblur="cart_cl.calc();" />
                         </div>
                     </div>
 
-                    <div class="coupon-btn coupon-btn-applied hidden-container">
-                        <div>
-                            <div class="font-weight-bold applied-coupon-code"></div>
-                            <small>Offer applied on the bill</small>
-                        </div>
-                        <div class="coupon-remove-btn">REMOVE</div>
-                    </div>
-                    <h6>Price (2 items) <span class="float-right">₹ <span id="total_price"></span></span> </h6>
-                    <h6>GST <span class="float-right">₹ <span id="total_tax"></span></span> </h6>
-                    <h6 class="bb-none">Total Price <span class="float-right text-pink">₹ <span id="total_amount"></span></span> </h6>
+                    
+                    <h6>Price <span class="float-right">₹ <span id="total_price"></span></span> </h6>
+                    <h6>Coupon Discount <span class="float-right">₹ <span id="coupon_discount"></span></span> </h6>
+                    <h6>GST (<span id="gst_per_label"></span>) <span class="float-right">₹ <span id="total_tax"></span></span> </h6>
+                    <h6>Total Price <span class="float-right text-pink">₹ <span id="total_amount"></span></span> </h6>
+                    <h6>Membership Card<span class="float-right text-pink">₹ <span id="membership_amount"></span></span> </h6>
+                    <h6 class="bb-none">Net Pay<span class="float-right text-pink">₹ <span id="net_pay"></span></span> </h6>
                     <button class="btn btn-block btn-pink" onclick="cart_cl.checkout();">Checkout</button>
                 </div>
             </div>
             <!-- <button class="btn btn-pink float-right">Proceed to Pay</button> -->
         </div>
     </div>
-    </div>
+</div>
 </section>
 
 <!-- Register Modal -->
@@ -324,28 +326,6 @@
             <!-- Modal body -->
             <div class="modal-body text-center p-4">
                 <input type="text" class="form-control" placeholder="Enter mobile number" />
-                <button type="button" class="btn btn-pink mt-3">Verify</button>
-            </div>
-
-
-        </div>
-    </div>
-</div>
-
-<!-- The Modal -->
-<div class="modal" id="verifyEmailModal">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <h4 class="modal-title">Verify Email</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-
-            <!-- Modal body -->
-            <div class="modal-body text-center p-4">
-                <input type="text" class="form-control" placeholder="Enter Email id" />
                 <button type="button" class="btn btn-pink mt-3">Verify</button>
             </div>
 

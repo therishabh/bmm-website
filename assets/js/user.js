@@ -13,11 +13,24 @@ var user_profile = new function() {
             success: function(result) {
                 //                console.log(result);
                 $("#username").val(result.name);
-                $("#email_id").val(result.email_id);
+                $("#t_name").html(result.name);
+                if(result.is_email_verified==1){
+                    $("#email_id_outer").removeClass("d-none");
+                    $("#email_id_verify_outer").addClass("d-none");
+                    $("#email_id").val(result.email_id);
+                    $("#t_email").html(result.email_id);
+                } else {
+                    $("#email_id_outer").addClass("d-none");
+                    $("#email_id_verify_outer").removeClass("d-none");
+                    $("#email_id_verify").val(result.email_id);
+                }
+                
                 $("#landline_no").val(result.mobile_no);
+                $("#t_mobile").html(result.mobile_no);
                 $("#dob").val(result.dob);
                 $("#doa").val(result.doa);
                 $("#gender").val(result.gender);
+                $("#profile_photo").attr("src",result.profile_image);
             }
         });
     };
@@ -614,6 +627,69 @@ var user_profile = new function() {
                 });
 
 
+            }
+        });
+    };
+
+    this.email_verify_show = function(){
+      
+      $.ajax({
+            url: `${base_url}user/profile/send-otp-for-email-verification.php`,
+            type: 'GET',
+            dataType: 'JSON',
+            data: {
+                token: localStorage.getItem("userToken")
+            },
+            success: function(res) {
+                $("#verifyEmailModal").show();  
+                toastr.success(res.message);
+            },
+            error: function(result) {
+                toastr.error(result.responseJSON.message);
+            }
+        });
+    };
+    
+    this.email_verify = function(){
+        
+        $.ajax({
+            url: `${base_url}user/profile/verify-email-otp.php`,
+            type: 'POST',
+            dataType: 'JSON',
+            data: JSON.stringify({
+                token: localStorage.getItem("userToken"),
+                otp: $("#email_otp").val()
+            }),
+            success: function(result) {
+                toastr.success(result.message);
+                $("#verifyEmailModal").hide();  
+                user_profile.getProfileData();
+
+            },
+            error: function(result) {
+                toastr.error(result.responseJSON.message);
+            }
+        });
+    };
+    
+    this.uploadProfileImage = function(this_) {
+        
+        var formdata = false;
+        if (window.FormData) {
+            formdata = new FormData();
+        }
+        console.log(this_.files);
+        formdata.append("file", this_.files[0], this_.files[0].name);
+        formdata.append("token", localStorage.getItem("userToken"));
+        jQuery.ajax({
+            url: `${base_url}user/profile/upload-profile-pic.php`,
+            type: "POST",
+            data: formdata,
+            processData: false,
+            contentType: false,
+            success: function(res) {
+                toastr.success(res.message);
+                user_profile.getProfileData();
             }
         });
     };
