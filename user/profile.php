@@ -19,16 +19,16 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Email</label>
-                                            <div class="input-group mb-3">
+                                            <div class="input-group mb-3 d-none" id="email_id_outer">
                                                 <input type="email" class="form-control" name="email_id" id="email_id" readonly />
                                                 <div class="input-group-append">
                                                     <span class="input-group-text"><i class="fa fa-check text-success"></i></span>
                                                 </div>
                                             </div>
-                                            <div class="input-group mb-3">
-                                                <input type="email" class="form-control" name="email_id" id="email_id" readonly />
+                                            <div class="input-group mb-3 d-none" id="email_id_verify_outer">
+                                                <input type="email" class="form-control" name="email_id" id="email_id_verify" />
                                                 <div class="input-group-append">
-                                                  <a href="#"> <span class="input-group-text font-weight-bold anchor-text">Verify</span></a> 
+                                                  <a href="javascript:user_profile.email_verify_show()"> <span class="input-group-text font-weight-bold anchor-text">Verify</span></a> 
                                                 </div>
                                             </div>
                                         </div>
@@ -76,16 +76,16 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="profile-photo">
-                                        <img src="../assets/images/profile-photo.jpg" alt="">
+                                        <img src="" alt="" id="profile_photo">
                                     </div>
                                     <div class="upload-btn-wrapper">
-                                        <button class="btn btn-pink">Upload Photo &nbsp; <i class="fa fa-edit"></i></button>
-                                        <input type="file" name="myfile" />
+                                        <button class="btn btn-pink" onclick="">Upload Photo &nbsp; <i class="fa fa-edit"></i></button>
+                                        <input type="file" name="myfile" onchange="user_profile.uploadProfileImage(this)" />
                                     </div>
                                     <div>
-                                        <h4>Rohit Verma</h4>
-                                        <p>9911060952</p>
-                                        <p>rohitverma@gmail.com</p>
+                                        <h4 id="t_name">Rohit Verma</h4>
+                                        <p id="t_mobile">9911060952</p>
+                                        <p id="t_email">rohitverma@gmail.com</p>
                                     </div>
                                 </div>
                             </div>
@@ -97,3 +97,24 @@
         </div>
     </div>
 </section>
+<!-- The Modal -->
+<div class="modal" id="verifyEmailModal">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Enter OTP sent on mail</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body text-center p-4">
+                <input type="text" class="form-control" placeholder="Enter otp" id="email_otp" />
+                <button type="button" class="btn btn-pink mt-3" onclick="user_profile.email_verify()">Verify</button>
+            </div>
+
+
+        </div>
+    </div>
+</div>
