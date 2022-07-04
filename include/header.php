@@ -41,10 +41,10 @@
             <div class="responsive-nav-header">
                 <div class="row">
                     <div class="col-6">
-                        <a href="<?php echo $base_url; ?>login" class="btn btn-pink">Sign In</a>
+                        <a class="btn btn-pink loginBtn">Sign In</a>
                     </div>
                     <div class="col-6">
-                        <a href="<?php echo $base_url; ?>register" class="btn btn-pink">Sign Up</a>
+                        <a class="btn btn-pink registerBtn">Sign Up</a>
                     </div>
                 </div>
             </div>
@@ -500,7 +500,7 @@
                     <li><a href="<?php echo $base_url; ?>makeup-academy">Makeup Academy</a></li>
 
                     <li><a href="<?php echo $base_url; ?>cards">Cards </a></li>
-                    <li><a href="<?php echo $base_url; ?>im-beautiful">I'm Beautiful &nbsp; <i class="fa fa-heart"></i> </a>
+                    <li><a href="<?php echo $base_url; ?>im-beautiful">I'm Beautiful &nbsp; <i class="fa fa-heart heart-icon"></i> </a>
 
                     <li>
                         <a href="<?php echo $base_url; ?>bmm-tv"> BMM TV</a>

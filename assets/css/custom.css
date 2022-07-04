@@ -359,12 +359,20 @@
             display: block;
             padding: 0px 13px;
             line-height: 50px;
-            font-weight: normal;
+            font-weight: 600;
         }
         
         nav ul li a:hover {
             text-decoration: none;
             color: #f92a63;
+        }
+        
+        nav ul li a svg.heart-icon {
+            color: red !important;
+        }
+        
+        nav ul li a:hover svg.heart-icon {
+            color: #ef6389 !important;
         }
         
         .slide-section img {

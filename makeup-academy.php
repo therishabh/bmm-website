@@ -44,6 +44,48 @@
 </section>
 
 <hr>
+<section class="our-partners">
+  <div class="container">
+    <h2 class="text-center h2-heading">Participating Salon</h2>
+
+    <div class="our-partners-slider owl-carousel owl-theme">
+
+      <div class="item">
+        <div class="partner-logo-box">
+          <img src="assets/images/salon-logo-1.png" alt="">
+        </div>
+      </div>
+      <div class="item">
+        <div class="partner-logo-box">
+          <img src="assets/images/salon-logo-2.png" alt="">
+        </div>
+      </div>
+      <div class="item">
+        <div class="partner-logo-box">
+          <img src="assets/images/salon-logo-3.png" alt="">
+        </div>
+      </div>
+      <div class="item">
+        <div class="partner-logo-box">
+          <img src="assets/images/salon-logo-1.png" alt="">
+        </div>
+      </div>
+      <div class="item">
+        <div class="partner-logo-box">
+          <img src="assets/images/salon-logo-2.png" alt="">
+        </div>
+      </div>
+      <div class="item">
+        <div class="partner-logo-box">
+          <img src="assets/images/salon-logo-3.png" alt="">
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+<hr>
 
 <div class="acamedy-accordian">
   <div class="container">
@@ -144,49 +186,6 @@
     </div>
   </div>
 </div>
-
-<hr>
-<section class="our-partners">
-  <div class="container">
-    <h2 class="text-center h2-heading">Participating Salon</h2>
-
-    <div class="our-partners-slider owl-carousel owl-theme">
-
-      <div class="item">
-        <div class="partner-logo-box">
-          <img src="assets/images/salon-logo-1.png" alt="">
-        </div>
-      </div>
-      <div class="item">
-        <div class="partner-logo-box">
-          <img src="assets/images/salon-logo-2.png" alt="">
-        </div>
-      </div>
-      <div class="item">
-        <div class="partner-logo-box">
-          <img src="assets/images/salon-logo-3.png" alt="">
-        </div>
-      </div>
-      <div class="item">
-        <div class="partner-logo-box">
-          <img src="assets/images/salon-logo-1.png" alt="">
-        </div>
-      </div>
-      <div class="item">
-        <div class="partner-logo-box">
-          <img src="assets/images/salon-logo-2.png" alt="">
-        </div>
-      </div>
-      <div class="item">
-        <div class="partner-logo-box">
-          <img src="assets/images/salon-logo-3.png" alt="">
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-</section>
 
 
 <section class="partners">
