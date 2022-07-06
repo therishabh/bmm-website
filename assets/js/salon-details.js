@@ -229,6 +229,7 @@ var salon_details = new function () {
                 if (packages.length > 0) {
                     $("#packages").removeClass('d-none');
                     html += `<div class="card">`;
+                    
 
                     html += `<div id="collapse_packages" class="collapse show" data-parent="#accordion">`;
                     html += `<div class="card-body">`;
@@ -239,6 +240,10 @@ var salon_details = new function () {
                         html += `<div class="service-wrapper-list">`;
                         html += `<div>`;
                         html += `<h5>${el.package_name} [${el.category}] </h5>`;
+                        (el.services).forEach(function(t1){
+                            html += `<span>${t1.name}</span><br>`;
+                        })
+                        
                         html += `<div>`;
                         html += `<span class="discounted_price">Rs. ${el.discounted_price}</span>`;
                         html += `</div>`;
@@ -252,8 +257,10 @@ var salon_details = new function () {
                         }
 
 
+
                         html += `</div>`;
                         html += `</div>`;
+                        
                     });
 
                     html + `</div>`;
