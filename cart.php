@@ -39,6 +39,7 @@
 
                 <div class="white-box p-4 cart-box-3 mt-3">
                     <div class="delivery-address-box">
+                        <h4 id="desktop-address-heading1">Choose Billing Address</h4>
                         <div class="row">
                             <span class="row col-lg-12" id="address_row">
 
@@ -65,7 +66,7 @@
                     <div class="add-delivery-address-form">
                         <h3 class="heading-tertiary-24" id="desktop-address-heading2">Add a New Billing Address</h3>
                         <div class="overflow-hidden mt-4" id="desktop-address-form">
-                            <form action="" id="" name="" method="post">
+                            <form action="" id="address_form" name="" method="post">
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group"> <label>Full Name <span class="text-danger">*</span></label><input alt="is_alphanumeric" name="full_name" id="desktop-full_name" type="text" class="form-control" maxlength="50" required=""></div>
@@ -202,7 +203,7 @@
                             <div class="col-md-12">
                                 <div class="form-group text-center mb-0">
                                     <button class="btn btn-pink" onclick="cart_cl.membershipCardVerify();">APPLY</button>
-                                    <button class="btn btn-secondary" id="">CANCEL</button>
+                                    <button class="btn btn-secondary" onclick="cart_cl.membershipCardCancel();">CANCEL</button>
                                 </div>
                             </div>
                         </div>
@@ -218,7 +219,7 @@
                         <div class="form-group m-0 p-0">
                             <label> <input type="radio" name="membership-card" value="card_full_pay"  onchange="cart_cl.calc();" /> Pay full amount with card</label>
                             <label> <input type="radio" name="membership-card" value="card_partial_pay"  onchange="cart_cl.calc();" /> Pay Partial amount with card</label>
-                            <input type="text" class="form-control" placeholder="Enter partial amount" id="partialPaymentInput" onblur="cart_cl.calc();" />
+                            <input type="number" class="form-control" placeholder="Enter partial amount" id="partialPaymentInput" onblur="cart_cl.calc();" />
                         </div>
                     </div>
 

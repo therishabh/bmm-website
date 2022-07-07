@@ -68,7 +68,7 @@ var cart_cl = new function () {
                 cart_cl.total_tax = 0;
                 cart_cl.total_amount = 0;
                 $('#service-list').html('');
-
+                
                 if (res.result.services != undefined) {
                     $('#service-list').append("<hr><h6><b>Services</b></h6>");
                     (res.result.services).forEach(function (service) {
@@ -118,6 +118,11 @@ var cart_cl = new function () {
                         $('#service-list').append(html);
                     });
                 }
+                
+                if(res.result.services == undefined && res.result.packages == undefined){
+                    //empty state to show here
+                }
+                
                 cart_cl.total_price = parseFloat(cart_cl.total_price).toFixed(2);
 
             },
@@ -481,6 +486,7 @@ var cart_cl = new function () {
             url: `${base_url}user/address/add-address.php`,
             type: 'POST',
             dataType: 'JSON',
+            async: false,
             data: JSON.stringify({
                 token: localStorage.getItem("userToken"),
                 "full_name": fullName,
@@ -496,6 +502,7 @@ var cart_cl = new function () {
             success: function (res) {
                 toastr.success(res.message);
                 cart_cl.getUserAddress();
+                $("#address_form")[0].reset();
             },
             error: function (res) {
                 toastr.error(res.responseJSON.message);
@@ -570,6 +577,14 @@ var cart_cl = new function () {
                 ;
             }
         });
+    };
+    
+    this.membershipCardCancel = function() {
+        $('#card_number').val('');
+        $('#expiry_date').val('');
+        $('#availableCardBox').hide();
+        $('#cardDropdown').hide();
+        $('.card-btn-apply').show();
     };
 };
 
