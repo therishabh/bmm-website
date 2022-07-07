@@ -5,7 +5,7 @@
  */
 
 const __url = $("#base_url").val();
-const token = localStorage.getItem("userToken");
+var token = localStorage.getItem("userToken");
 var salon_details = new function () {
     this.cartItemsArray = [];
     this.cartIDArray = [];
@@ -38,13 +38,17 @@ var salon_details = new function () {
                         coupon_html += ' | ';
                     }
                     if (el.discount_percent == "") {
-                        coupon_html += el.flat_discount_amount + ' flat discount USE ' + el.coupon_code;
+                        coupon_html += "Rs. " + el.flat_discount_amount + ' flat discount USE ' + el.coupon_code;
                     } else {
                         coupon_html += el.flat_discount_amount + ' % discount USE ' + el.coupon_code;
                     }
                     i++;
                 });
-                $("#salon_discounts").html(coupon_html);
+                
+                if (coupon_html != '') {
+                    $("#tags_").removeClass("d-none");
+                    $("#salon_discounts").html(coupon_html);
+                }
 
                 let services = res.result.services;
                 let type = [];
@@ -152,10 +156,11 @@ var salon_details = new function () {
     };
 
     this.bookService = function (serviceId, packageId, this_) {
-        if (!token) {
+        if (!localStorage.getItem("userToken")) {
             $('#loginModal').modal('show');
             // addToCart();
         } else {
+            token = localStorage.getItem("userToken");
             salon_details.addToCart(serviceId, packageId, this_);
             common.cartCount();
         }
@@ -177,10 +182,10 @@ var salon_details = new function () {
                 common.cartCount();
                 $(this_).removeClass('btn-pink');
                 $(this_).addClass('bg-light');
-                $(this_).html('Remove');
-                $(this_).attr('onclick',`salon_details.removeService('${service_id}','${package_id}',this)`);
-                
-//                $(this__).attr('onclick',`salon_details.removeService()`)
+                $(this_).html('Booked');
+                $(this_).attr('onclick', `javascript:void(0)`);
+//                $(this_).attr('onclick', `salon_details.removeService('${service_id}','${package_id}',this)`);
+
             }, error: function (result) {
                 toastr.error(result.responseJSON.message);
                 common.cartCount();
@@ -194,6 +199,7 @@ var salon_details = new function () {
             url: `${base_url}user/cart/remove-from-cart.php`,
             type: 'POST',
             dataType: 'JSON',
+            async: false,
             data: JSON.stringify({
                 token: localStorage.getItem("userToken"),
                 service_id: service_id,
@@ -202,11 +208,11 @@ var salon_details = new function () {
             success: function (res) {
                 toastr.success(res.message);
                 common.cartCount();
-                
+
                 $(this_).removeClass('bg-light');
                 $(this_).addClass('btn-pink');
                 $(this_).html('Book');
-                $(this_).attr('onclick',`salon_details.bookService('${service_id}','${package_id}',this)`);
+                $(this_).attr('onclick', `salon_details.bookService('${service_id}','${package_id}',this)`);
             }
         });
     };
@@ -229,7 +235,7 @@ var salon_details = new function () {
                 if (packages.length > 0) {
                     $("#packages").removeClass('d-none');
                     html += `<div class="card">`;
-                    
+
 
                     html += `<div id="collapse_packages" class="collapse show" data-parent="#accordion">`;
                     html += `<div class="card-body">`;
@@ -240,10 +246,10 @@ var salon_details = new function () {
                         html += `<div class="service-wrapper-list">`;
                         html += `<div>`;
                         html += `<h5>${el.package_name} [${el.category}] </h5>`;
-                        (el.services).forEach(function(t1){
+                        (el.services).forEach(function (t1) {
                             html += `<span>${t1.name}</span><br>`;
                         })
-                        
+
                         html += `<div>`;
                         html += `<span class="discounted_price">Rs. ${el.discounted_price}</span>`;
                         html += `</div>`;
@@ -260,7 +266,7 @@ var salon_details = new function () {
 
                         html += `</div>`;
                         html += `</div>`;
-                        
+
                     });
 
                     html + `</div>`;

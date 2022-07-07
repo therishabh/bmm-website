@@ -11,7 +11,7 @@
             <div class="col-md-8 salon-text">
                 <h1 id="salon_name"></h1>
                 <p> <i class="fa fa-map-marker-alt"></i> <span id="salon_address"></span></p>
-                <p><i class="fa fa-tags"></i> <span id="salon_discounts"> </span></p>
+                <p id="tags_" class="d-none"><i class="fa fa-tags"></i> <span id="salon_discounts"> </span></p>
                 <!--<span class="rating"><i class="fas fa-star"></i> 3.9</span>-->
             </div>
         </div>
