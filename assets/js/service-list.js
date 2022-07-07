@@ -57,6 +57,25 @@ var service_list = new function () {
             $("#makeupArtistTab_li").removeClass('d-none');
         }
 
+        if (localStorage.getItem("userToken")){
+            var fav_list = [];
+            $.ajax({
+                url: `${base_url}user/favourite/get-favourite-list.php`,
+                type: 'GET',
+                dataType: 'JSON',
+                async: false,
+                data: {
+                    token: localStorage.getItem("userToken")
+                },
+                success: function (res) {
+                    var result = res.result;
+                    result.forEach(function (el) {
+                        fav_list.push(el.id);
+                    });
+                }
+            });
+        }
+
         // var cartCount = '';
         $(".loading-wrapper").show();
         $.ajax({
@@ -73,6 +92,7 @@ var service_list = new function () {
 
                 if (result && result.length > 0) {
                     result.forEach((val, key) => {
+                        var cclass = "";
                         var serviceWrapper = '';
                         if (val.services && val.services.length > 0) {
                             val.services.forEach(serviceVal => {
@@ -94,10 +114,10 @@ var service_list = new function () {
                         }
                         var banner_image = (val.banner_image) ? val.banner_image : 'https://via.placeholder.com/400x250';
                         if (val.business_type == 'salon') {
-                        var serviceWrapper_i = '';
-                                if (val.services && val.services.length > 0 && (type==1 || type==2 || type==3 || type==4)) {
-                        val.services.forEach(serviceVal => {
-                        serviceWrapper_i += `
+                            var serviceWrapper_i = '';
+                            if (val.services && val.services.length > 0 && (type == 1 || type == 2 || type == 3 || type == 4)) {
+                                val.services.forEach(serviceVal => {
+                                    serviceWrapper_i += `
                                     
                                     <div  id="${serviceVal.id}" class="col-lg-12 ">
                                         <div>
@@ -112,14 +132,21 @@ var service_list = new function () {
                                         </div>
                                     </div>    
                                     `
-                        });
-                        }
-
-                        var app__ = `
-                            <div class="col-md-4">
-                            <div class="wishlist-icon" onclick="service_list.addToWishlist('${val.id}')" id="salon_${val.id}">
+                                });
+                            }
+                            if (fav_list.includes(val.id)) {
+                                cclass = `<div class="wishlist-icon" onclick="service_list.removeFromWishList('${val.id}')" id="salon_${val.id}">
+                                <i class="fas fa-heart"></i>
+                            </div>`;
+                            } else {
+                                cclass = `<div class="wishlist-icon" onclick="service_list.addToWishlist('${val.id}')" id="salon_${val.id}">
                                 <i class="far fa-heart"></i>
-                            </div>
+                            </div>`;
+                            }
+
+                            var app__ = `
+                            <div class="col-md-4">
+                            ${cclass}
                             <div class="service-box">
                                 <div onclick='location.href="${__url}salon-details/${val.id}/${service_id}"'>                            
                                     <img src="${banner_image}" alt="" class="img-fluid" />
@@ -133,16 +160,16 @@ var service_list = new function () {
                                         <p class="discountPara dp_${val.id}"></p>
                                          </div>
                                     </div>`;
-                                if (serviceWrapper_i!=''){
+                            if (serviceWrapper_i != '') {
                                 app__ += `
                                                      <hr>
                                                  <div class="service-body" >
                                                     ${serviceWrapper_i}    
                                                  </div> `;
-                                }
-                                
-                                app__ += '</div></div></div>';
-                            
+                            }
+
+                            app__ += '</div></div></div>';
+
 
                             $('#salonData .row').append(app__);
                         }
@@ -331,19 +358,6 @@ var service_list = new function () {
         }
     };
 
-    this.getWishList = function () {
-        $.ajax({
-            url: `${base_url}user/favourite/get-favourite-list.php`,
-            type: 'GET',
-            dataType: 'JSON',
-            data: {
-                token: localStorage.getItem("userToken")
-            },
-            success: function (result) {
-                console.log(result);
-            }
-        });
-    };
 
     this.bookServiceSalon = function (serviceId, this__) {
         if (!localStorage.getItem("userToken")) {
@@ -427,4 +441,3 @@ $('body').on('click', '.bookServiceBtn', function () {
 //  });
 
 service_list.getListingResult();
-service_list.getWishList();

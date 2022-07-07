@@ -528,7 +528,7 @@ var user_profile = new function() {
             success: function(res) {
                 var data = res.result;
                 $("#query_title").html(data.title);
-                $("#query_body").html('');
+                $("#query_body").html(data.description);
                 var reply = data.replies;
 
                 reply.forEach(function(el) {
