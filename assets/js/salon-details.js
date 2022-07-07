@@ -6,14 +6,14 @@
 
 const __url = $("#base_url").val();
 const token = localStorage.getItem("userToken");
-var salon_details = new function () {
+var salon_details = new function() {
     this.cartItemsArray = [];
     this.cartIDArray = [];
     this.cartPackageArray = [];
     this.cartPackageIDArray = [];
 
-    this.init = function () {
-//        console.log(salon_details.cartItemsArray);
+    this.init = function() {
+        //        console.log(salon_details.cartItemsArray);
         var salonId = $("#salon-id").val();
         var serviceId = $("#service-id").val();
         $.ajax({
@@ -25,7 +25,7 @@ var salon_details = new function () {
                 salon_id: salonId,
                 q: "services,info,coupons"
             },
-            success: function (res) {
+            success: function(res) {
                 let info = res.result.info;
                 $("#salon_name").html(info.salon_name);
                 $("#salon_address").html(info.address + ', ' + info.city + ', ' + info.state);
@@ -33,7 +33,7 @@ var salon_details = new function () {
                 let coupons = res.result.coupons;
                 var coupon_html = '';
                 var i = 0;
-                coupons.forEach(function (el) {
+                coupons.forEach(function(el) {
                     if (i > 0) {
                         coupon_html += ' | ';
                     }
@@ -49,9 +49,8 @@ var salon_details = new function () {
                 let services = res.result.services;
                 let type = [];
                 let type_services = {};
-                services.forEach(function (el) {
-                    if (type.indexOf(el.type) == -1)
-                    {
+                services.forEach(function(el) {
+                    if (type.indexOf(el.type) == -1) {
                         type_services[el.type] = [];
                         type.push(el.type);
                     }
@@ -118,7 +117,7 @@ var salon_details = new function () {
         });
     };
 
-    this.getCartItems = function () {
+    this.getCartItems = function() {
         $.ajax({
             url: `${base_url}user/cart/get-cart-items.php`,
             type: 'GET',
@@ -126,24 +125,24 @@ var salon_details = new function () {
             data: {
                 token: localStorage.getItem("userToken")
             },
-            success: function (res) {
+            success: function(res) {
                 if (res.result) {
                     if (res.result.services != undefined) {
-                        (res.result.services).forEach(function (service) {
+                        (res.result.services).forEach(function(service) {
                             salon_details.cartItemsArray.push(service.service_id);
                             salon_details.cartIDArray.push(service.service_id);
 
                         });
                     }
                     if (res.result.packages != undefined) {
-                        (res.result.packages).forEach(function (package) {
+                        (res.result.packages).forEach(function(package) {
                             salon_details.cartPackageArray.push(package.id);
                             salon_details.cartPackageIDArray.push(package.id);
                         });
                     }
                 }
             },
-            complete: function () {
+            complete: function() {
                 salon_details.init();
                 salon_details.packages();
             }
@@ -151,7 +150,7 @@ var salon_details = new function () {
 
     };
 
-    this.bookService = function (serviceId, packageId, this_) {
+    this.bookService = function(serviceId, packageId, this_) {
         if (!token) {
             $('#loginModal').modal('show');
             // addToCart();
@@ -161,7 +160,7 @@ var salon_details = new function () {
         }
     };
 
-    this.addToCart = function (service_id, package_id, this_) {
+    this.addToCart = function(service_id, package_id, this_) {
         var post_data = {
             token: token,
             service_id: service_id,
@@ -172,23 +171,24 @@ var salon_details = new function () {
             type: 'POST',
             dataType: 'JSON',
             data: JSON.stringify(post_data),
-            success: function (result) {
+            success: function(result) {
                 toastr.success('Service added in cart.');
                 common.cartCount();
                 $(this_).removeClass('btn-pink');
                 $(this_).addClass('bg-light');
                 $(this_).html('Remove');
-                $(this_).attr('onclick',`salon_details.removeService('${service_id}','${package_id}',this)`);
-                
-//                $(this__).attr('onclick',`salon_details.removeService()`)
-            }, error: function (result) {
+                $(this_).attr('onclick', `salon_details.removeService('${service_id}','${package_id}',this)`);
+
+                //                $(this__).attr('onclick',`salon_details.removeService()`)
+            },
+            error: function(result) {
                 toastr.error(result.responseJSON.message);
                 common.cartCount();
             }
         });
     }
 
-    this.removeService = function (service_id, package_id, this_) {
+    this.removeService = function(service_id, package_id, this_) {
         console.log(this_);
         $.ajax({
             url: `${base_url}user/cart/remove-from-cart.php`,
@@ -199,19 +199,19 @@ var salon_details = new function () {
                 service_id: service_id,
                 package_id: package_id
             }),
-            success: function (res) {
+            success: function(res) {
                 toastr.success(res.message);
                 common.cartCount();
-                
+
                 $(this_).removeClass('bg-light');
                 $(this_).addClass('btn-pink');
                 $(this_).html('Book');
-                $(this_).attr('onclick',`salon_details.bookService('${service_id}','${package_id}',this)`);
+                $(this_).attr('onclick', `salon_details.bookService('${service_id}','${package_id}',this)`);
             }
         });
     };
 
-    this.packages = function () {
+    this.packages = function() {
         var salonId = $("#salon-id").val();
         $.ajax({
             url: `${base_url}user/salon/detail.php`,
@@ -222,7 +222,7 @@ var salon_details = new function () {
                 salon_id: salonId,
                 q: 'packages'
             },
-            success: function (res) {
+            success: function(res) {
                 console.log();
                 var packages = res.result.packages;
                 var html = '';
@@ -235,10 +235,10 @@ var salon_details = new function () {
                     html += `<div class="service-wrapper">`;
                     html += `<div class="service-wrapper-body">`;
 
-                    packages.forEach(function (el) {
+                    packages.forEach(function(el) {
                         html += `<div class="service-wrapper-list">`;
                         html += `<div>`;
-                        html += `<h5>${el.package_name} [${el.category}] </h5>`;
+                        html += `<h5>${el.package_name} <img src="/assets/images/female-icon.png" class="category-icon" /> <img src="/assets/images/male-icon.png" class="category-icon" /> [${el.category}] </h5>`;
                         html += `<div>`;
                         html += `<span class="discounted_price">Rs. ${el.discounted_price}</span>`;
                         html += `</div>`;
