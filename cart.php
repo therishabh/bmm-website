@@ -13,6 +13,11 @@
                     <div class="heading mb-1 font-weight-bold" id='salon_name'></div>
                     <p><i class="fa fa-map-marker-alt"></i> <span id='salon_address'></span></p>
                     <div id='service-list'> </div>
+                    <div class="empty-box">
+                        <img src="assets/images/empty-service.png" alt="" />
+                        <h5>Your cart is empty!</h5>
+                        <p>It's a good day to book the service!</p>
+                    </div>
                 </div>
 
                 <div class="white-box p-4 cart-box-3 mt-3">
