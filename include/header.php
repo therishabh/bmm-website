@@ -462,6 +462,20 @@
                                                             <li><a href="https://dev.bookmymakeup.co.in/service-list/9/n/1">Oiling</a></li>
                                                         </ul>
                                                     </div>
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title" data="Hair Texture">Hair Texture</div>
+                                                        <ul class="checkbox-wrapper hair-texture">
+                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/27/n/1">Rebonding</a></li>
+
+                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/28/n/1">Perming</a></li>
+
+                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/29/n/1">Keratin</a></li>
+
+                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/30/n/1">Colour Protection</a></li>
+
+                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/31/n/1">Smoothening</a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                                 <div class="col-lg mb-4">
                                                     <div class="menu-common-list">
@@ -476,6 +490,20 @@
                                                             <li><a href="https://dev.bookmymakeup.co.in/service-list/13/n/1">Scalp Treatments</a></li>
                                                         </ul>
                                                     </div>
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title" data="Hair Texture">Hair Texture</div>
+                                                        <ul class="checkbox-wrapper hair-texture">
+                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/27/n/1">Rebonding</a></li>
+
+                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/28/n/1">Perming</a></li>
+
+                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/29/n/1">Keratin</a></li>
+
+                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/30/n/1">Colour Protection</a></li>
+
+                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/31/n/1">Smoothening</a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                                 <div class="col-lg mb-4">
                                                     <div class="menu-common-list">
@@ -486,6 +514,20 @@
                                                             <li><a href="https://dev.bookmymakeup.co.in/service-list/15/n/1">Nail Art</a></li>
 
                                                             <li><a href="https://dev.bookmymakeup.co.in/service-list/16/n/1">Nail Filling</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title" data="Hand &amp; Feet">Hand &amp; Feet</div>
+                                                        <ul class="checkbox-wrapper hand--feet">
+                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/32/n/1">Manicure</a></li>
+
+                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/33/n/1">Spa Pedicure</a></li>
+
+                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/34/n/1">Pedicure</a></li>
+
+                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/35/n/1">Waxing</a></li>
+
+                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/36/n/1">Spa Manicure</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -504,6 +546,20 @@
                                                             <li><a href="https://dev.bookmymakeup.co.in/service-list/21/n/1">Eye Make Up</a></li>
                                                         </ul>
                                                     </div>
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title" data="Hand &amp; Feet">Hand &amp; Feet</div>
+                                                        <ul class="checkbox-wrapper hand--feet">
+                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/32/n/1">Manicure</a></li>
+
+                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/33/n/1">Spa Pedicure</a></li>
+
+                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/34/n/1">Pedicure</a></li>
+
+                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/35/n/1">Waxing</a></li>
+
+                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/36/n/1">Spa Manicure</a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                                 <div class="col-lg mb-4">
                                                     <div class="menu-common-list">
@@ -520,74 +576,6 @@
                                                             <li><a href="https://dev.bookmymakeup.co.in/service-list/26/n/1">Threading</a></li>
                                                         </ul>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg mb-4">
-                                                    <div class="menu-common-list">
-                                                        <div class="nav-submenu-title" data="Hair Texture">Hair Texture</div>
-                                                        <ul class="checkbox-wrapper hair-texture">
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/27/n/1">Rebonding</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/28/n/1">Perming</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/29/n/1">Keratin</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/30/n/1">Colour Protection</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/31/n/1">Smoothening</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg mb-4">
-                                                    <div class="menu-common-list">
-                                                        <div class="nav-submenu-title" data="Hand &amp; Feet">Hand &amp; Feet</div>
-                                                        <ul class="checkbox-wrapper hand--feet">
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/32/n/1">Manicure</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/33/n/1">Spa Pedicure</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/34/n/1">Pedicure</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/35/n/1">Waxing</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/36/n/1">Spa Manicure</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg mb-4">
-                                                    <div class="menu-common-list">
-                                                        <div class="nav-submenu-title" data="Hair Texture">Hair Texture</div>
-                                                        <ul class="checkbox-wrapper hair-texture">
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/27/n/1">Rebonding</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/28/n/1">Perming</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/29/n/1">Keratin</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/30/n/1">Colour Protection</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/31/n/1">Smoothening</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg mb-4">
-                                                    <div class="menu-common-list">
-                                                        <div class="nav-submenu-title" data="Hand &amp; Feet">Hand &amp; Feet</div>
-                                                        <ul class="checkbox-wrapper hand--feet">
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/32/n/1">Manicure</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/33/n/1">Spa Pedicure</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/34/n/1">Pedicure</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/35/n/1">Waxing</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/36/n/1">Spa Manicure</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg mb-4">
                                                     <div class="menu-common-list">
                                                         <div class="nav-submenu-title" data="Hair Texture">Hair Texture</div>
                                                         <ul class="checkbox-wrapper hair-texture">
@@ -604,11 +592,14 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                          
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
+                                    <div class="submenu-img-box">
                                     <img src="<?php echo $base_url; ?>assets/images/submenu-salon-female-img.jpg" alt="" class="img-fluid">
+                                    </div>
                                 </div>
                             </div>
 

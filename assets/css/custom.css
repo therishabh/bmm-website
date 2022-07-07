@@ -425,6 +425,10 @@
             padding: 25px 36px;
         }
         
+        .submenu-img-box {
+            padding: 25px;
+        }
+        
         .slide-section img {
             width: 100%;
         }
@@ -6597,3 +6601,21 @@
         #syllabus {
             scroll-padding-top: 400px;
         } */
+        
+        .empty-box {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .empty-box img {
+            width: 400px;
+        }
+        
+        .page-not-found-404-section h1 {
+            font-size: 50px;
+            font-weight: 600;
+            color: var(--pink);
+        }
