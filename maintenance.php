@@ -7,7 +7,7 @@
         <div class="col-md-12 text-center">
           <h1>The website under maintenance</h1>
           <img src="assets/images/maintenance.png" alt="" />
-          <h4 class="mt-3">We will back shortly...</h4>
+          <h4 class="mt-3">Makeup is going on, Will be back soon.</h4>
           <a href="/" class="btn btn-pink mt-3">Back to Home</a>
         </div>
 

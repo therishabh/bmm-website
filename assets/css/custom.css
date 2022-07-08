@@ -6606,10 +6606,16 @@
         .empty-box {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
             align-items: center;
             justify-content: center;
             width: 100%;
+            text-align: center;
+        }
+        
+        .empty-box h5 {
+            margin-bottom: 0px;
+            color: var(--pink);
         }
         
         .empty-box img {
@@ -6618,6 +6624,10 @@
         
         .no-data-box img {
             width: 250px;
+        }
+        
+        .no-wishlist-box img {
+            width: 450px;
         }
         
         .page-not-found-404-section h1 {
