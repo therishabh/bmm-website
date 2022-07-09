@@ -6,7 +6,6 @@ let str = $("#service-str").val();
 const type = $("#type").val();
 
 
-<<<<<<< HEAD
 var service_list = new function() {
         this.getListingResult = function() {
                 if (type != '') {
@@ -48,6 +47,7 @@ var service_list = new function() {
                     $("#luxeTab_li").removeClass('d-none');
                     //                    $("#makeupArtistTab_li").removeClass('d-none');
                 } else {
+                    $(".custom-breadcrumb").addClass('d-none');
                     $("#salonsTab_li").removeClass('d-none');
                     $("#salonsTab_li").addClass('active');
                     $("#salonsTab").addClass('d-custom-block');
@@ -55,6 +55,25 @@ var service_list = new function() {
                     $("#bridalTab_li").removeClass('d-none');
                     $("#luxeTab_li").removeClass('d-none');
                     $("#makeupArtistTab_li").removeClass('d-none');
+                }
+
+                if (localStorage.getItem("userToken")) {
+                    var fav_list = [];
+                    $.ajax({
+                        url: `${base_url}user/favourite/get-favourite-list.php`,
+                        type: 'GET',
+                        dataType: 'JSON',
+                        async: false,
+                        data: {
+                            token: localStorage.getItem("userToken")
+                        },
+                        success: function(res) {
+                            var result = res.result;
+                            result.forEach(function(el) {
+                                fav_list.push(el.id);
+                            });
+                        }
+                    });
                 }
 
                 // var cartCount = '';
@@ -73,103 +92,11 @@ var service_list = new function() {
 
                                     if (result && result.length > 0) {
                                         result.forEach((val, key) => {
+                                                    var cclass = "";
                                                     var serviceWrapper = '';
                                                     if (val.services && val.services.length > 0) {
                                                         val.services.forEach(serviceVal => {
                                                                     serviceWrapper += `
-=======
-var service_list = new function () {
-    this.getListingResult = function () {
-        if (type != '') {
-            str = '';
-        }
-        if (type == 1) {
-            $("#salonsTab_li").removeClass('d-none');
-            $("#salonsTab_li").addClass('active');
-            $("#salonsTab").addClass('d-custom-block');
-//            $("#servicesTab_li").removeClass('d-none');
-            $("#bridalTab_li").removeClass('d-none');
-            $("#luxeTab_li").removeClass('d-none');
-//                    $("#makeupArtistTab_li").removeClass('d-none');
-        } else
-        if (type == 2) {
-//                    $("#salonsTab_li").removeClass('d-none');
-//                    $("#servicesTab_li").removeClass('d-none');
-            $("#bridalTab_li").removeClass('d-none');
-            $("#luxeTab_li").removeClass('d-none');
-            $("#makeupArtistTab_li").removeClass('d-none');
-            $("#makeupArtistTab_li").addClass('active');
-            $("#makeupArtistTab").addClass('d-custom-block');
-        } else
-        if (type == 3) {
-            $("#salonsTab_li").removeClass('d-none');
-            $("#salonsTab_li").addClass('active');
-            $("#salonsTab").addClass('d-custom-block');
-//            $("#servicesTab_li").removeClass('d-none');
-//                    $("#bridalTab_li").removeClass('d-none');
-//                    $("#luxeTab_li").removeClass('d-none');
-//                    $("#makeupArtistTab_li").removeClass('d-none');
-        } else
-        if (type == 4) {
-//                    $("#salonsTab_li").removeClass('d-none');
-//                    $("#servicesTab_li").removeClass('d-none');
-            $("#bridalTab_li").removeClass('d-none');
-            $("#bridalTab_li").addClass('active');
-            $("#bridalTab").addClass('d-custom-block');
-            $("#luxeTab_li").removeClass('d-none');
-//                    $("#makeupArtistTab_li").removeClass('d-none');
-        } else {
-            $(".custom-breadcrumb").addClass('d-none');
-            $("#salonsTab_li").removeClass('d-none');
-            $("#salonsTab_li").addClass('active');
-            $("#salonsTab").addClass('d-custom-block');
-            $("#servicesTab_li").removeClass('d-none');
-            $("#bridalTab_li").removeClass('d-none');
-            $("#luxeTab_li").removeClass('d-none');
-            $("#makeupArtistTab_li").removeClass('d-none');
-        }
-
-        if (localStorage.getItem("userToken")){
-            var fav_list = [];
-            $.ajax({
-                url: `${base_url}user/favourite/get-favourite-list.php`,
-                type: 'GET',
-                dataType: 'JSON',
-                async: false,
-                data: {
-                    token: localStorage.getItem("userToken")
-                },
-                success: function (res) {
-                    var result = res.result;
-                    result.forEach(function (el) {
-                        fav_list.push(el.id);
-                    });
-                }
-            });
-        }
-
-        // var cartCount = '';
-        $(".loading-wrapper").show();
-        $.ajax({
-            url: base_url + `/user/search/get-listing-result.php`,
-            type: 'GET',
-            data: {
-                service_id: service_id,
-                str: str
-            },
-            dataType: 'JSON',
-            success: function (result) {
-                result = result.result;
-                //console.log(result);
-
-                if (result && result.length > 0) {
-                    result.forEach((val, key) => {
-                        var cclass = "";
-                        var serviceWrapper = '';
-                        if (val.services && val.services.length > 0) {
-                            val.services.forEach(serviceVal => {
-                                serviceWrapper += `
->>>>>>> 3687e159b383f16a128d0cb9504c49a7b7cba73e
                                     <div class="service-wrapper-list" id="${serviceVal.id}">
                                         <div>
                                             <h5>${serviceVal.name} <img src="/assets/images/female-icon.png" class="category-icon" /> <img src="/assets/images/male-icon.png" class="category-icon" /> [${serviceVal.category}] </h5>
