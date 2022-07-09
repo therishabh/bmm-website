@@ -29,6 +29,12 @@
 
                                 </div>
 
+                                <div class="empty-box no-data-box">
+                                    <h5>Manage your past and upcoming bookings</h5>
+                                    <img src="<?php echo $base_url; ?>assets/images/no-bookings.png" alt="">
+                                    <p class="mb-0">You have not made any bookings yet</p>
+                                    <a href="/" class="btn btn-pink">Book Now</a>
+                                </div>
 
                             </div>
 

@@ -8,7 +8,7 @@
                             <div class="col-md-12">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <h3 class="h3-heading">My Pic</h3>
+                                        <h3 class="h3-heading">My Pics</h3>
                                         <!--<h5 class="float-left">Photos</h5>-->
                                         <a href="javascript:user_profile.openUpload();" class="btn btn-pink float-right">Upload Photos</a>
                                         <input type="file" id="myfile" name="myfile" style="display:none;" onchange="user_profile.uploadImage(this);">
@@ -16,6 +16,13 @@
                                         <div class="row mt-4 user-pic" id="user-pic">
                                             
                                         </div>
+
+                                        
+                                <div class="empty-box no-data-box">
+                                    <h5>Share your favourite makeup & hairstyling pics.</h5>
+                                    <img src="<?php echo $base_url; ?>assets/images/no-pics.png" alt="">
+                                    <a href="javascript:user_profile.openUpload();" class="btn btn-pink">Upload Photos</a>
+                                </div>
 
 
 <!--                                        <hr>

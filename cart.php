@@ -16,7 +16,9 @@
                     <div class="empty-box">
                         <img src="assets/images/empty-service.png" alt="" />
                         <h5>Your cart is empty!</h5>
-                        <p>It's a good day to book the service!</p>
+                        <p class="mb-0">You have not made any booking yet!</p>
+                        <a href="/" class="btn btn-pink">Book Now</a>
+                        <!-- <p>It's a good day to book the service!</p> -->
                     </div>
                 </div>
 

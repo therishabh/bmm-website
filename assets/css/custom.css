@@ -6630,10 +6630,35 @@
             width: 450px;
         }
         
-        .page-not-found-404-section h1 {
+        .page-not-found-404-section {
+            background: #eee8ea;
+            padding-bottom: 50px;
+            position: relative;
+        }
+        
+        .page-not-found-404-section img {
+            width: 100%;
+        }
+        
+        .maintenance-section {
+            background: #eee8ea;
+        }
+        
+        .maintenance-section h4 {
             font-size: 50px;
-            font-weight: 600;
-            color: var(--pink);
+            font-weight: bold;
+            color: #000;
+        }
+        
+        .maintenance-section img {
+            width: 100%;
+        }
+        
+        .maintenance-box {
+            text-align: right;
+            position: absolute;
+            top: 250px;
+            right: 100px;
         }
         
         .category-icon {
