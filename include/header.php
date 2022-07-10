@@ -1743,11 +1743,13 @@
 
                     <li><a href="<?php echo $base_url; ?>blog">Blog </a>
                     </li>
-
+                    
                     <li class="p-relative">
                         <a href="<?php echo $base_url; ?>pro/index">BMM PRO
                             <!-- <span class="new-tag new">FREE</span> -->
                         </a>
+                    </li>
+                    <li><a href="<?php echo $base_url; ?>subscription">Subscription </a>
                     </li>
 
 
