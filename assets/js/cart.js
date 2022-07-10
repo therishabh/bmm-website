@@ -68,7 +68,17 @@ var cart_cl = new function () {
                 cart_cl.total_tax = 0;
                 cart_cl.total_amount = 0;
                 $('#service-list').html('');
-                
+
+                console.log(res.result.services);
+                console.log(res.result.packages);
+                if (res.result.services == undefined && res.result.packages == undefined) {
+                    $("#empty").removeClass("d-none");
+                    $("#c_data").addClass("d-none");
+                } else {
+                    $("#empty").addClass("d-none");
+                    $("#c_data").removeClass("d-none");
+                }
+
                 if (res.result.services != undefined) {
                     $('#service-list').append("<hr><h6><b>Services</b></h6>");
                     (res.result.services).forEach(function (service) {
@@ -118,11 +128,9 @@ var cart_cl = new function () {
                         $('#service-list').append(html);
                     });
                 }
-                
-                if(res.result.services == undefined && res.result.packages == undefined){
-                    //empty state to show here
-                }
-                
+
+
+
                 cart_cl.total_price = parseFloat(cart_cl.total_price).toFixed(2);
 
             },
@@ -578,8 +586,8 @@ var cart_cl = new function () {
             }
         });
     };
-    
-    this.membershipCardCancel = function() {
+
+    this.membershipCardCancel = function () {
         $('#card_number').val('');
         $('#expiry_date').val('');
         $('#availableCardBox').hide();
