@@ -1,4 +1,4 @@
-<section class="maintenance-section">
+<section class="page-not-found-404-section">
   <img src="assets/images/404.jpeg" alt="" />
   <div class="container">
     <div class="row">

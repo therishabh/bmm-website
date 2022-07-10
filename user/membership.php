@@ -34,10 +34,10 @@
                                 </div>
 
                                 <div class="empty-box no-data-box">
-                                    <h5>Get upto 50% off on Services, Attractive Deals & No Payment Hassles <br>
+                                    <h5>Upto 50% Discount on services,Attractive  Offers & no payment hassles.<br>
                                     Buy Our Membership Cards</h5>
                                     <img src="<?php echo $base_url; ?>assets/images/no-cards.png" alt="">
-                                    <a href="/" class="btn btn-pink">Buy Membership Card</a>
+                                    <a href="/cards" class="btn btn-pink">Buy Membership Card</a>
                                 </div>
 
                             </div>

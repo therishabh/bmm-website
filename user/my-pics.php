@@ -20,8 +20,8 @@
                                         
                                 <div class="empty-box no-data-box">
                                     <h5>Share your favourite makeup & hairstyling pics.</h5>
-                                    <img src="<?php echo $base_url; ?>assets/images/no-pics.png" alt="">
                                     <a href="javascript:user_profile.openUpload();" class="btn btn-pink">Upload Photos</a>
+                                    <img src="<?php echo $base_url; ?>assets/images/no-pics.png" alt="">
                                 </div>
 
 

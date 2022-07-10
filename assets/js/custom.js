@@ -236,4 +236,9 @@ $(function() {
         $('.course-info-nav li a').removeClass('active');
         $(this).addClass('active');
     });
+
+    $('.new-submenu-category li').mouseover(function() {
+        $('.new-submenu-content').hide();
+        $('#' + $(this).attr('data')).show();
+    })
 })
