@@ -422,7 +422,8 @@
         .new-submenu-content {
             width: calc(100% - 200px);
             margin-left: 200px;
-            padding: 25px 36px;
+            padding: 20px;
+            display: none;
         }
         
         .submenu-img-box {
@@ -3726,7 +3727,7 @@
         .menu-common-list .nav-submenu-title {
             font-weight: bold;
             color: var(--pink) !important;
-            font-size: 14px;
+            font-size: 13px;
             text-transform: uppercase;
         }
         
@@ -3739,7 +3740,7 @@
             color: #000 !important;
             padding: 0px;
             font-weight: normal;
-            font-size: 14px;
+            font-size: 13px;
             line-height: 24px;
         }
         
@@ -5934,13 +5935,14 @@
         }
         
         .cart-box-2 .heading {
-            font-size: 18px;
+            font-size: 16px;
         }
         
         .cart-box-2 .service-cart-list {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 20px;
+            padding: 15px 0px;
+            border-bottom: 1px solid #e7e7e7;
         }
         
         .coupon-btn {
@@ -6373,6 +6375,21 @@
             padding: 25px;
         }
         
+        .profile-form .form-control {
+            font-size: 14px;
+        }
+        
+        .profile-form .anchor-text {
+            font-size: 14px;
+            color: var(--pink);
+        }
+        
+        .profile-form .anchor-text:hover {
+            color: var(--pink);
+            text-decoration: none;
+            border-bottom: 1px solid var(--pink);
+        }
+        
         .profile-card {
             padding: 25px;
         }
@@ -6605,17 +6622,169 @@
         .empty-box {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
             align-items: center;
             justify-content: center;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .empty-box h5 {
+            margin-bottom: 0px;
+            color: var(--pink);
         }
         
         .empty-box img {
             width: 400px;
         }
         
-        .page-not-found-404-section h1 {
+        .no-data-box img {
+            width: 250px;
+        }
+        
+        .no-wishlist-box img {
+            width: 450px;
+        }
+        
+        .page-not-found-404-section {
+            background: #eee8ea;
+            padding-bottom: 50px;
+            position: relative;
+        }
+        
+        .page-not-found-404-section img {
+            width: 100%;
+        }
+        
+        .maintenance-section {
+            background: #eee8ea;
+        }
+        
+        .maintenance-section h4 {
             font-size: 50px;
-            font-weight: 600;
+            font-weight: bold;
+            color: #000;
+        }
+        
+        .maintenance-section img {
+            width: 100%;
+        }
+        
+        .maintenance-box {
+            text-align: right;
+            position: absolute;
+            top: 250px;
+            right: 100px;
+        }
+        
+        .category-icon {
+            width: 48px;
+            height: 48px;
+        }
+        
+        #salon_name {
+            cursor: pointer;
+        }
+        
+        #salon_name:hover {
             color: var(--pink);
+        }
+        
+        .h2-heading-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .btn-query-back {
+            color: var(--pink);
+        }
+        
+        .btn-query-back:hover {
+            color: var(--pink);
+        }
+        
+        .subscription-section {
+            padding: 50px 0px;
+        }
+        
+        .package-wrapper {
+            background: #fff;
+            text-align: center;
+            transition: all 0.45s;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .package-wrapper:hover {
+            transform: scale(1.1);
+            box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        .package-wrapper .package-header {
+            padding: 20px 0px;
+        }
+        
+        .package-1 .package-header {
+            background: #f5d5cb;
+        }
+        
+        .package-2 .package-header {
+            background: #d5d6ea;
+        }
+        
+        .package-3 .package-header {
+            background: #d7ecd9;
+        }
+        
+        .package-wrapper .package-header .title {
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .package-wrapper .package-header .duration {
+            text-transform: lowercase;
+            margin-bottom: 0px;
+            color: #444;
+        }
+        
+        .package-wrapper .package-header h2 {
+            color: #000;
+            font-weight: bold;
+        }
+        
+        .package-wrapper .package-body {
+            padding: 25px 0px;
+            padding-top: 0px;
+        }
+        
+        .package-wrapper ul {
+            margin: 0px;
+            padding: 0px;
+            margin-bottom: 20px;
+        }
+        
+        .package-wrapper ul li {
+            list-style: none;
+            border-bottom: 1px solid #f1f1f1;
+            padding: 10px;
+        }
+        
+        .package-wrapper .btn {
+            padding: 10px 30px;
+            font-weight: bold;
+        }
+        
+        .package-1 .btn {
+            background: #f5d5cb;
+        }
+        
+        .package-2 .btn {
+            background: #d5d6ea;
+        }
+        
+        .package-3 .btn {
+            background: #d7ecd9;
         }

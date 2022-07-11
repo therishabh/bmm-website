@@ -14,7 +14,7 @@ var user_profile = new function() {
                 //                console.log(result);
                 $("#username").val(result.name);
                 $("#t_name").html(result.name);
-                if(result.is_email_verified==1){
+                if (result.is_email_verified == 1) {
                     $("#email_id_outer").removeClass("d-none");
                     $("#email_id_verify_outer").addClass("d-none");
                     $("#email_id").val(result.email_id);
@@ -24,13 +24,13 @@ var user_profile = new function() {
                     $("#email_id_verify_outer").removeClass("d-none");
                     $("#email_id_verify").val(result.email_id);
                 }
-                
+
                 $("#landline_no").val(result.mobile_no);
                 $("#t_mobile").html(result.mobile_no);
                 $("#dob").val(result.dob);
                 $("#doa").val(result.doa);
                 $("#gender").val(result.gender);
-                $("#profile_photo").attr("src",result.profile_image);
+                $("#profile_photo").attr("src", result.profile_image);
             }
         });
     };
@@ -221,7 +221,7 @@ var user_profile = new function() {
                     var html = '';
                     html += `<div class="col-md-4">`;
                     html += `<img src="assets/images/combo1.jpg" class="img-thumbnail" alt="">`;
-                    html += `<a href="#" class="btn btn-pink btn-block mt-2">Redeem Now</a>`;
+                    // html += `<a href="#" class="btn btn-pink btn-block mt-2">Redeem Now</a>`;
                     html += `</div>`;
                     $("#offers").append(html);
                 });
@@ -275,7 +275,7 @@ var user_profile = new function() {
                 var trans = res.transactions;
                 $("#tbody_trans").html('');
                 if (trans.length > 0) {
-                    var i=1;
+                    var i = 1;
                     trans.forEach(function(el) {
                         console.log(el);
                         var html = '';
@@ -346,7 +346,7 @@ var user_profile = new function() {
             }
         });
     };
-    
+
     this.deletePic = function(id) {
         $.ajax({
             url: `${base_url}user/gallery/delete-image.php`,
@@ -575,7 +575,7 @@ var user_profile = new function() {
             }
         });
     };
-    
+
     this.deleteQuery = function(id) {
         $.ajax({
             url: `${base_url}user/query/delete.php`,
@@ -595,7 +595,7 @@ var user_profile = new function() {
             }
         });
     };
-    
+
     this.referList = function() {
         $.ajax({
             url: `${base_url}user/refer-and-earn/get-refer-list.php`,
@@ -631,9 +631,9 @@ var user_profile = new function() {
         });
     };
 
-    this.email_verify_show = function(){
-      
-      $.ajax({
+    this.email_verify_show = function() {
+
+        $.ajax({
             url: `${base_url}user/profile/send-otp-for-email-verification.php`,
             type: 'GET',
             dataType: 'JSON',
@@ -641,7 +641,7 @@ var user_profile = new function() {
                 token: localStorage.getItem("userToken")
             },
             success: function(res) {
-                $("#verifyEmailModal").show();  
+                $("#verifyEmailModal").show();
                 toastr.success(res.message);
             },
             error: function(result) {
@@ -649,9 +649,9 @@ var user_profile = new function() {
             }
         });
     };
-    
-    this.email_verify = function(){
-        
+
+    this.email_verify = function() {
+
         $.ajax({
             url: `${base_url}user/profile/verify-email-otp.php`,
             type: 'POST',
@@ -662,7 +662,7 @@ var user_profile = new function() {
             }),
             success: function(result) {
                 toastr.success(result.message);
-                $("#verifyEmailModal").hide();  
+                $("#verifyEmailModal").hide();
                 user_profile.getProfileData();
 
             },
@@ -671,9 +671,9 @@ var user_profile = new function() {
             }
         });
     };
-    
+
     this.uploadProfileImage = function(this_) {
-        
+
         var formdata = false;
         if (window.FormData) {
             formdata = new FormData();

@@ -44,6 +44,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="<?php echo $base_url; ?>user/query"><i class="fa fa-question-circle icon"></i>Query</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?php echo $base_url; ?>user/subscription"><i class="fa fa-tag icon"></i>Subscription</a>
+                                </li>
 <!--                                <li class="nav-item">
                                     <a class="nav-link" href="<?php echo $base_url; ?>user/submit-review"><i class="far fa-star icon"></i>Submit Review</a>
                                 </li>-->

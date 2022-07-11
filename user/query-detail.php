@@ -8,7 +8,7 @@
             <div class="col-md-9">
                 <div class="manage-user-icon">
                     <div class="col-md-12">
-                        <h2 class="h2-heading">Query Detail</h2>
+                        <h2 class="h2-heading h2-heading-flex"><span>Query Detail</span> <a href="<?php echo $base_url; ?>user/query" class="btn-query-back"><i class="fa fa-arrow-left"></i> Back</a></h2>
                         <h4 id="query_title"></h4>
                         <span id="query_body">
                         

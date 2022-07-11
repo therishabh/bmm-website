@@ -31,31 +31,18 @@
                             <h6>Gender</h6>
                             <ul>
                                 <li>
-                                    <label> <input type="checkbox" /> Female</label>
+                                    <label> <input type="checkbox" name="gender" value="ladies" onchange="salon_details.change()" /> Female</label>
                                 </li>
                                 <li>
-                                    <label> <input type="checkbox" /> Male</label>
+                                    <label> <input type="checkbox" name="gender" value="gents"  onchange="salon_details.change()" /> Male</label>
                                 </li>
                             </ul>
                         </div>
                         <div class="filter-inner-box">
                             <h6>Categories</h6>
-                            <ul>
-                                <li>
-                                    <label> <input type="checkbox" /> Category one</label>
-                                </li>
-                                <li>
-                                    <label> <input type="checkbox" /> Category two</label>
-                                </li>
-                                <li>
-                                    <label> <input type="checkbox" /> Category three</label>
-                                </li>
-                                <li>
-                                    <label> <input type="checkbox" /> Category four</label>
-                                </li>
-                                <li>
-                                    <label> <input type="checkbox" /> Category five</label>
-                                </li>
+                            <ul id="all_cat">
+                                
+                                
                             </ul>
                         </div>
                     </div>

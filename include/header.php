@@ -420,185 +420,414 @@
                                     <div class="loading-wrapper">
                                         <img src="assets/images/loader.gif" alt="loading">
                                     </div>
-                                    <!-- <div id="salonServices">
-                                    </div> -->
                                     <div class="new-submenu-wrapper">
                                         <div class="new-submenu-category">
                                             <ul>
-                                                <li>Hair Styling <i class="fa fa-chevron-right"></i></li>
-                                                <li>Hair Care <i class="fa fa-chevron-right"></i></li>
-                                                <li>Body Care <i class="fa fa-chevron-right"></i></li>
-                                                <li>Skin Care <i class="fa fa-chevron-right"></i></li>
-                                                <li>FACE <i class="fa fa-chevron-right"></i></li>
-                                                <li>Nail Care <i class="fa fa-chevron-right"></i></li>
-                                                <li>Make Up <i class="fa fa-chevron-right"></i></li>
-                                                <li>Facials <i class="fa fa-chevron-right"></i></li>
-                                                <li>Hand & FEET <i class="fa fa-chevron-right"></i></li>
-                                                <li>Hair Colouring <i class="fa fa-chevron-right"></i></li>
+                                                <li data="hairService">Hair <i class="fa fa-chevron-right"></i></li>
+                                                <li data="bodyService">Body Care <i class="fa fa-chevron-right"></i></li>
+                                                <li data="skinCareService">Skin Care <i class="fa fa-chevron-right"></i></li>
+                                                <li data="faceService">FACE <i class="fa fa-chevron-right"></i></li>
+                                                <li data="nailCareService">Nail Care <i class="fa fa-chevron-right"></i></li>
+                                                <li data="makeupService">Make Up <i class="fa fa-chevron-right"></i></li>
+                                                <li data="handFeetService">Hand & FEET <i class="fa fa-chevron-right"></i></li>
                                             </ul>
                                         </div>
-                                        <div id="ladies-card-body-wrapper" class="new-submenu-content">
+                                        <div id="hairService" class="new-submenu-content">
                                             <div class="row">
                                                 <div class="col-lg mb-4">
                                                     <div class="menu-common-list">
-                                                        <div class="nav-submenu-title" data="Hair Styling">Hair Styling</div>
+                                                        <div class="nav-submenu-title">Hair Cut</div>
                                                         <ul class="checkbox-wrapper hair-styling">
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/1/n/1">Hair Cut</a></li>
+                                                            <li><a href="#">V Cut</a></li>
+                                                            <li><a href="#">Layer Cut</a></li>
+                                                            <li><a href="#">Celebrety Cut</a></li>
+                                                            <li><a href="#">Straight Cut</a></li>
+                                                            <li><a href="#">U Cut</a></li>
+                                                            <li><a href="#">Step Cut</a></li>
+                                                            <li><a href="#">Waterfall Cut</a></li>
+                                                            <li><a href="#">Bangs</a></li>
+                                                            <li><a href="#">Razor Cut</a></li>
+                                                            <li><a href="#">Feather Cut</a></li>
+                                                        </ul>
+                                                    </div>
 
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/2/n/1">Ironing</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/3/n/1">Global Colouring</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/4/n/1">Blow Dry</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/5/n/1">Root Touch Up</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/6/n/1">Shampoo &amp; Conditioning</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/7/n/1">Head Massage</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/8/n/1">Roller Setting</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/9/n/1">Oiling</a></li>
+                                                </div>
+                                                <div class="col-lg mb-4">
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Hair straightening</div>
+                                                        <ul class="checkbox-wrapper hair-texture">
+                                                            <li><a href="#">Keratin</a></li>
+                                                            <li><a href="#">Ironing -Short length</a></li>
+                                                            <li><a href="#">Ironing - Medium length</a></li>
+                                                            <li><a href="#">Ironing- Long length</a></li>
                                                         </ul>
                                                     </div>
                                                     <div class="menu-common-list">
-                                                        <div class="nav-submenu-title" data="Hair Texture">Hair Texture</div>
+                                                        <div class="nav-submenu-title">Hair Styling</div>
                                                         <ul class="checkbox-wrapper hair-texture">
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/27/n/1">Rebonding</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/28/n/1">Perming</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/29/n/1">Keratin</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/30/n/1">Colour Protection</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/31/n/1">Smoothening</a></li>
+                                                            <li><a href="#">Blow Dry</a></li>
+                                                            <li><a href="#">Hair Do</a></li>
+                                                            <li><a href="#">Triming</a></li>
+                                                            <li><a href="#">Roller Setting</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg mb-4">
                                                     <div class="menu-common-list">
-                                                        <div class="nav-submenu-title" data="Hair Treatments">Hair Treatments</div>
-                                                        <ul class="checkbox-wrapper hair-treatments">
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/10/n/1">Spa Treatments</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/11/n/1">Volumizing</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/12/n/1">Advanced Hair Moisturising</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/13/n/1">Scalp Treatments</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="menu-common-list">
-                                                        <div class="nav-submenu-title" data="Hair Texture">Hair Texture</div>
-                                                        <ul class="checkbox-wrapper hair-texture">
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/27/n/1">Rebonding</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/28/n/1">Perming</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/29/n/1">Keratin</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/30/n/1">Colour Protection</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/31/n/1">Smoothening</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg mb-4">
-                                                    <div class="menu-common-list">
-                                                        <div class="nav-submenu-title" data="Nail Care">Nail Care</div>
+                                                        <div class="nav-submenu-title">Hair Care</div>
                                                         <ul class="checkbox-wrapper nail-care">
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/14/n/1">Nail Paint</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/15/n/1">Nail Art</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/16/n/1">Nail Filling</a></li>
+                                                            <li><a href="#">Head Wash</a></li>
+                                                            <li><a href="#">Olaplex</a></li>
+                                                            <li><a href="#">Hair Spa</a></li>
+                                                            <li><a href="#">Smoothening </a></li>
+                                                            <li><a href="#">Anti-dandruff treatment</a></li>
+                                                            <li><a href="#">Shampoo & Conditioning</a></li>
                                                         </ul>
                                                     </div>
                                                     <div class="menu-common-list">
-                                                        <div class="nav-submenu-title" data="Hand &amp; Feet">Hand &amp; Feet</div>
-                                                        <ul class="checkbox-wrapper hand--feet">
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/32/n/1">Manicure</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/33/n/1">Spa Pedicure</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/34/n/1">Pedicure</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/35/n/1">Waxing</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/36/n/1">Spa Manicure</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg mb-4">
-                                                    <div class="menu-common-list">
-                                                        <div class="nav-submenu-title" data="Make Up">Make Up</div>
+                                                        <div class="nav-submenu-title">Hair Texture </div>
                                                         <ul class="checkbox-wrapper make-up">
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/17/n/1">Party Make Up</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/18/n/1">Engagement Make Up</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/19/n/1">Bridal &amp; Reception Make Up</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/20/n/1">Base Make Up</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/21/n/1">Eye Make Up</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="menu-common-list">
-                                                        <div class="nav-submenu-title" data="Hand &amp; Feet">Hand &amp; Feet</div>
-                                                        <ul class="checkbox-wrapper hand--feet">
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/32/n/1">Manicure</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/33/n/1">Spa Pedicure</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/34/n/1">Pedicure</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/35/n/1">Waxing</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/36/n/1">Spa Manicure</a></li>
+                                                            <li><a href="#">Rebonding </a></li>
+                                                            <li><a href="#">Perming </a></li>
+                                                            <li><a href="#">Cysteine </a></li>
+                                                            <li><a href="#">Kera Fusion </a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg mb-4">
                                                     <div class="menu-common-list">
-                                                        <div class="nav-submenu-title" data="Facials &amp; Rituals">Facials &amp; Rituals</div>
-                                                        <ul class="checkbox-wrapper facials--rituals">
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/22/n/1">Bleach</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/23/n/1">Luxury Facials/Rituals</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/24/n/1">Clean Ups</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/25/n/1">Body Polishing/Rejuvenation</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/26/n/1">Threading</a></li>
+                                                        <div class="nav-submenu-title">Hair Colouring</div>
+                                                        <ul class="checkbox-wrapper hand--feet">
+                                                            <li><a href="#">Global Colouring</a></li>
+                                                            <li><a href="#">Root Touch Up</a></li>
+                                                            <li><a href="#">Highlights</a></li>
+                                                            <li><a href="#">Streaks </a></li>
+                                                            <li><a href="#">Ombre </a></li>
+                                                            <li><a href="#">Balayage</a></li>
+                                                            <li><a href="#">Colour Change</a></li>
+                                                            <li><a href="#">Colour Protection </a></li>
                                                         </ul>
                                                     </div>
                                                     <div class="menu-common-list">
-                                                        <div class="nav-submenu-title" data="Hair Texture">Hair Texture</div>
-                                                        <ul class="checkbox-wrapper hair-texture">
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/27/n/1">Rebonding</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/28/n/1">Perming</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/29/n/1">Keratin</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/30/n/1">Colour Protection</a></li>
-
-                                                            <li><a href="https://dev.bookmymakeup.co.in/service-list/31/n/1">Smoothening</a></li>
+                                                        <div class="nav-submenu-title">Hair Extensions </div>
+                                                        <ul class="checkbox-wrapper hair-treatments">
+                                                            <li><a href="#">Temporary </a></li>
+                                                            <li><a href="#">Permanent </a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg mb-4">
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Packages Name</div>
+                                                        <ul class="checkbox-wrapper">
+                                                            <li><a href="#">GK 4999</a></li>
+                                                            <li><a href="#">Loreal 299</a></li>
+                                                            <li><a href="#">Silky Hairs</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Combo's </div>
+                                                        <ul class="checkbox-wrapper">
+                                                            <li><a href="#">Hair Wash+ Shampoo</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
-                                          
+                                        </div>
+                                        <div id="bodyService" class="new-submenu-content">
+                                            <div class="row">
+                                                <div class="col-lg mb-4">
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Bleach</div>
+                                                        <ul class="checkbox-wrapper">
+                                                            <li><a href="#">Neck & Face Bleach</a></li>
+                                                            <li><a href="#">Full Body Bleach</a></li>
+                                                            <li><a href="#">Body Polishing</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Body SPA</div>
+                                                        <ul class="checkbox-wrapper">
+                                                            <li><a href="#">Body Massage</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg mb-4">
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Waxing</div>
+                                                        <ul class="checkbox-wrapper">
+                                                            <li><a href="#">Half Arms Wax</a></li>
+                                                            <li><a href="#">Half Legs Wax</a></li>
+                                                            <li><a href="#">Full Arms Wax</a></li>
+                                                            <li><a href="#">Full Legs Wax</a></li>
+                                                            <li><a href="#">Bikini Wax</a></li>
+                                                            <li><a href="#">Under Arms Wax</a></li>
+                                                            <li><a href="#">Full Body Waxing</a></li>
+                                                            <li><a href="#">Midriff </a></li>
+                                                            <li><a href="#">B Line</a></li>
+                                                            <li><a href="#">Body Wax</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg mb-4">
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Packages Name</div>
+                                                        <ul class="checkbox-wrapper hand--feet">
+                                                            <li><a href="#">GK 4999</a></li>
+                                                            <li><a href="#">Loreal 299</a></li>
+                                                            <li><a href="#">Silky Hairs</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Combo's </div>
+                                                        <ul class="checkbox-wrapper hair-treatments">
+                                                            <li><a href="#">Hair Wash+ Shampoo</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="skinCareService" class="new-submenu-content">
+                                            <div class="row">
+                                                <div class="col-lg mb-4">
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Hair Removel</div>
+                                                        <ul class="checkbox-wrapper">
+                                                            <li><a href="#">Laser hair removal</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg mb-4">
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Detan</div>
+                                                        <ul class="checkbox-wrapper">
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg mb-4">
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Packages Name</div>
+                                                        <ul class="checkbox-wrapper hand--feet">
+                                                            <li><a href="#">GK 4999</a></li>
+                                                            <li><a href="#">Loreal 299</a></li>
+                                                            <li><a href="#">Silky Hairs</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Combo's </div>
+                                                        <ul class="checkbox-wrapper hair-treatments">
+                                                            <li><a href="#">Hair Wash+ Shampoo</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="faceService" class="new-submenu-content">
+                                            <div class="row">
+                                                <div class="col-lg mb-4">
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Face Care</div>
+                                                        <ul class="checkbox-wrapper">
+                                                            <li><a href="#">Face Cleanup</a></li>
+                                                            <li><a href="#">Face Wax</a></li>
+                                                            <li><a href="#">Bleach</a></li>
+                                                            <li><a href="#">Detan</a></li>
+                                                            <li><a href="#">Acne Treatment</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Face Mask</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg mb-4">
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Facials</div>
+                                                        <ul class="checkbox-wrapper">
+                                                            <li><a href="#">Classic </a></li>
+                                                            <li><a href="#">Basic Cleanup</a></li>
+                                                            <li><a href="#">Fruit Facial </a></li>
+                                                            <li><a href="#">Luxury /Rituals</a></li>
+                                                            <li><a href="#">Hydra Facial</a></li>
+                                                            <li><a href="#">Deep cleansing</a></li>
+                                                            <li><a href="#">Instant Fairness Facials</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg mb-4">
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Threading</div>
+                                                        <ul class="checkbox-wrapper">
+                                                            <li><a href="#">Upper Lips</a></li>
+                                                            <li><a href="#">Eyebrows</a></li>
+                                                            <li><a href="#">Forhead Threading</a></li>
+                                                            <li><a href="#">Upper/ Lower lips</a></li>
+                                                            <li><a href="#">Side Locks</a></li>
+                                                            <li><a href="#">Chin</a></li>
+                                                            <li><a href="#">Chicks</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg mb-4">
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Packages Name</div>
+                                                        <ul class="checkbox-wrapper hand--feet">
+                                                            <li><a href="#">GK 4999</a></li>
+                                                            <li><a href="#">Loreal 299</a></li>
+                                                            <li><a href="#">Silky Hairs</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Combo's </div>
+                                                        <ul class="checkbox-wrapper hair-treatments">
+                                                            <li><a href="#">Hair Wash+ Shampoo</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="nailCareService" class="new-submenu-content">
+                                            <div class="row">
+                                                <div class="col-lg mb-4">
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Nail Extension</div>
+                                                        <ul class="checkbox-wrapper">
+                                                            <li><a href="#">Nail Extension Fill</a></li>
+                                                            <li><a href="#">Nail Extension Removal </a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Nail Art</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg mb-4">
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Nail Paint</div>
+                                                        <ul class="checkbox-wrapper">
+                                                            <li><a href="#">Nail Polishing </a></li>
+                                                            <li><a href="#">Polish Removal</a></li>
+                                                            <li><a href="#">Cut,File & Polish </a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg mb-4">
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Manicure</div>
+                                                        <ul class="checkbox-wrapper">
+                                                            <li><a href="#">Gel Manicure</a></li>
+                                                            <li><a href="#">French Manicure</a></li>
+                                                            <li><a href="#">Spa Menincure</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg mb-4">
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Packages Name</div>
+                                                        <ul class="checkbox-wrapper hand--feet">
+                                                            <li><a href="#">GK 4999</a></li>
+                                                            <li><a href="#">Loreal 299</a></li>
+                                                            <li><a href="#">Silky Hairs</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Combo's </div>
+                                                        <ul class="checkbox-wrapper hair-treatments">
+                                                            <li><a href="#">Hair Wash+ Shampoo</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="makeupService" class="new-submenu-content">
+                                            <div class="row">
+                                                <div class="col-lg mb-4">
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Base Make Up</div>
+                                                        <ul class="checkbox-wrapper">
+                                                            <li><a href="#">Base Make Up</a></li>
+                                                            <li><a href="#">Eye Make Up</a></li>
+                                                            <li><a href="#">GLAM Makeup</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Party Makeup </div>
+                                                        <ul class="checkbox-wrapper">
+                                                            <li><a href="#">Party Makeup Mac</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg mb-4">
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Bridal MakeUp</div>
+                                                        <ul class="checkbox-wrapper">
+                                                            <li><a href="#">HD Makeup </a></li>
+                                                            <li><a href="#">Matte Makeup Look</a></li>
+                                                            <li><a href="#">Airbrush Makeup </a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg mb-4">
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Engagement Makeup</div>
+                                                        <ul class="checkbox-wrapper">
+                                                            <li><a href="#">Free Trail Makeup</a></li>
+                                                            <li><a href="#">Smokey Makeup</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Reception Makeup</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg mb-4">
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Packages Name</div>
+                                                        <ul class="checkbox-wrapper hand--feet">
+                                                            <li><a href="#">GK 4999</a></li>
+                                                            <li><a href="#">Loreal 299</a></li>
+                                                            <li><a href="#">Silky Hairs</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Combo's </div>
+                                                        <ul class="checkbox-wrapper hair-treatments">
+                                                            <li><a href="#">Hair Wash+ Shampoo</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="handFeetService" class="new-submenu-content">
+                                            <div class="row">
+                                                <div class="col-lg mb-4">
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Pedicure</div>
+                                                        <ul class="checkbox-wrapper">
+                                                            <li><a href="#">Foot Relaxing Massage</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg mb-4">
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Packages Name</div>
+                                                        <ul class="checkbox-wrapper hand--feet">
+                                                            <li><a href="#">GK 4999</a></li>
+                                                            <li><a href="#">Loreal 299</a></li>
+                                                            <li><a href="#">Silky Hairs</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">Combo's </div>
+                                                        <ul class="checkbox-wrapper hair-treatments">
+                                                            <li><a href="#">Hair Wash+ Shampoo</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="submenu-img-box">
-                                    <img src="<?php echo $base_url; ?>assets/images/submenu-salon-female-img.jpg" alt="" class="img-fluid">
+                                        <img src="<?php echo $base_url; ?>assets/images/submenu-salon-female-img.jpg" alt="" class="img-fluid">
                                     </div>
                                 </div>
                             </div>
@@ -611,16 +840,428 @@
 
                             <div class="">
                                 <div class="row">
-                                    <div class="col-md-9">
+                                    <!-- <div class="col-md-9">
                                         <div class="loading-wrapper">
                                             <img src="assets/images/loader.gif" alt="loading">
                                         </div>
                                         <div id="makeupArtistServices">
                                         </div>
+                                    </div> -->
+
+                                    <div class="col-md-9">
+                                        <div class="loading-wrapper">
+                                            <img src="assets/images/loader.gif" alt="loading">
+                                        </div>
+                                        <div class="new-submenu-wrapper">
+                                            <div class="new-submenu-category">
+                                                <ul>
+                                                    <li data="makeupServiceMa">Make Up <i class="fa fa-chevron-right"></i></li>
+                                                    <li data="faceServiceMa">FACE <i class="fa fa-chevron-right"></i></li>
+                                                    <li data="nailCareServiceMa">Nail Care <i class="fa fa-chevron-right"></i></li>
+                                                    <li data="skinCareServiceMa">Skin Care <i class="fa fa-chevron-right"></i></li>
+                                                    <li data="handFeetServiceMa">Hand & FEET <i class="fa fa-chevron-right"></i></li>
+                                                    <li data="hairServiceMa">Hair <i class="fa fa-chevron-right"></i></li>
+                                                    <li data="bodyServiceMa">Body Care <i class="fa fa-chevron-right"></i></li>
+                                                </ul>
+                                            </div>
+                                            <div id="hairServiceMa" class="new-submenu-content">
+                                                <div class="row">
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Hair Cut</div>
+                                                            <ul class="checkbox-wrapper hair-styling">
+                                                                <li><a href="#">V Cut</a></li>
+                                                                <li><a href="#">Layer Cut</a></li>
+                                                                <li><a href="#">Celebrety Cut</a></li>
+                                                                <li><a href="#">Straight Cut</a></li>
+                                                                <li><a href="#">U Cut</a></li>
+                                                                <li><a href="#">Step Cut</a></li>
+                                                                <li><a href="#">Waterfall Cut</a></li>
+                                                                <li><a href="#">Bangs</a></li>
+                                                                <li><a href="#">Razor Cut</a></li>
+                                                                <li><a href="#">Feather Cut</a></li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Hair straightening</div>
+                                                            <ul class="checkbox-wrapper hair-texture">
+                                                                <li><a href="#">Keratin</a></li>
+                                                                <li><a href="#">Ironing -Short length</a></li>
+                                                                <li><a href="#">Ironing - Medium length</a></li>
+                                                                <li><a href="#">Ironing- Long length</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Hair Styling</div>
+                                                            <ul class="checkbox-wrapper hair-texture">
+                                                                <li><a href="#">Blow Dry</a></li>
+                                                                <li><a href="#">Hair Do</a></li>
+                                                                <li><a href="#">Triming</a></li>
+                                                                <li><a href="#">Roller Setting</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Hair Care</div>
+                                                            <ul class="checkbox-wrapper nail-care">
+                                                                <li><a href="#">Head Wash</a></li>
+                                                                <li><a href="#">Olaplex</a></li>
+                                                                <li><a href="#">Hair Spa</a></li>
+                                                                <li><a href="#">Smoothening </a></li>
+                                                                <li><a href="#">Anti-dandruff treatment</a></li>
+                                                                <li><a href="#">Shampoo & Conditioning</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Hair Texture </div>
+                                                            <ul class="checkbox-wrapper make-up">
+                                                                <li><a href="#">Rebonding </a></li>
+                                                                <li><a href="#">Perming </a></li>
+                                                                <li><a href="#">Cysteine </a></li>
+                                                                <li><a href="#">Kera Fusion </a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Hair Colouring</div>
+                                                            <ul class="checkbox-wrapper hand--feet">
+                                                                <li><a href="#">Global Colouring</a></li>
+                                                                <li><a href="#">Root Touch Up</a></li>
+                                                                <li><a href="#">Highlights</a></li>
+                                                                <li><a href="#">Streaks </a></li>
+                                                                <li><a href="#">Ombre </a></li>
+                                                                <li><a href="#">Balayage</a></li>
+                                                                <li><a href="#">Colour Change</a></li>
+                                                                <li><a href="#">Colour Protection </a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Hair Extensions </div>
+                                                            <ul class="checkbox-wrapper hair-treatments">
+                                                                <li><a href="#">Temporary </a></li>
+                                                                <li><a href="#">Permanent </a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Packages Name</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">GK 4999</a></li>
+                                                                <li><a href="#">Loreal 299</a></li>
+                                                                <li><a href="#">Silky Hairs</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Combo's </div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Hair Wash+ Shampoo</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="bodyServiceMa" class="new-submenu-content">
+                                                <div class="row">
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Bleach</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Neck & Face Bleach</a></li>
+                                                                <li><a href="#">Full Body Bleach</a></li>
+                                                                <li><a href="#">Body Polishing</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Body SPA</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Body Massage</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Waxing</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Half Arms Wax</a></li>
+                                                                <li><a href="#">Half Legs Wax</a></li>
+                                                                <li><a href="#">Full Arms Wax</a></li>
+                                                                <li><a href="#">Full Legs Wax</a></li>
+                                                                <li><a href="#">Bikini Wax</a></li>
+                                                                <li><a href="#">Under Arms Wax</a></li>
+                                                                <li><a href="#">Full Body Waxing</a></li>
+                                                                <li><a href="#">Midriff </a></li>
+                                                                <li><a href="#">B Line</a></li>
+                                                                <li><a href="#">Body Wax</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Packages Name</div>
+                                                            <ul class="checkbox-wrapper hand--feet">
+                                                                <li><a href="#">GK 4999</a></li>
+                                                                <li><a href="#">Loreal 299</a></li>
+                                                                <li><a href="#">Silky Hairs</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Combo's </div>
+                                                            <ul class="checkbox-wrapper hair-treatments">
+                                                                <li><a href="#">Hair Wash+ Shampoo</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="skinCareServiceMa" class="new-submenu-content">
+                                                <div class="row">
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Hair Removel</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Laser hair removal</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Detan</div>
+                                                            <ul class="checkbox-wrapper">
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Packages Name</div>
+                                                            <ul class="checkbox-wrapper hand--feet">
+                                                                <li><a href="#">GK 4999</a></li>
+                                                                <li><a href="#">Loreal 299</a></li>
+                                                                <li><a href="#">Silky Hairs</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Combo's </div>
+                                                            <ul class="checkbox-wrapper hair-treatments">
+                                                                <li><a href="#">Hair Wash+ Shampoo</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="faceServiceMa" class="new-submenu-content">
+                                                <div class="row">
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Face Care</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Face Cleanup</a></li>
+                                                                <li><a href="#">Face Wax</a></li>
+                                                                <li><a href="#">Bleach</a></li>
+                                                                <li><a href="#">Detan</a></li>
+                                                                <li><a href="#">Acne Treatment</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Face Mask</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Facials</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Classic </a></li>
+                                                                <li><a href="#">Basic Cleanup</a></li>
+                                                                <li><a href="#">Fruit Facial </a></li>
+                                                                <li><a href="#">Luxury /Rituals</a></li>
+                                                                <li><a href="#">Hydra Facial</a></li>
+                                                                <li><a href="#">Deep cleansing</a></li>
+                                                                <li><a href="#">Instant Fairness Facials</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Threading</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Upper Lips</a></li>
+                                                                <li><a href="#">Eyebrows</a></li>
+                                                                <li><a href="#">Forhead Threading</a></li>
+                                                                <li><a href="#">Upper/ Lower lips</a></li>
+                                                                <li><a href="#">Side Locks</a></li>
+                                                                <li><a href="#">Chin</a></li>
+                                                                <li><a href="#">Chicks</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Packages Name</div>
+                                                            <ul class="checkbox-wrapper hand--feet">
+                                                                <li><a href="#">GK 4999</a></li>
+                                                                <li><a href="#">Loreal 299</a></li>
+                                                                <li><a href="#">Silky Hairs</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Combo's </div>
+                                                            <ul class="checkbox-wrapper hair-treatments">
+                                                                <li><a href="#">Hair Wash+ Shampoo</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="nailCareServiceMa" class="new-submenu-content">
+                                                <div class="row">
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Nail Extension</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Nail Extension Fill</a></li>
+                                                                <li><a href="#">Nail Extension Removal </a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Nail Art</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Nail Paint</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Nail Polishing </a></li>
+                                                                <li><a href="#">Polish Removal</a></li>
+                                                                <li><a href="#">Cut,File & Polish </a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Manicure</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Gel Manicure</a></li>
+                                                                <li><a href="#">French Manicure</a></li>
+                                                                <li><a href="#">Spa Menincure</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Packages Name</div>
+                                                            <ul class="checkbox-wrapper hand--feet">
+                                                                <li><a href="#">GK 4999</a></li>
+                                                                <li><a href="#">Loreal 299</a></li>
+                                                                <li><a href="#">Silky Hairs</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Combo's </div>
+                                                            <ul class="checkbox-wrapper hair-treatments">
+                                                                <li><a href="#">Hair Wash+ Shampoo</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="makeupServiceMa" class="new-submenu-content">
+                                                <div class="row">
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Base Make Up</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Base Make Up</a></li>
+                                                                <li><a href="#">Eye Make Up</a></li>
+                                                                <li><a href="#">GLAM Makeup</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Party Makeup </div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Party Makeup Mac</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Bridal MakeUp</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">HD Makeup </a></li>
+                                                                <li><a href="#">Matte Makeup Look</a></li>
+                                                                <li><a href="#">Airbrush Makeup </a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Engagement Makeup</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Free Trail Makeup</a></li>
+                                                                <li><a href="#">Smokey Makeup</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Reception Makeup</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Packages Name</div>
+                                                            <ul class="checkbox-wrapper hand--feet">
+                                                                <li><a href="#">GK 4999</a></li>
+                                                                <li><a href="#">Loreal 299</a></li>
+                                                                <li><a href="#">Silky Hairs</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Combo's </div>
+                                                            <ul class="checkbox-wrapper hair-treatments">
+                                                                <li><a href="#">Hair Wash+ Shampoo</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="handFeetServiceMa" class="new-submenu-content">
+                                                <div class="row">
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Pedicure</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Foot Relaxing Massage</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Packages Name</div>
+                                                            <ul class="checkbox-wrapper hand--feet">
+                                                                <li><a href="#">GK 4999</a></li>
+                                                                <li><a href="#">Loreal 299</a></li>
+                                                                <li><a href="#">Silky Hairs</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Combo's </div>
+                                                            <ul class="checkbox-wrapper hair-treatments">
+                                                                <li><a href="#">Hair Wash+ Shampoo</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <div class="col-md-3">
-                                        <img src="<?php echo $base_url; ?>assets/images/wedding-pre-bridal-nav-img.jpg" alt="" class="img-fluid">
+                                        <div class="submenu-img-box">
+                                            <img src="<?php echo $base_url; ?>assets/images/wedding-pre-bridal-nav-img.jpg" alt="" class="img-fluid">
+                                        </div>
                                     </div>
 
                                 </div>
@@ -634,15 +1275,426 @@
 
                             <div class="">
                                 <div class="row">
-                                    <div class="col-md-9">
+                                    <!-- <div class="col-md-9">
                                         <div class="loading-wrapper">
                                             <img src="assets/images/loader.gif" alt="loading">
                                         </div>
                                         <div id="bridalMakeupServices">
                                         </div>
+                                    </div> -->
+                                    <div class="col-md-9">
+                                        <div class="loading-wrapper">
+                                            <img src="assets/images/loader.gif" alt="loading">
+                                        </div>
+                                        <div class="new-submenu-wrapper">
+                                            <div class="new-submenu-category">
+                                                <ul>
+                                                    <li data="makeupServiceBm">Make Up <i class="fa fa-chevron-right"></i></li>
+                                                    <li data="bodyServiceBm">Body Care <i class="fa fa-chevron-right"></i></li>
+                                                    <li data="skinCareServiceBm">Skin Care <i class="fa fa-chevron-right"></i></li>
+                                                    <li data="faceServiceBm">FACE <i class="fa fa-chevron-right"></i></li>
+                                                    <li data="nailCareServiceBm">Nail Care <i class="fa fa-chevron-right"></i></li>
+                                                    <li data="handFeetServiceBm">Hand & FEET <i class="fa fa-chevron-right"></i></li>
+                                                    <li data="hairServiceBm">Hair <i class="fa fa-chevron-right"></i></li>
+                                                </ul>
+                                            </div>
+                                            <div id="hairServiceBm" class="new-submenu-content">
+                                                <div class="row">
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Hair Cut</div>
+                                                            <ul class="checkbox-wrapper hair-styling">
+                                                                <li><a href="#">V Cut</a></li>
+                                                                <li><a href="#">Layer Cut</a></li>
+                                                                <li><a href="#">Celebrety Cut</a></li>
+                                                                <li><a href="#">Straight Cut</a></li>
+                                                                <li><a href="#">U Cut</a></li>
+                                                                <li><a href="#">Step Cut</a></li>
+                                                                <li><a href="#">Waterfall Cut</a></li>
+                                                                <li><a href="#">Bangs</a></li>
+                                                                <li><a href="#">Razor Cut</a></li>
+                                                                <li><a href="#">Feather Cut</a></li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Hair straightening</div>
+                                                            <ul class="checkbox-wrapper hair-texture">
+                                                                <li><a href="#">Keratin</a></li>
+                                                                <li><a href="#">Ironing -Short length</a></li>
+                                                                <li><a href="#">Ironing - Medium length</a></li>
+                                                                <li><a href="#">Ironing- Long length</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Hair Styling</div>
+                                                            <ul class="checkbox-wrapper hair-texture">
+                                                                <li><a href="#">Blow Dry</a></li>
+                                                                <li><a href="#">Hair Do</a></li>
+                                                                <li><a href="#">Triming</a></li>
+                                                                <li><a href="#">Roller Setting</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Hair Care</div>
+                                                            <ul class="checkbox-wrapper nail-care">
+                                                                <li><a href="#">Head Wash</a></li>
+                                                                <li><a href="#">Olaplex</a></li>
+                                                                <li><a href="#">Hair Spa</a></li>
+                                                                <li><a href="#">Smoothening </a></li>
+                                                                <li><a href="#">Anti-dandruff treatment</a></li>
+                                                                <li><a href="#">Shampoo & Conditioning</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Hair Texture </div>
+                                                            <ul class="checkbox-wrapper make-up">
+                                                                <li><a href="#">Rebonding </a></li>
+                                                                <li><a href="#">Perming </a></li>
+                                                                <li><a href="#">Cysteine </a></li>
+                                                                <li><a href="#">Kera Fusion </a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Hair Colouring</div>
+                                                            <ul class="checkbox-wrapper hand--feet">
+                                                                <li><a href="#">Global Colouring</a></li>
+                                                                <li><a href="#">Root Touch Up</a></li>
+                                                                <li><a href="#">Highlights</a></li>
+                                                                <li><a href="#">Streaks </a></li>
+                                                                <li><a href="#">Ombre </a></li>
+                                                                <li><a href="#">Balayage</a></li>
+                                                                <li><a href="#">Colour Change</a></li>
+                                                                <li><a href="#">Colour Protection </a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Hair Extensions </div>
+                                                            <ul class="checkbox-wrapper hair-treatments">
+                                                                <li><a href="#">Temporary </a></li>
+                                                                <li><a href="#">Permanent </a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Packages Name</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">GK 4999</a></li>
+                                                                <li><a href="#">Loreal 299</a></li>
+                                                                <li><a href="#">Silky Hairs</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Combo's </div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Hair Wash+ Shampoo</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="bodyServiceBm" class="new-submenu-content">
+                                                <div class="row">
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Bleach</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Neck & Face Bleach</a></li>
+                                                                <li><a href="#">Full Body Bleach</a></li>
+                                                                <li><a href="#">Body Polishing</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Body SPA</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Body Massage</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Waxing</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Half Arms Wax</a></li>
+                                                                <li><a href="#">Half Legs Wax</a></li>
+                                                                <li><a href="#">Full Arms Wax</a></li>
+                                                                <li><a href="#">Full Legs Wax</a></li>
+                                                                <li><a href="#">Bikini Wax</a></li>
+                                                                <li><a href="#">Under Arms Wax</a></li>
+                                                                <li><a href="#">Full Body Waxing</a></li>
+                                                                <li><a href="#">Midriff </a></li>
+                                                                <li><a href="#">B Line</a></li>
+                                                                <li><a href="#">Body Wax</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Packages Name</div>
+                                                            <ul class="checkbox-wrapper hand--feet">
+                                                                <li><a href="#">GK 4999</a></li>
+                                                                <li><a href="#">Loreal 299</a></li>
+                                                                <li><a href="#">Silky Hairs</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Combo's </div>
+                                                            <ul class="checkbox-wrapper hair-treatments">
+                                                                <li><a href="#">Hair Wash+ Shampoo</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="skinCareServiceBm" class="new-submenu-content">
+                                                <div class="row">
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Hair Removel</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Laser hair removal</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Detan</div>
+                                                            <ul class="checkbox-wrapper">
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Packages Name</div>
+                                                            <ul class="checkbox-wrapper hand--feet">
+                                                                <li><a href="#">GK 4999</a></li>
+                                                                <li><a href="#">Loreal 299</a></li>
+                                                                <li><a href="#">Silky Hairs</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Combo's </div>
+                                                            <ul class="checkbox-wrapper hair-treatments">
+                                                                <li><a href="#">Hair Wash+ Shampoo</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="faceServiceBm" class="new-submenu-content">
+                                                <div class="row">
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Face Care</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Face Cleanup</a></li>
+                                                                <li><a href="#">Face Wax</a></li>
+                                                                <li><a href="#">Bleach</a></li>
+                                                                <li><a href="#">Detan</a></li>
+                                                                <li><a href="#">Acne Treatment</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Face Mask</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Facials</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Classic </a></li>
+                                                                <li><a href="#">Basic Cleanup</a></li>
+                                                                <li><a href="#">Fruit Facial </a></li>
+                                                                <li><a href="#">Luxury /Rituals</a></li>
+                                                                <li><a href="#">Hydra Facial</a></li>
+                                                                <li><a href="#">Deep cleansing</a></li>
+                                                                <li><a href="#">Instant Fairness Facials</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Threading</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Upper Lips</a></li>
+                                                                <li><a href="#">Eyebrows</a></li>
+                                                                <li><a href="#">Forhead Threading</a></li>
+                                                                <li><a href="#">Upper/ Lower lips</a></li>
+                                                                <li><a href="#">Side Locks</a></li>
+                                                                <li><a href="#">Chin</a></li>
+                                                                <li><a href="#">Chicks</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Packages Name</div>
+                                                            <ul class="checkbox-wrapper hand--feet">
+                                                                <li><a href="#">GK 4999</a></li>
+                                                                <li><a href="#">Loreal 299</a></li>
+                                                                <li><a href="#">Silky Hairs</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Combo's </div>
+                                                            <ul class="checkbox-wrapper hair-treatments">
+                                                                <li><a href="#">Hair Wash+ Shampoo</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="nailCareServiceBm" class="new-submenu-content">
+                                                <div class="row">
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Nail Extension</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Nail Extension Fill</a></li>
+                                                                <li><a href="#">Nail Extension Removal </a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Nail Art</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Nail Paint</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Nail Polishing </a></li>
+                                                                <li><a href="#">Polish Removal</a></li>
+                                                                <li><a href="#">Cut,File & Polish </a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Manicure</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Gel Manicure</a></li>
+                                                                <li><a href="#">French Manicure</a></li>
+                                                                <li><a href="#">Spa Menincure</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Packages Name</div>
+                                                            <ul class="checkbox-wrapper hand--feet">
+                                                                <li><a href="#">GK 4999</a></li>
+                                                                <li><a href="#">Loreal 299</a></li>
+                                                                <li><a href="#">Silky Hairs</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Combo's </div>
+                                                            <ul class="checkbox-wrapper hair-treatments">
+                                                                <li><a href="#">Hair Wash+ Shampoo</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="makeupServiceBm" class="new-submenu-content">
+                                                <div class="row">
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Base Make Up</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Base Make Up</a></li>
+                                                                <li><a href="#">Eye Make Up</a></li>
+                                                                <li><a href="#">GLAM Makeup</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Party Makeup </div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Party Makeup Mac</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Bridal MakeUp</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">HD Makeup </a></li>
+                                                                <li><a href="#">Matte Makeup Look</a></li>
+                                                                <li><a href="#">Airbrush Makeup </a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Engagement Makeup</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Free Trail Makeup</a></li>
+                                                                <li><a href="#">Smokey Makeup</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Reception Makeup</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Packages Name</div>
+                                                            <ul class="checkbox-wrapper hand--feet">
+                                                                <li><a href="#">GK 4999</a></li>
+                                                                <li><a href="#">Loreal 299</a></li>
+                                                                <li><a href="#">Silky Hairs</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Combo's </div>
+                                                            <ul class="checkbox-wrapper hair-treatments">
+                                                                <li><a href="#">Hair Wash+ Shampoo</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="handFeetServiceBm" class="new-submenu-content">
+                                                <div class="row">
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Pedicure</div>
+                                                            <ul class="checkbox-wrapper">
+                                                                <li><a href="#">Foot Relaxing Massage</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg mb-4">
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Packages Name</div>
+                                                            <ul class="checkbox-wrapper hand--feet">
+                                                                <li><a href="#">GK 4999</a></li>
+                                                                <li><a href="#">Loreal 299</a></li>
+                                                                <li><a href="#">Silky Hairs</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="menu-common-list">
+                                                            <div class="nav-submenu-title">Combo's </div>
+                                                            <ul class="checkbox-wrapper hair-treatments">
+                                                                <li><a href="#">Hair Wash+ Shampoo</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-md-3">
-                                        <img src="<?php echo $base_url; ?>assets/images/makeup-artist-nav-img.jpg" alt="" class="img-fluid">
+                                        <div class="submenu-img-box">
+                                            <img src="<?php echo $base_url; ?>assets/images/makeup-artist-nav-img.jpg" alt="" class="img-fluid">
+                                        </div>
                                     </div>
 
                                 </div>
@@ -663,7 +1715,9 @@
                                     </div>
                                 </div>
                                 <div class="col-md-3">
-                                    <img src="<?php echo $base_url; ?>assets/images/submenu-salon-male-img.jpg" alt="" class="img-fluid">
+                                    <div class="submenu-img-box">
+                                        <img src="<?php echo $base_url; ?>assets/images/submenu-salon-male-img.jpg" alt="" class="img-fluid">
+                                    </div>
                                 </div>
                             </div>
 
@@ -689,11 +1743,13 @@
 
                     <li><a href="<?php echo $base_url; ?>blog">Blog </a>
                     </li>
-
+                    
                     <li class="p-relative">
                         <a href="<?php echo $base_url; ?>pro/index">BMM PRO
                             <!-- <span class="new-tag new">FREE</span> -->
                         </a>
+                    </li>
+                    <li><a href="<?php echo $base_url; ?>subscription">Subscription </a>
                     </li>
 
 

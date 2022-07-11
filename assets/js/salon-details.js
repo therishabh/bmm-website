@@ -11,9 +11,11 @@ var salon_details = new function () {
     this.cartIDArray = [];
     this.cartPackageArray = [];
     this.cartPackageIDArray = [];
+    this.categories = [];
+    this.gender = [];
 
     this.init = function () {
-//        console.log(salon_details.cartItemsArray);
+        //        console.log(salon_details.cartItemsArray);
         var salonId = $("#salon-id").val();
         var serviceId = $("#service-id").val();
         $.ajax({
@@ -44,7 +46,7 @@ var salon_details = new function () {
                     }
                     i++;
                 });
-                
+
                 if (coupon_html != '') {
                     $("#tags_").removeClass("d-none");
                     $("#salon_discounts").html(coupon_html);
@@ -54,8 +56,7 @@ var salon_details = new function () {
                 let type = [];
                 let type_services = {};
                 services.forEach(function (el) {
-                    if (type.indexOf(el.type) == -1)
-                    {
+                    if (type.indexOf(el.type) == -1) {
                         type_services[el.type] = [];
                         type.push(el.type);
                     }
@@ -66,10 +67,11 @@ var salon_details = new function () {
                 for (var item in type_services) {
                     var html = '';
 
-                    html += `<div class="card">`;
+                    html += `<div class="card category" id="${item}">`;
                     html += `<div class="card-header">`;
                     html += `<a class="card-link" data-toggle="collapse" href="#collapse${j}">`;
                     html += `${item}`;
+                    $("#all_cat").append(`<li><label> <input type='checkbox' value='${item}' name='categories' onchange="salon_details.change();" /> ${item}</label></li>`);
                     html += `</a>`;
                     html += `</div>`;
                     html += `<div id="collapse${j}" class="collapse show" data-parent="#accordion">`;
@@ -88,9 +90,15 @@ var salon_details = new function () {
                             $("#highlight_service_book").attr('onclick', `salon_details.bookService(${type_services[item][i].id})`);
                         }
 
-                        html += `<div class="service-wrapper-list">`;
+                        html += `<div class="service-wrapper-list service_${type_services[item][i].category}" id="${type_services[item][i].id}">`;
                         html += `<div>`;
-                        html += `<h5>${type_services[item][i].name} [${type_services[item][i].category}] </h5>`;
+                        salon_details.gender[type_services[item][i].category] = type_services[item][i].category;
+                        if (type_services[item][i].category == 'ladies') {
+                            html += `<h5>${type_services[item][i].name} <img src="/assets/images/female-icon.png" class="category-icon" /> </h5>`;
+                        } else if (type_services[item][i].category == 'gents') {
+                            html += `<h5>${type_services[item][i].name} <img src="/assets/images/male-icon.png" class="category-icon" /> </h5>`;
+                        }
+
                         html += `<div>`;
                         html += `<span class="discounted_price">Rs. ${type_services[item][i].discounted_price}</span>`;
                         html += `</div>`;
@@ -245,7 +253,11 @@ var salon_details = new function () {
                     packages.forEach(function (el) {
                         html += `<div class="service-wrapper-list">`;
                         html += `<div>`;
-                        html += `<h5>${el.package_name} [${el.category}] </h5>`;
+                        if (el.category == 'ladies') {
+                            html += `<h5>${el.package_name} <img src="/assets/images/female-icon.png" class="category-icon" /></h5>`;
+                        } else if (el.category == 'gents') {
+                            html += `<h5>${el.package_name} <img src="/assets/images/male-icon.png" class="category-icon" /></h5>`;
+                        }
                         (el.services).forEach(function (t1) {
                             html += `<span>${t1.name}</span><br>`;
                         })
@@ -280,6 +292,35 @@ var salon_details = new function () {
 
         });
     };
+
+    this.change = function () {
+        var category = $("input[name=categories]:checked").val();
+        var gender = $("input[name=gender]:checked").val();
+        if (category == undefined) {
+            $(".category").removeClass("d-none");
+        } else {
+            $(".category").addClass("d-none");
+            $("input[name=categories]:checked").each(function () {
+                console.log(this.value);
+                $(`[id='${this.value}']`).removeClass("d-none");
+            });
+
+        }
+        
+        if (gender == undefined) {
+            $(".service_ladies").removeClass("d-none");
+            $(".service_gents").removeClass("d-none");
+        } else {
+            $(".service_ladies").addClass("d-none");
+            $(".service_gents").addClass("d-none");
+            $("input[name=gender]:checked").each(function () {
+                console.log(this.value);
+                $(`.service_${this.value}`).removeClass("d-none");
+            });
+
+        }
+        
+    }
 };
 
 

@@ -75,9 +75,15 @@
                     </a>
                 </li>
                 <li>
-                    <a href="subscription" class="<?php echo strpos($_SERVER['REQUEST_URI'], 'subscription') !== false ? 'active' : '' ?>">
+                    <a href="salon-subscription" class="<?php echo strpos($_SERVER['REQUEST_URI'], 'salon-subscription') !== false ? 'active' : '' ?>">
                         <i class="fa fa-credit-card" aria-hidden="true"></i>
-                        Subscription
+                        Salon Subscription
+                    </a>
+                </li>
+                <li>
+                    <a href="makeup-artist-subscription" class="<?php echo strpos($_SERVER['REQUEST_URI'], 'makeup-artist-subscription') !== false ? 'active' : '' ?>">
+                        <i class="fa fa-credit-card" aria-hidden="true"></i>
+                        Makeup Artist Subscription
                     </a>
                 </li>
                 <li class="logoutLi">

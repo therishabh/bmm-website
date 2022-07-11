@@ -561,12 +561,56 @@ ul.action-list li i:hover {
 .package-wrapper {
     background: #fff;
     text-align: center;
-    padding: 25px 0px;
+    transition: all 0.45s;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
-.package-wrapper h2 {
+.package-wrapper:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.package-wrapper .package-header {
+    padding: 20px 0px;
+}
+
+.package-1 .package-header {
+    background: #d7ecd9;
+}
+
+.package-2 .package-header {
+    background: #f5d5cb;
+}
+
+.package-3 .package-header {
+    background: #d5d6ea;
+}
+
+.package-4 .package-header {
+    background: #f3ddf2;
+}
+
+.package-wrapper .package-header .title {
     text-transform: uppercase;
-    color: #f92b62;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.package-wrapper .package-header .duration {
+    text-transform: lowercase;
+    margin-bottom: 0px;
+    color: #444;
+}
+
+.package-wrapper .package-header h2 {
+    color: #000;
+    font-weight: bold;
+}
+
+.package-wrapper .package-body {
+    padding: 25px 0px;
+    padding-top: 0px;
 }
 
 .package-wrapper ul {
@@ -579,4 +623,25 @@ ul.action-list li i:hover {
     list-style: none;
     border-bottom: 1px solid #f1f1f1;
     padding: 10px;
+}
+
+.package-wrapper .btn {
+    padding: 10px 30px;
+    font-weight: bold;
+}
+
+.package-1 .btn {
+    background: #d7ecd9;
+}
+
+.package-2 .btn {
+    background: #f5d5cb;
+}
+
+.package-3 .btn {
+    background: #d5d6ea;
+}
+
+.package-4 .btn {
+    background: #f3ddf2;
 }
