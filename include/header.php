@@ -1749,8 +1749,8 @@
                             <!-- <span class="new-tag new">FREE</span> -->
                         </a>
                     </li>
-                    <li><a href="<?php echo $base_url; ?>subscription">Subscription </a>
-                    </li>
+                    <!-- <li><a href="<?php echo $base_url; ?>subscription">Subscriptions </a>
+                    </li> -->
 
 
                 </ul>
