@@ -1,6 +1,6 @@
 <section class="subscription-section">
   <div class="container">
-  <h2 class="text-center h2-heading">Subscription</h2>
+  <h2 class="text-center h2-heading">Subscriptions</h2>
     <div class="row">
       <div class="col-md-4 col-6">
         <div class="package-wrapper package-1">
