@@ -371,7 +371,7 @@
                             </div>
                             <div class="custom-dropdown dropdown-after-login d-custom-none">
                                 <div class="custom-dropdown-btn">
-                                    <a class="username"><i class="far fa-user-circle float-left mr-2"></i> <span> Login </span>
+                                    <a class="username  "><i class="far fa-user-circle float-left mr-2"></i> <span> Login </span>
                                     </a>
                                 </div>
                                 <div class="custom-dropdown-item">

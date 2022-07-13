@@ -1,5 +1,5 @@
 var user_profile = new function() {
-
+    this.__url = $("#base_url").val();
     this.userToken = localStorage.getItem("userToken");
 
     this.getProfileData = function() {
@@ -79,6 +79,9 @@ var user_profile = new function() {
             },
             success: function(res) {
                 var result = res.result;
+                $("#wishlist_data").html("");
+                if(result.length>0 && result.length!=undefined)
+                {
                 result.forEach(function(el) {
                     var html = '';
                     html += `<div class="col-md-4">`;
@@ -108,6 +111,13 @@ var user_profile = new function() {
                     html += `</div>`;
                     $("#wishlist_data").append(html);
                 });
+            }else {
+                $("#wishlist_data").append(`<div class="no-wishlist-box empty-box no-data-box">
+                                <img src="${user_profile.__url}assets/images/no-wishlist.png" alt="">
+                                <h5>Your wishlist is empty!</h5>
+                                <p>Seems like you don't have wished here.<br>Make a wish!</p>
+                            </div>`);
+            }
             }
         });
     };
@@ -241,6 +251,8 @@ var user_profile = new function() {
             },
             success: function(res) {
                 var result = res.result;
+                $("#membershipCards").html("");
+                if(result.length>0 && result.length!=undefined){
                 result.forEach(function(el) {
                     var html = '';
                     html += `<div class="col-md-4 border mr-2" id="mc_s${el.id}" onclick="user_profile.getUserCardStatement(${el.id})">`;
@@ -256,7 +268,14 @@ var user_profile = new function() {
                     html += `</div>`;
                     $("#membershipCards").append(html);
                 });
-
+                }else {
+                    $("#membershipCards").append(`<div class="empty-box no-data-box">
+                                    <h5>Upto 50% Discount on services,Attractive  Offers & no payment hassles.<br>
+                                    Buy Our Membership Cards</h5>
+                                    <img src="${user_profile.__url}assets/images/no-cards.png" alt="">
+                                    <a href="/cards" class="btn btn-pink">Buy Membership Card</a>
+                                </div>`);
+                }
 
             }
         });

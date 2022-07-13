@@ -99,7 +99,7 @@ var cart_cl = new function () {
                 }
 
                 if (res.result.packages != undefined) {
-                    $('#service-list').append("<hr><h6><b>Packages</b></h6>");
+                    $('#service-list').append("<br><h6><b>Packages</b></h6>");
                     (res.result.packages).forEach(function (service) {
                         var html = '';
                         html += '<div class="service-cart-list">';

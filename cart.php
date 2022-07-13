@@ -4,8 +4,9 @@
         <div class="white-box p-4 cart-box-2 mt-3 d-none" id="empty">
                     <div class="empty-box">
                         <img src="assets/images/empty-service.png" alt="" />
-                        <h5>Your cart is empty!</h5>
-                        <p>It's a good day to book the service!</p>
+                        <h5>Your cart is empty!</h5><h5>Your cart is empty!</h5>
+                        <p class="mb-0">You have not made any booking yet!</p>
+                        <a href="/" class="btn btn-pink">Book Now</a>
                     </div>
                 </div>
         <div class="row d-none" id="c_data">
@@ -20,13 +21,6 @@
                     <div class="heading mb-1 font-weight-bold" id='salon_name'></div>
                     <p><i class="fa fa-map-marker-alt"></i> <span id='salon_address'></span></p>
                     <div id='service-list'> </div>
-                    <div class="empty-box">
-                        <img src="assets/images/empty-service.png" alt="" />
-                        <h5>Your cart is empty!</h5>
-                        <p class="mb-0">You have not made any booking yet!</p>
-                        <a href="/" class="btn btn-pink">Book Now</a>
-                        <!-- <p>It's a good day to book the service!</p> -->
-                    </div>
                 </div>
                 
 
