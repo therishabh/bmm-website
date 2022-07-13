@@ -83,9 +83,9 @@
                                         <input type="file" name="myfile" onchange="user_profile.uploadProfileImage(this)" />
                                     </div>
                                     <div>
-                                        <h4 id="t_name">Rohit Verma</h4>
-                                        <p id="t_mobile">9911060952</p>
-                                        <p id="t_email">rohitverma@gmail.com</p>
+                                        <h4 id="t_name"></h4>
+                                        <p id="t_mobile"></p>
+                                        <p id="t_email"></p>
                                     </div>
                                 </div>
                             </div>
