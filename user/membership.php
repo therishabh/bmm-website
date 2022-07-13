@@ -11,9 +11,9 @@
 
                                 <div class="row" id="membershipCards">
                                 </div>
-
-                                <h2 class="h2-heading">Card Statement</h2>
-                                <div class="table-responsive">
+                                
+                                <h2 class="h2-heading" id="card_stmt">Card Statement</h2>
+                                <div class="table-responsive" id="card_stmt_table">
                                     <table class="table table-bordered">
                                         <thead>
                                             <tr>

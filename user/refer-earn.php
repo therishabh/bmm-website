@@ -37,7 +37,7 @@
                                 </div>
 
                                 <hr>
-                                <div class="table-responsive">
+                                <div class="table-responsive" id="tdata_out">
                                     <table class="table table-bordered">
                                         <thead>
                                             <tr>
@@ -46,18 +46,13 @@
                                                 <th>Phone</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id="tdata">
                                             <tr>
                                                 <td>Rohit Verma</td>
                                                 <td>email@gmail.com</td>
                                                 <td>9876543210</td>
                                             </tr>
-                                            <tr>
-                                                <td>Rohit Verma</td>
-                                                <td>email@gmail.com</td>
-                                                <td>9876543210</td>
-                                            </tr>
-
+                                         
                                         </tbody>
                                     </table>
                                 </div>

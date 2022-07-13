@@ -394,151 +394,151 @@ $(function () {
     // *****************
     // getAllServices
     // *****************
-    var getAllServices = function () {
-        $(".loading-wrapper").show();
-        var selectedServices = [];
-        var intoSlug = function (str) {
-            return str.toLowerCase().split(" ").join("-").replace("&", "");
-        };
-        const url = `${base_url}user/services/get-services.php`;
-        $.ajax({
-            url: url,
-            type: "GET",
-            dataType: "JSON",
-            success: function (result) {
-                // console.log(result)
-
-                for (let key in result) {
-                    if (key == "ladies") {
-                        $("#salonServices").append(`
-                                  <div class="">
-                                <div id="${key + "-card-body-wrapper"}">
-                                    <div class="row"></div>
-                                </div>
-                                  </div>`);
-                        for (let category in result[key]) {
-                            $(`#salonServices #${key}-card-body-wrapper .row`).append(
-                                    `<div class="col-lg mb-4">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title" data="${category}">${category}</div>
-                                        <ul class="checkbox-wrapper ${intoSlug(
-                                            category
-                                            )}"></ul>
-                                        </div>
-                                    </div>
-                                    `
-                                    );
-                            result[key][category].forEach((val) => {
-                                var x = `#salonServices #${key}-card-body-wrapper .${intoSlug(
-                                        category
-                                        )}`;
-                                $(x).append(`
-                                      <li><a href="${__url}service-list/${val.id}/n/1">${val.name}</a></li>
-                                    `);
-                            });
-                        }
-                        $(".loading-wrapper").hide();
-                        $("#salonServices").fadeIn(1000);
-
-                        $("#makeupArtistServices").append(`
-                                  <div class="">
-                                <div id="${key + "-card-body-wrapper"}">
-                                    <div class="row"></div>
-                                </div>
-                                  </div>`);
-                        for (let category in result[key]) {
-                            $(`#makeupArtistServices #${key}-card-body-wrapper .row`).append(
-                                    `<div class="col-lg mb-4">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title" data="${category}">${category}</div>
-                                        <ul class="checkbox-wrapper ${intoSlug(
-                                            category
-                                            )}"></ul>
-                                        </div>
-                                    </div>
-                                    `
-                                    );
-                            result[key][category].forEach((val) => {
-                                var x = `#makeupArtistServices #${key}-card-body-wrapper .${intoSlug(
-                                        category
-                                        )}`;
-                                $(x).append(`
-                                      <li><a href="${__url}service-list/${val.id}/n/2">${val.name}</a></li>
-                                    `);
-                            });
-                        }
-                        $(".loading-wrapper").hide();
-                        $("#makeupArtistServices").fadeIn(1000);
-
-                        $("#bridalMakeupServices").append(`
-                                  <div class="">
-                                <div id="${key + "-card-body-wrapper"}">
-                                    <div class="row"></div>
-                                </div>
-                                  </div>`);
-                        for (let category in result[key]) {
-                            $(`#bridalMakeupServices #${key}-card-body-wrapper .row`).append(
-                                    `<div class="col-lg mb-4">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title" data="${category}">${category}</div>
-                                        <ul class="checkbox-wrapper ${intoSlug(
-                                            category
-                                            )}"></ul>
-                                        </div>
-                                    </div>
-                                    `
-                                    );
-                            result[key][category].forEach((val) => {
-                                var x = `#bridalMakeupServices #${key}-card-body-wrapper .${intoSlug(
-                                        category
-                                        )}`;
-                                $(x).append(`
-                                      <li><a href="${__url}service-list/${val.id}/n/4">${val.name}</a></li>
-                                    `);
-                            });
-                        }
-                        $(".loading-wrapper").hide();
-                        $("#bridalMakeupServices").fadeIn(1000);
-                    }
-
-                    if (key == "gents") {
-                        $("#gentsServices").append(`
-                                  <div class="">
-                                <div id="${key + "-card-body-wrapper"}">
-                                    <div class="row"></div>
-                                </div>
-                                  </div>`);
-                        for (let category in result[key]) {
-                            $(`#gentsServices #${key}-card-body-wrapper .row`).append(
-                                    `<div class="col-lg mb-4">
-                                    <div class="menu-common-list">
-                                        <div class="nav-submenu-title" data="${category}">${category}</div>
-                                        <ul class="checkbox-wrapper ${intoSlug(
-                                            category
-                                            )}"></ul>
-                                        </div>
-                                    </div>
-                                    `
-                                    );
-                            result[key][category].forEach((val) => {
-                                var x = `#gentsServices #${key}-card-body-wrapper .${intoSlug(
-                                        category
-                                        )}`;
-                                $(x).append(`
-                                      <li><a href="${__url}service-list/${val.id}/n/3">${val.name}</a></li>
-                                    `);
-                            });
-                        }
-                        $(".loading-wrapper").hide();
-                        $("#gentsServices").fadeIn(1000);
-                    }
-                }
-
-                $(".services-page .button-wrapper button").fadeIn(1000);
-            },
-        });
-    };
-    getAllServices();
+//    var getAllServices = function () {
+//        $(".loading-wrapper").show();
+//        var selectedServices = [];
+//        var intoSlug = function (str) {
+//            return str.toLowerCase().split(" ").join("-").replace("&", "");
+//        };
+//        const url = `${base_url}user/services/get-services.php`;
+//        $.ajax({
+//            url: url,
+//            type: "GET",
+//            dataType: "JSON",
+//            success: function (result) {
+//                // console.log(result)
+//
+//                for (let key in result) {
+//                    if (key == "ladies") {
+//                        $("#salonServices").append(`
+//                                  <div class="">
+//                                <div id="${key + "-card-body-wrapper"}">
+//                                    <div class="row"></div>
+//                                </div>
+//                                  </div>`);
+//                        for (let category in result[key]) {
+//                            $(`#salonServices #${key}-card-body-wrapper .row`).append(
+//                                    `<div class="col-lg mb-4">
+//                                    <div class="menu-common-list">
+//                                        <div class="nav-submenu-title" data="${category}">${category}</div>
+//                                        <ul class="checkbox-wrapper ${intoSlug(
+//                                            category
+//                                            )}"></ul>
+//                                        </div>
+//                                    </div>
+//                                    `
+//                                    );
+//                            result[key][category].forEach((val) => {
+//                                var x = `#salonServices #${key}-card-body-wrapper .${intoSlug(
+//                                        category
+//                                        )}`;
+//                                $(x).append(`
+//                                      <li><a href="${__url}service-list/${val.id}/n/1">${val.name}</a></li>
+//                                    `);
+//                            });
+//                        }
+//                        $(".loading-wrapper").hide();
+//                        $("#salonServices").fadeIn(1000);
+//
+//                        $("#makeupArtistServices").append(`
+//                                  <div class="">
+//                                <div id="${key + "-card-body-wrapper"}">
+//                                    <div class="row"></div>
+//                                </div>
+//                                  </div>`);
+//                        for (let category in result[key]) {
+//                            $(`#makeupArtistServices #${key}-card-body-wrapper .row`).append(
+//                                    `<div class="col-lg mb-4">
+//                                    <div class="menu-common-list">
+//                                        <div class="nav-submenu-title" data="${category}">${category}</div>
+//                                        <ul class="checkbox-wrapper ${intoSlug(
+//                                            category
+//                                            )}"></ul>
+//                                        </div>
+//                                    </div>
+//                                    `
+//                                    );
+//                            result[key][category].forEach((val) => {
+//                                var x = `#makeupArtistServices #${key}-card-body-wrapper .${intoSlug(
+//                                        category
+//                                        )}`;
+//                                $(x).append(`
+//                                      <li><a href="${__url}service-list/${val.id}/n/2">${val.name}</a></li>
+//                                    `);
+//                            });
+//                        }
+//                        $(".loading-wrapper").hide();
+//                        $("#makeupArtistServices").fadeIn(1000);
+//
+//                        $("#bridalMakeupServices").append(`
+//                                  <div class="">
+//                                <div id="${key + "-card-body-wrapper"}">
+//                                    <div class="row"></div>
+//                                </div>
+//                                  </div>`);
+//                        for (let category in result[key]) {
+//                            $(`#bridalMakeupServices #${key}-card-body-wrapper .row`).append(
+//                                    `<div class="col-lg mb-4">
+//                                    <div class="menu-common-list">
+//                                        <div class="nav-submenu-title" data="${category}">${category}</div>
+//                                        <ul class="checkbox-wrapper ${intoSlug(
+//                                            category
+//                                            )}"></ul>
+//                                        </div>
+//                                    </div>
+//                                    `
+//                                    );
+//                            result[key][category].forEach((val) => {
+//                                var x = `#bridalMakeupServices #${key}-card-body-wrapper .${intoSlug(
+//                                        category
+//                                        )}`;
+//                                $(x).append(`
+//                                      <li><a href="${__url}service-list/${val.id}/n/4">${val.name}</a></li>
+//                                    `);
+//                            });
+//                        }
+//                        $(".loading-wrapper").hide();
+//                        $("#bridalMakeupServices").fadeIn(1000);
+//                    }
+//
+//                    if (key == "gents") {
+//                        $("#gentsServices").append(`
+//                                  <div class="">
+//                                <div id="${key + "-card-body-wrapper"}">
+//                                    <div class="row"></div>
+//                                </div>
+//                                  </div>`);
+//                        for (let category in result[key]) {
+//                            $(`#gentsServices #${key}-card-body-wrapper .row`).append(
+//                                    `<div class="col-lg mb-4">
+//                                    <div class="menu-common-list">
+//                                        <div class="nav-submenu-title" data="${category}">${category}</div>
+//                                        <ul class="checkbox-wrapper ${intoSlug(
+//                                            category
+//                                            )}"></ul>
+//                                        </div>
+//                                    </div>
+//                                    `
+//                                    );
+//                            result[key][category].forEach((val) => {
+//                                var x = `#gentsServices #${key}-card-body-wrapper .${intoSlug(
+//                                        category
+//                                        )}`;
+//                                $(x).append(`
+//                                      <li><a href="${__url}service-list/${val.id}/n/3">${val.name}</a></li>
+//                                    `);
+//                            });
+//                        }
+//                        $(".loading-wrapper").hide();
+//                        $("#gentsServices").fadeIn(1000);
+//                    }
+//                }
+//
+//                $(".services-page .button-wrapper button").fadeIn(1000);
+//            },
+//        });
+//    };
+    //getAllServices();
 
     //if user already logged in
     if (userToken) {
@@ -630,3 +630,62 @@ var common = new (function () {
         }
     };
 })();
+
+var nav = new function () {
+    this.services = function (type) {
+        $.ajax({
+            url: `${base_url}user/nav-bar/service-listing.php`,
+            type: 'GET',
+            dataType: 'JSON',
+            data: {
+                nav_bar_type: type
+            },
+            success: function (res) {
+                var html = "";
+                if (type == 'salon') {
+                    $("salon_nav").html(`<div class="loading-wrapper">
+                                        <img src="assets/images/loader.gif" alt="loading">
+                                    </div>`);
+                }
+                    var data = res.result;
+                if (data.length > 0) {
+                    var html_right = '';
+                    var html_left = '';
+                    html +=`<div class="new-submenu-wrapper">
+                                        <div class="new-submenu-category">
+                                            <ul>`;
+                    data.forEach(function (el) {
+                        html_right += `<li data="${el.name}">${el.name}<i class="fa fa-chevron-right"></i></li>`;
+                        
+                    });
+                    html += html_right + `</ul>
+                                        </div>`;
+                    data.forEach(function (el) {
+                                      html +=  `<div id="${el.name}" class="new-submenu-content">`;
+                                      html +=      `<div class="row">`;
+                                            (el.subcategory).forEach(function(el1){
+                                                html +=`<div class="col-lg mb-4">
+                                                    <div class="menu-common-list">
+                                                        <div class="nav-submenu-title">${el1.name}</div>
+                                                        <ul class="checkbox-wrapper hair-styling">`;
+                                                        (el1.services).forEach(function(el2){
+                                                            html +=` <li><a href="#">${el2.name}</a></li>`;
+                                                        });
+                                                
+                                                html +=`</ul>
+                                                    </div>
+
+                                                </div>`;
+                                            })
+                                               
+                                          html +=`     
+                                            </div>
+                                        </div>`;
+                                    });
+                    console.log(html);  
+                    $("#salon_nav").html(html);
+                }
+            }
+        });
+    }
+};

@@ -10,19 +10,17 @@
                                     <div class="col-md-12">
                                         <h3 class="h3-heading">My Pics</h3>
                                         <!--<h5 class="float-left">Photos</h5>-->
+                                        <span id="up_btn" class="">
                                         <a href="javascript:user_profile.openUpload();" class="btn btn-pink float-right">Upload Photos</a>
                                         <input type="file" id="myfile" name="myfile" style="display:none;" onchange="user_profile.uploadImage(this);">
                                         <div class="clearfix"></div>
+                                        </span>
                                         <div class="row mt-4 user-pic" id="user-pic">
                                             
                                         </div>
 
                                         
-                                <div class="empty-box no-data-box">
-                                    <h5>Share your favourite makeup & hairstyling pics.</h5>
-                                    <a href="javascript:user_profile.openUpload();" class="btn btn-pink">Upload Photos</a>
-                                    <img src="<?php echo $base_url; ?>assets/images/no-pics.png" alt="">
-                                </div>
+                                
 
 
 <!--                                        <hr>
