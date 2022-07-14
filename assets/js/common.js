@@ -633,6 +633,8 @@ var common = new (function () {
 
 var nav = new function () {
     this.services = function (type) {
+        
+        var url__ = $("#base_url").val()
         $.ajax({
             url: `${base_url}user/nav-bar/service-listing.php`,
             type: 'GET',
@@ -647,6 +649,21 @@ var nav = new function () {
                                         <img src="assets/images/loader.gif" alt="loading">
                                     </div>`);
                 }
+                if (type == 'makeup-artist') {
+                    $("makeup_nav").html(`<div class="loading-wrapper">
+                                        <img src="assets/images/loader.gif" alt="loading">
+                                    </div>`);
+                }
+                if (type == 'bridal-makeup') {
+                    $("bridal_nav").html(`<div class="loading-wrapper">
+                                        <img src="assets/images/loader.gif" alt="loading">
+                                    </div>`);
+                }
+                if (type == 'gents') {
+                    $("gents_nav").html(`<div class="loading-wrapper">
+                                        <img src="assets/images/loader.gif" alt="loading">
+                                    </div>`);
+                }
                     var data = res.result;
                 if (data.length > 0) {
                     var html_right = '';
@@ -654,22 +671,38 @@ var nav = new function () {
                     html +=`<div class="new-submenu-wrapper">
                                         <div class="new-submenu-category">
                                             <ul>`;
+                    var i=1;
                     data.forEach(function (el) {
-                        html_right += `<li data="${el.name}">${el.name}<i class="fa fa-chevron-right"></i></li>`;
-                        
+                        html_right += `<li data="${type}${i}" onmouseover="nav.hover__('${type}${i}')">${el.name}<i class="fa fa-chevron-right"></i></li>`;
+                        i++;
                     });
                     html += html_right + `</ul>
                                         </div>`;
+                    var i=1;
                     data.forEach(function (el) {
-                                      html +=  `<div id="${el.name}" class="new-submenu-content">`;
+                                      html +=  `<div id="${type}${i}" class="new-submenu-content  all_hover ">`;
                                       html +=      `<div class="row">`;
                                             (el.subcategory).forEach(function(el1){
-                                                html +=`<div class="col-lg mb-4">
+                                                html +=`<div class="col-lg-3">
                                                     <div class="menu-common-list">
                                                         <div class="nav-submenu-title">${el1.name}</div>
                                                         <ul class="checkbox-wrapper hair-styling">`;
                                                         (el1.services).forEach(function(el2){
-                                                            html +=` <li><a href="#">${el2.name}</a></li>`;
+                                                            if (type == 'salon') {
+                                                                html +=` <li><a href="${url__}service-list/${el2.id}/n/1">${el2.name}</a></li>`;
+                                                            } else
+                                                            if (type == 'makeup-artist') {
+                                                                html +=` <li><a href="${url__}service-list/${el2.id}/n/2">${el2.name}</a></li>`;
+                                                            }else
+                                                            if (type == 'bridal-makeup') {
+                                                                html +=` <li><a href="${url__}service-list/${el2.id}/n/4">${el2.name}</a></li>`;
+                                                            }else
+                                                            if (type == 'gents') {
+                                                                html +=` <li><a href="${url__}service-list/${el2.id}/n/3">${el2.name}</a></li>`;
+                                                            }else{
+                                                            
+                                                            }
+                                                            
                                                         });
                                                 
                                                 html +=`</ul>
@@ -681,11 +714,31 @@ var nav = new function () {
                                           html +=`     
                                             </div>
                                         </div>`;
+                                        i++;
                                     });
-                    console.log(html);  
-                    $("#salon_nav").html(html);
+                                          html +=`     
+                                        </div>`;
+                      
+                    if (type == 'salon') {
+                        $("#salon_nav").html(html);
+                    }
+                    if (type == 'makeup-artist') {
+                        $("#makeup_nav").html(html);
+                    }
+                    if (type == 'bridal-makeup') {
+                        $("#bridal_nav").html(html);
+                    }
+                    if (type == 'gents') {
+                        $("#gents_nav").html(html);
+                    }
                 }
             }
         });
+    }
+    
+    this.hover__ = function(id) {
+        console.log(id);
+        $(".all_hover").css('display','none');
+        $("#"+id).css('display','block');
     }
 };
