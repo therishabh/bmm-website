@@ -1520,6 +1520,10 @@
                         <form class="login-form" id="registerStepOne">
                             <div class="form-group">
                                 <div class="form-heading">Register</div>
+                                <div class="form-group mt-3">
+                                    <label>Referral Code</label>
+                                    <input type="text" class="form-control" name="" />
+                                </div>
                                 <div class="row mt-3">
                                     <div class="col-md-8">
                                         <div class="form-group">
