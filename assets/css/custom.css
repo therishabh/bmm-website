@@ -1438,7 +1438,7 @@
             display: block;
             color: #000;
             font-size: 13px;
-            padding: 9px 12px;
+            padding: 11px 12px;
             border-left: 3px solid transparent;
             transition: all 0.25s ease-in-out;
         }
@@ -6622,7 +6622,7 @@
         .empty-box {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
             align-items: center;
             justify-content: center;
             width: 100%;
@@ -6639,11 +6639,11 @@
         }
         
         .no-data-box img {
-            width: 250px;
+            width: 225px;
         }
         
         .no-wishlist-box img {
-            width: 450px;
+            width: 300px;
         }
         
         .page-not-found-404-section {
@@ -6787,4 +6787,25 @@
         
         .package-3 .btn {
             background: #d7ecd9;
+        }
+        
+        .user-offer-box {
+            border: 1px solid #ccc;
+            padding: 20px 15px;
+            margin-top: 20px;
+            border-radius: 6px;
+            text-align: center;
+        }
+        
+        .user-offer-box .code {
+            font-size: 20px;
+            border: 1px dashed #ccc;
+            display: inline;
+            padding: 6px 15px;
+        }
+        
+        .user-offer-box p {
+            margin-top: 15px;
+            margin-bottom: 0px;
+            font-size: 14px;
         }
