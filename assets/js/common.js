@@ -595,6 +595,26 @@ function logout() {
     location.href = $("#base_url").val() + "home";
 }
 
+
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    alert("Geolocation is not supported by this browser.");
+  }
+}
+
+function showPosition(position) {
+   localStorage.setItem("lat",position.coords.latitude);
+   localStorage.setItem("long",position.coords.longitude);
+   localStorage.setItem("radius","5");
+}
+
+if(localStorage.getItem("lat")=="" || localStorage.getItem("long")=="" || localStorage.getItem("lat")==undefined  || localStorage.getItem("long")==undefined){
+getLocation();
+}
+
 var common = new (function () {
     this.__url = $("#base_url").val();
 

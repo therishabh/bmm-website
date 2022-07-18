@@ -83,7 +83,10 @@ var service_list = new function() {
                             type: 'GET',
                             data: {
                                 service_id: service_id,
-                                str: str
+                                str: str,
+                                lat: localStorage.getItem("lat"),
+                                long : localStorage.getItem("long"),
+                                radius : localStorage.getItem("radius")
                             },
                             dataType: 'JSON',
                             success: function(result) {
