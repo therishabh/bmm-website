@@ -6,6 +6,9 @@
                                     <a class="nav-link" href="<?php echo $base_url; ?>user/profile"><i class="fas fa-user icon"></i> Manage Profile</a>
                                 </li>
                                 <li class="nav-item">
+                                    <a class="nav-link" href="<?php echo $base_url; ?>user/change-password"><i class="fas fa-user icon"></i> Change Password</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link" href="<?php echo $base_url; ?>user/wishlist"><i class="far fa-bookmark icon"></i> Wishlist</a>
                                 </li>
                                 <li class="nav-item">
