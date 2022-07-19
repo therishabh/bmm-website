@@ -6,13 +6,35 @@
         <div class="salon-category-tab-parents">
             <div class="row">
                 <div class="col-md-12">
-
+                    <div class="service-list">
+                        <ul>
+                            <li>
+                                <select class="form-control">
+                                    <option value="nearest">Nearest</option>
+                                    <option value="10km">10 km/-</option>
+                                    <option value="15km">15 km/-</option>
+                                    <option value="all">All</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select class="form-control">
+                                    <option>Recommended</option>
+                                    <option>Pricing high to low</option>
+                                    <option>Pricing low to high</option>
+                                    <option>Distance high to low</option>
+                                    <option>Distance low to high</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12 mt-3">
                     <nav class="custom-breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="<?php echo $base_url; ?>">Home</a></li>
                             <li class="breadcrumb-item"><a href="javascript:void(0);" id="level1">-</a></li>
                             <li class="breadcrumb-item"><a href="javascript:void(0);" id="level2">-</a></li>
-                            <li class="breadcrumb-item active" aria-current="page"  id="level3">-</li>
+                            <li class="breadcrumb-item active" aria-current="page" id="level3">-</li>
                         </ol>
                     </nav>
 

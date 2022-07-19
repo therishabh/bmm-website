@@ -75,7 +75,7 @@
             height: 100%;
             background: #fff;
             padding: 0px;
-            z-index: 1000000;
+            z-index: 100000;
             overflow-y: auto;
             transition: all 0.35s ease-in-out;
             box-shadow: 2px 4px 10px rgba(39, 59, 69, 0.4);
@@ -6807,5 +6807,21 @@
         .user-offer-box p {
             margin-top: 15px;
             margin-bottom: 0px;
+            font-size: 14px;
+        }
+        
+        .service-list ul {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .service-list ul li {
+            list-style: none;
+            width: 150px;
+            float: right;
+            margin-left: 10px;
+        }
+        
+        .service-list ul li .form-control {
             font-size: 14px;
         }

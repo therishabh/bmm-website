@@ -1,4 +1,7 @@
 @media screen and (min-width:360px) and (max-width:767px) {
+    .salon-section-new .salon-box-new h3 {
+        font-size: 18px;
+    }
     h2 {
         font-size: 24px;
     }
@@ -124,8 +127,9 @@
     #loginModal .close,
     #forgotPasswordModal .close,
     #registerModal .close {
-        top: -6px;
-        right: -6px;
+        top: 24px;
+        right: 8px;
+        position: absolute;
     }
     header {
         background: #fff;
@@ -290,6 +294,7 @@
     }
     .login-section {
         padding: 20px 0;
+        background: none;
     }
     .bmm-collection-box .price {
         display: inline-block;
