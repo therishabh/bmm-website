@@ -307,11 +307,12 @@
                 },
                 success: function(result) {
                     const salon_info = result.result.info;
-                    $('#infoForm [name=contact_person_name]').val(salon_info.contact_person_name);
-                    $('#infoForm [name=contact_person_mobile]').val(salon_info.mobile_no);
-                    $('#infoForm [name=contact_person_email]').val(salon_info.email_id);
-                    $("#infoForm [name=contact_person_gender]").val(salon_info.contact_person_gender);
-                    $("#infoForm [name=i_am_owner]").val(salon_info.i_am_owner)
+                    console.log(salon_info);
+                    $('#contactPersonForm [name=contact_person_name]').val(salon_info.contact_person_name);
+                    $('#contactPersonForm [name=contact_person_mobile]').val(salon_info.mobile_no);
+                    $('#contactPersonForm [name=contact_person_email]').val(salon_info.email_id);
+                    $("#contactPersonForm [name=contact_person_gender]").val(salon_info.contact_person_gender);
+                    $("#contactPersonForm [name=i_am_owner]").val(salon_info.i_am_owner)
 
                     $('#salonInfoForm [name=salon_name]').val(salon_info.salon_name);
                     $('#salonInfoForm [name=website]').val(salon_info.website);

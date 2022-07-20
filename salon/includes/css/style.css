@@ -563,7 +563,7 @@ ul.action-list li i:hover {
     text-align: center;
     transition: all 0.45s;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .package-wrapper:hover {
