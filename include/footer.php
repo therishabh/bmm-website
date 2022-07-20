@@ -70,27 +70,32 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
                             <div class="col-md-3">
                                 <h3>Book Salons <i class="fa fa-map-marker-alt"></i> <span class="float-right footer-down-arrow"><i class="fas fa-chevron-down"></i></span></h3>
                                 <ul class="fotter-links2">
-                                    <li><a href="#">Delhi</a> </li>
-                                    <li><a href="#">Chandigarh</a> </li>
-                                    <li><a href="#">Agra</a> </li>
-                                    <li><a href="#">Lucknow</a> </li>
-                                    <li><a href="#">Mohali</a> </li>
-                                    <li><a href="#">Mumbai</a> </li>
-                                    <li><a href="#">Tirchy</a> </li>
-                                    <li><a href="#">Kolkotta </a> </li>
-                                    <li><a href="#">Noida </a> </li>
-                                    <li><a href="#">Gurugram </a> </li>
-                                    <li><a href="#">Bengaluru </a> </li>
-                                    <li><a href="#">Indore</a> </li>
-                                    <li><a href="#">Jaipur </a> </li>
-                                    <li><a href="#">Amritsar </a> </li>
-                                    <li><a href="#">Varanasi </a> </li>
-                                    <li><a href="#">Panipat </a> </li>
-                                    <li><a href="#">Ahmedabad </a> </li>
-                                    <li><a href="#">Patna </a> </li>
-                                    <li><a href="#">Rohtak </a> </li>
-                                    <li><a href="#">Pune </a> </li>
-                                    <li><a href="#">Lucknow </a> </li>
+                                    <li onclick="nav.setLocation('28.6138954', '77.2090057','New Delhi');"><a>New Delhi</a></li>
+                                    <li onclick="nav.setLocation('28.6517178', '77.2219388','Delhi');"><a>Delhi</a></li>
+                                    <li onclick="nav.setLocation('28.5707583', '77.3260756','Noida');"><a>Noida</a></li>
+                                    <li onclick="nav.setLocation('28.6711527', '77.4120356','Ghaziabad');"><a>Ghaziabad</a></li>
+                                    <li onclick="nav.setLocation('28.4031478', '77.3105561','Faridabad');"><a>Faridabad</a></li>
+                                    <li onclick="nav.setLocation('28.4646148', '77.0299194','Gurugram');"><a>Gurugram</a></li>
+                                    <li onclick="nav.setLocation('19.0785451', '72.878176','Mumbai');"> <a>Mumbai</a></li>
+                                    <li onclick="nav.setLocation('19.0308262', '73.0198537','Navi Mumbai');"><a>Navi Mumbai</a></li>
+                                    <li onclick="nav.setLocation('18.521428', '73.8544541','Pune');"> <a>Pune</a></li>
+                                    <li onclick="nav.setLocation('21.1498134', '79.0820556','Nagpur');"><a>Nagpur</a></li>
+                                    <li onclick="nav.setLocation('19.9615591', '73.8316941','Nasik');"><a>Nasik</a></li>
+                                    <li onclick="nav.setLocation('31.6343083', '74.8736788','Amritsar');"><a>Amritsar</a></li>
+                                    <li onclick="nav.setLocation('30.9090157', '75.851601','Ludhiana');"> <a>Ludhiana</a></li>
+                                    <li onclick="nav.setLocation('30.3295605', '76.4127819','Patiala');"><a>Patiala</a></li>
+                                    <li onclick="nav.setLocation('30.7334421', '76.7797143','Chandigarh');"><a>Chandigarh</a></li>
+                                    <li onclick="nav.setLocation('28.9953758', '77.0233627','Sonipat');"><a>Sonipat</a></li>
+                                    <li onclick="nav.setLocation('29.3912753', '76.9771675','Panipat');"><a>Panipat</a></li>
+                                    <li onclick="nav.setLocation('29.6803266', '76.9896254','Karnal');"><a>Karnal</a></li>
+                                    <li onclick="nav.setLocation('28.4646148', '77.0299194','Gurugram');"><a>Gurugram</a></li>
+                                    <li onclick="nav.setLocation('26.9154576', '75.8189817','Jaipur');"><a>Jaipur</a></li>
+                                    <li onclick="nav.setLocation('24.578721', '73.6862571','Udaipur');"> <a>Udaipur</a></li>
+                                    <li onclick="nav.setLocation('28.0159286', '73.3171367','Bikaner');"><a>Bikaner</a></li>
+                                    <li onclick="nav.setLocation('25.1737019', '75.8574194','Kota');"><a>Kota</a></li>
+                                    <li onclick="nav.setLocation('25.3356491', '83.0076292','Varanasi');"><a>Varanasi</a></li>
+                                    <li onclick="nav.setLocation('26.8381', '80.9346001','Lucknow');">   <a> Lucknow</a></li>
+                                    <li onclick="nav.setLocation('26.4609135', '80.3217588','Kanpur');"><a>Kanpur</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -218,26 +223,26 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
 <script type="text/javascript" src="<?php echo $base_url; ?>assets/highslide/highslide-with-gallery.js"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/highslide/highslide.css" />
 <script type="text/javascript">
-    hs.graphicsDir = '<?php echo $base_url; ?>assets/highslide/graphics/';
-    hs.align = 'center';
-    hs.transitions = ['expand', 'crossfade'];
-    hs.outlineType = 'rounded-white';
-    hs.fadeInOut = true;
-    //hs.dimmingOpacity = 0.75;
+                                    hs.graphicsDir = '<?php echo $base_url; ?>assets/highslide/graphics/';
+                                    hs.align = 'center';
+                                    hs.transitions = ['expand', 'crossfade'];
+                                    hs.outlineType = 'rounded-white';
+                                    hs.fadeInOut = true;
+                                    //hs.dimmingOpacity = 0.75;
 
-    // Add the controlbar
-    hs.addSlideshow({
-        //slideshowGroup: 'group1',
-        interval: 5000,
-        repeat: false,
-        useControls: true,
-        fixedControls: 'fit',
-        overlayOptions: {
-            opacity: .75,
-            position: 'bottom center',
-            hideOnMouseOut: true
-        }
-    });
+                                    // Add the controlbar
+                                    hs.addSlideshow({
+                                        //slideshowGroup: 'group1',
+                                        interval: 5000,
+                                        repeat: false,
+                                        useControls: true,
+                                        fixedControls: 'fit',
+                                        overlayOptions: {
+                                            opacity: .75,
+                                            position: 'bottom center',
+                                            hideOnMouseOut: true
+                                        }
+                                    });
 </script>
 <!--gallery script ends here-->
 <?php if ($page == 'blog') { ?>
@@ -256,25 +261,25 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
 <?php if ($page == 'user' && $explode_data[1] == 'profile') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
     <script type="text/javascript">
-        if (user_profile.userToken) {
-            user_profile.getProfileData();
-        }
+                                    if (user_profile.userToken) {
+                                        user_profile.getProfileData();
+                                    }
     </script>
 <?php } ?>
 <?php if ($page == 'user' && $explode_data[1] == 'membership') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
     <script type="text/javascript">
-        if (user_profile.userToken) {
-            user_profile.getUserMemberships();
-        }
+                                    if (user_profile.userToken) {
+                                        user_profile.getUserMemberships();
+                                    }
     </script>
 <?php } ?>
 <?php if ($page == 'user' && $explode_data[1] == 'my-bookings') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
     <script type="text/javascript">
-        if (user_profile.userToken) {
-            user_profile.getUserBookings();
-        }
+                                    if (user_profile.userToken) {
+                                        user_profile.getUserBookings();
+                                    }
     </script>
 <?php } ?>
 <?php if ($page == 'cart') { ?>
@@ -303,17 +308,17 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
 <?php if ($page == 'user' && $explode_data[1] == 'wishlist') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
     <script type="text/javascript">
-        if (user_profile.userToken) {
-            user_profile.getUserWishlist();
-        }
+                                    if (user_profile.userToken) {
+                                        user_profile.getUserWishlist();
+                                    }
     </script>
 <?php } ?>
 <?php if ($page == 'user' && $explode_data[1] == 'bmm-tv') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
     <script type="text/javascript">
-        if (user_profile.userToken) {
-            user_profile.bmmtv();
-        }
+                                    if (user_profile.userToken) {
+                                        user_profile.bmmtv();
+                                    }
     </script>
 <?php } ?>
 <?php if ($page == 'hair-masters') { ?>
@@ -322,43 +327,50 @@ if (strpos(dirname($_SERVER['PHP_SELF']), '/pro') === false) {
 <?php if ($page == 'user' && $explode_data[1] == 'offers') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
     <script type="text/javascript">
-        if (user_profile.userToken) {
-            user_profile.getOffersForUser();
-        }
+                                    if (user_profile.userToken) {
+                                        user_profile.getOffersForUser();
+                                    }
     </script>
 <?php } ?>
 <?php if ($page == 'user' && $explode_data[1] == 'query') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
     <script type="text/javascript">
-        if (user_profile.userToken) {
-            user_profile.getQueryCategoryList();
-        }
+                                    if (user_profile.userToken) {
+                                        user_profile.getQueryCategoryList();
+                                    }
     </script>
 <?php } ?>    
 <?php if ($page == 'user' && $explode_data[1] == 'query-detail') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
     <script type="text/javascript">
-        if (user_profile.userToken) {
-            user_profile.query_detail();
-        }
+                                    if (user_profile.userToken) {
+                                        user_profile.query_detail();
+                                    }
     </script>
 <?php } ?>    
 <?php if ($page == 'user' && $explode_data[1] == 'my-pics') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
     <script type="text/javascript">
-        if (user_profile.userToken) {
-            user_profile.getUserPics();
-        }
+                                    if (user_profile.userToken) {
+                                        user_profile.getUserPics();
+                                    }
     </script>
 <?php } ?>   
 <?php if ($page == 'user' && $explode_data[1] == 'refer-earn') { ?>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
     <script type="text/javascript">
-        if (user_profile.userToken) {
-            user_profile.referList();
-        }
+                                    if (user_profile.userToken) {
+                                        user_profile.referList();
+                                    }
     </script>
 <?php } ?>  
+<?php if ($page == 'user' && $explode_data[1] == 'change-password') { ?>
+    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/user.js"></script>
+    <script type="text/javascript">
+                                    if (user_profile.userToken) {
+                                    }
+    </script>
+<?php } ?> 
 </body>
 
 </html>

@@ -560,12 +560,12 @@
                         </div>
                         <div class="city-list">
                             <ul>
-                                <li>New Delhi</li>
-                                <li>Delhi</li>
-                                <li>Noida</li>
-                                <li>Ghaziabad</li>
-                                <li>Faridabad</li>
-                                <li>Gurugram</li>
+                                <li onclick="nav.setLocation('28.6138954','77.2090057','New Delhi');">New Delhi</li>
+                                <li onclick="nav.setLocation('28.6517178','77.2219388','Delhi');">Delhi</li>
+                                <li onclick="nav.setLocation('28.5707583','77.3260756','Noida');">Noida</li>
+                                <li onclick="nav.setLocation('28.6711527','77.4120356','Ghaziabad');">Ghaziabad</li>
+                                <li onclick="nav.setLocation('28.4031478','77.3105561','Faridabad');">Faridabad</li>
+                                <li onclick="nav.setLocation('28.4646148','77.0299194','Gurugram');">Gurugram</li>
                             </ul>
                         </div>
                     </div>
@@ -579,58 +579,57 @@
                         <div class="col-md-6">
                             <h6>Delhi NCR</h6>
                             <ul>
-                                <li>New Delhi</li>
-                                <li>Delhi</li>
-                                <li>Noida</li>
-                                <li>Ghaziabad</li>
-                                <li>Faridabad</li>
-                                <li>Gurugram</li>
+                                <li onclick="nav.setLocation('28.6138954','77.2090057','New Delhi');">New Delhi</li>
+                                <li onclick="nav.setLocation('28.6517178','77.2219388','Delhi');">Delhi</li>
+                                <li onclick="nav.setLocation('28.5707583','77.3260756','Noida');">Noida</li>
+                                <li onclick="nav.setLocation('28.6711527','77.4120356','Ghaziabad');">Ghaziabad</li>
+                                <li onclick="nav.setLocation('28.4031478','77.3105561','Faridabad');">Faridabad</li>
+                                <li onclick="nav.setLocation('28.4646148','77.0299194','Gurugram');">Gurugram</li>
                             </ul>
                         </div>
                         <div class="col-md-6">
                             <h6>Maharastra</h6>
                             <ul>
-                                <li>Mumbai</li>
-                                <li>Navi Mumbai</li>
-                                <li>Brady House</li>
-                                <li>Pune</li>
-                                <li>Nagpur</li>
-                                <li>Nasik</li>
+                                <li onclick="nav.setLocation('19.0785451','72.878176','Mumbai');">Mumbai</li>
+                                <li onclick="nav.setLocation('19.0308262','73.0198537','Navi Mumbai');">Navi Mumbai</li>
+                                <li onclick="nav.setLocation('18.521428','73.8544541','Pune');">Pune</li>
+                                <li onclick="nav.setLocation('21.1498134','79.0820556','Nagpur');">Nagpur</li>
+                                <li onclick="nav.setLocation('19.9615591','73.8316941','Nasik');">Nasik</li>
                             </ul>
                         </div>
                         <div class="col-md-6">
                             <h6>Punjab</h6>
                             <ul>
-                                <li>Amritsar</li>
-                                <li>Ludhiana</li>
-                                <li>Patiala</li>
-                                <li>Chandigarh</li>
+                                <li onclick="nav.setLocation('31.6343083','74.8736788','Amritsar');">Amritsar</li>
+                                <li onclick="nav.setLocation('30.9090157','75.851601','Ludhiana');">Ludhiana</li>
+                                <li onclick="nav.setLocation('30.3295605','76.4127819','Patiala');">Patiala</li>
+                                <li onclick="nav.setLocation('30.7334421','76.7797143','Chandigarh');">Chandigarh</li>
                             </ul>
                         </div>
                         <div class="col-md-6">
                             <h6>Haryana</h6>
                             <ul>
-                                <li>Sonipat</li>
-                                <li>Panipat</li>
-                                <li>Karnal</li>
-                                <li>Gurugram</li>
+                                <li onclick="nav.setLocation('28.9953758','77.0233627','Sonipat');">Sonipat</li>
+                                <li onclick="nav.setLocation('29.3912753','76.9771675','Panipat');">Panipat</li>
+                                <li onclick="nav.setLocation('29.6803266','76.9896254','Karnal');">Karnal</li>
+                                <li onclick="nav.setLocation('28.4646148','77.0299194','Gurugram');">Gurugram</li>
                             </ul>
                         </div>
                         <div class="col-md-6">
                             <h6>Rajasthan</h6>
                             <ul>
-                                <li>Jaipur</li>
-                                <li>Udaipur</li>
-                                <li>Bikaner</li>
-                                <li>Kota</li>
+                                <li onclick="nav.setLocation('26.9154576','75.8189817','Jaipur');">Jaipur</li>
+                                <li onclick="nav.setLocation('24.578721','73.6862571','Udaipur');">Udaipur</li>
+                                <li onclick="nav.setLocation('28.0159286','73.3171367','Bikaner');">Bikaner</li>
+                                <li onclick="nav.setLocation('25.1737019','75.8574194','Kota');">Kota</li>
                             </ul>
                         </div>
                         <div class="col-md-6">
                             <h6>Uttar Pradesh</h6>
                             <ul>
-                                <li>Varanasi</li>
-                                <li>Lucknow</li>
-                                <li>Kanpur</li>
+                                <li onclick="nav.setLocation('25.3356491','83.0076292','Varanasi');">Varanasi</li>
+                                <li onclick="nav.setLocation('26.8381','80.9346001','Lucknow');">Lucknow</li>
+                                <li onclick="nav.setLocation('26.4609135','80.3217588','Kanpur');">Kanpur</li>
                             </ul>
                         </div>
                     </div>
@@ -707,7 +706,7 @@
                                 <div class="form-heading">Register</div>
                                 <div class="form-group mt-3">
                                     <label>Referral Code</label>
-                                    <input type="text" class="form-control" name="" />
+                                    <input type="text" class="form-control" name="refer" />
                                 </div>
                                 <div class="row mt-3">
                                     <div class="col-md-8">

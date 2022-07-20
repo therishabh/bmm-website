@@ -13,20 +13,20 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Old Password</label>
-                                            <input type="password" class="form-control" name="" id="" value="" />
+                                            <input type="password" class="form-control" name="" id="old_password" value="" />
                                         </div>
                                         <div class="form-group">
                                             <label>New Password</label>
-                                            <input type="password" class="form-control" name="" id="" value="" />
+                                            <input type="password" class="form-control" name="" id="new_password" value="" />
                                         </div>
                                         <div class="form-group">
                                             <label>Confirm Password</label>
-                                            <input type="password" class="form-control" name="" id="" value="" />
+                                            <input type="password" class="form-control" name="" id="confirm_password" value="" />
                                         </div>
                                         <div class="form-btns">
                                             <ul>
                                                 <li>
-                                                    <button type="button" onclick="" class="btn btn-pink">Update</button>
+                                                    <button type="button" onclick="user_profile.updatePassword();" class="btn btn-pink">Update</button>
                                                 </li>
                                             </ul>
                                         </div>

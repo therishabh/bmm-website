@@ -9,14 +9,14 @@
                     <div class="service-list">
                         <ul>
                             <li>
-                                <select class="form-control">
-                                    <option value="nearest">Nearest</option>
-                                    <option value="10km">10 km/-</option>
-                                    <option value="15km">15 km/-</option>
-                                    <option value="all">All</option>
+                                <select class="form-control" onchange="service_list.onchangekm();" id="km_onchange">
+                                    <option value="5">Nearest</option>
+                                    <option value="10">10 km/-</option>
+                                    <option value="15">15 km/-</option>
+                                    <option value="100">All</option>
                                 </select>
                             </li>
-                            <li>
+<!--                            <li>
                                 <select class="form-control">
                                     <option>Recommended</option>
                                     <option>Pricing high to low</option>
@@ -24,7 +24,7 @@
                                     <option>Distance high to low</option>
                                     <option>Distance low to high</option>
                                 </select>
-                            </li>
+                            </li>-->
                         </ul>
                     </div>
                 </div>
@@ -34,7 +34,8 @@
                             <li class="breadcrumb-item"><a href="<?php echo $base_url; ?>">Home</a></li>
                             <li class="breadcrumb-item"><a href="javascript:void(0);" id="level1">-</a></li>
                             <li class="breadcrumb-item"><a href="javascript:void(0);" id="level2">-</a></li>
-                            <li class="breadcrumb-item active" aria-current="page" id="level3">-</li>
+                            <li class="breadcrumb-item"><a href="javascript:void(0);" id="level3">-</a></li>
+                            <li class="breadcrumb-item active" aria-current="page" id="level4">-</li>
                         </ol>
                     </nav>
 

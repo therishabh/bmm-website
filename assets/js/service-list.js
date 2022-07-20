@@ -270,6 +270,7 @@ var service_list = new function() {
 
                     $(".loading-wrapper").hide();
                 } else {
+                    $(".loading-wrapper").hide();
                     $('#nodata').html('<div><img src="assets/images/nodata.png" /><h5>Data is not available...</h5></div>')
                 }
 
@@ -414,11 +415,18 @@ var service_list = new function() {
                 if (type == 4) {
                     $("#level1").html('Bridal Makeup');
                 }
-                $("#level2").html(data.type);
-                $("#level3").html(data.name);
+                $("#level2").html(data.category);
+                $("#level3").html(data.subcategory);
+                $("#level4").html(data.name);
             }
         });
     };
+    
+    this.onchangekm = function() {
+        var km = $("#km_onchange").val();
+        localStorage.setItem("radius",km);
+        service_list.getListingResult();
+    }
 };
 
 
